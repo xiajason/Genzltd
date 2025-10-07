@@ -9,16 +9,16 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"github.com/xiajason/zervi-basic/basic/backend/internal/api-gateway/service_registry"
+	apigateway "github.com/xiajason/zervi-basic/basic/backend/internal/api-gateway"
 )
 
 // ProxyHandler 代理处理器
 type ProxyHandler struct {
-	serviceRegistry *service_registry.ServiceRegistry
+	serviceRegistry *apigateway.ServiceRegistry
 }
 
 // NewProxyHandler 创建代理处理器
-func NewProxyHandler(serviceRegistry *service_registry.ServiceRegistry) *ProxyHandler {
+func NewProxyHandler(serviceRegistry *apigateway.ServiceRegistry) *ProxyHandler {
 	return &ProxyHandler{
 		serviceRegistry: serviceRegistry,
 	}

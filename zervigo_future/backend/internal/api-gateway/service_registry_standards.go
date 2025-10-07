@@ -1,4 +1,4 @@
-package service_registry
+package apigateway
 
 import (
 	"fmt"

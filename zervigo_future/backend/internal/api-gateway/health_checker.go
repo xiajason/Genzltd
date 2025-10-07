@@ -1,4 +1,4 @@
-package health_checker
+package apigateway
 
 import (
 	"context"
@@ -8,7 +8,6 @@ import (
 	"sync"
 	"time"
 
-	"github.com/xiajason/zervi-basic/basic/backend/internal/api-gateway/service_registry"
 )
 
 // HealthStatus 健康状态
@@ -23,7 +22,7 @@ type HealthStatus struct {
 
 // HealthChecker 健康检查器
 type HealthChecker struct {
-	serviceRegistry *service_registry.ServiceRegistry
+	serviceRegistry *ServiceRegistry
 	interval        time.Duration
 	timeout         time.Duration
 	statuses        map[string]*HealthStatus
@@ -56,7 +55,7 @@ func NewHealthChecker(interval, timeout time.Duration) (*HealthChecker, error) {
 }
 
 // SetServiceRegistry 设置服务注册管理器
-func (hc *HealthChecker) SetServiceRegistry(registry *service_registry.ServiceRegistry) {
+func (hc *HealthChecker) SetServiceRegistry(registry *ServiceRegistry) {
 	hc.serviceRegistry = registry
 }
 

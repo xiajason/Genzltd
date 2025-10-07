@@ -5,18 +5,17 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	"github.com/xiajason/zervi-basic/basic/backend/internal/api-gateway/health_checker"
-	"github.com/xiajason/zervi-basic/basic/backend/internal/api-gateway/service_registry"
+	apigateway "github.com/xiajason/zervi-basic/basic/backend/internal/api-gateway"
 )
 
 // HealthHandler 健康检查处理器
 type HealthHandler struct {
-	healthChecker   *health_checker.HealthChecker
-	serviceRegistry *service_registry.ServiceRegistry
+	healthChecker   *apigateway.HealthChecker
+	serviceRegistry *apigateway.ServiceRegistry
 }
 
 // NewHealthHandler 创建健康检查处理器
-func NewHealthHandler(healthChecker *health_checker.HealthChecker, serviceRegistry *service_registry.ServiceRegistry) *HealthHandler {
+func NewHealthHandler(healthChecker *apigateway.HealthChecker, serviceRegistry *apigateway.ServiceRegistry) *HealthHandler {
 	return &HealthHandler{
 		healthChecker:   healthChecker,
 		serviceRegistry: serviceRegistry,
