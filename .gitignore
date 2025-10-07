@@ -1,0 +1,70 @@
+# 日志文件
+*.log
+logs/
+zervigo_future/logs/
+
+# 测试数据和报告
+*_test_*.json
+*_test_*.md
+*_report_*.json
+*_report_*.md
+*_analysis_*.json
+*_analysis_*.md
+
+# 备份文件
+*.backup
+*.bak
+*.tar
+*.tar.gz
+*.zip
+
+# 临时文件
+tmp/
+temp/
+__pycache__/
+*.pyc
+*.pyo
+
+# 大型二进制文件
+*.db
+*.sqlite
+*.sqlite3
+*.rdb
+
+# 测试数据
+test_data/
+*_test_data.json
+*_test_data.sql
+
+# 文档和报告（保留核心文档）
+@alibaba_cloud_*/
+@alibaba_cloud_practices/
+@future_optimized/
+@dao/
+*.md
+!README.md
+!CICD_*.md
+!GITHUB_*.md
+!IMPLEMENTATION_*.md
+!COMPLETE_*.md
+
+# 脚本文件（保留核心脚本）
+*.sh
+!zervigo_future/scripts/deployment/*.sh
+!zervigo_future/scripts/maintenance/*.sh
+
+# Python测试文件
+*_test.py
+*_analysis.py
+*_report.py
+*_comparison.py
+*_optimization.py
+*_verification.py
+*_sync.py
+*_monitor.py
+
+# 其他大文件
+*.pdf
+*.docx
+*.xlsx
+*.csv
