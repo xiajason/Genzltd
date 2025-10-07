@@ -1,0 +1,190 @@
+{
+  "timestamp": "2025-10-03T00:01:50.500352",
+  "server_ip": "47.115.168.107",
+  "test_name": "阿里云生产环境端到端测试",
+  "environment": "production",
+  "summary": {
+    "total_tests": 19,
+    "passed": 19,
+    "failed": 0,
+    "success_rate": "100.0%"
+  },
+  "test_results": {
+    "connectivity": {
+      "total_tests": 7,
+      "passed": 7,
+      "failed": 0,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Prometheus监控",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 23,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "service": "Grafana面板",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 70,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "service": "Node Exporter",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 66721,
+          "content_type": "text/plain; version=0.0.4; charset=utf-8"
+        }
+      ]
+    },
+    "production_services": {
+      "total_tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.020926
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.02089
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.019915
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.02151
+        }
+      ]
+    },
+    "monitoring_system": {
+      "total_tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "details": [
+        {
+          "service": "Prometheus",
+          "test": "health_check",
+          "status": "passed",
+          "response": "Prometheus is Healthy."
+        },
+        {
+          "service": "Grafana",
+          "test": "health_check",
+          "status": "passed",
+          "http_code": 200
+        },
+        {
+          "service": "Node Exporter",
+          "test": "metrics_collection",
+          "status": "passed",
+          "metrics_count": 635
+        }
+      ]
+    },
+    "integration": {
+      "total_tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "service": "Production Integration",
+          "test": "all_services_accessible",
+          "status": "passed",
+          "services_count": 7,
+          "successful_services": 7
+        }
+      ]
+    },
+    "performance": {
+      "total_tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.022127,
+          "performance_level": "excellent"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.023832,
+          "performance_level": "excellent"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.021438,
+          "performance_level": "excellent"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.023833,
+          "performance_level": "excellent"
+        }
+      ]
+    }
+  }
+}

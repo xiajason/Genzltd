@@ -1,0 +1,38 @@
+api:
+  aliyun: http://aliyun-api-server
+  local: http://localhost:8080
+  tencent: http://tencent-api-server
+database:
+  mongodb:
+    database: mbti_docs
+    host: localhost
+    port: 27017
+  mysql:
+    database: mbti_unified
+    host: localhost
+    password: ''
+    port: 3306
+    user: root
+  neo4j:
+    host: localhost
+    http_port: 7474  # Web界面端口
+    bolt_port: 7687  # 数据库连接端口
+    username: neo4j
+    password: mbti_neo4j_2025
+  postgresql:
+    database: mbti_ai
+    host: localhost
+    password: ''
+    port: 5432
+    user: postgres
+  redis:
+    db: 0
+    host: localhost
+    password: ''
+    port: 6379
+  sqlite:
+    path: mbti_local.db
+monitoring:
+  alerts: true
+  enabled: true
+  interval: 60

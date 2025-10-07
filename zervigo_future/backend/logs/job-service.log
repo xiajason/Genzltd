@@ -1,0 +1,3 @@
+# command-line-arguments
+./main.go:39:2: undefined: setupJobRoutes
+./main.go:42:2: undefined: setupJobEvolutionRoutes

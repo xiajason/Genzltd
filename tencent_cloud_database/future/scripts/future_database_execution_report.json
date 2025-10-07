@@ -1,0 +1,49 @@
+{
+  "execution_time": "2025-10-06T09:27:35.471319",
+  "total_scripts": 8,
+  "successful_scripts": 3,
+  "failed_scripts": 5,
+  "success_rate": 37.5,
+  "detailed_results": {
+    "mysql": {
+      "status": "failed",
+      "error": "/bin/sh: 1: mysql: not found\n",
+      "output": ""
+    },
+    "postgresql": {
+      "status": "failed",
+      "error": "/bin/sh: 1: psql: not found\n",
+      "output": ""
+    },
+    "sqlite": {
+      "status": "success",
+      "output": "🎯 Future版SQLite数据库结构创建脚本\n==================================================\n🚀 开始为 5 个用户创建SQLite数据库结构...\n✅ 用户 1 的SQLite数据库结构创建完成: data/users/1/resume.db\n✅ 用户 2 的SQLite数据库结构创建完成: data/users/2/resume.db\n✅ 用户 3 的SQLite数据库结构创建完成: data/users/3/resume.db\n✅ 用户 4 的SQLite数据库结构创建完成: data/users/4/resume.db\n✅ 用户 5 的SQLite数据库结构创建完成: data/users/5/resume.db\n✅ 完成！成功创建 5/5 个用户数据库\n\n🔍 验证数据库结构...\n✅ 用户 1: 数据库结构验证通过，隐私设置: 5条，偏好设置: 5条\n✅ 用户 2: 数据库结构验证通过，隐私设置: 5条，偏好设置: 5条\n✅ 用户 3: 数据库结构验证通过，隐私设置: 5条，偏好设置: 5条\n✅ 用户 4: 数据库结构验证通过，隐私设置: 5条，偏好设置: 5条\n✅ 用户 5: 数据库结构验证通过，隐私设置: 5条，偏好设置: 5条\n\n🎉 Future版SQLite数据库结构创建完成！\n📊 统计: 成功创建 5/5 个用户数据库\n📁 数据库位置: data/users\n",
+      "error": ""
+    },
+    "redis": {
+      "status": "success",
+      "output": "🎯 Future版Redis数据库结构配置脚本\n==================================================\n❌ Redis连接测试失败: Authentication required.\n❌ 无法连接到Redis服务器，请检查Redis是否运行\n",
+      "error": ""
+    },
+    "neo4j": {
+      "status": "success",
+      "output": "🎯 Future版Neo4j图数据库结构创建脚本\n==================================================\n❌ Neo4j连接测试失败: {neo4j_code: Neo.ClientError.Security.Unauthorized} {message: The client is unauthorized due to authentication failure.} {gql_status: 50N42} {gql_status_description: error: general processing exception - unexpected error. The client is unauthorized due to authentication failure.}\n❌ 无法连接到Neo4j服务器，请检查Neo4j是否运行\n",
+      "error": ""
+    },
+    "elasticsearch": {
+      "status": "failed",
+      "error": "Traceback (most recent call last):\n  File \"/opt/jobfirst-multi-version/future/scripts/future_elasticsearch_database_structure.py\", line 714, in <module>\n    main()\n  File \"/opt/jobfirst-multi-version/future/scripts/future_elasticsearch_database_structure.py\", line 693, in main\n    creator = FutureElasticsearchDatabaseCreator()\n  File \"/opt/jobfirst-multi-version/future/scripts/future_elasticsearch_database_structure.py\", line 26, in __init__\n    self.es = Elasticsearch([{'host': host, 'port': port}])\n  File \"/home/ubuntu/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/__init__.py\", line 247, in __init__\n    node_configs = client_node_configs(\n  File \"/home/ubuntu/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py\", line 119, in client_node_configs\n    node_configs = hosts_to_node_configs(hosts)\n  File \"/home/ubuntu/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py\", line 167, in hosts_to_node_configs\n    node_configs.append(host_mapping_to_node_config(host))\n  File \"/home/ubuntu/.local/lib/python3.10/site-packages/elasticsearch/_sync/client/utils.py\", line 197, in host_mapping_to_node_config\n    return NodeConfig(**options)  # type: ignore[arg-type]\nTypeError: NodeConfig.__init__() missing 1 required positional argument: 'scheme'\n",
+      "output": "🎯 Future版Elasticsearch索引结构创建脚本\n==================================================\n"
+    },
+    "weaviate": {
+      "status": "failed",
+      "error": "/opt/jobfirst-multi-version/future/scripts/future_weaviate_database_structure.py:26: DeprecationWarning: \nPython client v3 `weaviate.Client(...)` has been removed.\n\nUpgrade your code to use Python client v4 `weaviate.WeaviateClient` connections and methods.\n    - For Python Client v4 usage, see: https://weaviate.io/developers/weaviate/client-libraries/python\n    - For code migration, see: https://weaviate.io/developers/weaviate/client-libraries/python/v3_v4_migration\n\nIf you have to use v3 code, install the v3 client and pin the v3 dependency in your requirements file: `weaviate-client>=3.26.7;<4.0.0`\n  self.client = weaviate.Client(url=url)\nTraceback (most recent call last):\n  File \"/opt/jobfirst-multi-version/future/scripts/future_weaviate_database_structure.py\", line 753, in <module>\n    main()\n  File \"/opt/jobfirst-multi-version/future/scripts/future_weaviate_database_structure.py\", line 732, in main\n    creator = FutureWeaviateDatabaseCreator()\n  File \"/opt/jobfirst-multi-version/future/scripts/future_weaviate_database_structure.py\", line 26, in __init__\n    self.client = weaviate.Client(url=url)\nTypeError: Client.__init__() got an unexpected keyword argument 'url'\n",
+      "output": "🎯 Future版Weaviate向量数据库结构创建脚本\n==================================================\n"
+    },
+    "verification": {
+      "status": "failed",
+      "error": "Traceback (most recent call last):\n  File \"/opt/jobfirst-multi-version/future/scripts/future_database_verification_script.py\", line 10, in <module>\n    import psycopg2\nModuleNotFoundError: No module named 'psycopg2'\n",
+      "output": ""
+    }
+  }
+}

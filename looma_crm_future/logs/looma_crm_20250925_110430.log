@@ -1,0 +1,70 @@
+[2025-09-25 11:04:31 +0800] [3602] [INFO] Sanic v23.12.1
+2025-09-25 11:04:31,718 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-25 11:04:31 +0800] [3602] [INFO] Goin' Fast @ http://0.0.0.0:8700
+2025-09-25 11:04:31,719 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:8700
+[2025-09-25 11:04:31 +0800] [3602] [INFO] app: looma_crm
+2025-09-25 11:04:31,719 - sanic.root - INFO - app: looma_crm
+[2025-09-25 11:04:31 +0800] [3602] [INFO] mode: production, single worker
+2025-09-25 11:04:31,719 - sanic.root - INFO - mode: production, single worker
+[2025-09-25 11:04:31 +0800] [3602] [INFO] server: sanic, HTTP/1.1
+2025-09-25 11:04:31,719 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-25 11:04:31 +0800] [3602] [INFO] python: 3.12.11
+2025-09-25 11:04:31,719 - sanic.root - INFO - python: 3.12.11
+[2025-09-25 11:04:31 +0800] [3602] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-25 11:04:31,719 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-25 11:04:31 +0800] [3602] [INFO] packages: sanic-routing==23.12.0
+2025-09-25 11:04:31,719 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-25 11:04:32,390 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-25 11:04:32,390 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-25 11:04:32,390 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-25 11:04:37,433 - shared.database.unified_data_access - WARNING - Weaviate连接初始化失败: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8091 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-09-25 11:04:37,452 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-25 11:04:37,452 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-25 11:04:37,454 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-25 11:04:37,477 - shared.database.unified_data_access - WARNING - MongoDB连接初始化失败: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-09-25 11:04:37,482 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功 (无认证模式)
+2025-09-25 11:04:37,482 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-25 11:04:37,482 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-25 11:04:37,482 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-25 11:04:37,482 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-25 11:04:37,482 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-25 11:04:37,482 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-25 11:04:37,482 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-25 11:04:37 +0800] [3610] [INFO] Starting worker [3610]
+2025-09-25 11:04:37,484 - sanic.server - INFO - Starting worker [3610]
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/pymongo/synchronous/topology.py:553: ResourceWarning: Unclosed MongoClient opened at:
+  File "<string>", line 1, in <module>
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/worker/serve.py", line 117, in worker_serve
+    return _serve_http_1(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 257, in _serve_http_1
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/app.py", line 2450, in _server_event
+    await self.dispatch(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/signals.py", line 304, in dispatch
+    return await dispatch
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/signals.py", line 248, in _dispatch
+    retval = await maybe_coroutine
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/app.py", line 1629, in _listener
+    await maybe_coro
+  File "/Users/szjason72/jobfirst/looma_crm_pro/looma_crm/app.py", line 60, in setup_services
+    await app.ctx.data_access.initialize()
+  File "/Users/szjason72/jobfirst/looma_crm_pro/shared/database/unified_data_access.py", line 56, in initialize
+    await self._init_mongodb()
+  File "/Users/szjason72/jobfirst/looma_crm_pro/shared/database/unified_data_access.py", line 131, in _init_mongodb
+    self.mongodb_client = AsyncIOMotorClient(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/motor/core.py", line 171, in __init__
+    delegate = self.__delegate_class__(*args, **kwargs)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 882, in __init__
+    self._init_based_on_options(self._seeds, srv_max_hosts, srv_service_name)
+Call MongoClient.close() to safely shut down your client and free up resources.
+  self._process_change(server_description, reset_pool, interrupt_connections)

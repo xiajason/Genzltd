@@ -1,0 +1,36 @@
+server:
+  port: 9009
+  servlet:
+    context-path: /blockchain
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: blockchain
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*.xml
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: AUTO
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+    banner: false
+  #原生配置
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    call-setters-on-nulls: true
+    jdbc-type-for-null: 'null'
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #开启sql日志
+
+logging:
+  config: classpath:logback-spring.xml
+  level:
+    root: info # 修改控制台log等级
+
+service:
+  version: ${APP_VERSION:1.0.0#230303}

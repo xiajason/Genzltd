@@ -1,0 +1,4214 @@
+{
+  "name": "MBTI 完整版题库",
+  "version": "v1.0",
+  "total_questions": 200,
+  "questions": [
+    {
+      "id": 1,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632165"
+    },
+    {
+      "id": 2,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632202"
+    },
+    {
+      "id": 3,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632403"
+    },
+    {
+      "id": 4,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632200"
+    },
+    {
+      "id": 5,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632140"
+    },
+    {
+      "id": 6,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632321"
+    },
+    {
+      "id": 7,
+      "question_text": "在制定计划时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632253"
+    },
+    {
+      "id": 8,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632373"
+    },
+    {
+      "id": 9,
+      "question_text": "面对新想法时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632193"
+    },
+    {
+      "id": 10,
+      "question_text": "在制定计划时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632260"
+    },
+    {
+      "id": 11,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632385"
+    },
+    {
+      "id": 12,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632070"
+    },
+    {
+      "id": 13,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632276"
+    },
+    {
+      "id": 14,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632465"
+    },
+    {
+      "id": 15,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "确定的时间表",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632492"
+    },
+    {
+      "id": 16,
+      "question_text": "在安排时间时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632451"
+    },
+    {
+      "id": 17,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632291"
+    },
+    {
+      "id": 18,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632364"
+    },
+    {
+      "id": 19,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632258"
+    },
+    {
+      "id": 20,
+      "question_text": "在制定计划时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632244"
+    },
+    {
+      "id": 21,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632471"
+    },
+    {
+      "id": 22,
+      "question_text": "面对批评时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632305"
+    },
+    {
+      "id": 23,
+      "question_text": "在团队决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632286"
+    },
+    {
+      "id": 24,
+      "question_text": "面对变化时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632428"
+    },
+    {
+      "id": 25,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632279"
+    },
+    {
+      "id": 26,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632062"
+    },
+    {
+      "id": 27,
+      "question_text": "面对抽象概念时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632212"
+    },
+    {
+      "id": 28,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632142"
+    },
+    {
+      "id": 29,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632089"
+    },
+    {
+      "id": 30,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632438"
+    },
+    {
+      "id": 31,
+      "question_text": "在团队决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632347"
+    },
+    {
+      "id": 32,
+      "question_text": "在长期目标中，你更关注：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632409"
+    },
+    {
+      "id": 33,
+      "question_text": "在项目管理中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632416"
+    },
+    {
+      "id": 34,
+      "question_text": "在团队决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632394"
+    },
+    {
+      "id": 35,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632496"
+    },
+    {
+      "id": 36,
+      "question_text": "面对批评时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632307"
+    },
+    {
+      "id": 37,
+      "question_text": "在团队合作中，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632128"
+    },
+    {
+      "id": 38,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "确定的时间表",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632422"
+    },
+    {
+      "id": 39,
+      "question_text": "在制定计划时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632172"
+    },
+    {
+      "id": 40,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632080"
+    },
+    {
+      "id": 41,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632153"
+    },
+    {
+      "id": 42,
+      "question_text": "在制定计划时，你更关注：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632499"
+    },
+    {
+      "id": 43,
+      "question_text": "在复杂项目中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632418"
+    },
+    {
+      "id": 44,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632350"
+    },
+    {
+      "id": 45,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632274"
+    },
+    {
+      "id": 46,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632103"
+    },
+    {
+      "id": 47,
+      "question_text": "面对新环境时，你的第一反应是：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632045"
+    },
+    {
+      "id": 48,
+      "question_text": "在团队决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632359"
+    },
+    {
+      "id": 49,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632420"
+    },
+    {
+      "id": 50,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632051"
+    },
+    {
+      "id": 51,
+      "question_text": "面对变化时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "确定的时间表",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632413"
+    },
+    {
+      "id": 52,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632082"
+    },
+    {
+      "id": 53,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632494"
+    },
+    {
+      "id": 54,
+      "question_text": "在深度思考时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632060"
+    },
+    {
+      "id": 55,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632179"
+    },
+    {
+      "id": 56,
+      "question_text": "面对新想法时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632188"
+    },
+    {
+      "id": 57,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632453"
+    },
+    {
+      "id": 58,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632295"
+    },
+    {
+      "id": 59,
+      "question_text": "在深度思考时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632149"
+    },
+    {
+      "id": 60,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632126"
+    },
+    {
+      "id": 61,
+      "question_text": "面对批评时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632331"
+    },
+    {
+      "id": 62,
+      "question_text": "在项目管理中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632446"
+    },
+    {
+      "id": 63,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632397"
+    },
+    {
+      "id": 64,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632405"
+    },
+    {
+      "id": 65,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632218"
+    },
+    {
+      "id": 66,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632486"
+    },
+    {
+      "id": 67,
+      "question_text": "面对变化时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632457"
+    },
+    {
+      "id": 68,
+      "question_text": "面对批评时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632383"
+    },
+    {
+      "id": 69,
+      "question_text": "在制定计划时，你更关注：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632461"
+    },
+    {
+      "id": 70,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632110"
+    },
+    {
+      "id": 71,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632283"
+    },
+    {
+      "id": 72,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632326"
+    },
+    {
+      "id": 73,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632407"
+    },
+    {
+      "id": 74,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632246"
+    },
+    {
+      "id": 75,
+      "question_text": "在解决问题时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632067"
+    },
+    {
+      "id": 76,
+      "question_text": "在长期关系中，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632340"
+    },
+    {
+      "id": 77,
+      "question_text": "在解决问题时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632160"
+    },
+    {
+      "id": 78,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632265"
+    },
+    {
+      "id": 79,
+      "question_text": "在长期关系中，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632354"
+    },
+    {
+      "id": 80,
+      "question_text": "在解决问题时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632096"
+    },
+    {
+      "id": 81,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632223"
+    },
+    {
+      "id": 82,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632302"
+    },
+    {
+      "id": 83,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632436"
+    },
+    {
+      "id": 84,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632267"
+    },
+    {
+      "id": 85,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632242"
+    },
+    {
+      "id": 86,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632073"
+    },
+    {
+      "id": 87,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632380"
+    },
+    {
+      "id": 88,
+      "question_text": "在安排时间时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632455"
+    },
+    {
+      "id": 89,
+      "question_text": "在复杂项目中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632432"
+    },
+    {
+      "id": 90,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632237"
+    },
+    {
+      "id": 91,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632121"
+    },
+    {
+      "id": 92,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632426"
+    },
+    {
+      "id": 93,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632144"
+    },
+    {
+      "id": 94,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632333"
+    },
+    {
+      "id": 95,
+      "question_text": "在解决问题时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632135"
+    },
+    {
+      "id": 96,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632378"
+    },
+    {
+      "id": 97,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632310"
+    },
+    {
+      "id": 98,
+      "question_text": "在复杂项目中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632430"
+    },
+    {
+      "id": 99,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632107"
+    },
+    {
+      "id": 100,
+      "question_text": "面对批评时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632392"
+    },
+    {
+      "id": 101,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632214"
+    },
+    {
+      "id": 102,
+      "question_text": "在创新项目中，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632174"
+    },
+    {
+      "id": 103,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632170"
+    },
+    {
+      "id": 104,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632195"
+    },
+    {
+      "id": 105,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632105"
+    },
+    {
+      "id": 106,
+      "question_text": "在获取信息时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632221"
+    },
+    {
+      "id": 107,
+      "question_text": "在解决问题时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632101"
+    },
+    {
+      "id": 108,
+      "question_text": "在安排时间时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632488"
+    },
+    {
+      "id": 109,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632112"
+    },
+    {
+      "id": 110,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632255"
+    },
+    {
+      "id": 111,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632293"
+    },
+    {
+      "id": 112,
+      "question_text": "在获取信息时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632186"
+    },
+    {
+      "id": 113,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632137"
+    },
+    {
+      "id": 114,
+      "question_text": "在复杂决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632336"
+    },
+    {
+      "id": 115,
+      "question_text": "在团队合作中，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632114"
+    },
+    {
+      "id": 116,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632235"
+    },
+    {
+      "id": 117,
+      "question_text": "当你需要充电时，你更喜欢：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632162"
+    },
+    {
+      "id": 118,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632119"
+    },
+    {
+      "id": 119,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632440"
+    },
+    {
+      "id": 120,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632228"
+    },
+    {
+      "id": 121,
+      "question_text": "在制定计划时，你更关注：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632501"
+    },
+    {
+      "id": 122,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632239"
+    },
+    {
+      "id": 123,
+      "question_text": "在创新项目中，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632198"
+    },
+    {
+      "id": 124,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632376"
+    },
+    {
+      "id": 125,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632484"
+    },
+    {
+      "id": 126,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632345"
+    },
+    {
+      "id": 127,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632057"
+    },
+    {
+      "id": 128,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632124"
+    },
+    {
+      "id": 129,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632387"
+    },
+    {
+      "id": 130,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632078"
+    },
+    {
+      "id": 131,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632076"
+    },
+    {
+      "id": 132,
+      "question_text": "在创新项目中，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632281"
+    },
+    {
+      "id": 133,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632324"
+    },
+    {
+      "id": 134,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632442"
+    },
+    {
+      "id": 135,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632362"
+    },
+    {
+      "id": 136,
+      "question_text": "在解决问题时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632098"
+    },
+    {
+      "id": 137,
+      "question_text": "在长期关系中，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632342"
+    },
+    {
+      "id": 138,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632300"
+    },
+    {
+      "id": 139,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632205"
+    },
+    {
+      "id": 140,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "确定的时间表",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632469"
+    },
+    {
+      "id": 141,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632467"
+    },
+    {
+      "id": 142,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632151"
+    },
+    {
+      "id": 143,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632272"
+    },
+    {
+      "id": 144,
+      "question_text": "当你需要充电时，你更喜欢：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632085"
+    },
+    {
+      "id": 145,
+      "question_text": "在获取信息时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632269"
+    },
+    {
+      "id": 146,
+      "question_text": "在团队决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632298"
+    },
+    {
+      "id": 147,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632288"
+    },
+    {
+      "id": 148,
+      "question_text": "在创新项目中，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632249"
+    },
+    {
+      "id": 149,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "decision",
+      "created_at": "2025-10-04T10:03:39.632314"
+    },
+    {
+      "id": 150,
+      "question_text": "你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632167"
+    },
+    {
+      "id": 151,
+      "question_text": "面对新想法时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "细节和步骤",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632230"
+    },
+    {
+      "id": 152,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "和谐关系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632371"
+    },
+    {
+      "id": 153,
+      "question_text": "在评价他人时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632319"
+    },
+    {
+      "id": 154,
+      "question_text": "在深度思考时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632065"
+    },
+    {
+      "id": 155,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632317"
+    },
+    {
+      "id": 156,
+      "question_text": "当你需要充电时，你更喜欢：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632087"
+    },
+    {
+      "id": 157,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632177"
+    },
+    {
+      "id": 158,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632399"
+    },
+    {
+      "id": 159,
+      "question_text": "在项目管理中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632434"
+    },
+    {
+      "id": 160,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632478"
+    },
+    {
+      "id": 161,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "确定的时间表",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632444"
+    },
+    {
+      "id": 162,
+      "question_text": "在项目管理中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632424"
+    },
+    {
+      "id": 163,
+      "question_text": "面对灵活需求时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632503"
+    },
+    {
+      "id": 164,
+      "question_text": "在安排时间时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632490"
+    },
+    {
+      "id": 165,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "主动参与讨论",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632131"
+    },
+    {
+      "id": 166,
+      "question_text": "当你需要充电时，你更喜欢：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "social",
+      "created_at": "2025-10-04T10:03:39.632133"
+    },
+    {
+      "id": 167,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632183"
+    },
+    {
+      "id": 168,
+      "question_text": "在社交聚会中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632094"
+    },
+    {
+      "id": 169,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632216"
+    },
+    {
+      "id": 170,
+      "question_text": "面对批评时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632352"
+    },
+    {
+      "id": 171,
+      "question_text": "在创新项目中，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632181"
+    },
+    {
+      "id": 172,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "现实的应用",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "抽象的概念",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "perception",
+      "created_at": "2025-10-04T10:03:39.632207"
+    },
+    {
+      "id": 173,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "逻辑分析",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632390"
+    },
+    {
+      "id": 174,
+      "question_text": "在复杂决策中，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632357"
+    },
+    {
+      "id": 175,
+      "question_text": "在复杂项目中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632473"
+    },
+    {
+      "id": 176,
+      "question_text": "在完成任务时，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632401"
+    },
+    {
+      "id": 177,
+      "question_text": "面对变化时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632480"
+    },
+    {
+      "id": 178,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632338"
+    },
+    {
+      "id": 179,
+      "question_text": "在获取信息时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632191"
+    },
+    {
+      "id": 180,
+      "question_text": "在做决定时，你更倾向于：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "个人感受",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "judgment",
+      "created_at": "2025-10-04T10:03:39.632369"
+    },
+    {
+      "id": 181,
+      "question_text": "在获取信息时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "未来的可能性",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632262"
+    },
+    {
+      "id": 182,
+      "question_text": "面对冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "理性判断",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632367"
+    },
+    {
+      "id": 183,
+      "question_text": "在长期规划中，你更关注：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "可能的联系",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632225"
+    },
+    {
+      "id": 184,
+      "question_text": "面对价值观冲突时，你更愿意：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "公平原则",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "主观价值",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632328"
+    },
+    {
+      "id": 185,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "确定的时间表",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632476"
+    },
+    {
+      "id": 186,
+      "question_text": "当你感到压力时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "独立思考",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632092"
+    },
+    {
+      "id": 187,
+      "question_text": "面对复杂的人际关系时，你更愿意：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "与很多人交流",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632117"
+    },
+    {
+      "id": 188,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632146"
+    },
+    {
+      "id": 189,
+      "question_text": "在项目管理中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632449"
+    },
+    {
+      "id": 190,
+      "question_text": "在深度思考时，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "与少数人深入交流",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "personality",
+      "created_at": "2025-10-04T10:03:39.632054"
+    },
+    {
+      "id": 191,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632209"
+    },
+    {
+      "id": 192,
+      "question_text": "在复杂项目中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "开放的时间表",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "lifestyle",
+      "created_at": "2025-10-04T10:03:39.632482"
+    },
+    {
+      "id": 193,
+      "question_text": "在制定计划时，你更倾向于：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "实际的经验",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "information",
+      "created_at": "2025-10-04T10:03:39.632233"
+    },
+    {
+      "id": 194,
+      "question_text": "在复杂项目中，你更倾向于：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "提前计划",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "适应变化",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "structure",
+      "created_at": "2025-10-04T10:03:39.632463"
+    },
+    {
+      "id": 195,
+      "question_text": "在长期项目中，你更倾向于：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "寻求外部刺激",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "仔细考虑后决定",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632158"
+    },
+    {
+      "id": 196,
+      "question_text": "面对不确定性时，你更愿意：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "结构化的方式",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "灵活的方式",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632459"
+    },
+    {
+      "id": 197,
+      "question_text": "面对理论分析时，你更愿意：",
+      "dimension": "SN",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "S",
+          "text": "具体的事实",
+          "score": 1
+        },
+        {
+          "value": "N",
+          "text": "整体和模式",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "learning",
+      "created_at": "2025-10-04T10:03:39.632251"
+    },
+    {
+      "id": 198,
+      "question_text": "在长期目标中，你更关注：",
+      "dimension": "JP",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "J",
+          "text": "按计划执行",
+          "score": 1
+        },
+        {
+          "value": "P",
+          "text": "保持灵活",
+          "score": -1
+        }
+      ],
+      "difficulty": "hard",
+      "category": "planning",
+      "created_at": "2025-10-04T10:03:39.632411"
+    },
+    {
+      "id": 199,
+      "question_text": "在解决问题时，你更关注：",
+      "dimension": "TF",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "T",
+          "text": "客观标准",
+          "score": 1
+        },
+        {
+          "value": "F",
+          "text": "情感考虑",
+          "score": -1
+        }
+      ],
+      "difficulty": "medium",
+      "category": "values",
+      "created_at": "2025-10-04T10:03:39.632312"
+    },
+    {
+      "id": 200,
+      "question_text": "当你需要充电时，你更喜欢：",
+      "dimension": "EI",
+      "question_type": "advanced",
+      "options": [
+        {
+          "value": "E",
+          "text": "快速做出决定",
+          "score": 1
+        },
+        {
+          "value": "I",
+          "text": "寻求内心平静",
+          "score": -1
+        }
+      ],
+      "difficulty": "easy",
+      "category": "energy",
+      "created_at": "2025-10-04T10:03:39.632155"
+    }
+  ],
+  "dimensions": {
+    "EI": 50,
+    "SN": 50,
+    "TF": 50,
+    "JP": 50
+  },
+  "created_at": "2025-10-04T10:03:39.632536"
+}

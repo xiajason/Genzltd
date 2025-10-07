@@ -1,0 +1,139 @@
+version: '3.8'
+
+services:
+  # MySQL数据库 - 元数据存储
+  blockchain-mysql:
+    image: mysql:8.0
+    container_name: blockchain-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: f_mysql_root_2025
+      MYSQL_DATABASE: jobfirst_blockchain
+      MYSQL_USER: blockchain_user
+      MYSQL_PASSWORD: f_mysql_password_2025
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    networks:
+      - blockchain-network
+    command: --default-authentication-plugin=mysql_native_password
+
+  # PostgreSQL数据库 - AI服务
+  blockchain-postgresql:
+    image: postgres:15
+    container_name: blockchain-postgresql
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: f_pg
+      POSTGRES_USER: blockchain_user
+      POSTGRES_PASSWORD: f_postgres_password_2025
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
+      - ./logs/postgresql:/var/log/postgresql
+    networks:
+      - blockchain-network
+
+  # Redis缓存数据库
+  blockchain-redis:
+    image: redis:7-alpine
+    container_name: blockchain-redis
+    restart: unless-stopped
+    command: redis-server --requirepass f_redis_password_2025
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+      - ./logs/redis:/var/log/redis
+    networks:
+      - blockchain-network
+
+  # Neo4j图数据库
+  blockchain-neo4j:
+    image: neo4j:5.15.0
+    container_name: blockchain-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/f_neo4j_password_2025
+      NEO4J_dbms_security_auth__enabled: "true"
+      NEO4J_dbms_default__database: blockchain-graph
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./data/neo4j:/data
+      - ./logs/neo4j:/logs
+    networks:
+      - blockchain-network
+
+  # Elasticsearch搜索引擎
+  blockchain-elasticsearch:
+    image: elasticsearch:7.17.9
+    container_name: blockchain-elasticsearch
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - ./logs/elasticsearch:/usr/share/elasticsearch/logs
+    networks:
+      - blockchain-network
+
+  # Weaviate向量数据库
+  blockchain-weaviate:
+    image: semitechnologies/weaviate:1.21.0
+    container_name: blockchain-weaviate
+    restart: unless-stopped
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      CLUSTER_HOSTNAME: 'node1'
+    ports:
+      - "8080:8080"
+      - "8082:8082"
+    volumes:
+      - ./data/weaviate:/var/lib/weaviate
+      - ./logs/weaviate:/var/log/weaviate
+    networks:
+      - blockchain-network
+
+  # SQLite数据库管理服务
+  blockchain-sqlite-manager:
+    image: python:3.11-slim
+    container_name: blockchain-sqlite-manager
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./data/sqlite:/app/data
+      - ./scripts:/app/scripts
+      - ./logs/sqlite:/app/logs
+    networks:
+      - blockchain-network
+    command: tail -f /dev/null
+
+networks:
+  blockchain-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  blockchain-mysql-data:
+  blockchain-postgresql-data:
+  blockchain-redis-data:
+  blockchain-neo4j-data:
+  blockchain-elasticsearch-data:
+  blockchain-weaviate-data:
+  blockchain-sqlite-data:

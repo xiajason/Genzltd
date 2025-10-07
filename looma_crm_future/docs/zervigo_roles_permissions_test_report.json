@@ -1,0 +1,464 @@
+{
+  "test_summary": {
+    "total_tests": 32,
+    "successful_tests": 20,
+    "failed_tests": 12,
+    "success_rate": 62.5,
+    "timestamp": "2025-09-23T22:56:48.879731"
+  },
+  "test_categories": {
+    "角色层次结构": [
+      {
+        "test_name": "超级管理员层次",
+        "success": true,
+        "role": "super_admin",
+        "expected_level": 5,
+        "actual_level": 5,
+        "expected_permissions": 50,
+        "actual_permissions": 51,
+        "level_match": true,
+        "permission_match": true
+      },
+      {
+        "test_name": "系统管理员层次",
+        "success": true,
+        "role": "system_admin",
+        "expected_level": 4,
+        "actual_level": 4,
+        "expected_permissions": 40,
+        "actual_permissions": 42,
+        "level_match": true,
+        "permission_match": true
+      },
+      {
+        "test_name": "数据管理员层次",
+        "success": true,
+        "role": "data_admin",
+        "expected_level": 3,
+        "actual_level": 3,
+        "expected_permissions": 30,
+        "actual_permissions": 35,
+        "level_match": true,
+        "permission_match": true
+      },
+      {
+        "test_name": "HR管理员层次",
+        "success": true,
+        "role": "hr_admin",
+        "expected_level": 3,
+        "actual_level": 3,
+        "expected_permissions": 30,
+        "actual_permissions": 35,
+        "level_match": true,
+        "permission_match": true
+      },
+      {
+        "test_name": "公司管理员层次",
+        "success": true,
+        "role": "company_admin",
+        "expected_level": 2,
+        "actual_level": 2,
+        "expected_permissions": 20,
+        "actual_permissions": 27,
+        "level_match": true,
+        "permission_match": true
+      },
+      {
+        "test_name": "普通用户层次",
+        "success": true,
+        "role": "regular_user",
+        "expected_level": 1,
+        "actual_level": 1,
+        "expected_permissions": 8,
+        "actual_permissions": 10,
+        "level_match": true,
+        "permission_match": true
+      }
+    ],
+    "权限继承": [],
+    "权限控制集成": [],
+    "数据隔离": [],
+    "审计系统": [
+      {
+        "test_name": "超级管理员操作审计",
+        "success": true,
+        "user": "super_admin_user",
+        "role": "super_admin",
+        "action": "admin_operation",
+        "audit_event_id": "f06a57fa-c085-445f-8811-27ed2eaa347e"
+      },
+      {
+        "test_name": "系统管理员操作审计",
+        "success": true,
+        "user": "system_admin_user",
+        "role": "system_admin",
+        "action": "system_operation",
+        "audit_event_id": "6beccac2-77b5-442c-8c5c-4eb917c80169"
+      },
+      {
+        "test_name": "数据管理员操作审计",
+        "success": true,
+        "user": "data_admin_user",
+        "role": "data_admin",
+        "action": "data_operation",
+        "audit_event_id": "64a0872f-3706-4f88-ad3e-551fc360e50a"
+      },
+      {
+        "test_name": "HR管理员操作审计",
+        "success": true,
+        "user": "hr_admin_user",
+        "role": "hr_admin",
+        "action": "hr_operation",
+        "audit_event_id": "e0cf7106-8f9c-41a0-9697-55f222fd8710"
+      },
+      {
+        "test_name": "公司管理员操作审计",
+        "success": true,
+        "user": "company_admin_user",
+        "role": "company_admin",
+        "action": "company_operation",
+        "audit_event_id": "c94b7382-116f-436a-ba7e-2865f4df76c2"
+      },
+      {
+        "test_name": "普通用户操作审计",
+        "success": true,
+        "user": "regular_user",
+        "role": "regular_user",
+        "action": "user_operation",
+        "audit_event_id": "59cf4e1c-5a84-4e9c-b6ce-0b87198648b7"
+      }
+    ]
+  },
+  "detailed_results": [
+    {
+      "test_name": "超级管理员层次",
+      "success": true,
+      "role": "super_admin",
+      "expected_level": 5,
+      "actual_level": 5,
+      "expected_permissions": 50,
+      "actual_permissions": 51,
+      "level_match": true,
+      "permission_match": true
+    },
+    {
+      "test_name": "系统管理员层次",
+      "success": true,
+      "role": "system_admin",
+      "expected_level": 4,
+      "actual_level": 4,
+      "expected_permissions": 40,
+      "actual_permissions": 42,
+      "level_match": true,
+      "permission_match": true
+    },
+    {
+      "test_name": "数据管理员层次",
+      "success": true,
+      "role": "data_admin",
+      "expected_level": 3,
+      "actual_level": 3,
+      "expected_permissions": 30,
+      "actual_permissions": 35,
+      "level_match": true,
+      "permission_match": true
+    },
+    {
+      "test_name": "HR管理员层次",
+      "success": true,
+      "role": "hr_admin",
+      "expected_level": 3,
+      "actual_level": 3,
+      "expected_permissions": 30,
+      "actual_permissions": 35,
+      "level_match": true,
+      "permission_match": true
+    },
+    {
+      "test_name": "公司管理员层次",
+      "success": true,
+      "role": "company_admin",
+      "expected_level": 2,
+      "actual_level": 2,
+      "expected_permissions": 20,
+      "actual_permissions": 27,
+      "level_match": true,
+      "permission_match": true
+    },
+    {
+      "test_name": "普通用户层次",
+      "success": true,
+      "role": "regular_user",
+      "expected_level": 1,
+      "actual_level": 1,
+      "expected_permissions": 8,
+      "actual_permissions": 10,
+      "level_match": true,
+      "permission_match": true
+    },
+    {
+      "test_name": "超级管理员包含系统管理员权限",
+      "success": true,
+      "high_role": "super_admin",
+      "low_role": "system_admin",
+      "high_role_permissions": 51,
+      "low_role_permissions": 42,
+      "inherited_permissions": 42,
+      "inheritance_rate": 1.0
+    },
+    {
+      "test_name": "系统管理员包含数据管理员权限",
+      "success": true,
+      "high_role": "system_admin",
+      "low_role": "data_admin",
+      "high_role_permissions": 42,
+      "low_role_permissions": 35,
+      "inherited_permissions": 35,
+      "inheritance_rate": 1.0
+    },
+    {
+      "test_name": "数据管理员包含公司管理员权限",
+      "success": true,
+      "high_role": "data_admin",
+      "low_role": "company_admin",
+      "high_role_permissions": 35,
+      "low_role_permissions": 27,
+      "inherited_permissions": 27,
+      "inheritance_rate": 1.0
+    },
+    {
+      "test_name": "公司管理员包含普通用户权限",
+      "success": true,
+      "high_role": "company_admin",
+      "low_role": "regular_user",
+      "high_role_permissions": 27,
+      "low_role_permissions": 10,
+      "inherited_permissions": 10,
+      "inheritance_rate": 1.0
+    },
+    {
+      "test_name": "超级管理员 - 用户管理权限",
+      "success": false,
+      "user": "super_admin_user",
+      "role": "super_admin",
+      "resource_type": "user",
+      "action_type": "manage",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 4"
+    },
+    {
+      "test_name": "超级管理员 - 系统管理权限",
+      "success": false,
+      "user": "super_admin_user",
+      "role": "super_admin",
+      "resource_type": "system",
+      "action_type": "manage",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 5"
+    },
+    {
+      "test_name": "系统管理员 - 用户管理权限",
+      "success": false,
+      "user": "system_admin_user",
+      "role": "system_admin",
+      "resource_type": "user",
+      "action_type": "manage",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 4"
+    },
+    {
+      "test_name": "系统管理员 - 系统管理权限",
+      "success": true,
+      "user": "system_admin_user",
+      "role": "system_admin",
+      "resource_type": "system",
+      "action_type": "manage",
+      "expected": false,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 5"
+    },
+    {
+      "test_name": "数据管理员 - 数据管理权限",
+      "success": false,
+      "user": "data_admin_user",
+      "role": "data_admin",
+      "resource_type": "user",
+      "action_type": "read",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 1"
+    },
+    {
+      "test_name": "HR管理员 - 简历管理权限",
+      "success": false,
+      "user": "hr_admin_user",
+      "role": "hr_admin",
+      "resource_type": "resume",
+      "action_type": "manage",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 3"
+    },
+    {
+      "test_name": "公司管理员 - 职位管理权限",
+      "success": false,
+      "user": "company_admin_user",
+      "role": "company_admin",
+      "resource_type": "job",
+      "action_type": "manage",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 3"
+    },
+    {
+      "test_name": "普通用户 - 读取权限",
+      "success": false,
+      "user": "regular_user",
+      "role": "regular_user",
+      "resource_type": "user",
+      "action_type": "read",
+      "expected": true,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 1"
+    },
+    {
+      "test_name": "普通用户 - 管理权限",
+      "success": true,
+      "user": "regular_user",
+      "role": "regular_user",
+      "resource_type": "user",
+      "action_type": "manage",
+      "expected": false,
+      "actual": false,
+      "reason": "角色级别不足: 0 < 4"
+    },
+    {
+      "test_name": "超级管理员 - 访问用户数据",
+      "success": false,
+      "user": "super_admin_user",
+      "role": "super_admin",
+      "resource": "user_data_1",
+      "expected": true,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "系统管理员 - 访问用户数据",
+      "success": false,
+      "user": "system_admin_user",
+      "role": "system_admin",
+      "resource": "user_data_1",
+      "expected": true,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "数据管理员 - 访问用户数据",
+      "success": false,
+      "user": "data_admin_user",
+      "role": "data_admin",
+      "resource": "user_data_1",
+      "expected": true,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "HR管理员 - 访问用户数据",
+      "success": false,
+      "user": "hr_admin_user",
+      "role": "hr_admin",
+      "resource": "user_data_1",
+      "expected": true,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "公司管理员 - 访问用户数据",
+      "success": true,
+      "user": "company_admin_user",
+      "role": "company_admin",
+      "resource": "user_data_1",
+      "expected": false,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "普通用户 - 访问自己的数据",
+      "success": false,
+      "user": "regular_user",
+      "role": "regular_user",
+      "resource": "user_data_1",
+      "expected": true,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "权限不足"
+    },
+    {
+      "test_name": "普通用户 - 访问他人数据",
+      "success": true,
+      "user": "regular_user",
+      "role": "regular_user",
+      "resource": "company_data_1",
+      "expected": false,
+      "actual": false,
+      "isolation_level": "user",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "超级管理员操作审计",
+      "success": true,
+      "user": "super_admin_user",
+      "role": "super_admin",
+      "action": "admin_operation",
+      "audit_event_id": "f06a57fa-c085-445f-8811-27ed2eaa347e"
+    },
+    {
+      "test_name": "系统管理员操作审计",
+      "success": true,
+      "user": "system_admin_user",
+      "role": "system_admin",
+      "action": "system_operation",
+      "audit_event_id": "6beccac2-77b5-442c-8c5c-4eb917c80169"
+    },
+    {
+      "test_name": "数据管理员操作审计",
+      "success": true,
+      "user": "data_admin_user",
+      "role": "data_admin",
+      "action": "data_operation",
+      "audit_event_id": "64a0872f-3706-4f88-ad3e-551fc360e50a"
+    },
+    {
+      "test_name": "HR管理员操作审计",
+      "success": true,
+      "user": "hr_admin_user",
+      "role": "hr_admin",
+      "action": "hr_operation",
+      "audit_event_id": "e0cf7106-8f9c-41a0-9697-55f222fd8710"
+    },
+    {
+      "test_name": "公司管理员操作审计",
+      "success": true,
+      "user": "company_admin_user",
+      "role": "company_admin",
+      "action": "company_operation",
+      "audit_event_id": "c94b7382-116f-436a-ba7e-2865f4df76c2"
+    },
+    {
+      "test_name": "普通用户操作审计",
+      "success": true,
+      "user": "regular_user",
+      "role": "regular_user",
+      "action": "user_operation",
+      "audit_event_id": "59cf4e1c-5a84-4e9c-b6ce-0b87198648b7"
+    }
+  ]
+}

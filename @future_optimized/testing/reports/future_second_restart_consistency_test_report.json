@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-10-06T09:43:35.335162",
+  "version": "future",
+  "restart_number": 2,
+  "test_type": "data_consistency_test_after_second_restart",
+  "test_data": {
+    "id": "future_second_restart_test_001",
+    "value": "future_second_restart_test_value",
+    "timestamp": "2025-10-06T09:43:35.291277"
+  },
+  "results": {
+    "mysql": "✅ 数据一致性验证成功",
+    "redis": "✅ 数据一致性验证成功"
+  },
+  "statistics": {
+    "success_count": 2,
+    "total_count": 2,
+    "success_rate": 100.0,
+    "total_time": 0.04386281967163086
+  }
+}

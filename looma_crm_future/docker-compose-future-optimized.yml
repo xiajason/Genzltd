@@ -1,0 +1,196 @@
+# JobFirst Future版优化Docker Compose配置
+# 使用本地已有镜像，避免重复下载
+
+services:
+  # Future版AI网关服务 - 使用nginx
+  future-ai-gateway:
+    image: nginx:alpine
+    container_name: future-ai-gateway
+    ports:
+      - "7510:80"
+    environment:
+      - AI_GATEWAY_HOST=0.0.0.0
+      - AI_GATEWAY_PORT=7510
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版简历AI服务 - 使用nginx
+  future-resume-ai:
+    image: nginx:alpine
+    container_name: future-resume-ai
+    ports:
+      - "7511:80"
+    environment:
+      - RESUME_AI_HOST=0.0.0.0
+      - RESUME_AI_PORT=7511
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Redis - 使用本地镜像
+  redis-future:
+    image: redis:7-alpine
+    container_name: future-redis
+    ports:
+      - "6382:6379"
+    command: redis-server --appendonly yes --requirepass future_redis_password_2025
+    volumes:
+      - future_redis_data:/data
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "future_redis_password_2025", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用PostgreSQL - 使用本地镜像
+  postgres-future:
+    image: postgres:15
+    container_name: future-postgres
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=jobfirst_future
+      - POSTGRES_USER=jobfirst_future
+      - POSTGRES_PASSWORD=secure_future_password_2025
+    volumes:
+      - future_postgres_data:/var/lib/postgresql/data
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jobfirst_future -d jobfirst_future"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用MongoDB - 使用本地镜像
+  mongodb-future:
+    image: mongo:7.0
+    container_name: future-mongodb
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=jobfirst_future
+      - MONGO_INITDB_ROOT_PASSWORD=secure_future_password_2025
+      - MONGO_INITDB_DATABASE=jobfirst_future
+    volumes:
+      - future_mongodb_data:/data/db
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Neo4j - 使用本地镜像
+  neo4j-future:
+    image: neo4j:5.15
+    container_name: future-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/future_neo4j_password_2025
+      - NEO4J_dbms_default__database=jobfirst_future
+    volumes:
+      - future_neo4j_data:/data
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "future_neo4j_password_2025", "RETURN 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Elasticsearch - 使用本地镜像
+  elasticsearch-future:
+    image: elasticsearch:8.11.0
+    container_name: future-elasticsearch
+    ports:
+      - "9202:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - future_elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200/_cluster/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Weaviate - 使用本地镜像
+  weaviate-future:
+    image: semitechnologies/weaviate:1.21.5
+    container_name: future-weaviate
+    ports:
+      - "8082:8080"
+    environment:
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - DEFAULT_VECTORIZER_MODULE=none
+      - CLUSTER_HOSTNAME=node1
+    volumes:
+      - future_weaviate_data:/var/lib/weaviate
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/v1/meta"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Looma CRM主服务 - 使用nginx
+  looma-crm-future:
+    image: nginx:alpine
+    container_name: looma-crm-future
+    ports:
+      - "7500:80"
+    environment:
+      - POSTGRES_HOST=postgres-future:5432
+      - POSTGRES_DB=jobfirst_future
+      - POSTGRES_USER=jobfirst_future
+      - POSTGRES_PASSWORD=secure_future_password_2025
+      - REDIS_HOST=redis-future:6379
+      - REDIS_DB=1
+      - REDIS_PASSWORD=future_redis_password_2025
+    depends_on:
+      - postgres-future
+      - redis-future
+    networks:
+      - looma-future-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  future_redis_data:
+  future_postgres_data:
+  future_mongodb_data:
+  future_neo4j_data:
+  future_elasticsearch_data:
+  future_weaviate_data:
+
+networks:
+  looma-future-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.25.0.0/16

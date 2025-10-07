@@ -1,0 +1,31 @@
+[20251002_183645] 磁盘使用监控开始
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    10Gi   308Gi     4%    426k  3.2G    0%   /
+devfs            206Ki   206Ki     0Bi   100%     712     0  100%   /dev
+/dev/disk3s6     460Gi    20Ki   308Gi     1%       0  3.2G    0%   /System/Volumes/VM
+/dev/disk3s2     460Gi   6.6Gi   308Gi     3%    1.2k  3.2G    0%   /System/Volumes/Preboot
+/dev/disk3s4     460Gi   4.8Mi   308Gi     1%      58  3.2G    0%   /System/Volumes/Update
+/dev/disk1s2     500Mi   6.0Mi   483Mi     2%       1  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1     500Mi   5.4Mi   483Mi     2%      33  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     500Mi   1.2Mi   483Mi     1%      90  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s5     460Gi   134Gi   308Gi    31%    3.6M  3.2G    0%   /System/Volumes/Data
+map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+
+[20251002_183645] Docker资源监控开始
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          31        10        13.72GB   6.135GB (44%)
+Containers      11        9         1.186MB   172B (0%)
+Local Volumes   89        13        7.812GB   6.818GB (87%)
+Build Cache     42        0         0B        0B
+
+[20251002_183645] 项目目录大小监控开始
+4.7G	.
+
+[20251002_183645] 数据库备份大小监控开始
+4.0K	database-backups/backup_report_20250930_153318.md
+ 24M	database-backups/comprehensive_20251002_131748
+  0B	database-backups/containerized
+3.3G	database-backups/fixed
+260K	database-backups/local
+4.0K	database-backups/verify_backup_20250930_153318.sh
+

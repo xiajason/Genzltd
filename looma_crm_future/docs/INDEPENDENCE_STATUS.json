@@ -1,0 +1,118 @@
+{
+  "independence": {
+    "start_date": "2025-09-24",
+    "current_phase": "1.1",
+    "current_milestone": "\u6570\u636e\u5e93\u72ec\u7acb\u5316",
+    "overall_progress": 0,
+    "phases": {
+      "1": {
+        "name": "\u57fa\u7840\u72ec\u7acb\u5316",
+        "start_date": "2025-09-24",
+        "end_date": "2025-10-20",
+        "progress": 0,
+        "milestones": {
+          "1.1": {
+            "name": "\u6570\u636e\u5e93\u72ec\u7acb\u5316",
+            "status": "completed",
+            "progress": 100,
+            "start_date": "2025-09-24T09:46:05.807455",
+            "end_date": "2025-09-24T10:13:29.909483"
+          },
+          "1.2": {
+            "name": "\u4ee3\u7801\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "1.3": {
+            "name": "\u914d\u7f6e\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "1.4": {
+            "name": "\u811a\u672c\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          }
+        }
+      },
+      "2": {
+        "name": "\u529f\u80fd\u72ec\u7acb\u5316",
+        "start_date": "2025-10-21",
+        "end_date": "2025-11-03",
+        "progress": 0,
+        "milestones": {
+          "2.1": {
+            "name": "AI\u670d\u52a1\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "2.2": {
+            "name": "\u76d1\u63a7\u7cfb\u7edf\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "2.3": {
+            "name": "\u524d\u7aef\u7cfb\u7edf\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "2.4": {
+            "name": "\u96c6\u6210\u6d4b\u8bd5\u72ec\u7acb\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          }
+        }
+      },
+      "3": {
+        "name": "\u751f\u4ea7\u72ec\u7acb\u5316",
+        "start_date": "2025-11-04",
+        "end_date": "2025-11-17",
+        "progress": 0,
+        "milestones": {
+          "3.1": {
+            "name": "\u751f\u4ea7\u73af\u5883\u51c6\u5907",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "3.2": {
+            "name": "\u6570\u636e\u8fc1\u79fb\u751f\u4ea7\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "3.3": {
+            "name": "\u670d\u52a1\u5207\u6362\u751f\u4ea7\u5316",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          },
+          "3.4": {
+            "name": "\u751f\u4ea7\u73af\u5883\u9a8c\u8bc1",
+            "status": "pending",
+            "progress": 0,
+            "start_date": null,
+            "end_date": null
+          }
+        }
+      }
+    }
+  }
+}

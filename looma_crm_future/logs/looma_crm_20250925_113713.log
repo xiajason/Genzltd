@@ -1,0 +1,109 @@
+[2025-09-25 11:37:13 +0800] [31429] [INFO] Sanic v23.12.1
+2025-09-25 11:37:13,752 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-25 11:37:13 +0800] [31429] [INFO] Goin' Fast @ http://0.0.0.0:8700
+2025-09-25 11:37:13,752 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:8700
+[2025-09-25 11:37:13 +0800] [31429] [INFO] app: looma_crm
+2025-09-25 11:37:13,752 - sanic.root - INFO - app: looma_crm
+[2025-09-25 11:37:13 +0800] [31429] [INFO] mode: production, single worker
+2025-09-25 11:37:13,752 - sanic.root - INFO - mode: production, single worker
+[2025-09-25 11:37:13 +0800] [31429] [INFO] server: sanic, HTTP/1.1
+2025-09-25 11:37:13,752 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-25 11:37:13 +0800] [31429] [INFO] python: 3.12.11
+2025-09-25 11:37:13,752 - sanic.root - INFO - python: 3.12.11
+[2025-09-25 11:37:13 +0800] [31429] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-25 11:37:13,752 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-25 11:37:13 +0800] [31429] [INFO] packages: sanic-routing==23.12.0
+2025-09-25 11:37:13,752 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-25 11:37:14,417 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-25 11:37:14,417 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-25 11:37:14,417 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-25 11:37:19,454 - shared.database.unified_data_access - WARNING - Weaviate连接初始化失败: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8091 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-09-25 11:37:19,464 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-25 11:37:19,464 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-25 11:37:19,465 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-25 11:37:19,477 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功
+2025-09-25 11:37:19,477 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-25 11:37:19,477 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-25 11:37:19,477 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-25 11:37:19,477 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-25 11:37:19,477 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-25 11:37:19,477 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-25 11:37:19,477 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-25 11:37:19 +0800] [31436] [INFO] Starting worker [31436]
+2025-09-25 11:37:19,478 - sanic.server - INFO - Starting worker [31436]
+2025-09-25 11:37:23,242 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:37:23,245 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:37:23,246 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:37:23,248 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:37:23,250 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:37:23,251 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:37:23,317 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:37:33,258 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:37:33,260 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:37:33,262 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:37:33,263 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:37:33,264 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:37:33,266 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:37:38,313 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:37:43,272 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:37:43,274 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:37:43,276 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:37:43,278 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:37:43,280 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:37:43,281 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:37:53,290 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:37:53,292 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:37:53,293 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:37:53,295 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:37:53,296 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:37:53,297 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:37:53,314 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:38:03,303 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:03,305 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:03,307 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:03,309 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:03,310 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:03,312 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:38:08,314 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:38:13,319 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:13,321 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:13,323 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:13,324 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:13,325 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:13,326 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:38:23,314 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:38:23,331 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:23,333 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:23,334 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:23,335 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:23,336 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:23,337 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:38:33,340 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:33,341 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:33,342 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:33,343 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:33,344 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:33,345 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:38:34,760 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:38:38,313 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:38:39,822 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:39,822 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:39,823 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:39,823 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:39,824 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:39,824 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:38:43,349 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:43,352 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:43,353 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:43,354 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:43,356 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:43,357 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:38:53,315 - __mp_main__ - ERROR - 未处理的异常: Bad body type. Expected str, got bytes)
+2025-09-25 11:38:53,362 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:38:53,363 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:38:53,366 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:38:53,367 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:38:53,368 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:38:53,369 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]

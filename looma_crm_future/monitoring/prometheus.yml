@@ -1,0 +1,121 @@
+# Prometheus监控配置 - Looma CRM AI架构重构
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+scrape_configs:
+  # Prometheus自身监控
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Looma CRM核心服务
+  - job_name: 'looma-crm'
+    static_configs:
+      - targets: ['looma_crm:8888']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # AI网关服务
+  - job_name: 'ai-gateway'
+    static_configs:
+      - targets: ['ai_gateway:8206']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 简历处理服务
+  - job_name: 'resume-service'
+    static_configs:
+      - targets: ['resume_service:8207']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 职位匹配服务
+  - job_name: 'matching-service'
+    static_configs:
+      - targets: ['matching_service:8208']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 智能对话服务
+  - job_name: 'chat-service'
+    static_configs:
+      - targets: ['chat_service:8209']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 向量搜索服务
+  - job_name: 'vector-service'
+    static_configs:
+      - targets: ['vector_service:8210']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 认证授权服务
+  - job_name: 'auth-service'
+    static_configs:
+      - targets: ['auth_service:8211']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 监控管理服务
+  - job_name: 'monitor-service'
+    static_configs:
+      - targets: ['monitor_service:8212']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 配置管理服务
+  - job_name: 'config-service'
+    static_configs:
+      - targets: ['config_service:8213']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  # 数据库服务监控
+  - job_name: 'neo4j'
+    static_configs:
+      - targets: ['neo4j:7474']
+    metrics_path: '/metrics'
+    scrape_interval: 60s
+
+  - job_name: 'postgres'
+    static_configs:
+      - targets: ['postgres:5432']
+    metrics_path: '/metrics'
+    scrape_interval: 60s
+
+  - job_name: 'redis'
+    static_configs:
+      - targets: ['redis:6379']
+    metrics_path: '/metrics'
+    scrape_interval: 60s
+
+  - job_name: 'elasticsearch'
+    static_configs:
+      - targets: ['elasticsearch:9200']
+    metrics_path: '/_prometheus/metrics'
+    scrape_interval: 60s
+
+  # Weaviate向量数据库
+  - job_name: 'weaviate'
+    static_configs:
+      - targets: ['weaviate:8080']
+    metrics_path: '/v1/metrics'
+    scrape_interval: 60s
+
+  # 系统监控
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['localhost:9100']
+    scrape_interval: 30s
+
+  # 容器监控
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['localhost:8080']
+    scrape_interval: 30s

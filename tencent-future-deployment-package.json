@@ -1,0 +1,79 @@
+{
+  "package_info": {
+    "name": "tencent-future-deployment",
+    "version": "1.0.0",
+    "description": "腾讯云Future版部署包",
+    "created_at": "2025-10-04T15:57:39.444539"
+  },
+  "components": {
+    "ai_services": {
+      "ai_gateway": {
+        "port": "7510",
+        "description": "AI网关服务",
+        "dependencies": [
+          "redis"
+        ],
+        "config_file": "ai_gateway_config.json"
+      },
+      "resume_ai": {
+        "port": "7511",
+        "description": "简历AI服务",
+        "dependencies": [
+          "redis"
+        ],
+        "config_file": "resume_ai_config.json"
+      }
+    },
+    "databases": {
+      "redis": {
+        "port": "6383",
+        "description": "Redis缓存数据库",
+        "config_file": "redis_config.conf"
+      },
+      "postgres": {
+        "port": "5435",
+        "description": "PostgreSQL关系数据库",
+        "config_file": "postgres_config.conf"
+      },
+      "mongodb": {
+        "port": "27019",
+        "description": "MongoDB文档数据库",
+        "config_file": "mongodb_config.conf"
+      },
+      "neo4j": {
+        "port": "7476/7689",
+        "description": "Neo4j图数据库",
+        "config_file": "neo4j_config.conf"
+      },
+      "elasticsearch": {
+        "port": "9203",
+        "description": "Elasticsearch搜索引擎",
+        "config_file": "elasticsearch_config.yml"
+      },
+      "weaviate": {
+        "port": "8083",
+        "description": "Weaviate向量数据库",
+        "config_file": "weaviate_config.yml"
+      }
+    }
+  },
+  "deployment_scripts": {
+    "install.sh": "安装脚本",
+    "start.sh": "启动脚本",
+    "stop.sh": "停止脚本",
+    "restart.sh": "重启脚本",
+    "status.sh": "状态检查脚本",
+    "backup.sh": "备份脚本",
+    "restore.sh": "恢复脚本"
+  },
+  "monitoring": {
+    "prometheus": {
+      "port": "9090",
+      "config_file": "prometheus.yml"
+    },
+    "grafana": {
+      "port": "3000",
+      "config_file": "grafana.ini"
+    }
+  }
+}

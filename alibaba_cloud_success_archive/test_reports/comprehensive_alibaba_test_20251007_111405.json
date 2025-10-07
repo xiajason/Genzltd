@@ -1,0 +1,54 @@
+{
+  "test_info": {
+    "start_time": "2025-10-07T11:13:45.793921",
+    "end_time": "2025-10-07T11:14:05.644672",
+    "server_ip": "47.115.168.107",
+    "total_databases": 6,
+    "successful_tests": 5,
+    "success_rate": "83.3%"
+  },
+  "database_results": {
+    "MySQL": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test\n1"
+    },
+    "PostgreSQL": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test \n------\n    1\n(1 row)"
+    },
+    "Redis": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "PONG"
+    },
+    "Neo4j": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test\n1"
+    },
+    "Elasticsearch": {
+      "status": "failed",
+      "reason": "Container not running",
+      "details": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\n"
+    },
+    "Weaviate": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "{\"grpcMaxMessageSize\":104858000,\"hostname\":\"http://[::]:8080\",\"modules\":{},\"version\":\"1.30.18\"}"
+    }
+  },
+  "system_resources": {
+    "memory": "              total        used        free      shared  buff/cache   available\nMem:          1.8Gi       1.3Gi       442Mi        14Mi       281Mi       568Mi\nSwap:            0B          0B          0B\n",
+    "docker_stats": "Failed to get stats"
+  },
+  "optimization_status": {
+    "Neo4j": "内存优化完成 (减少45.7%)",
+    "Elasticsearch": "JVM参数优化完成 (减少68.5%)",
+    "MySQL": "密码认证修复完成",
+    "PostgreSQL": "密码认证修复完成",
+    "Redis": "密码认证修复完成",
+    "Weaviate": "wget工具安装完成"
+  }
+}

@@ -1,0 +1,139 @@
+version: '3.8'
+
+services:
+  # MySQL数据库 - 元数据存储
+  dao-mysql:
+    image: mysql:8.0
+    container_name: dao-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: f_mysql_root_2025
+      MYSQL_DATABASE: jobfirst_dao
+      MYSQL_USER: dao_user
+      MYSQL_PASSWORD: f_mysql_password_2025
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./logs/mysql:/var/log/mysql
+    networks:
+      - dao-network
+    command: --default-authentication-plugin=mysql_native_password
+
+  # PostgreSQL数据库 - AI服务
+  dao-postgresql:
+    image: postgres:15
+    container_name: dao-postgresql
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: f_pg
+      POSTGRES_USER: dao_user
+      POSTGRES_PASSWORD: f_postgres_password_2025
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
+      - ./logs/postgresql:/var/log/postgresql
+    networks:
+      - dao-network
+
+  # Redis缓存数据库
+  dao-redis:
+    image: redis:7-alpine
+    container_name: dao-redis
+    restart: unless-stopped
+    command: redis-server --requirepass f_redis_password_2025
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./data/redis:/data
+      - ./logs/redis:/var/log/redis
+    networks:
+      - dao-network
+
+  # Neo4j图数据库
+  dao-neo4j:
+    image: neo4j:5.15.0
+    container_name: dao-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/f_neo4j_password_2025
+      NEO4J_dbms_security_auth__enabled: "true"
+      NEO4J_dbms_default__database: dao-graph
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    volumes:
+      - ./data/neo4j:/data
+      - ./logs/neo4j:/logs
+    networks:
+      - dao-network
+
+  # Elasticsearch搜索引擎
+  dao-elasticsearch:
+    image: elasticsearch:7.17.9
+    container_name: dao-elasticsearch
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./data/elasticsearch:/usr/share/elasticsearch/data
+      - ./logs/elasticsearch:/usr/share/elasticsearch/logs
+    networks:
+      - dao-network
+
+  # Weaviate向量数据库
+  dao-weaviate:
+    image: semitechnologies/weaviate:1.21.0
+    container_name: dao-weaviate
+    restart: unless-stopped
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      CLUSTER_HOSTNAME: 'node1'
+    ports:
+      - "8080:8080"
+      - "8082:8082"
+    volumes:
+      - ./data/weaviate:/var/lib/weaviate
+      - ./logs/weaviate:/var/log/weaviate
+    networks:
+      - dao-network
+
+  # SQLite数据库管理服务
+  dao-sqlite-manager:
+    image: python:3.11-slim
+    container_name: dao-sqlite-manager
+    restart: unless-stopped
+    working_dir: /app
+    volumes:
+      - ./data/sqlite:/app/data
+      - ./scripts:/app/scripts
+      - ./logs/sqlite:/app/logs
+    networks:
+      - dao-network
+    command: tail -f /dev/null
+
+networks:
+  dao-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+
+volumes:
+  dao-mysql-data:
+  dao-postgresql-data:
+  dao-redis-data:
+  dao-neo4j-data:
+  dao-elasticsearch-data:
+  dao-weaviate-data:
+  dao-sqlite-data:

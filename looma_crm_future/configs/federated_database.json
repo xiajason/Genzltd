@@ -1,0 +1,81 @@
+{
+  "federated_database": {
+    "looma_containerized": {
+      "postgresql": {
+        "host": "localhost",
+        "port": 5434,
+        "database": "looma_independent",
+        "username": "looma_user",
+        "password": "looma_password",
+        "service_type": "docker",
+        "purpose": "CRM业务数据"
+      },
+      "mongodb": {
+        "host": "localhost",
+        "port": 27018,
+        "database": "looma_independent",
+        "username": "looma_admin",
+        "password": "looma_admin_password",
+        "service_type": "docker",
+        "purpose": "文档存储"
+      },
+      "redis": {
+        "host": "localhost",
+        "port": 6382,
+        "password": "looma_independent_password",
+        "service_type": "docker",
+        "purpose": "独立缓存"
+      },
+      "elasticsearch": {
+        "host": "localhost",
+        "port": 9202,
+        "service_type": "docker",
+        "purpose": "全文搜索"
+      },
+      "weaviate": {
+        "host": "localhost",
+        "port": 8091,
+        "service_type": "docker",
+        "purpose": "向量搜索"
+      }
+    },
+    "zervigo_local": {
+      "mysql": {
+        "host": "localhost",
+        "port": 3306,
+        "database": "jobfirst",
+        "username": "root",
+        "password": "",
+        "service_type": "homebrew",
+        "purpose": "核心业务数据"
+      },
+      "redis": {
+        "host": "localhost",
+        "port": 6379,
+        "password": "",
+        "service_type": "homebrew",
+        "purpose": "缓存和会话"
+      }
+    },
+    "cross_system_sync": {
+      "user_sync": {
+        "source": "zervigo_local.mysql",
+        "target": "looma_containerized.postgresql",
+        "frequency": "realtime",
+        "fields": ["id", "username", "email", "created_at"]
+      },
+      "resume_sync": {
+        "source": "zervigo_local.mysql",
+        "target": "looma_containerized.mongodb",
+        "frequency": "realtime",
+        "fields": ["id", "user_id", "content", "metadata"]
+      },
+      "cache_sync": {
+        "source": "zervigo_local.redis",
+        "target": "looma_containerized.redis",
+        "frequency": "realtime",
+        "patterns": ["user:*", "session:*", "ai_cache:*"]
+      }
+    }
+  }
+}

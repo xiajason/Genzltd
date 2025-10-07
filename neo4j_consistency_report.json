@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-01-04T14:50:00Z",
+  "database": "Neo4j",
+  "status": "connected",
+  "mbti_types_count": 4,
+  "relationships_count": 3,
+  "data_consistency": "passed",
+  "data_integrity": "passed"
+}

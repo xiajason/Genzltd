@@ -1,0 +1,34 @@
+[20251002_183646] 系统负载监控开始
+18:36  up 1 day, 19:04, 1 user, load averages: 2.72 2.68 2.60
+
+[20251002_183646] 内存使用监控开始
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                5071.
+Pages active:                            303738.
+Pages inactive:                          283559.
+Pages speculative:                        19911.
+Pages throttled:                              0.
+Pages wired down:                        119980.
+Pages purgeable:                          11437.
+"Translation faults":                 768283465.
+Pages copy-on-write:                  107736499.
+Pages zero filled:                    303235278.
+Pages reactivated:                      9828730.
+Pages purged:                            778352.
+File-backed pages:                       208691.
+Anonymous pages:                         398517.
+Pages stored in compressor:              643882.
+Pages occupied by compressor:            279409.
+Decompressions:                        18381748.
+Compressions:                          20215864.
+Pageins:                                5900963.
+Pageouts:                                 82802.
+Swapins:                                      0.
+Swapouts:                                     0.
+
+[20251002_183646] CPU使用监控开始
+CPU usage: 12.38% user, 13.80% sys, 73.80% idle 
+
+[20251002_183646] 网络连接监控开始
+      36
+

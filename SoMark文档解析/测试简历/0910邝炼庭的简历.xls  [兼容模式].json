@@ -1,0 +1,644 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 41,
+          "type": "text",
+          "bbox": [
+            128,
+            212,
+            247,
+            241
+          ],
+          "content": "【基本资料】",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            129,
+            249,
+            272,
+            276
+          ],
+          "content": "姓名：邝炼庭",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 33,
+          "type": "text",
+          "bbox": [
+            130,
+            281,
+            376,
+            307
+          ],
+          "content": "出身日期: 1975-06-03",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "text",
+          "bbox": [
+            129,
+            311,
+            385,
+            338
+          ],
+          "content": "现居住地：深圳市南山区",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 25,
+          "type": "text",
+          "bbox": [
+            129,
+            344,
+            294,
+            370
+          ],
+          "content": "婚姻状况：已婚",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 26,
+          "type": "text",
+          "bbox": [
+            129,
+            375,
+            294,
+            401
+          ],
+          "content": "教育程度：大专",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "text",
+          "bbox": [
+            129,
+            405,
+            501,
+            433
+          ],
+          "content": "毕业院校：广州市花都成人教育学校",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            130,
+            437,
+            387,
+            463
+          ],
+          "content": "手机号码：13728616843",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            128,
+            469,
+            473,
+            497
+          ],
+          "content": "Email:kuanglianting@126.com",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 42,
+          "type": "text",
+          "bbox": [
+            129,
+            516,
+            246,
+            543
+          ],
+          "content": "【求职意向】",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "text",
+          "bbox": [
+            129,
+            551,
+            294,
+            577
+          ],
+          "content": "应聘类型：全职",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            130,
+            583,
+            295,
+            609
+          ],
+          "content": "住房要求：提供",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 39,
+          "type": "title",
+          "bbox": [
+            523,
+            151,
+            689,
+            187
+          ],
+          "content": "个人简历",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 30,
+          "type": "text",
+          "bbox": [
+            564,
+            248,
+            662,
+            277
+          ],
+          "content": "性别：男",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 27,
+          "type": "text",
+          "bbox": [
+            566,
+            281,
+            702,
+            307
+          ],
+          "content": "身高：165CM",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 28,
+          "type": "text",
+          "bbox": [
+            565,
+            312,
+            690,
+            338
+          ],
+          "content": "体重：55KG",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 40,
+          "type": "text",
+          "bbox": [
+            565,
+            343,
+            843,
+            371
+          ],
+          "content": "户口所在地：广州市花都区",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 36,
+          "type": "text",
+          "bbox": [
+            566,
+            375,
+            663,
+            401
+          ],
+          "content": "民族：汉",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "text",
+          "bbox": [
+            566,
+            406,
+            844,
+            434
+          ],
+          "content": "毕业专业：计算机综合应用",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 34,
+          "type": "text",
+          "bbox": [
+            564,
+            550,
+            820,
+            579
+          ],
+          "content": "期望月薪：3500\\-5000元",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 31,
+          "type": "text",
+          "bbox": [
+            564,
+            583,
+            731,
+            611
+          ],
+          "content": "到岗时间：随时",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "figure",
+          "bbox": [
+            908,
+            263,
+            1072,
+            474
+          ],
+          "content": "这张图片展示了一位中年亚洲男性，他戴着眼镜，穿着深色西装和白色衬衫。背景为纯白色，突显出人物的正式形象。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094109836_5_d864aebe5385472e9a84f9e44b816bfd/imgs/image0-1.jpg"
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            130,
+            613,
+            353,
+            640
+          ],
+          "content": "意向地区：深圳/广州",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            128,
+            644,
+            653,
+            675
+          ],
+          "content": "意向岗位：广告·策划·设计/设计经理/主管/专员",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 35,
+          "type": "text",
+          "bbox": [
+            128,
+            694,
+            324,
+            722
+          ],
+          "content": "【工作经验】（设计）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            130,
+            728,
+            413,
+            755
+          ],
+          "content": "工作时间：2000/2\\~2005/6",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            130,
+            759,
+            546,
+            787
+          ],
+          "content": "工作单位：广州市金桥广告发展有限公司",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            130,
+            791,
+            482,
+            819
+          ],
+          "content": "工作职位：平面设计--广告部主管",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            128,
+            823,
+            975,
+            851
+          ],
+          "content": "工作职责：1. 负责公司一切项目的策划和方案的编制撰写、修改、把关及打印、汇报、保密等工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 44,
+          "type": "text",
+          "bbox": [
+            244,
+            856,
+            1087,
+            881
+          ],
+          "content": "2. 负责项目各专业的协调、反馈、传达、策划、检查、监督、指导等工作，对执行总监及总经理负责；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 43,
+          "type": "text",
+          "bbox": [
+            241,
+            871,
+            1089,
+            932
+          ],
+          "content": "2. 负责项目设计中的协调、反馈、跟踪、意见、意见、意见、意见、意见、意见、意见、意见、 3. 负责与客户服务部、创作设计部接洽，并制订工作计划，确定交接时间，经总经理批准，按公司要求 组织实施；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            242,
+            936,
+            1082,
+            986
+          ],
+          "content": "4.对客户热情、周到，深入了解客户的意图和要求，细致周到地做好客户解答工作；保证各类平面项 目的质量极其时间的把握，成功的验收；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            244,
+            991,
+            768,
+            1017
+          ],
+          "content": "5.建立规范以保持设计执行高品质、高可靠性和高安全性标准；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            243,
+            1023,
+            767,
+            1049
+          ],
+          "content": "6.按照现有规范及组织实际状况，确定并执行质量和安全标准；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            245,
+            1054,
+            545,
+            1080
+          ],
+          "content": "7.负责有关信息的收集、汇总处理；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            244,
+            1085,
+            581,
+            1111
+          ],
+          "content": "8. 按公司意图和要求编制广告工作计划。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 38,
+          "type": "text",
+          "bbox": [
+            128,
+            1129,
+            246,
+            1158
+          ],
+          "content": "【专业职能】",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            128,
+            1162,
+            674,
+            1192
+          ],
+          "content": "语言能力：英语（一般）普通话（熟练）粤语（精通）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 29,
+          "type": "text",
+          "bbox": [
+            129,
+            1196,
+            272,
+            1222
+          ],
+          "content": "计算机：精通",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "text",
+          "bbox": [
+            127,
+            1226,
+            910,
+            1255
+          ],
+          "content": "相关职能：1、精通photoshop、coreldraw、illustrator等平面设计软件；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            242,
+            1258,
+            549,
+            1285
+          ],
+          "content": "2、精通计算机的软硬件维护；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            243,
+            1289,
+            640,
+            1317
+          ],
+          "content": "3、较强的开发、管理团队运作的能力。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 37,
+          "type": "text",
+          "bbox": [
+            128,
+            1333,
+            246,
+            1361
+          ],
+          "content": "【个人描述】",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 32,
+          "type": "text",
+          "bbox": [
+            126,
+            1367,
+            1085,
+            1456
+          ],
+          "content": "本人诚信、务实、爱好广泛、性格开朗、工作认真、严格，有五年的平面广告/设计/策划经历， 能有效协调广告设计部的日常运作能力，对各类活动广告宣传、画册、产品目录、宣传纸、 CI、户外大型招牌、海报等各类平面设计制作有丰富的经验。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            123,
+            1475,
+            902,
+            1505
+          ],
+          "content": "附注：本人有部份照片和作品上传在“kuanglianting photo.163.com”网址上，欢迎浏览。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

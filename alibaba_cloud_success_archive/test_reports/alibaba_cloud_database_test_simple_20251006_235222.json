@@ -1,0 +1,39 @@
+{
+  "test_time": "2025-10-06T23:52:10.075941",
+  "server_ip": "47.115.168.107",
+  "databases": {
+    "MySQL": {
+      "status": "failed",
+      "error": "/bin/sh: -c: line 0: syntax error near unexpected token `('\n/bin/sh: -c: line 0: `ssh -i ~/.ssh/cross_cloud_key root@47.115.168.107 'docker exec production-mysql mysql -u root -pf_mysql_password_2025 -e 'SELECT COUNT(*) as table_count FROM information_schema.tables WHERE table_schema = \"jobfirst_future\";'''\n"
+    },
+    "PostgreSQL": {
+      "status": "failed",
+      "error": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nERROR:  column \"public\" does not exist\nLINE 1: ... FROM information_schema.tables WHERE table_schema = public;\n                                                                ^\n"
+    },
+    "Redis": {
+      "status": "success",
+      "key_count": 2,
+      "port": 6379
+    },
+    "Neo4j": {
+      "status": "failed",
+      "error": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nusage: cypher-shell [-h] [-a ADDRESS] [-u USERNAME] [-p PASSWORD]\n                    [--encryption {true,false,default}] [-d DATABASE]\n                    [--format {auto,verbose,plain}] [-P PARAM] [--debug]\n                    [--non-interactive] [--sample-rows SAMPLE-ROWS]\n                    [--wrap {true,false}] [-v] [--driver-version] [-f FILE]\n                    [--change-password] [--fail-fast | --fail-at-end]\n                    [cypher]\ncypher-shell: error: unrecognized arguments: '1 as test'\n/bin/sh: : command not found\n"
+    },
+    "Elasticsearch": {
+      "status": "failed",
+      "error": "No response"
+    },
+    "Weaviate": {
+      "status": "success",
+      "version": "1.30.18",
+      "port": 8080
+    }
+  },
+  "summary": {
+    "total_databases": 6,
+    "successful_connections": 2,
+    "failed_connections": 4,
+    "success_rate": "33.3%",
+    "test_duration": "0:00:12.599377"
+  }
+}

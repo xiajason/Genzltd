@@ -1,0 +1,91 @@
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-27 14:08:26,396 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-27 14:08:26,396 - __main__ - INFO - Jaeger tracing initialized successfully
+[2025-09-27 14:08:26 +0800] [96536] [INFO] Sanic v23.12.1
+2025-09-27 14:08:26,412 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-27 14:08:26 +0800] [96536] [INFO] Goin' Fast @ http://0.0.0.0:7500
+2025-09-27 14:08:26,412 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:7500
+[2025-09-27 14:08:26 +0800] [96536] [INFO] app: looma_crm
+2025-09-27 14:08:26,412 - sanic.root - INFO - app: looma_crm
+[2025-09-27 14:08:26 +0800] [96536] [INFO] mode: production, single worker
+2025-09-27 14:08:26,412 - sanic.root - INFO - mode: production, single worker
+[2025-09-27 14:08:26 +0800] [96536] [INFO] server: sanic, HTTP/1.1
+2025-09-27 14:08:26,412 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-27 14:08:26 +0800] [96536] [INFO] python: 3.12.11
+2025-09-27 14:08:26,412 - sanic.root - INFO - python: 3.12.11
+[2025-09-27 14:08:26 +0800] [96536] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-27 14:08:26,412 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-27 14:08:26 +0800] [96536] [INFO] packages: sanic-routing==23.12.0
+2025-09-27 14:08:26,412 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-27 14:08:26,951 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-27 14:08:26,951 - __mp_main__ - INFO - Jaeger tracing initialized successfully
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-27 14:08:27,686 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-27 14:08:27,686 - __mp_main__ - INFO - Jaeger tracing initialized successfully
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-27 14:08:27,708 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-27 14:08:27,708 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-27 14:08:27,708 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-27 14:08:27,876 - shared.database.unified_data_access - INFO - Weaviate连接初始化成功
+2025-09-27 14:08:27,916 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-27 14:08:27,916 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-27 14:08:27,916 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-27 14:08:27,923 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功
+2025-09-27 14:08:27,923 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-27 14:08:27,923 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-27 14:08:27,923 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-27 14:08:27,923 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-27 14:08:27,923 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-27 14:08:27,923 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-27 14:08:27,923 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-27 14:08:27 +0800] [96553] [INFO] Starting worker [96553]
+2025-09-27 14:08:27,925 - sanic.server - INFO - Starting worker [96553]
+2025-09-27 14:08:30,702 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 14:08:30,705 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 14:08:30,706 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 14:09:09,583 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 14:09:09,585 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 14:09:09,586 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 14:09:56,479 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 14:09:56,482 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 14:09:56,483 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 14:10:19,330 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 14:10:19,333 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 14:10:19,333 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 14:10:31,199 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 14:10:31,201 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 14:10:31,201 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+[2025-09-27 14:51:10 +0800] [96553] [INFO] Stopping worker [96553]
+[2025-09-27 14:51:10 +0800] [96536] [INFO] Received signal SIGTERM. Shutting down.
+2025-09-27 14:51:10,579 - sanic.root - INFO - Received signal SIGTERM. Shutting down.
+2025-09-27 14:51:10,580 - sanic.server - INFO - Stopping worker [96553]
+2025-09-27 14:51:10,582 - __mp_main__ - INFO - 正在清理Looma CRM服务...
+[2025-09-27 14:51:10 +0800] [96553] [ERROR] Event loop stopped before Future completed.
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/worker/serve.py", line 117, in worker_serve
+    return _serve_http_1(
+           ^^^^^^^^^^^^^^
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 301, in _serve_http_1
+    _run_server_forever(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 189, in _run_server_forever
+    loop.run_until_complete(after_stop())
+  File "uvloop/loop.pyx", line 1516, in uvloop.loop.Loop.run_until_complete
+RuntimeError: Event loop stopped before Future completed.
+2025-09-27 14:51:10,582 - sanic.error - ERROR - Event loop stopped before Future completed.
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/worker/serve.py", line 117, in worker_serve
+    return _serve_http_1(
+           ^^^^^^^^^^^^^^
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 301, in _serve_http_1
+    _run_server_forever(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 189, in _run_server_forever
+    loop.run_until_complete(after_stop())
+  File "uvloop/loop.pyx", line 1516, in uvloop.loop.Loop.run_until_complete
+RuntimeError: Event loop stopped before Future completed.
+[2025-09-27 14:51:11 +0800] [96536] [INFO] Server Stopped
+2025-09-27 14:51:11,201 - sanic.root - INFO - Server Stopped

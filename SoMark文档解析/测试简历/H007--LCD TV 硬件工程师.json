@@ -1,0 +1,542 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 14,
+          "type": "header",
+          "bbox": [
+            142,
+            69,
+            323,
+            139
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "title",
+          "bbox": [
+            186,
+            159,
+            347,
+            184
+          ],
+          "content": "China Agent # 1",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            186,
+            219,
+            462,
+            248
+          ],
+          "content": "姓 名: H007 性 别: 男",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            186,
+            253,
+            542,
+            281
+          ],
+          "content": "民族：汉族户籍：江西吉安",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            186,
+            286,
+            489,
+            314
+          ],
+          "content": "年龄： 28 婚姻状况： 未婚",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            187,
+            320,
+            337,
+            346
+          ],
+          "content": "身高：167cm",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            186,
+            351,
+            481,
+            379
+          ],
+          "content": "待遇要求：￥15000 元以上/月",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "title",
+          "bbox": [
+            188,
+            450,
+            288,
+            473
+          ],
+          "content": "教育/培训",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            185,
+            512,
+            662,
+            543
+          ],
+          "content": "2001-09 ~2005-07 东华理工大学 自动化 本科",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "title",
+          "bbox": [
+            188,
+            579,
+            289,
+            603
+          ],
+          "content": "技能/专长",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            187,
+            643,
+            422,
+            671
+          ],
+          "content": "第一外语：英语 良好",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            186,
+            675,
+            630,
+            704
+          ],
+          "content": "计算机能力：全国计算机等级考试二级",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            187,
+            709,
+            354,
+            736
+          ],
+          "content": "计算机详细技能:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            186,
+            740,
+            476,
+            769
+          ],
+          "content": "其它技能：Keil C51",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            185,
+            775,
+            237,
+            800
+          ],
+          "content": "VHDL",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "text",
+          "bbox": [
+            185,
+            807,
+            237,
+            831
+          ],
+          "content": "VC++",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "text",
+          "bbox": [
+            185,
+            840,
+            422,
+            866
+          ],
+          "content": "Power PCB power logic",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 25,
+          "type": "text",
+          "bbox": [
+            185,
+            874,
+            303,
+            898
+          ],
+          "content": "protel99se",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "title",
+          "bbox": [
+            190,
+            938,
+            277,
+            960
+          ],
+          "content": "自我评价",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            184,
+            1002,
+            1058,
+            1189
+          ],
+          "content": "本人性格开朗，工作认真负责，做事沉重冷静，待人友善，有很起强的团队精神，在毕业三 年多的时间里一直从事电子方面的研发工作，并积累了丰富的电子产品类的软硬体的开发工 作经验。熟练运用Power PCB，power logic，protel99se 电子Layout 软件；熟悉硬件可 编程逻辑语言的编程(主要运用Altera 公司QuartusII 软件VHDL 语言)；熟练应用Keil C51 单片机的开发软件及仿真的配合工作的Proteus 软件；及能使用Visual C++ 软件编写上位 机运用程序！",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "title",
+          "bbox": [
+            188,
+            1230,
+            277,
+            1252
+          ],
+          "content": "工作经验",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            186,
+            1259,
+            668,
+            1288
+          ],
+          "content": "$\\blacksquare$ 东莞中逸电子有限公司 （2006-04\\~2008-09）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            186,
+            1293,
+            729,
+            1321
+          ],
+          "content": "公司性质：外资企业 行业类别：电子、微电子技术",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            187,
+            1326,
+            521,
+            1353
+          ],
+          "content": "担任职位： 电子工程师/技术员",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            184,
+            1358,
+            1057,
+            1418
+          ],
+          "content": "工作描述： 进行各类测试智能仪器设备(主要为电感，马达转子/定子，变压器的成品测 试仪器）的软硬件研发工作，职责主要有：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            1423,
+            1060,
+            1583
+          ],
+          "content": "1. 硬件电路的设计开发及PCB Layout工作，完成具功能要求各硬件模块，如测试模块（包括外部模拟信号输入输出及信号的各项处理，如功率放大，高压产生及取样，模拟信号选通，A/D及D/A转换，各数字信号选通以完成与CPU模块的信号链接等），CPU及数据程序的存储模块，人机交互及显示模块，供电电源模块等，搭建一个完整的测试设备硬件平台。在完成或修改以上功能模块进行整体原理图的设计及PCB Layout(主要运用画图软件有",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 7,
+          "type": "header",
+          "bbox": [
+            141,
+            68,
+            322,
+            141
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            184,
+            156,
+            854,
+            184
+          ],
+          "content": "PowerPCB, Powerlogic, Protel 99se), 具有多层 PCB 板 Layout 经验。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            182,
+            188,
+            1057,
+            248
+          ],
+          "content": "2. 运用 VHDL 进行硬件可编程逻辑语言程序编写，以实现硬件外围电路 I/O 扩展及实现外围电路控制的功能。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            185,
+            254,
+            1059,
+            317
+          ],
+          "content": "3. 运用软件 Keil C51 的单片机程序编写工作，及在设计过程中自行用 visual c++计算机软件进行上位机的软件开发及底层程序的编写，以实现对硬件各功能模块的调试工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            185,
+            320,
+            553,
+            346
+          ],
+          "content": "4.制作完成各研发阶段性流程的报表。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            187,
+            350,
+            423,
+            378
+          ],
+          "content": "离职原因：另求发展",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            186,
+            383,
+            666,
+            411
+          ],
+          "content": "$\\blacksquare$ 东莞东聚电子有限公司 （2005-03 $\\sim$ 2005-11）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            186,
+            415,
+            915,
+            444
+          ],
+          "content": "公司性质： 外资企业 行业类别： 计算机业（软件、数据库、系统集成）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            186,
+            448,
+            445,
+            476
+          ],
+          "content": "担任职位：硬件工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            184,
+            481,
+            1061,
+            573
+          ],
+          "content": "工作描述：主要负责鼠标类产品研发设计工作，完成从机种的定案到量产整个流程的EVT,DVT,MVT各阶段性测试，及PCB layout及研发阶段的各项改版工作，熟悉PDM(Product Data Management)管理系统，SAP系统！",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            186,
+            578,
+            491,
+            608
+          ],
+          "content": "离职原因：参加公务员考试",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": true
+    }
+  ]
+}

@@ -1,0 +1,514 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 22,
+          "type": "header",
+          "bbox": [
+            141,
+            69,
+            323,
+            138
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 30,
+          "type": "title",
+          "bbox": [
+            186,
+            158,
+            347,
+            184
+          ],
+          "content": "China Agent # 1",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            186,
+            219,
+            461,
+            248
+          ],
+          "content": "姓 名: H003 性 别: 男",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            187,
+            252,
+            541,
+            281
+          ],
+          "content": "民族：壮族 户 篇：广西南宁",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "text",
+          "bbox": [
+            186,
+            286,
+            490,
+            314
+          ],
+          "content": "年龄： 28 婚姻状况： 未婚",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            187,
+            320,
+            336,
+            346
+          ],
+          "content": "身高： 168cm",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            186,
+            351,
+            356,
+            379
+          ],
+          "content": "待遇要求：面议",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 27,
+          "type": "title",
+          "bbox": [
+            188,
+            450,
+            288,
+            473
+          ],
+          "content": "教育/培训",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 31,
+          "type": "text",
+          "bbox": [
+            185,
+            511,
+            729,
+            544
+          ],
+          "content": "2000-09 ~2004-07 重庆大学 计算机科学与技术 本科",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 28,
+          "type": "text",
+          "bbox": [
+            186,
+            577,
+            571,
+            605
+          ],
+          "content": "2007-06 ~2008-05 EF 英语培训 英语",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "text",
+          "bbox": [
+            186,
+            611,
+            538,
+            637
+          ],
+          "content": "2007\\-05 \\~2007\\-05 华为ESD防护",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            184,
+            643,
+            781,
+            673
+          ],
+          "content": "2006-05 ~2006-05   鼎韵科技 高级PCB 设计与电磁兼容培训",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "title",
+          "bbox": [
+            187,
+            709,
+            288,
+            733
+          ],
+          "content": "技能/专长",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            188,
+            772,
+            457,
+            800
+          ],
+          "content": "专业职称：工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            187,
+            805,
+            554,
+            833
+          ],
+          "content": "第一外语： 英语 第二外语： 日语",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            187,
+            839,
+            434,
+            866
+          ],
+          "content": "计算机能力：高级",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            184,
+            871,
+            1056,
+            930
+          ],
+          "content": "计算机详细技能： 熟悉汇编语言及C 语言,熟练应用Keil 51,turbo c ,vc++,protel 99, POWERPCB 和Auto CAD 制图；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            186,
+            936,
+            748,
+            964
+          ],
+          "content": "熟悉Word, Excel, Powerpoint, Photoshop 等日常办公软件;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            188,
+            968,
+            656,
+            996
+          ],
+          "content": "其它技能：4年LCM开发项目管理经验；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            187,
+            1001,
+            530,
+            1029
+          ],
+          "content": "熟悉各种LCD驱动IC的软件编写；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 25,
+          "type": "title",
+          "bbox": [
+            190,
+            1068,
+            277,
+            1091
+          ],
+          "content": "自我评价",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            186,
+            1131,
+            912,
+            1158
+          ],
+          "content": "熟练应用 Keil 51,turbo c ,vc++,protel 99, POWERPCB 和 Auto CAD 制图;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "text",
+          "bbox": [
+            187,
+            1164,
+            749,
+            1191
+          ],
+          "content": "熟悉Word, Excel, Powerpoint, Photoshop 等日常办公软件;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            186,
+            1196,
+            748,
+            1224
+          ],
+          "content": "在客户资料评估和结构设计方面具有较强的思维分析能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            187,
+            1229,
+            375,
+            1256
+          ],
+          "content": "能与客户良好沟通；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            188,
+            1261,
+            465,
+            1288
+          ],
+          "content": "多年LCM 开发项目管理经验；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            186,
+            1294,
+            542,
+            1322
+          ],
+          "content": "对目前主流的TFT 产品有深刻的了解",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 26,
+          "type": "title",
+          "bbox": [
+            187,
+            1393,
+            278,
+            1416
+          ],
+          "content": "工作经验",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            186,
+            1423,
+            555,
+            1450
+          ],
+          "content": "■康惠半导体（2004-07 ~ 2008-05）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            186,
+            1455,
+            729,
+            1483
+          ],
+          "content": "公司性质：外资企业 行业类别：电子、微电子技术",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            186,
+            1489,
+            521,
+            1516
+          ],
+          "content": "担任职位： 电子工程师/技术员",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 29,
+          "type": "text",
+          "bbox": [
+            184,
+            1522,
+            1055,
+            1582
+          ],
+          "content": "工作描述： 负责LCM 的新产品的设计开发及与客户沟通。物料的统筹计划，新材料的确 认及供货商评估。安排样品的制作及软、硬件调试。样品的确认及规格书的制作等。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 1,
+          "type": "header",
+          "bbox": [
+            141,
+            69,
+            320,
+            140
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            184,
+            156,
+            1060,
+            283
+          ],
+          "content": "在LCD LAYOUT 设计上具有ESD 设计经验，使模块产品在防静电方面得到改善。 对于 CROSSTALK，闪屏等LCD 显示不良问题的解决有丰富的经验。TFT 手机模块软件和硬件能够 单独开发完成。具有独立开发设计到量产的经验以及cost down 设计观念，具有自己独特的 设计评估方法。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            187,
+            285,
+            422,
+            315
+          ],
+          "content": "离职原因：自身提高",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

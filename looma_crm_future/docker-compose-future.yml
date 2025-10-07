@@ -1,0 +1,307 @@
+# JobFirst Future版专用Docker Compose配置
+# 完全独立的Future版AI服务基础设施
+
+version: '3.8'
+
+services:
+  # Future版Looma CRM主服务
+  future-looma-crm:
+    build: ./ai_services_independent/looma_crm_future
+    container_name: future-looma-crm
+    ports:
+      - "7500:7500"
+    environment:
+      LOOMA_CRM_HOST: "0.0.0.0"
+      LOOMA_CRM_PORT: "7500"
+      REDIS_HOST: "future-redis"
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: "future_redis_password_2025"
+      REDIS_DB: "1"
+      REDIS_KEY_PREFIX: "future:"
+      POSTGRES_HOST: "future-postgres:5432"
+      POSTGRES_DB: "jobfirst_future"
+      POSTGRES_USER: "jobfirst_future"
+      POSTGRES_PASSWORD: "secure_future_password_2025"
+      DEBUG: "False"
+    depends_on:
+      - redis-future
+      - postgres-future
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7500/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版AI网关服务
+  future-ai-gateway:
+    build: ./ai_services_independent/ai_gateway_future
+    container_name: future-ai-gateway
+    ports:
+      - "7510:7510"
+    environment:
+      AI_GATEWAY_HOST: "0.0.0.0"
+      AI_GATEWAY_PORT: "7510"
+      REDIS_HOST: "future-redis"
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: "future_redis_password_2025"
+      REDIS_DB: "1"
+      REDIS_KEY_PREFIX: "future:"
+      DEBUG: "False"
+    depends_on:
+      - redis-future
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7510/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版简历AI服务
+  future-resume-ai:
+    build: ./ai_services_independent/resume_ai_future
+    container_name: future-resume-ai
+    ports:
+      - "7511:7511"
+    environment:
+      RESUME_AI_HOST: "0.0.0.0"
+      RESUME_AI_PORT: "7511"
+      REDIS_HOST: "future-redis"
+      REDIS_PORT: "6379"
+      REDIS_PASSWORD: "future_redis_password_2025"
+      REDIS_DB: "1"
+      REDIS_KEY_PREFIX: "future:"
+      DEBUG: "False"
+    depends_on:
+      - redis-future
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7511/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版MinerU服务
+  future-mineru:
+    image: ai-services-mineru:latest
+    container_name: future-mineru
+    ports:
+      - "8000:8000"
+    environment:
+      REDIS_HOST: "redis-future:6379"
+      REDIS_DB: "1"
+      REDIS_KEY_PREFIX: "future:"
+      SERVICE_NAME: "future-mineru"
+    depends_on:
+      - redis-future
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版AI模型服务
+  future-ai-models:
+    image: ai-services-ai-models:latest
+    container_name: future-ai-models
+    ports:
+      - "8002:8002"
+    environment:
+      REDIS_HOST: "redis-future:6379"
+      REDIS_DB: "1"
+      REDIS_KEY_PREFIX: "future:"
+      SERVICE_NAME: "future-ai-models"
+    depends_on:
+      - redis-future
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Redis
+  redis-future:
+    image: redis:7-alpine
+    container_name: future-redis
+    ports:
+      - "6382:6379"
+    command: redis-server --appendonly yes --requirepass future_redis_password_2025
+    volumes:
+      - future_redis_data:/data
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "future_redis_password_2025", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用PostgreSQL
+  postgres-future:
+    image: postgres:15
+    container_name: future-postgres
+    ports:
+      - "5434:5432"
+    environment:
+      - POSTGRES_DB=jobfirst_future
+      - POSTGRES_USER=jobfirst_future
+      - POSTGRES_PASSWORD=secure_future_password_2025
+    volumes:
+      - future_postgres_data:/var/lib/postgresql/data
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U jobfirst_future -d jobfirst_future"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用MongoDB
+  mongodb-future:
+    image: mongo:7.0
+    container_name: future-mongodb
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=jobfirst_future
+      - MONGO_INITDB_ROOT_PASSWORD=secure_future_password_2025
+      - MONGO_INITDB_DATABASE=jobfirst_future
+    volumes:
+      - future_mongodb_data:/data/db
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Neo4j
+  neo4j-future:
+    image: neo4j:5.15
+    container_name: future-neo4j
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/future_neo4j_password_2025
+      - NEO4J_dbms_default__database=jobfirst-future
+    volumes:
+      - future_neo4j_data:/data
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "cypher-shell", "-u", "neo4j", "-p", "future_neo4j_password_2025", "RETURN 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Elasticsearch
+  elasticsearch-future:
+    image: elasticsearch:8.11.0
+    container_name: future-elasticsearch
+    ports:
+      - "9202:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - future_elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9200/_cluster/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Weaviate
+  weaviate-future:
+    image: semitechnologies/weaviate:1.21.5
+    container_name: future-weaviate
+    ports:
+      - "8082:8080"
+    environment:
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - DEFAULT_VECTORIZER_MODULE=none
+      - CLUSTER_HOSTNAME=node1
+    volumes:
+      - future_weaviate_data:/var/lib/weaviate
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/v1/meta"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Prometheus
+  prometheus-future:
+    image: prom/prometheus:latest
+    container_name: future-prometheus
+    ports:
+      - "9091:9090"
+    volumes:
+      - ./monitoring/prometheus-future.yml:/etc/prometheus/prometheus.yml
+      - future_prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:9090/-/healthy"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Future版专用Grafana
+  grafana-future:
+    image: grafana/grafana:latest
+    container_name: future-grafana
+    ports:
+      - "3001:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=future_grafana_password_2025
+    volumes:
+      - future_grafana_data:/var/lib/grafana
+      - ./monitoring/grafana-future-dashboard.json:/etc/grafana/provisioning/dashboards/future-dashboard.json
+    networks:
+      - future-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 --spider http://localhost:3000/api/health || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  future_redis_data:
+  future_postgres_data:
+  future_mongodb_data:
+  future_neo4j_data:
+  future_elasticsearch_data:
+  future_weaviate_data:
+  future_prometheus_data:
+  future_grafana_data:
+
+networks:
+  future-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

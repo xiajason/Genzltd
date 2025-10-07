@@ -1,0 +1,22 @@
+{
+  "timestamp": "2025-10-04 12:05:18",
+  "connection_status": "失败",
+  "username": "neo4j",
+  "bolt_url": "bolt://localhost:7687",
+  "successful_password": "未找到",
+  "tested_passwords": [
+    "neo4j",
+    "mbti_neo4j_2025",
+    "jobfirst_password_2024",
+    "jobfirst123",
+    "looma_password",
+    "password",
+    "password123",
+    ""
+  ],
+  "recommendations": [
+    "需要重新安装Neo4j",
+    "或者使用Docker方式部署",
+    "检查Neo4j配置文件"
+  ]
+}

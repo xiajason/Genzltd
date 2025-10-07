@@ -1,0 +1,810 @@
+// 积分制DAO治理系统数据库Schema - 用户整合版本
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:@127.0.0.1:3306/dao_dev?charset=utf8mb4&parseTime=True&loc=Local"
+}
+
+// DAO成员表 - 基于积分制（扩展版本，整合zervigo用户数据）
+model DAOMember {
+  id                    BigInt    @id @default(autoincrement())
+  userId                String    @unique @map("user_id")
+  
+  // 基础用户信息（从zervigo整合）
+  username              String?   // 用户名
+  email                 String?   // 邮箱
+  password              String?   // 密码（加密存储）
+  firstName             String?   @map("first_name") // 名字
+  lastName              String?   @map("last_name")  // 姓氏
+  avatarUrl             String?   @map("avatar_url") // 头像URL
+  phone                 String?   // 电话
+  
+  // 扩展用户资料（从zervigo整合）
+  bio                   String?   @db.Text // 个人简介
+  location              String?   // 位置
+  website               String?   // 网站
+  githubUrl             String?   @map("github_url") // GitHub链接
+  linkedinUrl           String?   @map("linkedin_url") // LinkedIn链接
+  twitterUrl            String?   @map("twitter_url") // Twitter链接
+  skills                Json?     // 技能列表
+  interests             Json?     // 兴趣列表
+  languages             Json?     // 语言列表
+  
+  // DAO特有字段
+  walletAddress         String?   @map("wallet_address") // 可选，未来扩展
+  reputationScore       Int       @default(0) @map("reputation_score")
+  contributionPoints    Int       @default(0) @map("contribution_points")
+  joinDate              DateTime  @default(now()) @map("join_date")
+  status                DAOStatus @default(ACTIVE)
+  createdAt             DateTime  @default(now()) @map("created_at")
+  updatedAt             DateTime  @updatedAt @map("updated_at")
+  
+  // 关联关系
+  proposals             DAOProposal[] @relation("Proposer")
+  votes                 DAOVote[] @relation("Voter")
+  rewards               DAOReward[] @relation("Recipient")
+  activities            DAOActivity[] @relation("User")
+  unifiedPoints         UnifiedPoints?
+  pointsHistory         PointsHistory[]
+  pointsSyncLogs        PointsSyncLogs[]
+  sentInvitations       DAOInvitation[] @relation("Inviter")
+  reviewInvitations     DAOInvitationReview[] @relation("Reviewer")
+  createdDAOConfigs     DAOConfig[] @relation("DAOConfigCreator")
+  userRoles             DAOUserRole[] @relation("DAOUserRoles")
+  auditLogs             DAOAuditLog[] @relation("DAOAuditLogs")
+
+  @@map("dao_members")
+}
+
+// DAO提案表
+model DAOProposal {
+  id                BigInt            @id @default(autoincrement())
+  proposalId        String            @unique @map("proposal_id")
+  title             String
+  description       String?           @db.Text
+  proposerId        String            @map("proposer_id")
+  proposalType      DAOProposalType   @map("proposal_type")
+  status            DAOProposalStatus @default(DRAFT)
+  startTime         DateTime?         @map("start_time")
+  endTime           DateTime?         @map("end_time")
+  votesFor          Int               @default(0) @map("votes_for")
+  votesAgainst      Int               @default(0) @map("votes_against")
+  totalVotes        Int               @default(0) @map("total_votes")
+  createdAt         DateTime          @default(now()) @map("created_at")
+  updatedAt         DateTime          @updatedAt @map("updated_at")
+  
+  // 关联关系
+  proposer          DAOMember         @relation("Proposer", fields: [proposerId], references: [userId])
+  votes             DAOVote[]         @relation("Proposal")
+
+  @@map("dao_proposals")
+}
+
+// DAO投票表
+model DAOVote {
+  id              BigInt      @id @default(autoincrement())
+  proposalId      String      @map("proposal_id")
+  voterId         String      @map("voter_id")
+  voteChoice      DAOVoteChoice @map("vote_choice")
+  votingPower     Int         @map("voting_power") // 基于积分计算的投票权重
+  voteTimestamp   DateTime    @default(now()) @map("vote_timestamp")
+  
+  // 关联关系
+  proposal        DAOProposal @relation("Proposal", fields: [proposalId], references: [proposalId])
+  voter           DAOMember   @relation("Voter", fields: [voterId], references: [userId])
+
+  @@unique([proposalId, voterId], map: "unique_vote")
+  @@map("dao_votes")
+}
+
+// DAO奖励表
+model DAOReward {
+  id              BigInt          @id @default(autoincrement())
+  recipientId     String          @map("recipient_id")
+  rewardType      DAORewardType   @map("reward_type")
+  amount          Decimal         @db.Decimal(18, 8)
+  currency        String          @default("DAO")
+  description     String?         @db.Text
+  status          DAORewardStatus @default(PENDING)
+  createdAt       DateTime        @default(now()) @map("created_at")
+  distributedAt   DateTime?       @map("distributed_at")
+  
+  // 关联关系
+  recipient       DAOMember       @relation("Recipient", fields: [recipientId], references: [userId])
+
+  @@map("dao_rewards")
+}
+
+// DAO活动日志表
+model DAOActivity {
+  id                    BigInt    @id @default(autoincrement())
+  userId                String    @map("user_id")
+  activityType          String    @map("activity_type")
+  activityDescription   String?   @db.Text @map("activity_description")
+  metadata              Json?
+  timestamp             DateTime  @default(now())
+  
+  // 关联关系
+  user                  DAOMember @relation("User", fields: [userId], references: [userId])
+
+  @@map("dao_activity_log")
+}
+
+// 国库表（基础版本）
+model Treasury {
+  id          BigInt   @id @default(autoincrement())
+  address     String   @unique
+  privateKey  String   @map("private_key")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("treasury")
+}
+
+// 枚举类型
+enum DAOStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+enum DAOProposalType {
+  GOVERNANCE
+  FUNDING
+  TECHNICAL
+  POLICY
+}
+
+enum DAOProposalStatus {
+  DRAFT
+  ACTIVE
+  PASSED
+  REJECTED
+  EXECUTED
+}
+
+enum DAOVoteChoice {
+  FOR
+  AGAINST
+  ABSTAIN
+}
+
+enum DAORewardType {
+  CONTRIBUTION
+  VOTING
+  PROPOSAL
+  GOVERNANCE
+}
+
+enum DAORewardStatus {
+  PENDING
+  APPROVED
+  DISTRIBUTED
+}
+
+// 统一积分表
+model UnifiedPoints {
+  id                  BigInt   @id @default(autoincrement())
+  userId              String   @unique @map("user_id")
+  
+  // 基础积分
+  totalPoints         Int      @default(0) @map("total_points")
+  availablePoints     Int      @default(0) @map("available_points")
+  
+  // 分类积分
+  reputationPoints    Int      @default(80) @map("reputation_points")
+  contributionPoints  Int      @default(0) @map("contribution_points")
+  activityPoints      Int      @default(0) @map("activity_points")
+  
+  // DAO相关
+  votingPower         Int      @default(8) @map("voting_power")
+  governanceLevel     Int      @default(1) @map("governance_level")
+  
+  // 时间戳
+  createdAt           DateTime @default(now()) @map("created_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  member              DAOMember @relation(fields: [userId], references: [userId])
+  
+  @@map("unified_points")
+}
+
+// 积分历史表
+model PointsHistory {
+  id                    BigInt           @id @default(autoincrement())
+  userId                String           @map("user_id")
+  
+  // 积分变动
+  pointsChange          Int              @map("points_change")
+  changeType            PointsChangeType @map("change_type")
+  
+  // 分类变动
+  reputationChange      Int              @default(0) @map("reputation_change")
+  contributionChange    Int              @default(0) @map("contribution_change")
+  activityChange        Int              @default(0) @map("activity_change")
+  
+  // 变动原因
+  reason                String
+  description           String?          @db.Text
+  sourceSystem          PointsSourceSystem @map("source_system")
+  
+  // 引用信息
+  referenceType         String?          @map("reference_type")
+  referenceId           BigInt?          @map("reference_id")
+  
+  // 余额快照
+  balanceBefore         Int              @map("balance_before")
+  balanceAfter          Int              @map("balance_after")
+  votingPowerBefore     Int              @map("voting_power_before")
+  votingPowerAfter      Int              @map("voting_power_after")
+  
+  // 时间戳
+  createdAt             DateTime         @default(now()) @map("created_at")
+  
+  // 关联关系
+  member                DAOMember        @relation(fields: [userId], references: [userId])
+  
+  @@map("points_history")
+}
+
+// 积分奖励规则表
+model PointsRewardRules {
+  id            BigInt              @id @default(autoincrement())
+  ruleId        String              @unique @map("rule_id")
+  name          String
+  description   String?             @db.Text
+  sourceSystem  PointsSourceSystem  @map("source_system")
+  triggerEvent  String              @map("trigger_event")
+  pointsChange  Int                 @map("points_change")
+  pointsType    PointsType          @map("points_type")
+  conditions    Json?
+  isActive      Boolean             @default(true) @map("is_active")
+  createdAt     DateTime            @default(now()) @map("created_at")
+  updatedAt     DateTime            @updatedAt @map("updated_at")
+  
+  @@map("points_reward_rules")
+}
+
+// 积分同步日志表
+model PointsSyncLogs {
+  id            BigInt              @id @default(autoincrement())
+  userId        String              @map("user_id")
+  syncType      PointsSyncType      @map("sync_type")
+  syncStatus    PointsSyncStatus    @default(pending) @map("sync_status")
+  syncData      Json?               @map("sync_data")
+  errorMessage  String?             @db.Text @map("error_message")
+  retryCount    Int                 @default(0) @map("retry_count")
+  createdAt     DateTime            @default(now()) @map("created_at")
+  completedAt   DateTime?           @map("completed_at")
+  
+  // 关联关系
+  member        DAOMember           @relation(fields: [userId], references: [userId])
+  
+  @@map("points_sync_logs")
+}
+
+// 积分相关枚举
+enum PointsChangeType {
+  earn
+  spend
+  transfer
+  adjust
+}
+
+enum PointsSourceSystem {
+  zervigo
+  dao
+  system
+}
+
+enum PointsType {
+  total
+  reputation
+  contribution
+  activity
+}
+
+enum PointsSyncType {
+  zervigo_to_dao
+  dao_to_zervigo
+  bidirectional
+}
+
+enum PointsSyncStatus {
+  pending
+  success
+  failed
+  partial
+}
+
+// DAO邀请表
+model DAOInvitation {
+  id              BigInt              @id @default(autoincrement())
+  invitationId    String              @unique @map("invitation_id")
+  daoId           String              @map("dao_id")
+  inviterId       String              @map("inviter_id")
+  inviteeEmail    String              @map("invitee_email")
+  inviteeName     String?             @map("invitee_name")
+  roleType        DAOInvitationRole   @map("role_type")
+  invitationType  DAOInvitationType   @map("invitation_type")
+  status          DAOInvitationStatus @default(pending)
+  token           String              @unique
+  expiresAt       DateTime            @map("expires_at")
+  acceptedAt      DateTime?           @map("accepted_at")
+  createdAt       DateTime            @default(now()) @map("created_at")
+  updatedAt       DateTime            @updatedAt @map("updated_at")
+  
+  // 关联关系
+  inviter         DAOMember           @relation("Inviter", fields: [inviterId], references: [userId])
+  reviews         DAOInvitationReview[]
+  
+  @@map("dao_invitations")
+}
+
+// DAO邀请审核表
+model DAOInvitationReview {
+  id              BigInt              @id @default(autoincrement())
+  invitationId    String              @map("invitation_id")
+  reviewerId      String              @map("reviewer_id")
+  reviewStatus    DAOReviewStatus     @map("review_status")
+  reviewComment   String?             @db.Text @map("review_comment")
+  reviewedAt      DateTime?           @map("reviewed_at")
+  createdAt       DateTime            @default(now()) @map("created_at")
+  
+  // 关联关系
+  invitation      DAOInvitation       @relation(fields: [invitationId], references: [invitationId])
+  reviewer        DAOMember           @relation("Reviewer", fields: [reviewerId], references: [userId])
+  
+  @@map("dao_invitation_reviews")
+}
+
+// DAO邀请统计表
+model DAOInvitationStats {
+  id                    BigInt   @id @default(autoincrement())
+  daoId                 String   @unique @map("dao_id")
+  totalInvitations      Int      @default(0) @map("total_invitations")
+  acceptedInvitations   Int      @default(0) @map("accepted_invitations")
+  pendingInvitations    Int      @default(0) @map("pending_invitations")
+  expiredInvitations    Int      @default(0) @map("expired_invitations")
+  lastUpdated           DateTime @default(now()) @updatedAt @map("last_updated")
+  
+  @@map("dao_invitation_stats")
+}
+
+// DAO配置表 - 存储DAO的各种配置参数
+model DAOConfig {
+  id                    BigInt   @id @default(autoincrement())
+  daoId                 String   @unique @map("dao_id")
+  
+  // DAO基础配置
+  daoName               String   @map("dao_name")
+  daoDescription        String?  @db.Text @map("dao_description")
+  daoLogo               String?  @map("dao_logo") // 图标URL
+  daoType               DAOType  @default(COMMUNITY) @map("dao_type")
+  
+  // 治理参数配置
+  votingThreshold       Float    @default(50.0) @map("voting_threshold") // 投票通过阈值(%)
+  proposalThreshold     Int      @default(1000) @map("proposal_threshold") // 提案创建阈值(积分)
+  votingPeriod          Int      @default(7) @map("voting_period") // 投票期限(天)
+  executionDelay        Int      @default(1) @map("execution_delay") // 执行延迟(天)
+  minProposalAmount     Float?   @map("min_proposal_amount") // 最小提案金额
+  
+  // 成员管理配置
+  maxMembers            Int?     @map("max_members") // 最大成员数
+  allowMemberInvite     Boolean  @default(true) @map("allow_member_invite") // 是否允许成员邀请
+  requireApproval       Boolean  @default(false) @map("require_approval") // 是否需要审批
+  autoApproveThreshold  Int?     @map("auto_approve_threshold") // 自动审批阈值(积分)
+  
+  // 权限配置
+  allowProposalCreation Boolean  @default(true) @map("allow_proposal_creation") // 是否允许提案创建
+  allowVoting           Boolean  @default(true) @map("allow_voting") // 是否允许投票
+  allowTreasuryAccess   Boolean  @default(false) @map("allow_treasury_access") // 是否允许国库访问
+  
+  // 通知配置
+  enableNotifications   Boolean  @default(true) @map("enable_notifications") // 是否启用通知
+  notificationChannels  Json?    @map("notification_channels") // 通知渠道配置
+  
+  // 高级配置
+  governanceToken       String?  @map("governance_token") // 治理代币
+  contractAddress       String?  @map("contract_address") // 合约地址
+  totalSupply           BigInt?  @map("total_supply") // 总供应量
+  circulatingSupply     BigInt?  @map("circulating_supply") // 流通供应量
+  
+  // 状态和时间
+  status                DAOConfigStatus @default(ACTIVE)
+  createdBy             String   @map("created_by") // 创建者
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  createdByUser         DAOMember @relation("DAOConfigCreator", fields: [createdBy], references: [userId])
+  settings              DAOSetting[]
+  
+  @@map("dao_configs")
+}
+
+// DAO设置表 - 存储DAO的详细设置项
+model DAOSetting {
+  id          BigInt   @id @default(autoincrement())
+  daoId       String   @map("dao_id")
+  settingKey  String   @map("setting_key")
+  settingValue String  @db.Text @map("setting_value")
+  settingType DAOSettingType @default(STRING) @map("setting_type")
+  description String?  @db.Text
+  isPublic    Boolean  @default(false) @map("is_public") // 是否公开
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  dao         DAOConfig @relation(fields: [daoId], references: [daoId])
+  
+  @@unique([daoId, settingKey], map: "unique_dao_setting")
+  @@map("dao_settings")
+}
+
+// DAO权限管理表 - 基于Zervigo权限设计
+model DAOPermission {
+  id              BigInt           @id @default(autoincrement())
+  permissionKey   String           @unique @map("permission_key") // 权限标识
+  name            String           // 权限名称
+  description     String?          @db.Text // 权限描述
+  resourceType    DAOResourceType  @map("resource_type") // 资源类型
+  action          DAOActionType    // 操作类型
+  scope           DAOPermissionScope @default(OWN) // 权限范围
+  conditions      Json?            // 权限条件
+  isActive        Boolean          @default(true) @map("is_active")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+  
+  // 关联关系
+  rolePermissions DAORolePermission[]
+  
+  @@map("dao_permissions")
+}
+
+// DAO角色表 - 基于Zervigo角色层次设计
+model DAORole {
+  id              BigInt           @id @default(autoincrement())
+  roleKey         String           @unique @map("role_key") // 角色标识
+  name            String           // 角色名称
+  description     String?          @db.Text // 角色描述
+  level           Int              @default(1) // 角色级别 (1-6)
+  inheritsFrom    String?          @map("inherits_from") // 继承的角色
+  isActive        Boolean          @default(true) @map("is_active")
+  createdAt       DateTime         @default(now()) @map("created_at")
+  updatedAt       DateTime         @updatedAt @map("updated_at")
+  
+  // 关联关系
+  rolePermissions DAORolePermission[]
+  userRoles       DAOUserRole[]
+  
+  @@map("dao_roles")
+}
+
+// DAO角色权限关联表
+model DAORolePermission {
+  id           BigInt   @id @default(autoincrement())
+  roleId       BigInt   @map("role_id")
+  permissionId BigInt   @map("permission_id")
+  createdAt    DateTime @default(now()) @map("created_at")
+  
+  // 关联关系
+  role         DAORole       @relation(fields: [roleId], references: [id])
+  permission   DAOPermission @relation(fields: [permissionId], references: [id])
+  
+  @@unique([roleId, permissionId], map: "unique_role_permission")
+  @@map("dao_role_permissions")
+}
+
+// DAO用户角色关联表
+model DAOUserRole {
+  id          BigInt     @id @default(autoincrement())
+  userId      String     @map("user_id")
+  roleId      BigInt     @map("role_id")
+  daoId       String     @map("dao_id") // 特定DAO的角色
+  assignedBy  String     @map("assigned_by") // 分配者
+  assignedAt  DateTime   @default(now()) @map("assigned_at")
+  expiresAt   DateTime?  @map("expires_at") // 过期时间
+  isActive    Boolean    @default(true) @map("is_active")
+  createdAt   DateTime   @default(now()) @map("created_at")
+  updatedAt   DateTime   @updatedAt @map("updated_at")
+  
+  // 关联关系
+  user        DAOMember  @relation("DAOUserRoles", fields: [userId], references: [userId])
+  role        DAORole    @relation(fields: [roleId], references: [id])
+  
+  @@unique([userId, roleId, daoId], map: "unique_user_role_dao")
+  @@map("dao_user_roles")
+}
+
+// DAO审计日志表 - 基于Looma CRM审计系统设计
+model DAOAuditLog {
+  id            BigInt           @id @default(autoincrement())
+  eventId       String           @unique @map("event_id") // 事件ID
+  eventType     DAOAuditEventType @map("event_type") // 事件类型
+  userId        String           @map("user_id")
+  username      String           // 用户名
+  sessionId     String?          @map("session_id") // 会话ID
+  ipAddress     String?          @map("ip_address") // IP地址
+  userAgent     String?          @map("user_agent") // 用户代理
+  daoId         String?          @map("dao_id") // DAO ID
+  resourceType  String?          @map("resource_type") // 资源类型
+  resourceId    String?          @map("resource_id") // 资源ID
+  action        String?          // 操作
+  status        DAOAuditStatus   @default(SUCCESS) // 状态
+  level         DAOAuditLevel    @default(LOW) // 级别
+  details       Json?            // 详细信息
+  durationMs    Int?             @map("duration_ms") // 持续时间(毫秒)
+  errorMessage  String?          @db.Text @map("error_message") // 错误信息
+  timestamp     DateTime         @default(now()) // 时间戳
+  
+  // 关联关系
+  user          DAOMember        @relation("DAOAuditLogs", fields: [userId], references: [userId])
+  
+  @@index([userId], map: "idx_audit_user_id")
+  @@index([eventType], map: "idx_audit_event_type")
+  @@index([daoId], map: "idx_audit_dao_id")
+  @@index([timestamp], map: "idx_audit_timestamp")
+  @@map("dao_audit_logs")
+}
+
+// DAO审计规则表
+model DAOAuditRule {
+  id          BigInt           @id @default(autoincrement())
+  ruleId      String           @unique @map("rule_id") // 规则ID
+  name        String           // 规则名称
+  description String?          @db.Text // 规则描述
+  eventTypes  Json             @map("event_types") // 事件类型列表
+  conditions  Json             // 条件
+  actions     Json             // 动作
+  isActive    Boolean          @default(true) @map("is_active")
+  createdAt   DateTime         @default(now()) @map("created_at")
+  updatedAt   DateTime         @updatedAt @map("updated_at")
+  
+  @@map("dao_audit_rules")
+}
+
+// DAO审计告警表
+model DAOAuditAlert {
+  id          BigInt           @id @default(autoincrement())
+  alertId     String           @unique @map("alert_id") // 告警ID
+  ruleId      String           @map("rule_id") // 规则ID
+  eventId     String           @map("event_id") // 事件ID
+  severity    DAOAuditLevel    // 严重程度
+  message     String           // 告警消息
+  details     Json?            // 详细信息
+  isResolved  Boolean          @default(false) @map("is_resolved") // 是否已解决
+  resolvedBy  String?          @map("resolved_by") // 解决者
+  resolvedAt  DateTime?        @map("resolved_at") // 解决时间
+  timestamp   DateTime         @default(now()) // 时间戳
+  
+  @@index([ruleId], map: "idx_alert_rule_id")
+  @@index([severity], map: "idx_alert_severity")
+  @@index([isResolved], map: "idx_alert_resolved")
+  @@index([timestamp], map: "idx_alert_timestamp")
+  @@map("dao_audit_alerts")
+}
+
+// DAO多语言支持表
+model DAOLanguage {
+  id          BigInt   @id @default(autoincrement())
+  code        String   @unique // 语言代码 (zh, en, ja, ko等)
+  name        String   // 语言名称
+  nativeName  String   @map("native_name") // 本地名称
+  isActive    Boolean  @default(true) @map("is_active")
+  isDefault   Boolean  @default(false) @map("is_default") // 是否默认语言
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  translations DAOTranslation[]
+  
+  @@map("dao_languages")
+}
+
+// DAO翻译表
+model DAOTranslation {
+  id         BigInt   @id @default(autoincrement())
+  languageId BigInt   @map("language_id")
+  key        String   // 翻译键
+  value      String   @db.Text // 翻译值
+  category   String?  // 分类
+  context    String?  // 上下文
+  isActive   Boolean  @default(true) @map("is_active")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  language   DAOLanguage @relation(fields: [languageId], references: [id])
+  
+  @@unique([languageId, key], map: "unique_language_key")
+  @@index([category], map: "idx_translation_category")
+  @@map("dao_translations")
+}
+
+// 权限相关枚举
+enum DAOResourceType {
+  USER        // 用户
+  PROPOSAL    // 提案
+  VOTE        // 投票
+  MEMBER      // 成员
+  CONFIG      // 配置
+  TREASURY    // 国库
+  ANALYTICS   // 分析
+  SYSTEM      // 系统
+}
+
+enum DAOActionType {
+  CREATE      // 创建
+  READ        // 读取
+  UPDATE      // 更新
+  DELETE      // 删除
+  LIST        // 列表
+  EXPORT      // 导出
+  IMPORT      // 导入
+  EXECUTE     // 执行
+  MANAGE      // 管理
+}
+
+enum DAOPermissionScope {
+  OWN         // 自己的资源
+  ORGANIZATION // 组织内资源
+  TENANT      // 租户内资源
+  GLOBAL      // 全局资源
+}
+
+// 审计相关枚举
+enum DAOAuditEventType {
+  LOGIN           // 登录
+  LOGOUT          // 登出
+  DATA_ACCESS     // 数据访问
+  DATA_MODIFICATION // 数据修改
+  DATA_DELETION   // 数据删除
+  PERMISSION_CHANGE // 权限变更
+  ROLE_ASSIGNMENT // 角色分配
+  SYSTEM_CONFIG   // 系统配置
+  SECURITY_VIOLATION // 安全违规
+  API_ACCESS      // API访问
+  PROPOSAL_CREATE // 提案创建
+  PROPOSAL_UPDATE // 提案更新
+  VOTE_CAST       // 投票
+  MEMBER_INVITE   // 成员邀请
+  CONFIG_CHANGE   // 配置变更
+}
+
+enum DAOAuditStatus {
+  SUCCESS     // 成功
+  FAILURE     // 失败
+  WARNING     // 警告
+  SUSPICIOUS  // 可疑
+}
+
+enum DAOAuditLevel {
+  LOW         // 低
+  MEDIUM      // 中
+  HIGH        // 高
+  CRITICAL    // 严重
+}
+
+// 智能治理相关模型
+model DAODecisionRule {
+  id                BigInt   @id @default(autoincrement())
+  ruleName          String   @map("rule_name") // 规则名称
+  description       String?  @db.Text // 规则描述
+  triggerConditions Json     @map("trigger_conditions") // 触发条件
+  executionActions  Json     @map("execution_actions") // 执行动作
+  isActive          Boolean  @default(true) @map("is_active")
+  createdBy         String   @map("created_by") // 创建者
+  createdAt         DateTime @default(now()) @map("created_at")
+  updatedAt         DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  executions        DAODecisionExecution[]
+  
+  @@map("dao_decision_rules")
+}
+
+model DAODecisionExecution {
+  id              BigInt   @id @default(autoincrement())
+  proposalId      String   @map("proposal_id") // 提案ID
+  executionType   String   @map("execution_type") // 执行类型 (AUTO/MANUAL/SCHEDULED)
+  status          String   @default("PENDING") // 执行状态
+  scheduledTime   DateTime? @map("scheduled_time") // 计划执行时间
+  startedAt       DateTime? @map("started_at") // 开始执行时间
+  completedAt     DateTime? @map("completed_at") // 完成时间
+  failedAt        DateTime? @map("failed_at") // 失败时间
+  cancelledAt     DateTime? @map("cancelled_at") // 取消时间
+  errorMessage    String?  @db.Text @map("error_message") // 错误信息
+  executionRules  Json     @map("execution_rules") // 执行规则
+  createdBy       String   @map("created_by") // 创建者
+  cancelledBy     String?  @map("cancelled_by") // 取消者
+  createdAt       DateTime @default(now()) @map("created_at")
+  updatedAt       DateTime @updatedAt @map("updated_at")
+  
+  // 关联关系
+  rule            DAODecisionRule? @relation(fields: [ruleId], references: [id])
+  ruleId          BigInt?  @map("rule_id")
+  executionLogs   DAODecisionExecutionLog[]
+  
+  @@index([proposalId], map: "idx_decision_execution_proposal_id")
+  @@index([status], map: "idx_decision_execution_status")
+  @@index([createdAt], map: "idx_decision_execution_created_at")
+  @@map("dao_decision_executions")
+}
+
+model DAODecisionExecutionLog {
+  id            BigInt   @id @default(autoincrement())
+  executionId   BigInt   @map("execution_id") // 执行ID
+  logLevel      String   @map("log_level") // 日志级别 (INFO/WARN/ERROR)
+  message       String   @db.Text // 日志消息
+  details       Json?    // 详细信息
+  timestamp     DateTime @default(now()) // 时间戳
+  
+  // 关联关系
+  execution     DAODecisionExecution @relation(fields: [executionId], references: [id])
+  
+  @@index([executionId], map: "idx_decision_execution_log_execution_id")
+  @@index([timestamp], map: "idx_decision_execution_log_timestamp")
+  @@map("dao_decision_execution_logs")
+}
+
+// DAO类型枚举
+enum DAOType {
+  COMMUNITY    // 社区DAO
+  CORPORATE    // 企业DAO
+  INVESTMENT   // 投资DAO
+  GOVERNANCE   // 治理DAO
+  SOCIAL       // 社交DAO
+  DEFI         // DeFi DAO
+  NFT          // NFT DAO
+  GAMING       // 游戏DAO
+  EDUCATION    // 教育DAO
+  RESEARCH     // 研究DAO
+}
+
+// DAO配置状态枚举
+enum DAOConfigStatus {
+  ACTIVE       // 活跃
+  INACTIVE     // 非活跃
+  SUSPENDED    // 暂停
+  ARCHIVED     // 归档
+}
+
+// DAO设置类型枚举
+enum DAOSettingType {
+  STRING       // 字符串
+  NUMBER       // 数字
+  BOOLEAN      // 布尔值
+  JSON         // JSON对象
+  ARRAY        // 数组
+}
+
+// 邀请相关枚举
+enum DAOInvitationRole {
+  member
+  moderator
+  admin
+}
+
+enum DAOInvitationType {
+  direct
+  referral
+  public
+}
+
+enum DAOInvitationStatus {
+  pending
+  accepted
+  expired
+  revoked
+}
+
+enum DAOReviewStatus {
+  pending
+  approved
+  rejected
+}

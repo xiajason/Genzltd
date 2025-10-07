@@ -1,0 +1,151 @@
+{
+  "report_time": "2025-10-07T09:35:30.034535",
+  "title": "阿里云 vs 腾讯云数据库对比分析报告",
+  "comparison_basis": "基于实际测试结果和配置信息",
+  "servers": {
+    "alibaba": {
+      "ip": "47.115.168.107",
+      "status": "已测试",
+      "database_count": 6,
+      "success_rate": "66.7%"
+    },
+    "tencent": {
+      "ip": "43.154.200.107",
+      "status": "配置分析",
+      "database_count": 6,
+      "success_rate": "待测试"
+    }
+  },
+  "database_comparison": {
+    "mysql": {
+      "alibaba": {
+        "status": "stable",
+        "memory_usage": "356.8MB (18.19%)",
+        "cpu_usage": "0.66%",
+        "connection": "success",
+        "issues": "内存使用较高"
+      },
+      "tencent": {
+        "status": "unknown",
+        "memory_usage": "unknown",
+        "cpu_usage": "unknown",
+        "connection": "unknown",
+        "issues": "需要测试"
+      }
+    },
+    "postgresql": {
+      "alibaba": {
+        "status": "excellent",
+        "memory_usage": "16.06MB (0.82%)",
+        "cpu_usage": "0.23%",
+        "connection": "success",
+        "issues": "无"
+      },
+      "tencent": {
+        "status": "unknown",
+        "memory_usage": "unknown",
+        "cpu_usage": "unknown",
+        "connection": "unknown",
+        "issues": "需要测试"
+      }
+    },
+    "redis": {
+      "alibaba": {
+        "status": "excellent",
+        "memory_usage": "7.164MB (0.37%)",
+        "cpu_usage": "0.25%",
+        "connection": "success",
+        "issues": "无"
+      },
+      "tencent": {
+        "status": "unknown",
+        "memory_usage": "unknown",
+        "cpu_usage": "unknown",
+        "connection": "unknown",
+        "issues": "需要测试"
+      }
+    },
+    "neo4j": {
+      "alibaba": {
+        "status": "high_cpu",
+        "memory_usage": "375MB (19.12%)",
+        "cpu_usage": "27.43%",
+        "connection": "success",
+        "issues": "CPU使用率较高"
+      },
+      "tencent": {
+        "status": "unknown",
+        "memory_usage": "unknown",
+        "cpu_usage": "unknown",
+        "connection": "unknown",
+        "issues": "需要测试"
+      }
+    },
+    "elasticsearch": {
+      "alibaba": {
+        "status": "starting",
+        "memory_usage": "118.8kB (0.01%)",
+        "cpu_usage": "196.82%",
+        "connection": "pending",
+        "issues": "启动中，CPU使用率很高"
+      },
+      "tencent": {
+        "status": "unknown",
+        "memory_usage": "unknown",
+        "cpu_usage": "unknown",
+        "connection": "unknown",
+        "issues": "需要测试"
+      }
+    },
+    "weaviate": {
+      "alibaba": {
+        "status": "good",
+        "memory_usage": "38.16MB (1.95%)",
+        "cpu_usage": "0.40%",
+        "connection": "success",
+        "issues": "无"
+      },
+      "tencent": {
+        "status": "unknown",
+        "memory_usage": "unknown",
+        "cpu_usage": "unknown",
+        "connection": "unknown",
+        "issues": "需要测试"
+      }
+    }
+  },
+  "system_comparison": {
+    "alibaba": {
+      "total_memory": "1.8Gi",
+      "used_memory": "1.3Gi",
+      "memory_usage_percent": "72.2%",
+      "swap": "0B",
+      "database_containers": "6个",
+      "overall_health": "66.7%"
+    },
+    "tencent": {
+      "total_memory": "unknown",
+      "used_memory": "unknown",
+      "memory_usage_percent": "unknown",
+      "swap": "unknown",
+      "database_containers": "6个 (future-redis, future-postgres, future-mongodb, future-neo4j, future-elasticsearch, future-weaviate)",
+      "overall_health": "unknown"
+    }
+  },
+  "key_differences": [
+    "阿里云使用production-*容器命名，腾讯云使用future-*容器命名",
+    "阿里云有MongoDB，腾讯云有MongoDB替代MySQL",
+    "阿里云数据库配置可能有问题，导致Neo4j和Elasticsearch不稳定",
+    "腾讯云使用docker-compose管理，可能配置更规范",
+    "阿里云内存使用率72.2%，需要检查腾讯云的内存使用情况",
+    "阿里云Neo4j CPU使用率27.43%，需要对比腾讯云Neo4j性能"
+  ],
+  "recommendations": [
+    "立即测试腾讯云数据库运行状况",
+    "对比两个服务器的资源配置差异",
+    "检查腾讯云Neo4j和Elasticsearch的配置",
+    "分析腾讯云数据库的稳定性",
+    "找出阿里云数据库问题的根本原因",
+    "基于腾讯云成功经验优化阿里云配置"
+  ]
+}

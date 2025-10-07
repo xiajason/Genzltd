@@ -1,0 +1,50 @@
+{
+  "test_time": "2025-10-06T23:46:11.988296",
+  "server_ip": "47.115.168.107",
+  "databases": {
+    "MySQL": {
+      "status": "failed",
+      "error": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nmysql: [Warning] Using a password on the command line interface can be insecure.\nERROR 1049 (42000): Unknown database 'DATABASES'\n/bin/sh: : command not found\n",
+      "connection": "Docker exec"
+    },
+    "PostgreSQL": {
+      "status": "failed",
+      "error": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nERROR:  syntax error at or near \"dt\"\nLINE 1: dt\n        ^\n",
+      "connection": "Docker exec"
+    },
+    "Redis": {
+      "status": "success",
+      "connection": "Direct",
+      "key_count": 2,
+      "port": 6379
+    },
+    "Neo4j": {
+      "status": "failed",
+      "error": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nusage: cypher-shell [-h] [-a ADDRESS] [-u USERNAME] [-p PASSWORD]\n                    [--encryption {true,false,default}] [-d DATABASE]\n                    [--format {auto,verbose,plain}] [-P PARAM] [--debug]\n                    [--non-interactive] [--sample-rows SAMPLE-ROWS]\n                    [--wrap {true,false}] [-v] [--driver-version] [-f FILE]\n                    [--change-password] [--fail-fast | --fail-at-end]\n                    [cypher]\ncypher-shell: error: unrecognized arguments: '1 as test'\n/bin/sh: : command not found\n",
+      "connection": "Docker exec"
+    },
+    "Elasticsearch": {
+      "status": "failed",
+      "error": "No response",
+      "connection": "HTTP"
+    },
+    "Weaviate": {
+      "status": "success",
+      "connection": "HTTP",
+      "version": "1.30.18",
+      "port": 8080
+    }
+  },
+  "summary": {
+    "total_databases": 6,
+    "successful_connections": 2,
+    "failed_connections": 4,
+    "success_rate": "33.3%",
+    "test_duration": "0:00:15.220867"
+  },
+  "docker_containers": {
+    "status": "failed",
+    "error": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nError: `podman ps` takes no arguments\n",
+    "containers": []
+  }
+}

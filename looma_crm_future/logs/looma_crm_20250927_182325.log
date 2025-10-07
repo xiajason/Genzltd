@@ -1,0 +1,147 @@
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-27 18:23:26,201 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-27 18:23:26,201 - __main__ - INFO - Jaeger tracing initialized successfully
+[2025-09-27 18:23:26 +0800] [42079] [INFO] Sanic v23.12.1
+2025-09-27 18:23:26,213 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-27 18:23:26 +0800] [42079] [INFO] Goin' Fast @ http://0.0.0.0:7500
+2025-09-27 18:23:26,213 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:7500
+[2025-09-27 18:23:26 +0800] [42079] [INFO] app: looma_crm
+2025-09-27 18:23:26,213 - sanic.root - INFO - app: looma_crm
+[2025-09-27 18:23:26 +0800] [42079] [INFO] mode: production, single worker
+2025-09-27 18:23:26,213 - sanic.root - INFO - mode: production, single worker
+[2025-09-27 18:23:26 +0800] [42079] [INFO] server: sanic, HTTP/1.1
+2025-09-27 18:23:26,213 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-27 18:23:26 +0800] [42079] [INFO] python: 3.12.11
+2025-09-27 18:23:26,213 - sanic.root - INFO - python: 3.12.11
+[2025-09-27 18:23:26 +0800] [42079] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-27 18:23:26,213 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-27 18:23:26 +0800] [42079] [INFO] packages: sanic-routing==23.12.0
+2025-09-27 18:23:26,213 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-27 18:23:26,654 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-27 18:23:26,654 - __mp_main__ - INFO - Jaeger tracing initialized successfully
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-27 18:23:27,071 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-27 18:23:27,072 - __mp_main__ - INFO - Jaeger tracing initialized successfully
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-27 18:23:27,091 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-27 18:23:27,091 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-27 18:23:27,091 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-27 18:23:32,080 - opentelemetry.sdk._shared_internal - ERROR - Exception while exporting Span.
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/opentelemetry/sdk/_shared_internal/__init__.py", line 179, in _export
+    self._exporter.export(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/opentelemetry/exporter/jaeger/thrift/__init__.py", line 225, in export
+    self._agent_client.emit(batch)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/opentelemetry/exporter/jaeger/thrift/send.py", line 95, in emit
+    udp_socket.sendto(buff, self.address)
+OSError: [Errno 40] Message too long
+2025-09-27 18:23:32,142 - shared.database.unified_data_access - WARNING - Weaviate连接初始化失败: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8091 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-09-27 18:23:32,155 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-27 18:23:32,155 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-27 18:23:32,156 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-27 18:23:32,172 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功
+2025-09-27 18:23:32,172 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-27 18:23:32,172 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-27 18:23:32,172 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-27 18:23:32,172 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-27 18:23:32,172 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-27 18:23:32,172 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-27 18:23:32,172 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-27 18:23:32 +0800] [42098] [INFO] Starting worker [42098]
+2025-09-27 18:23:32,175 - sanic.server - INFO - Starting worker [42098]
+2025-09-27 18:23:32,175 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 18:23:32,176 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 18:23:32,178 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 18:23:32,179 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 18:23:32,179 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 18:25:18,440 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 18:25:18,440 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 18:25:18,441 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 18:25:18,442 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 18:25:18,442 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 18:28:58,113 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 18:28:58,113 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 18:28:58,114 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 18:28:58,115 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 18:28:58,115 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 18:34:45,154 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 18:34:45,155 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 18:34:45,156 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 18:34:45,157 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 18:34:45,157 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 21:46:59,180 - shared.integration.zervigo_client - ERROR - Request failed: Server disconnected
+2025-09-27 21:46:59,183 - shared.integration.zervigo_client - ERROR - Request failed: Server disconnected
+2025-09-27 21:46:59,185 - shared.integration.zervigo_client - ERROR - Request failed: Server disconnected
+2025-09-27 21:46:59,186 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 21:46:59,187 - shared.integration.zervigo_client - ERROR - Request failed: Server disconnected
+2025-09-27 21:46:59,189 - shared.integration.zervigo_client - ERROR - Request failed: Server disconnected
+2025-09-27 21:46:59,197 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 21:46:59,198 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 21:46:59,198 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8602 ssl:default [Connection refused]
+2025-09-27 21:46:59,199 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 21:46:59,199 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 21:46:59,200 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 21:46:59,204 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 21:46:59,205 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 21:46:59,205 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8602 ssl:default [Connection refused]
+2025-09-27 21:46:59,206 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 21:46:59,206 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 21:46:59,207 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 21:46:59,214 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 21:46:59,214 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 21:46:59,215 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8602 ssl:default [Connection refused]
+2025-09-27 21:46:59,215 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 21:46:59,216 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 21:46:59,216 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 21:46:59,221 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 21:46:59,221 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 21:46:59,222 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8602 ssl:default [Connection refused]
+2025-09-27 21:46:59,222 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 21:46:59,223 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 21:46:59,223 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-27 21:46:59,233 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-27 21:46:59,234 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-27 21:46:59,235 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8602 ssl:default [Connection refused]
+2025-09-27 21:46:59,235 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-27 21:46:59,236 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-27 21:46:59,236 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+2025-09-28 09:53:55,548 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8601 ssl:default [Connection refused]
+2025-09-28 09:53:55,550 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8603 ssl:default [Connection refused]
+2025-09-28 09:53:55,551 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8602 ssl:default [Connection refused]
+2025-09-28 09:53:55,561 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8609 ssl:default [Connection refused]
+2025-09-28 09:53:55,566 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8604 ssl:default [Connection refused]
+2025-09-28 09:53:55,567 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8605 ssl:default [Connection refused]
+[2025-09-28 09:59:51 +0800] [42098] [INFO] Stopping worker [42098]
+2025-09-28 09:59:51,415 - sanic.server - INFO - Stopping worker [42098]
+[2025-09-28 09:59:51 +0800] [42079] [INFO] Received signal SIGTERM. Shutting down.
+2025-09-28 09:59:51,415 - sanic.root - INFO - Received signal SIGTERM. Shutting down.
+2025-09-28 09:59:51,419 - __mp_main__ - INFO - 正在清理Looma CRM服务...
+[2025-09-28 09:59:51 +0800] [42098] [ERROR] Event loop stopped before Future completed.
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/worker/serve.py", line 117, in worker_serve
+    return _serve_http_1(
+           ^^^^^^^^^^^^^^
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 301, in _serve_http_1
+    _run_server_forever(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 189, in _run_server_forever
+    loop.run_until_complete(after_stop())
+  File "uvloop/loop.pyx", line 1516, in uvloop.loop.Loop.run_until_complete
+RuntimeError: Event loop stopped before Future completed.
+2025-09-28 09:59:51,420 - sanic.error - ERROR - Event loop stopped before Future completed.
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/worker/serve.py", line 117, in worker_serve
+    return _serve_http_1(
+           ^^^^^^^^^^^^^^
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 301, in _serve_http_1
+    _run_server_forever(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 189, in _run_server_forever
+    loop.run_until_complete(after_stop())
+  File "uvloop/loop.pyx", line 1516, in uvloop.loop.Loop.run_until_complete
+RuntimeError: Event loop stopped before Future completed.
+[2025-09-28 09:59:51 +0800] [42079] [INFO] Server Stopped
+2025-09-28 09:59:51,830 - sanic.root - INFO - Server Stopped

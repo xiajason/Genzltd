@@ -1,0 +1,41 @@
+{
+  "execution_time": "2025-10-06T09:26:56.554649",
+  "total_scripts": 8,
+  "successful_scripts": 0,
+  "failed_scripts": 8,
+  "success_rate": 0.0,
+  "detailed_results": {
+    "mysql": {
+      "status": "failed",
+      "error": "SQL文件不存在: future_mysql_database_structure.sql"
+    },
+    "postgresql": {
+      "status": "failed",
+      "error": "SQL文件不存在: future_postgresql_database_structure.sql"
+    },
+    "sqlite": {
+      "status": "failed",
+      "error": "Python脚本不存在: future_sqlite_database_structure.py"
+    },
+    "redis": {
+      "status": "failed",
+      "error": "Python脚本不存在: future_redis_database_structure.py"
+    },
+    "neo4j": {
+      "status": "failed",
+      "error": "Python脚本不存在: future_neo4j_database_structure.py"
+    },
+    "elasticsearch": {
+      "status": "failed",
+      "error": "Python脚本不存在: future_elasticsearch_database_structure.py"
+    },
+    "weaviate": {
+      "status": "failed",
+      "error": "Python脚本不存在: future_weaviate_database_structure.py"
+    },
+    "verification": {
+      "status": "failed",
+      "error": "验证脚本不存在: future_database_verification_script.py"
+    }
+  }
+}

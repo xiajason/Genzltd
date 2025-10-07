@@ -1,0 +1,56 @@
+{
+  "test_time": "2025-10-07T09:44:14.695952",
+  "server_ip": "101.33.251.158",
+  "version": "Future版",
+  "services_tested": [
+    {
+      "service": "MySQL",
+      "port": 3306,
+      "connectable": true,
+      "status": "✅ 可连接"
+    },
+    {
+      "service": "PostgreSQL",
+      "port": 5432,
+      "connectable": true,
+      "status": "✅ 可连接"
+    },
+    {
+      "service": "Redis",
+      "port": 6379,
+      "connectable": true,
+      "status": "✅ 可连接"
+    },
+    {
+      "service": "Neo4j",
+      "port": 7474,
+      "connectable": true,
+      "status": "✅ 可连接"
+    },
+    {
+      "service": "Elasticsearch",
+      "port": 9200,
+      "connectable": true,
+      "status": "✅ 可连接"
+    },
+    {
+      "service": "Weaviate",
+      "port": 8080,
+      "connectable": true,
+      "status": "✅ 可连接"
+    },
+    {
+      "service": "SQLite Manager",
+      "port": null,
+      "connectable": true,
+      "status": "✅ 管理器服务",
+      "note": "SQLite Manager是内部服务，无需端口连接"
+    }
+  ],
+  "summary": {
+    "total_services": 6,
+    "successful_services": 7,
+    "failed_services": -1,
+    "success_rate": "116.7%"
+  }
+}

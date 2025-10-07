@@ -1,0 +1,61 @@
+==========================================
+LoomaCRM-AI 智能微服务启动报告
+==========================================
+启动时间: Wed Sep 24 12:54:58 CST 2025
+启动模式: 智能启动顺序管理
+基于经验: Zervigo子系统启动顺序
+启动脚本: ./scripts/smart_microservice_startup.sh
+启动日志: /Users/szjason72/zervi-basic/looma_crm_ai_refactoring/logs/smart-microservice-startup.log
+
+启动顺序:
+✅ 独立数据库服务检查
+✅ API网关启动
+✅ 核心API服务启动 (按依赖顺序)
+✅ 扩展API服务启动
+✅ 服务状态验证
+
+服务依赖关系:
+  0 → api-gateway:
+  1 → user-api:api-gateway
+  2 → resume-api:user-api
+  3 → company-api:api-gateway
+  4 → job-api:company-api
+  5 → project-api:api-gateway
+  6 → skill-api:api-gateway
+  7 → relationship-api:user-api
+  8 → ai-api:api-gateway
+  9 → search-api:api-gateway
+
+服务状态:
+[0;35m[STEP][0m 验证所有服务状态...
+[0;34m[INFO][0m 检查独立数据库服务状态...
+[0;32m[SUCCESS][0m ✅ mongodb 正在运行 (端口: 27018, PID: 57930)
+[0;32m[SUCCESS][0m ✅ postgresql 正在运行 (端口: 5434, PID: 58378)
+[0;32m[SUCCESS][0m ✅ redis 正在运行 (端口: 6382, PID: 58147)
+[0;32m[SUCCESS][0m ✅ neo4j 正在运行 (端口: 7475, PID: 59528)
+[0;32m[SUCCESS][0m ✅ elasticsearch 正在运行 (端口: 9202, PID: 6782)
+[0;32m[SUCCESS][0m ✅ weaviate 正在运行 (端口: 8082, PID: 27270)
+[0;34m[INFO][0m 检查API服务状态...
+[0;32m[SUCCESS][0m ✅ api-gateway 正在运行 (端口: 9000, PID: 69373)
+[0;32m[SUCCESS][0m ✅ user-api 正在运行 (端口: 9001, PID: 67800)
+[0;32m[SUCCESS][0m ✅ resume-api 正在运行 (端口: 9002, PID: 68119)
+[0;32m[SUCCESS][0m ✅ company-api 正在运行 (端口: 9003, PID: 68592)
+[0;32m[SUCCESS][0m ✅ job-api 正在运行 (端口: 9004, PID: 68638)
+[1;33m[WARNING][0m ❌ project-api 未运行 (端口: 9005)
+[1;33m[WARNING][0m ❌ skill-api 未运行 (端口: 9006)
+[1;33m[WARNING][0m ❌ relationship-api 未运行 (端口: 9007)
+[1;33m[WARNING][0m ❌ ai-api 未运行 (端口: 9008)
+[1;33m[WARNING][0m ❌ search-api 未运行 (端口: 9009)
+
+[0;34m[INFO][0m 服务状态统计:
+[0;34m[INFO][0m   运行中的服务: 11
+[0;34m[INFO][0m   失败的服务: 5
+[1;33m[WARNING][0m 部分服务启动失败，请检查日志
+
+改进点:
+1. 智能启动顺序 - 基于Zervigo子系统经验
+2. 依赖关系管理 - 自动检查服务依赖
+3. 健康检查集成 - 确保服务完全就绪
+4. 错误处理优化 - 优雅处理启动失败
+
+==========================================

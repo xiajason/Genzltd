@@ -1,0 +1,27 @@
+{
+  "timestamp": "20251006_104302",
+  "version": "future",
+  "restart_count": 4,
+  "container_ips": {
+    "future-postgresql": "172.20.0.6",
+    "future-weaviate": "172.20.0.3",
+    "future-sqlite-manager": "172.20.0.5",
+    "future-neo4j": "172.20.0.4",
+    "future-mysql": "172.20.0.7",
+    "future-elasticsearch": "172.20.0.8",
+    "future-redis": "172.20.0.2"
+  },
+  "connection_results": {
+    "mysql": "success",
+    "postgresql": "success",
+    "redis": "success",
+    "neo4j": "success",
+    "elasticsearch": "success",
+    "weaviate": "success"
+  },
+  "consistency_results": {
+    "mysql": "success",
+    "postgresql": "success",
+    "redis": "success"
+  }
+}

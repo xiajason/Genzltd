@@ -1,0 +1,1 @@
+DATABASE_URL="mysql://dao_user:dao_password_2024@127.0.0.1:9506/dao_dev?charset=utf8mb4&parseTime=True&loc=Local"

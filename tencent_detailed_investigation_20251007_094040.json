@@ -1,0 +1,69 @@
+{
+  "investigation_time": "2025-10-07T09:40:15.606017",
+  "server_ip": "101.33.251.158",
+  "services_checked": [
+    {
+      "service": "DAO版Web服务",
+      "port": 9200,
+      "status": "✅ 可连接",
+      "connectable": true
+    },
+    {
+      "service": "DAO版Web服务",
+      "port": 9200,
+      "url": "http://101.33.251.158:9200/",
+      "status_code": 200,
+      "response_size": 539,
+      "response_time": 0.025552,
+      "working": true
+    },
+    {
+      "service": "DAO PostgreSQL",
+      "port": 5433,
+      "status": "✅ 可连接",
+      "connectable": true
+    },
+    {
+      "service": "DAO Redis",
+      "port": 6380,
+      "status": "✅ 可连接",
+      "connectable": true
+    },
+    {
+      "service": "区块链服务",
+      "port": 8300,
+      "status": "✅ 可连接",
+      "connectable": true
+    },
+    {
+      "service": "区块链服务",
+      "port": 8300,
+      "url": "http://101.33.251.158:8300/",
+      "status_code": 0,
+      "error": "Connection refused",
+      "working": false
+    }
+  ],
+  "issues_found": [
+    {
+      "service": "区块链服务",
+      "issue": "HTTP服务异常: Connection refused",
+      "severity": "medium",
+      "description": "服务在端口8300上无法正常响应HTTP请求"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "检查区块链服务容器状态",
+      "command": "docker ps | grep blockchain",
+      "description": "检查区块链服务是否正在运行"
+    },
+    {
+      "priority": "high",
+      "action": "重启区块链服务",
+      "command": "docker restart blockchain-service",
+      "description": "尝试重启区块链服务"
+    }
+  ]
+}

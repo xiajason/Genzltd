@@ -1,0 +1,124 @@
+networks:
+  future-network:
+    driver: bridge
+services:
+  future-ai-gateway:
+    build:
+      context: ./ai_services_independent/ai_gateway_future
+      dockerfile: Dockerfile
+    container_name: aliyun-future-ai-gateway
+    depends_on:
+    - future-redis
+    environment:
+      AI_GATEWAY_HOST: 0.0.0.0
+      AI_GATEWAY_PORT: '7510'
+      REDIS_HOST: future-redis
+      REDIS_PASSWORD: future_redis_password_2025
+      REDIS_PORT: '6379'
+    networks:
+    - future-network
+    ports:
+    - 7510:7510
+  future-elasticsearch:
+    container_name: aliyun-future-elasticsearch
+    environment:
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+      discovery.type: single-node
+      xpack.security.enabled: 'false'
+    image: elasticsearch:8.11.0
+    networks:
+    - future-network
+    ports:
+    - 9203:9200
+    volumes:
+    - future_elasticsearch_data:/usr/share/elasticsearch/data
+  future-mongodb:
+    container_name: aliyun-future-mongodb
+    environment:
+      MONGO_INITDB_DATABASE: jobfirst_future
+      MONGO_INITDB_ROOT_PASSWORD: secure_future_password_2025
+      MONGO_INITDB_ROOT_USERNAME: jobfirst_future
+    image: mongo:7.0
+    networks:
+    - future-network
+    ports:
+    - 27019:27017
+    volumes:
+    - future_mongodb_data:/data/db
+  future-neo4j:
+    container_name: aliyun-future-neo4j
+    environment:
+      NEO4J_AUTH: neo4j/future_neo4j_password_2025
+      NEO4J_dbms_default__database: jobfirst_future
+    image: neo4j:5.15
+    networks:
+    - future-network
+    ports:
+    - 7476:7474
+    - 7689:7687
+    volumes:
+    - future_neo4j_data:/data
+  future-postgres:
+    container_name: aliyun-future-postgres
+    environment:
+      POSTGRES_DB: jobfirst_future
+      POSTGRES_PASSWORD: secure_future_password_2025
+      POSTGRES_USER: jobfirst_future
+    image: postgres:15
+    networks:
+    - future-network
+    ports:
+    - 5435:5432
+    volumes:
+    - future_postgres_data:/var/lib/postgresql/data
+  future-redis:
+    command: redis-server --appendonly yes --requirepass future_redis_password_2025
+    container_name: aliyun-future-redis
+    image: redis:7-alpine
+    networks:
+    - future-network
+    ports:
+    - 6383:6379
+    volumes:
+    - future_redis_data:/data
+  future-resume-ai:
+    build:
+      context: ./ai_services_independent/resume_ai_future
+      dockerfile: Dockerfile
+    container_name: aliyun-future-resume-ai
+    depends_on:
+    - future-redis
+    environment:
+      REDIS_HOST: future-redis
+      REDIS_PASSWORD: future_redis_password_2025
+      REDIS_PORT: '6379'
+      RESUME_AI_HOST: 0.0.0.0
+      RESUME_AI_PORT: '7511'
+    networks:
+    - future-network
+    ports:
+    - 7511:7511
+  future-weaviate:
+    container_name: aliyun-future-weaviate
+    environment:
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      CLUSTER_HOSTNAME: node1
+      DEFAULT_VECTORIZER_MODULE: none
+      ENABLE_MODULES: text2vec-cohere,text2vec-huggingface,text2vec-palm,text2vec-openai,generative-openai,generative-cohere,generative-palm,ref2vec-centroid,reranker-cohere,qna-openai
+      PERSISTENCE_DATA_PATH: /var/lib/weaviate
+      QUERY_DEFAULTS_LIMIT: '25'
+    image: semitechnologies/weaviate:1.21.5
+    networks:
+    - future-network
+    ports:
+    - 8083:8080
+    volumes:
+    - future_weaviate_data:/var/lib/weaviate
+version: '3.8'
+volumes:
+  future_elasticsearch_data: {}
+  future_mongodb_data: {}
+  future_neo4j_data: {}
+  future_postgres_data: {}
+  future_redis_data: {}
+  future_weaviate_data: {}

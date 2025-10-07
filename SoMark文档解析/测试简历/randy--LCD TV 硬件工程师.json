@@ -1,0 +1,286 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 1,
+          "type": "table",
+          "bbox": [
+            122,
+            221,
+            1129,
+            1577
+          ],
+          "content": "<table><tr><td colspan=\"2\"></td><td colspan=\"7\"></td><td rowspan=\"6\"></td></tr><tr><td colspan=\"2\" rowspan=\"2\">jobcn.com 卓\n\n![](https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094235646_5_7eb02150031d48778707040bd81300c4/imgs/image0-2-table-1.jpg)\n\n</td><td colspan=\"4\">$搏 选中该求职$</td></tr><tr><td colspan=\"4\"></td></tr><tr><td></td><td></td><td>—</td><td></td><td></td><td></td></tr><tr><td colspan=\"6\">$randy 的个人简历 (No:4663074)$</td></tr><tr><td colspan=\"6\"></td></tr><tr><td>姓名:</td><td colspan=\"2\">randy</td><td>$性别:$</td><td>男</td><td rowspan=\"9\">没有照片</td><td rowspan=\"10\"></td></tr><tr><td>更新日期:</td><td colspan=\"2\">$2008年09月03日$</td><td>民族:</td><td>汉族</td></tr><tr><td>户籍:</td><td colspan=\"2\">$江西其他$</td><td>年龄:</td><td>$33$</td></tr><tr><td>婚姻状况:</td><td colspan=\"3\">已婚  身高:</td><td>$170cm$</td></tr><tr><td>现所在地:</td><td colspan=\"4\">广东深圳</td></tr><tr><td>希望地区:</td><td colspan=\"4\">广东深圳 广东</td></tr><tr><td>希望岗位:</td><td colspan=\"4\">电子/电气(器)类-电路(布线)设计工程师</td></tr><tr><td></td><td colspan=\"4\">电子/电气(器)类-数码产品开发工程师  计算机(IT)类-开发/应用-硬件工程师</td></tr><tr><td>待遇要求:</td><td colspan=\"4\">面议</td></tr><tr><td>$最快到岗:$</td><td colspan=\"4\">随时到岗</td><td></td></tr><tr><td colspan=\"6\"></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"6\">教育/培训</td><td></td></tr><tr><td colspan=\"6\"></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"2\">1993-09~19</td><td colspan=\"3\">7-07 赣南师院 电子工程与科学</td><td>本科</td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"6\"></td><td></td></tr><tr><td colspan=\"7\">工作经验 至今 10 年 3 月工作经验,曾在 4 家公司工作</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"6\"></td><td></td></tr><tr><td colspan=\"6\">■ 侨德电子（2007-07～2008-05）</td><td></td></tr><tr><td colspan=\"2\">公司性质:</td><td>民营企业</td><td>业类别: 电</td><td colspan=\"2\">子、微电子技术</td><td></td></tr><tr><td colspan=\"2\">担任职位：</td><td colspan=\"4\">硬件研发工程师</td><td></td></tr><tr><td colspan=\"2\">工作描述:</td><td colspan=\"4\">VD 解码板、miniPC 主板、PMP/MP3 设计研发。</td><td></td></tr><tr><td colspan=\"2\"></td><td colspan=\"4\">解决生产中的问题。  新产品的导入准备工作。  技术员的培训工作。</td><td></td></tr><tr><td>■ ANPE (20</td><td colspan=\"5\">02-03 ~ 2007-12）</td><td></td></tr><tr><td colspan=\"2\">公司性质：</td><td>小资企业</td><td>业类别: 电</td><td colspan=\"2\">子、微电子技术</td><td></td></tr><tr><td colspan=\"2\">担任职位：</td><td colspan=\"4\">工程师/工程组长</td><td></td></tr><tr><td colspan=\"2\">工作描述:</td><td colspan=\"4\">主要职责：新产品研发规划，pcb layout, EMC整改，输出BOM及作业指导书，指标整改</td><td></td></tr><tr><td colspan=\"2\" rowspan=\"2\"></td><td colspan=\"4\">主要成绩:MiniPC主板、DVD、GPS、PMP/MP3、数码相框研、硬盘播放器的开发及试产</td><td></td></tr><tr><td colspan=\"4\">解决其它公司没有办法解决的疑难问题案例.</td><td></td></tr><tr><td>■腾莺合电子</td><td>科技</td><td colspan=\"4\">[2000-03, 2003-01)</td><td></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "cate-item",
+          "bbox": [
+            135,
+            1062,
+            1111,
+            1094
+          ],
+          "content": "■ 侨德电子 (2007-07 ~ 2008-05)",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            135,
+            1561,
+            549,
+            1592
+          ],
+          "content": "$\\rule{2mm}{4mm}$ 瞄营全电子科技 （2000-03\\~2002\\-01）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 9,
+          "type": "table",
+          "bbox": [
+            127,
+            150,
+            1119,
+            327
+          ],
+          "content": "<table><tr><td>公司性质:</td><td>合资企业</td><td>行业类别:</td><td>计算机业（硬件、网络设备）</td></tr><tr><td>担任职位：</td><td>硬件工程师</td><td></td><td></td></tr><tr><td>工作描述:</td><td>$1.参与了电脑主板PCB$</td><td>设计.</td><td rowspan=\"3\"></td></tr><tr><td></td><td>2.负责新产试产跟进工</td><td>作.</td></tr><tr><td></td><td>3.电脑板卡的布线设计.</td><td>工作.</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "table",
+          "bbox": [
+            128,
+            320,
+            1116,
+            562
+          ],
+          "content": "<table><tr><td colspan=\"3\">■巨业电子 (1998-03~1999-12)</td></tr><tr><td colspan=\"3\"></td></tr><tr><td>公司性质：</td><td>外资企业 行业类别: 电</td><td>电子、微电子技术</td></tr><tr><td>担任职位：</td><td>项目组长</td><td></td></tr><tr><td>工作描述:</td><td colspan=\"2\" rowspan=\"4\">1.设计 PC 游戏手柄。  2.开发设计电话机。该案子采用 9918/117 方案。负责了 PCB layout，BOM 制定，指标整改。  3.电子礼品开发.包括万年历\\万年历电话\\夜视钟等。  4.开发设计电脑话务员产品。</td></tr><tr><td rowspan=\"3\"></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "table",
+          "bbox": [
+            127,
+            622,
+            1116,
+            1059
+          ],
+          "content": "<table><tr><td colspan=\"2\">技能/专长</td></tr><tr><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td></tr><tr><td colspan=\"2\"></td></tr><tr><td>语言能力:</td><td>普通话流利,粤语一般</td></tr><tr><td>第一外语:</td><td>英语 一般</td></tr><tr><td>计算机能力:</td><td>中级</td></tr><tr><td colspan=\"2\" rowspan=\"2\">计算机详细技能:</td></tr><tr><td>其它技能:</td><td>★精通PADS2005、Protel99、ORCAD、allegro EDA软件，设计多层PCB板经</td></tr><tr><td rowspan=\"6\"></td><td>验丰富。</td></tr><tr><td>★精通PMP/MP4、数码相框、GPS、ATV/DTV设计(方案采用SUNPLUS、TI、</td></tr><tr><td>ESS、ADI、VIA、SAMSUNG 等公司主控)。</td></tr><tr><td>★有MTK1389、凌阳8202、卓然966等DVD方案板卡及硬盘播放器独立研发</td></tr><tr><td>工作.</td></tr><tr><td>★有EPC主板、IPC主板、PC主板/板卡、PC电源设计经验。</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "table",
+          "bbox": [
+            128,
+            1086,
+            1116,
+            1388
+          ],
+          "content": "<table><tr><td></td></tr><tr><td>发展方向</td></tr><tr><td></td></tr><tr><td>寻求职位: 1.电子工程师; 2.电脑硬件工程师; 3.PMP/DVD/DTV 硬件工程</td></tr><tr><td>$硬件工程师、电脑主板/板卡硬件工程师、MiniPC 工程师$</td></tr><tr><td></td></tr><tr><td></td><td rowspan=\"2\">自我评价</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            137,
+            1394,
+            860,
+            1419
+          ],
+          "content": "$\\star$ 精通PADS2005、Protel99、ORCAD、allegro EDA 软件，设计多层PCB 板经验丰富。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            137,
+            1425,
+            460,
+            1451
+          ],
+          "content": "★独立完成多个案子的研发工作经验。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            136,
+            1458,
+            748,
+            1483
+          ],
+          "content": "★对研发、元件市场、生产各环节非常清楚,能准确合理按排和引导生产。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            137,
+            1490,
+            765,
+            1516
+          ],
+          "content": "$\\star$ 十分熟悉电子零件性能及市场,最大限度的控制产品物料成本和生产成本。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            138,
+            1523,
+            656,
+            1549
+          ],
+          "content": "$\\star$ 有EPC 主板、IPC 主板、PC 主板/板卡、PC 电源设计经验。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            135,
+            1555,
+            1107,
+            1582
+          ],
+          "content": "★ 精通 PMP/MP4、数码相框、GPS、ATV/DTV 设计(采用 SUNPLUS、TI、ESS、ADI、VIA、SAMSUNG 等公司主控)。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": true
+    },
+    {
+      "page_num": 2,
+      "blocks": [
+        {
+          "idx": 4,
+          "type": "table",
+          "bbox": [
+            89,
+            134,
+            1190,
+            908
+          ],
+          "content": "<table><tr><td colspan=\"9\"></td><td rowspan=\"18\"></td><td></td></tr><tr><td rowspan=\"3\"></td><td colspan=\"6\">有 MTK1389、凌阳 8202、卓然 966 等 DVD 方案板卡及硬盘播放器独立研发工作。多次解决其它公司没有办法解决的疑难问题案例。</td><td rowspan=\"3\"></td><td></td></tr><tr><td colspan=\"6\"></td><td></td></tr><tr><td rowspan=\"12\"></td><td colspan=\"6\"></td><td></td></tr><tr><td colspan=\"6\"></td><td></td><td></td></tr><tr><td colspan=\"6\"></td><td></td><td></td></tr><tr><td colspan=\"6\">系方式</td><td></td><td></td></tr><tr><td colspan=\"6\"></td><td></td><td></td></tr><tr><td colspan=\"6\"></td><td></td><td></td></tr><tr><td>系电话:</td><td>13684981705</td><td>移动电话:</td><td colspan=\"3\">13684981705</td><td></td><td></td></tr><tr><td>$子邮件: B$</td><td>$EPC888@126.c$</td><td colspan=\"4\">聊天号码:</td><td></td><td></td></tr><tr><td colspan=\"7\">人主页：</td><td></td></tr><tr><td>讯地址:</td><td colspan=\"6\">宝安 西乡 (518100)</td><td></td></tr><tr><td colspan=\"7\"></td><td></td></tr><tr><td colspan=\"8\"></td><td></td></tr><tr><td colspan=\"8\"></td><td></td></tr><tr><td rowspan=\"2\"></td><td>邀请</td><td>面试 邀</td><td>库 i 打印简</td><td colspan=\"2\">历  发送至本公司邮箱</td><td colspan=\"2\" rowspan=\"2\"></td><td></td></tr><tr><td colspan=\"5\"></td><td></td></tr><tr><td>我</td><td>们</td><td>相关法律</td><td>在线帮助</td><td>加盟卓博</td><td>投诉、意见反馈</td><td>RSS 信息聚合</td><td>合服务</td><td></td><td>WAP</td></tr><tr><td colspan=\"10\" rowspan=\"2\">Copyright © 1999 - 2008 jobcn.com All Rights Reserved  招聘 求职 首选 -- 卓博人才网 版权所有  粤 B2-20040458 软件企业认定证书 高新技术企业认定证书 民营科技企业资格证书</td></tr><tr><td colspan=\"5\"></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            25,
+            679,
+            1202,
+            714
+          ],
+          "content": "关于我们  相关法律  在线帮助  网站地图  联系我们  加盟卓博  投诉、意见反馈  RSS信息聚合服务  WAP",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "figure",
+          "bbox": [
+            512,
+            878,
+            749,
+            958
+          ],
+          "content": "三个徽章图标并排展示，从左到右分别是红色盾形徽章、蓝色盾形徽章和警亭图案。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094235646_5_7eb02150031d48778707040bd81300c4/imgs/image2-1.jpg"
+        },
+        {
+          "idx": 0,
+          "type": "title",
+          "bbox": [
+            22,
+            997,
+            152,
+            1028
+          ],
+          "content": "The image contains four yellow blocks with a white background and a black border. There is no text content in the image.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "figure",
+          "bbox": [
+            187,
+            1032,
+            255,
+            1062
+          ],
+          "content": "两个黄色背景的方框，每个方框内有一个蓝色箭头指向右方。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094235646_5_7eb02150031d48778707040bd81300c4/imgs/image2-2.jpg"
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

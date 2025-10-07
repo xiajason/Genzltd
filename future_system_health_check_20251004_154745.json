@@ -1,0 +1,147 @@
+{
+  "timestamp": "2025-10-04T15:47:45.985814",
+  "title": "Future系统健康检查报告",
+  "stop_check": {
+    "processes": {
+      "looma_processes": "✅ 已停止",
+      "ai_processes": "✅ 已停止",
+      "future_processes": "✅ 已停止"
+    },
+    "containers": {
+      "future_containers": "✅ 已停止",
+      "database_containers": "✅ 已停止",
+      "ai_service_containers": "✅ 已停止"
+    },
+    "ports": {
+      "7500": "✅ 已释放",
+      "7510": "✅ 已释放",
+      "7511": "✅ 已释放"
+    },
+    "status": "✅ 完全停止"
+  },
+  "start_check": {
+    "main_service": {
+      "status": "healthy",
+      "service": "LoomaCRM Future",
+      "response_time": 0.002972,
+      "data": {
+        "status": "healthy",
+        "service": "looma-crm-future",
+        "redis": "connected",
+        "postgres": "connected",
+        "version": "1.0.0",
+        "timestamp": "2025-09-29T11:40:00Z"
+      }
+    },
+    "ai_gateway": {
+      "status": "healthy",
+      "service": "AI网关",
+      "response_time": 0.001665,
+      "data": {
+        "status": "healthy",
+        "service": "ai-gateway-future",
+        "redis": "connected",
+        "version": "1.0.0",
+        "timestamp": "2025-09-29T11:40:00Z"
+      }
+    },
+    "resume_ai": {
+      "status": "healthy",
+      "service": "简历AI",
+      "response_time": 0.001638,
+      "data": {
+        "status": "healthy",
+        "service": "resume-ai-future",
+        "redis": "connected",
+        "version": "1.0.0",
+        "timestamp": "2025-09-29T11:40:00Z"
+      }
+    },
+    "overall_status": "✅ 启动成功"
+  },
+  "service_status": {
+    "main_services": {
+      "looma_crm_future": {
+        "port": "7500",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      },
+      "ai_gateway": {
+        "port": "7510",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      },
+      "resume_ai": {
+        "port": "7511",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      }
+    },
+    "ai_services": {
+      "mineru": {
+        "port": "8000",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      },
+      "ai_models": {
+        "port": "8002",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      }
+    },
+    "monitoring": {
+      "grafana": {
+        "port": "3001",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      },
+      "prometheus": {
+        "port": "9091",
+        "status": "✅ 运行中",
+        "health": "healthy"
+      }
+    }
+  },
+  "database_status": {
+    "redis": {
+      "port": "6382",
+      "status": "✅ 运行中",
+      "container": "future-redis"
+    },
+    "postgresql": {
+      "port": "5434",
+      "status": "✅ 运行中",
+      "container": "future-postgres"
+    },
+    "mongodb": {
+      "port": "27018",
+      "status": "✅ 运行中",
+      "container": "future-mongodb"
+    },
+    "neo4j": {
+      "port": "7474/7687",
+      "status": "✅ 运行中",
+      "container": "future-neo4j"
+    },
+    "elasticsearch": {
+      "port": "9202",
+      "status": "✅ 运行中",
+      "container": "future-elasticsearch"
+    },
+    "weaviate": {
+      "port": "8082",
+      "status": "✅ 运行中",
+      "container": "future-weaviate"
+    }
+  },
+  "overall_status": "✅ 系统运行正常",
+  "summary": {
+    "overall_status": "✅ 系统运行正常",
+    "stop_check": true,
+    "start_check": true,
+    "total_services": 7,
+    "total_databases": 6,
+    "healthy_services": 7,
+    "unhealthy_services": 0
+  }
+}

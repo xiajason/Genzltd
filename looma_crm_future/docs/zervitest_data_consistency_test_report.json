@@ -1,0 +1,178 @@
+{
+  "test_time": "2025-09-23T21:44:58.814913",
+  "test_user": {
+    "id": 17,
+    "username": "zervitest",
+    "email": "zervitest_updated@example.com",
+    "phone": "+12345678988",
+    "role": "guest",
+    "status": "inactive"
+  },
+  "total_tests": 3,
+  "successful_tests": 3,
+  "failed_tests": 0,
+  "test_results": [
+    {
+      "test_type": "complete_user_data_flow",
+      "user_id": 17,
+      "username": "zervitest",
+      "looma_user": {
+        "id": "talent_17",
+        "name": "zervitest",
+        "email": "zervitest_updated@example.com",
+        "phone": "+12345678988",
+        "skills": [],
+        "experience": 0,
+        "education": {
+          "degree": "Bachelor",
+          "school": "Test University",
+          "major": "Computer Science",
+          "graduation_year": 2020
+        },
+        "projects": [],
+        "relationships": [],
+        "status": "inactive",
+        "created_at": "2025-09-23T20:36:09",
+        "updated_at": "2025-09-23T21:24:29",
+        "zervigo_user_id": 17,
+        "first_name": "ZerviUpdated",
+        "last_name": "TestUpdated",
+        "email_verified": true,
+        "phone_verified": true
+      },
+      "zervigo_user": {
+        "id": 17,
+        "username": "zervitest",
+        "email": "zervitest_updated@example.com",
+        "phone": "+12345678988",
+        "role": "user",
+        "status": "inactive",
+        "first_name": "ZerviUpdated",
+        "last_name": "TestUpdated",
+        "email_verified": true,
+        "phone_verified": true,
+        "created_at": "2025-09-23T20:36:09",
+        "updated_at": "2025-09-23T21:24:29"
+      },
+      "sync_result": "SyncResult(event_id='looma_crm_zervigo_1758635098.810835', success=True, timestamp=datetime.datetime(2025, 9, 23, 21, 44, 58, 810934), duration_ms=0, error_message=None, conflict_resolved=False, data_changed=False)",
+      "consistency_result": {
+        "is_consistent": true,
+        "errors": [],
+        "warnings": [],
+        "details": {
+          "用户名": "一致",
+          "邮箱": "一致",
+          "手机号": "一致",
+          "状态": "一致",
+          "认证参数first_name": "一致",
+          "认证参数last_name": "一致",
+          "认证参数email_verified": "一致",
+          "认证参数phone_verified": "一致"
+        }
+      },
+      "success": true,
+      "timestamp": "2025-09-23T21:44:58.810968"
+    },
+    {
+      "test_type": "data_modification_consistency",
+      "user_id": 17,
+      "username": "zervitest",
+      "modification_data": {
+        "email": "zervitest_updated@example.com",
+        "phone": "+12345678988",
+        "first_name": "ZerviUpdated",
+        "last_name": "TestUpdated",
+        "status": "inactive",
+        "updated_at": "2025-09-23T21:44:58.810973"
+      },
+      "looma_update": {
+        "id": "talent_17",
+        "email": "zervitest_updated@example.com",
+        "phone": "+12345678988",
+        "first_name": "ZerviUpdated",
+        "last_name": "TestUpdated",
+        "status": "inactive",
+        "updated_at": "2025-09-23T21:44:58.810973"
+      },
+      "zervigo_update": {},
+      "sync_result": "SyncResult(event_id='looma_crm_zervigo_1758635098.813482', success=True, timestamp=datetime.datetime(2025, 9, 23, 21, 44, 58, 813515), duration_ms=0, error_message=None, conflict_resolved=False, data_changed=False)",
+      "consistency_result": {
+        "is_consistent": true,
+        "errors": [],
+        "warnings": [],
+        "details": {
+          "MySQL_email": "更新成功",
+          "MySQL_phone": "更新成功",
+          "MySQL_first_name": "更新成功",
+          "MySQL_last_name": "更新成功",
+          "MySQL_status": "更新成功"
+        }
+      },
+      "success": true,
+      "timestamp": "2025-09-23T21:44:58.814829"
+    },
+    {
+      "test_type": "authentication_parameters_consistency",
+      "user_id": 17,
+      "username": "zervitest",
+      "auth_params": {
+        "user_id": 17,
+        "username": "zervitest",
+        "email": "zervitest_updated@example.com",
+        "phone": "+12345678988",
+        "role": "guest",
+        "status": "inactive",
+        "email_verified": true,
+        "phone_verified": true,
+        "first_name": "ZerviUpdated",
+        "last_name": "TestUpdated"
+      },
+      "completeness_result": {
+        "is_complete": true,
+        "completeness_score": 77.77777777777779,
+        "missing_fields": [],
+        "details": {
+          "用户名": "完整",
+          "邮箱": "完整",
+          "手机号": "完整",
+          "角色": "完整",
+          "状态": "完整",
+          "名字": "完整",
+          "姓氏": "完整",
+          "邮箱验证": "已验证",
+          "手机验证": "已验证"
+        }
+      },
+      "mapping_result": {
+        "mapping_successful": true,
+        "mapped_fields": {
+          "id": null,
+          "username": "zervitest",
+          "email": "zervitest_updated@example.com",
+          "phone": "+12345678988",
+          "role": "user",
+          "status": "inactive",
+          "first_name": "ZerviUpdated",
+          "last_name": "TestUpdated",
+          "email_verified": true,
+          "phone_verified": true,
+          "created_at": "2025-09-23T21:44:58.814865",
+          "updated_at": "2025-09-23T21:44:58.814866"
+        },
+        "errors": []
+      },
+      "sync_result": {
+        "sync_successful": true,
+        "sync_details": "SyncResult(event_id='looma_crm_zervigo_1758635098.814876', success=True, timestamp=datetime.datetime(2025, 9, 23, 21, 44, 58, 814903), duration_ms=0, error_message=None, conflict_resolved=False, data_changed=False)",
+        "errors": []
+      },
+      "success": true,
+      "timestamp": "2025-09-23T21:44:58.814911"
+    }
+  ],
+  "summary": {
+    "complete_user_data_flow": 1,
+    "data_modification_consistency": 1,
+    "authentication_parameters_consistency": 1
+  }
+}

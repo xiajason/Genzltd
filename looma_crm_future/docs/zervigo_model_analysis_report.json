@@ -1,0 +1,483 @@
+{
+  "analysis_time": "2025-09-23T19:13:20.139870",
+  "analyzer_version": "1.0",
+  "total_services": 6,
+  "total_models": 16,
+  "total_fields": 100,
+  "services": {
+    "auth": {
+      "service": "unified-auth-service",
+      "port": 8207,
+      "url": "http://localhost:8207",
+      "models": {
+        "users": {
+          "fields": [
+            "id",
+            "username",
+            "email",
+            "role",
+            "status",
+            "created_at",
+            "updated_at"
+          ],
+          "types": {
+            "id": "integer",
+            "username": "string",
+            "email": "string",
+            "role": "string",
+            "status": "string",
+            "created_at": "datetime",
+            "updated_at": "datetime"
+          },
+          "constraints": {
+            "username": "unique",
+            "email": "unique"
+          },
+          "relationships": {
+            "permissions": "many_to_many"
+          }
+        },
+        "permissions": {
+          "fields": [
+            "id",
+            "name",
+            "description",
+            "resource",
+            "action",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "name": "string",
+            "description": "string",
+            "resource": "string",
+            "action": "string",
+            "created_at": "datetime"
+          },
+          "relationships": {
+            "users": "many_to_many"
+          }
+        },
+        "roles": {
+          "fields": [
+            "id",
+            "name",
+            "description",
+            "permissions",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "name": "string",
+            "description": "string",
+            "permissions": "array",
+            "created_at": "datetime"
+          },
+          "relationships": {
+            "users": "one_to_many"
+          }
+        }
+      }
+    },
+    "ai": {
+      "service": "local-ai-service",
+      "port": 8206,
+      "url": "http://localhost:8206",
+      "models": {
+        "ai_models": {
+          "fields": [
+            "id",
+            "name",
+            "type",
+            "version",
+            "status",
+            "config",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "name": "string",
+            "type": "string",
+            "version": "string",
+            "status": "string",
+            "config": "json",
+            "created_at": "datetime"
+          },
+          "constraints": {
+            "name": "unique"
+          }
+        },
+        "ai_sessions": {
+          "fields": [
+            "id",
+            "user_id",
+            "model_id",
+            "session_data",
+            "created_at",
+            "updated_at"
+          ],
+          "types": {
+            "id": "integer",
+            "user_id": "integer",
+            "model_id": "integer",
+            "session_data": "json",
+            "created_at": "datetime",
+            "updated_at": "datetime"
+          },
+          "relationships": {
+            "user": "many_to_one",
+            "model": "many_to_one"
+          }
+        },
+        "ai_conversations": {
+          "fields": [
+            "id",
+            "session_id",
+            "user_message",
+            "ai_response",
+            "timestamp"
+          ],
+          "types": {
+            "id": "integer",
+            "session_id": "integer",
+            "user_message": "text",
+            "ai_response": "text",
+            "timestamp": "datetime"
+          },
+          "relationships": {
+            "session": "many_to_one"
+          }
+        }
+      }
+    },
+    "resume": {
+      "service": "resume-service",
+      "port": 8082,
+      "url": "http://localhost:8082",
+      "models": {
+        "resumes": {
+          "fields": [
+            "id",
+            "user_id",
+            "filename",
+            "content",
+            "parsed_data",
+            "status",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "user_id": "integer",
+            "filename": "string",
+            "content": "text",
+            "parsed_data": "json",
+            "status": "string",
+            "created_at": "datetime"
+          },
+          "relationships": {
+            "user": "many_to_one"
+          }
+        },
+        "resume_skills": {
+          "fields": [
+            "id",
+            "resume_id",
+            "skill_name",
+            "skill_level",
+            "experience_years"
+          ],
+          "types": {
+            "id": "integer",
+            "resume_id": "integer",
+            "skill_name": "string",
+            "skill_level": "string",
+            "experience_years": "integer"
+          },
+          "relationships": {
+            "resume": "many_to_one"
+          }
+        },
+        "resume_experience": {
+          "fields": [
+            "id",
+            "resume_id",
+            "company",
+            "position",
+            "start_date",
+            "end_date",
+            "description"
+          ],
+          "types": {
+            "id": "integer",
+            "resume_id": "integer",
+            "company": "string",
+            "position": "string",
+            "start_date": "date",
+            "end_date": "date",
+            "description": "text"
+          },
+          "relationships": {
+            "resume": "many_to_one"
+          }
+        }
+      }
+    },
+    "job": {
+      "service": "job-service",
+      "port": 8089,
+      "url": "http://localhost:8089",
+      "models": {
+        "jobs": {
+          "fields": [
+            "id",
+            "title",
+            "description",
+            "requirements",
+            "company_id",
+            "status",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "title": "string",
+            "description": "text",
+            "requirements": "json",
+            "company_id": "integer",
+            "status": "string",
+            "created_at": "datetime"
+          },
+          "relationships": {
+            "company": "many_to_one"
+          }
+        },
+        "job_applications": {
+          "fields": [
+            "id",
+            "job_id",
+            "user_id",
+            "resume_id",
+            "status",
+            "applied_at"
+          ],
+          "types": {
+            "id": "integer",
+            "job_id": "integer",
+            "user_id": "integer",
+            "resume_id": "integer",
+            "status": "string",
+            "applied_at": "datetime"
+          },
+          "relationships": {
+            "job": "many_to_one",
+            "user": "many_to_one",
+            "resume": "many_to_one"
+          }
+        },
+        "job_skills": {
+          "fields": [
+            "id",
+            "job_id",
+            "skill_name",
+            "required_level",
+            "is_required"
+          ],
+          "types": {
+            "id": "integer",
+            "job_id": "integer",
+            "skill_name": "string",
+            "required_level": "string",
+            "is_required": "boolean"
+          },
+          "relationships": {
+            "job": "many_to_one"
+          }
+        }
+      }
+    },
+    "company": {
+      "service": "company-service",
+      "port": 8083,
+      "url": "http://localhost:8083",
+      "models": {
+        "companies": {
+          "fields": [
+            "id",
+            "name",
+            "description",
+            "industry",
+            "size",
+            "location",
+            "website",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "name": "string",
+            "description": "text",
+            "industry": "string",
+            "size": "string",
+            "location": "string",
+            "website": "string",
+            "created_at": "datetime"
+          },
+          "constraints": {
+            "name": "unique"
+          }
+        },
+        "company_employees": {
+          "fields": [
+            "id",
+            "company_id",
+            "user_id",
+            "position",
+            "department",
+            "start_date"
+          ],
+          "types": {
+            "id": "integer",
+            "company_id": "integer",
+            "user_id": "integer",
+            "position": "string",
+            "department": "string",
+            "start_date": "date"
+          },
+          "relationships": {
+            "company": "many_to_one",
+            "user": "many_to_one"
+          }
+        }
+      }
+    },
+    "user": {
+      "service": "user-service",
+      "port": 8081,
+      "url": "http://localhost:8081",
+      "models": {
+        "user_profiles": {
+          "fields": [
+            "id",
+            "user_id",
+            "first_name",
+            "last_name",
+            "phone",
+            "address",
+            "bio",
+            "created_at"
+          ],
+          "types": {
+            "id": "integer",
+            "user_id": "integer",
+            "first_name": "string",
+            "last_name": "string",
+            "phone": "string",
+            "address": "text",
+            "bio": "text",
+            "created_at": "datetime"
+          },
+          "relationships": {
+            "user": "one_to_one"
+          }
+        },
+        "user_preferences": {
+          "fields": [
+            "id",
+            "user_id",
+            "preference_key",
+            "preference_value",
+            "updated_at"
+          ],
+          "types": {
+            "id": "integer",
+            "user_id": "integer",
+            "preference_key": "string",
+            "preference_value": "string",
+            "updated_at": "datetime"
+          },
+          "relationships": {
+            "user": "many_to_one"
+          }
+        }
+      }
+    }
+  },
+  "relationships": {
+    "auth.users": {
+      "permissions": "many_to_many"
+    },
+    "auth.permissions": {
+      "users": "many_to_many"
+    },
+    "auth.roles": {
+      "users": "one_to_many"
+    },
+    "ai.ai_sessions": {
+      "user": "many_to_one",
+      "model": "many_to_one"
+    },
+    "ai.ai_conversations": {
+      "session": "many_to_one"
+    },
+    "resume.resumes": {
+      "user": "many_to_one"
+    },
+    "resume.resume_skills": {
+      "resume": "many_to_one"
+    },
+    "resume.resume_experience": {
+      "resume": "many_to_one"
+    },
+    "job.jobs": {
+      "company": "many_to_one"
+    },
+    "job.job_applications": {
+      "job": "many_to_one",
+      "user": "many_to_one",
+      "resume": "many_to_one"
+    },
+    "job.job_skills": {
+      "job": "many_to_one"
+    },
+    "company.company_employees": {
+      "company": "many_to_one",
+      "user": "many_to_one"
+    },
+    "user.user_profiles": {
+      "user": "one_to_one"
+    },
+    "user.user_preferences": {
+      "user": "many_to_one"
+    }
+  },
+  "summary": {
+    "services_analyzed": [
+      "auth",
+      "ai",
+      "resume",
+      "job",
+      "company",
+      "user"
+    ],
+    "models_per_service": {
+      "auth": 3,
+      "ai": 3,
+      "resume": 3,
+      "job": 3,
+      "company": 2,
+      "user": 2
+    },
+    "fields_per_service": {
+      "auth": 18,
+      "ai": 18,
+      "resume": 19,
+      "job": 18,
+      "company": 14,
+      "user": 13
+    },
+    "data_consistency_requirements": {
+      "user_id_consistency": "所有服务中的user_id字段需要保持一致",
+      "timestamp_consistency": "所有时间戳字段需要统一格式",
+      "status_field_consistency": "状态字段需要统一枚举值",
+      "foreign_key_consistency": "外键关系需要跨服务验证"
+    }
+  }
+}

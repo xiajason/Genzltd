@@ -1,0 +1,28 @@
+{
+  "test_time": "2025-09-23T21:17:01.462465",
+  "user_id": 17,
+  "username": "zervitest",
+  "authentication_parameters": {
+    "user_id": 17,
+    "username": "zervitest",
+    "email": "zervitest@example.com",
+    "phone": "+12345678999",
+    "role": "guest",
+    "status": "active",
+    "email_verified": true,
+    "phone_verified": true,
+    "first_name": "Zervi",
+    "last_name": "Test"
+  },
+  "completeness_analysis": {
+    "has_username": true,
+    "has_email": true,
+    "has_phone": true,
+    "has_role": true,
+    "is_active": true,
+    "email_verified": true,
+    "phone_verified": true,
+    "has_full_name": true
+  },
+  "recommendations": []
+}

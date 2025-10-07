@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-10-06T09:45:55.132257",
+  "version": "future",
+  "test_type": "second_restart_comprehensive_test",
+  "restart_number": 2,
+  "summary": {
+    "ip_change_rate": "71.4% (5/7 containers)",
+    "connection_test_success": "100% (4/4 databases)",
+    "data_consistency_success": "100% (2/2 databases)",
+    "overall_success": "100%"
+  },
+  "ip_changes": {
+    "f-mysql": "172.20.0.5 -> 172.20.0.8 (🔄 变化)",
+    "f-redis": "172.20.0.3 -> 172.20.0.3 (✅ 不变)",
+    "f-sqlite-manager": "172.20.0.4 -> 172.20.0.6 (🔄 变化)",
+    "f-weaviate": "172.20.0.6 -> 172.20.0.7 (🔄 变化)",
+    "f-elasticsearch": "172.20.0.2 -> 172.20.0.2 (✅ 不变)",
+    "f-neo4j": "172.20.0.8 -> 172.20.0.4 (🔄 变化)",
+    "f-postgresql": "172.20.0.7 -> 172.20.0.5 (🔄 变化)"
+  },
+  "test_results": {
+    "connection_test": {
+      "mysql": "✅ 连接成功",
+      "postgres": "✅ 连接成功",
+      "redis": "✅ 连接成功",
+      "neo4j": "✅ 连接成功",
+      "success_rate": "100% (4/4)",
+      "total_time": "0.05秒"
+    },
+    "data_consistency_test": {
+      "mysql": "✅ 数据一致性验证成功",
+      "redis": "✅ 数据一致性验证成功",
+      "success_rate": "100% (2/2)",
+      "total_time": "0.04秒"
+    }
+  },
+  "key_findings": [
+    "✅ 第2次重启后IP地址变化率: 71.4% (5/7 容器)",
+    "✅ 连接测试成功率: 100% (4/4 数据库)",
+    "✅ 数据一致性测试成功率: 100% (2/2 数据库)",
+    "✅ 动态IP检测脚本完全有效",
+    "✅ 测试脚本完全适应IP地址变化",
+    "✅ Redis f-string问题已完全修复"
+  ],
+  "technical_achievements": [
+    "✅ 验证了动态IP检测脚本的稳定性",
+    "✅ 验证了多数据库通信连接的可靠性",
+    "✅ 验证了数据一致性测试的准确性",
+    "✅ 确认了Future版的完全隔离运行",
+    "✅ 建立了完整的自动化测试流程"
+  ],
+  "comparison_with_first_restart": {
+    "first_restart_ip_change_rate": "100% (7/7)",
+    "second_restart_ip_change_rate": "71.4% (5/7)",
+    "connection_test_consistency": "100% both times",
+    "data_consistency_consistency": "100% both times",
+    "overall_stability": "✅ 完全稳定"
+  },
+  "conclusion": "Future版第2次重启测试完全成功，动态IP分配问题解决方案稳定可靠！"
+}

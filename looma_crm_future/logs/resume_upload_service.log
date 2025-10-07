@@ -1,0 +1,60 @@
+INFO:__main__:启动简历上传服务...
+INFO:__main__:上传目录: uploads
+INFO:__main__:最大文件大小: 10.0MB
+INFO:__main__:支持的文件类型: .docx, .txt, .pdf, .doc
+[2025-09-28 16:12:56 +0800] [73663] [DEBUG] 
+
+                 Sanic
+         Build Fast. Run Fast.
+
+
+DEBUG:sanic.root:
+
+                 Sanic
+         Build Fast. Run Fast.
+
+
+[2025-09-28 16:12:56 +0800] [73663] [INFO] Sanic v23.12.1
+INFO:sanic.root:Sanic v23.12.1
+[2025-09-28 16:12:56 +0800] [73663] [INFO] Goin' Fast @ http://0.0.0.0:7520
+INFO:sanic.root:Goin' Fast @ http://0.0.0.0:7520
+[2025-09-28 16:12:56 +0800] [73663] [INFO] app: ResumeUploadService
+INFO:sanic.root:app: ResumeUploadService
+[2025-09-28 16:12:56 +0800] [73663] [INFO] mode: debug, single worker
+INFO:sanic.root:mode: debug, single worker
+[2025-09-28 16:12:56 +0800] [73663] [INFO] server: sanic, HTTP/1.1
+INFO:sanic.root:server: sanic, HTTP/1.1
+[2025-09-28 16:12:56 +0800] [73663] [INFO] python: 3.12.11
+INFO:sanic.root:python: 3.12.11
+[2025-09-28 16:12:56 +0800] [73663] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+INFO:sanic.root:platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-28 16:12:56 +0800] [73663] [INFO] packages: sanic-routing==23.12.0
+INFO:sanic.root:packages: sanic-routing==23.12.0
+[2025-09-28 16:12:56 +0800] [73663] [DEBUG] Creating multiprocessing context using 'spawn'
+DEBUG:sanic.root:Creating multiprocessing context using 'spawn'
+[2025-09-28 16:12:56 +0800] [73663] [DEBUG] [34mStarting a process: [1m[38;2;255;13;104mSanic-Server-0-0[0m
+DEBUG:sanic.root:[34mStarting a process: [1m[38;2;255;13;104mSanic-Server-0-0[0m
+[2025-09-28 16:12:56 +0800] [73679] [DEBUG] [34mProcess ack: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[73679][0m
+DEBUG:sanic.root:[34mProcess ack: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[73679][0m
+[2025-09-28 16:12:56 +0800] [73679] [INFO] Starting worker [73679]
+INFO:sanic.server:Starting worker [73679]
+[2025-09-28 16:12:59 +0800] - (sanic.access)[INFO][127.0.0.1:51101]: GET http://localhost:7520/health  200 213
+INFO:sanic.access:
+[2025-09-28 16:14:24 +0800] - (sanic.access)[INFO][127.0.0.1:58880]: GET http://localhost:7520/health  200 213
+INFO:sanic.access:
+INFO:__mp_main__:收到简历上传请求
+ERROR:__mp_main__:文件上传失败: 'File' object has no attribute 'filename'
+[2025-09-28 16:14:32 +0800] - (sanic.access)[INFO][127.0.0.1:61100]: POST http://localhost:7520/api/v1/upload  500 53
+INFO:sanic.access:
+[2025-09-28 16:15:11 +0800] [73663] [INFO] Received signal SIGTERM. Shutting down.
+INFO:sanic.root:Received signal SIGTERM. Shutting down.
+[2025-09-28 16:15:11 +0800] [73663] [DEBUG] [34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[73679][0m
+DEBUG:sanic.root:[34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[73679][0m
+[2025-09-28 16:15:11 +0800] [73679] [INFO] Stopping worker [73679]
+INFO:sanic.server:Stopping worker [73679]
+[2025-09-28 16:15:11 +0800] [73679] [INFO] Worker complete [73679]
+INFO:sanic.server:Worker complete [73679]
+[2025-09-28 16:15:11 +0800] [73663] [INFO] Server Stopped
+INFO:sanic.root:Server Stopped
+[2025-09-28 16:15:11 +0800] [73663] [DEBUG] Auf Wiedersehen
+DEBUG:sanic.root:Auf Wiedersehen

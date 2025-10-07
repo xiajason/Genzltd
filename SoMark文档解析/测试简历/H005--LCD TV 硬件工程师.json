@@ -1,0 +1,846 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 17,
+          "type": "header",
+          "bbox": [
+            142,
+            69,
+            323,
+            138
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "title",
+          "bbox": [
+            186,
+            158,
+            348,
+            184
+          ],
+          "content": "China Agent # 1",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            186,
+            219,
+            473,
+            248
+          ],
+          "content": "姓 名: H005 性 别: 男",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            186,
+            252,
+            542,
+            281
+          ],
+          "content": "民族：汉族户籍：广东广州",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            186,
+            286,
+            480,
+            314
+          ],
+          "content": "年龄： 40 婚姻状况：已婚",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            187,
+            319,
+            336,
+            346
+          ],
+          "content": "身高： 165cm",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            185,
+            350,
+            559,
+            379
+          ],
+          "content": "待遇要求： ￥30000 元/月（可面议）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "title",
+          "bbox": [
+            188,
+            450,
+            288,
+            473
+          ],
+          "content": "教育/培训",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "text",
+          "bbox": [
+            185,
+            511,
+            1059,
+            547
+          ],
+          "content": "1986-09 ~1990-07 中国人民解放军国防科学技术大学 应用物理系计算机应用专业 本科",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "text",
+          "bbox": [
+            185,
+            576,
+            828,
+            609
+          ],
+          "content": "2000-09 ~2000-12 广州灵通 IT 培训中心 Microsoft MCSD MCSD",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "title",
+          "bbox": [
+            188,
+            644,
+            289,
+            668
+          ],
+          "content": "技能/专长",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            186,
+            707,
+            663,
+            737
+          ],
+          "content": "专业职称：计算机工程师（广东省中级）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            187,
+            741,
+            424,
+            769
+          ],
+          "content": "第一外语： 英语 良好",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            187,
+            774,
+            433,
+            801
+          ],
+          "content": "计算机能力：高级",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            184,
+            806,
+            1057,
+            865
+          ],
+          "content": "计算机详细技能：VisualBasic、C++应用程序开发，altium Designer、Keil C51/ARM 等嵌入式系统分析与软件硬件开发，可编程逻辑 VHDL 程序设计。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            187,
+            870,
+            645,
+            900
+          ],
+          "content": "其它技能：Office排版，五笔字输入。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "title",
+          "bbox": [
+            190,
+            938,
+            276,
+            960
+          ],
+          "content": "自我评价",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            1001,
+            1058,
+            1159
+          ],
+          "content": "本人喜爱学习、积于进取，是一个工作认真负责、积极主动、善于团队工作、有坚强意志和 顽强毅力的人，思维严谨。精通Visual Basic、Visual C++、Access、SQL Server 等软件 开发，protel 电子电路设计，Keil C51、ARM 等嵌入式系统开发，OFFICE 办公软件使用； 能熟练使用VHDL 语言对FPGA、CPLD 等可编程逻辑器件进行编程设计，熟悉MSF 框架结构， 具有较高的技术水平和丰富的开发实践经验。适合从事IT 产品的系统分析与开发设计工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "title",
+          "bbox": [
+            188,
+            1198,
+            277,
+            1219
+          ],
+          "content": "工作经验",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            186,
+            1228,
+            717,
+            1256
+          ],
+          "content": "$\\blacksquare$ 东莞市依时利智能科技有限公司 （2002-09 ~ 目前）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            187,
+            1260,
+            599,
+            1288
+          ],
+          "content": "公司性质：民营企业 行业类别：其他",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            186,
+            1293,
+            578,
+            1321
+          ],
+          "content": "担任职位：嵌入式系统工程师、经理",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            182,
+            1326,
+            1058,
+            1451
+          ],
+          "content": "工作描述： 1、参与ER\\-980 项目，负责ER\\-980 读卡器硬件和嵌入式软件的开发，获得东 湖市科技进步二等奖。读卡器采用先进的CPLD 可编程逻辑器件实现整个系统逻辑控制功能， LCD 显示操作提示、处理结果、错误等信息，Flash 存贮字库和系统参数，EM\\-4001 读头读 取兼容格式ID 卡卡号信息，RC\\-500 芯片访问Mifare One 系列IC 卡。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            185,
+            1455,
+            585,
+            1483
+          ],
+          "content": "2、独立开发ER\\-900 通用IC 卡发器机具。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            182,
+            1489,
+            1058,
+            1583
+          ],
+          "content": "3、独立开发ER-981单门门禁系统。系统采用开门控制与刷卡信息存贮功能分开的安全结构， 由电锁控制箱模块和控制主机两个独立机具组成，之间使用ABA通讯方式相连接。从项目开 发可行性方案分析、概要设计、详细设计和技术规范书等初始设计规划，到最后的电路原理",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 11,
+          "type": "header",
+          "bbox": [
+            141,
+            69,
+            322,
+            139
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            185,
+            156,
+            1059,
+            215
+          ],
+          "content": "设计、PCB 板布线、门禁通行控制规则的确定和嵌入式控制程序各个模块的详细实现算法流程 / 代码编写全部独立完成。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 25,
+          "type": "text",
+          "bbox": [
+            185,
+            220,
+            1056,
+            249
+          ],
+          "content": "4、组织ER\\-890 考勤机开发，负责整个系统规划、方案分析以及嵌入式程序代码设计工作。。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "text",
+          "bbox": [
+            185,
+            253,
+            829,
+            281
+          ],
+          "content": "5、组织ER\\-890T 宽带考勤机开发，负责整个系统规划、方案分析。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            182,
+            286,
+            1059,
+            347
+          ],
+          "content": "6、组织ER-983 双向进出控制单门门禁系统开发，负责整个系统规划、方案分析，以及主机 嵌入式程序代码设计工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "text",
+          "bbox": [
+            184,
+            382,
+            1054,
+            443
+          ],
+          "content": "2003 年参与设计的 ER 系列门禁系统项目被东莞市评为科技进步二等奖（证书号：200308） 2005 年10 月荣获TIB 英雄称号",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            186,
+            449,
+            516,
+            476
+          ],
+          "content": "2004、5 连续两年被评为优秀员工",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            186,
+            481,
+            485,
+            508
+          ],
+          "content": "2006 年初晋升为研发中心经理",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            183,
+            514,
+            1057,
+            573
+          ],
+          "content": "2006 年通过计算机应用能力考试、BFT 英语水平考试和职称评审委员会的评审，获得广东省 “计算机工程师” 中级专业技术职称（证书号：06100020002…）。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            187,
+            577,
+            710,
+            606
+          ],
+          "content": "$\\blacksquare$ 广州敏力科技开发有限公司 （2001-10 $\\sim$ 2002-08）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            186,
+            610,
+            828,
+            639
+          ],
+          "content": "公司性质：私营企业 行业类别：计算机业（硬件、网络设备）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            187,
+            643,
+            445,
+            671
+          ],
+          "content": "担任职位：开发部主管",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            182,
+            676,
+            1059,
+            833
+          ],
+          "content": "工作描述： 一领导开发小组为Gestetner 公司设计数码印刷机控制器，负责整个系统规 划、方案分析以及CPLD 可编程逻辑器件编程工作。系统使用Winbond 公司生产的8 位单片 机W77E58 作为主监控器；Lattice 公司的两片在系统可编程逻辑CPLD 芯片ispLSI 1048E 实现对SDRAM 内存的读写控制，并行口ECP 工作模式下的数据接收、状态报告控制，以及数 码印刷机图像数据的发送控制；现代的HY57V28820HCT 提供大容量数据存贮。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            186,
+            837,
+            730,
+            866
+          ],
+          "content": "$\\blacksquare$ 福州创达高技术产业开发公司 （2000\\-01 \\~ 2001\\-09）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            187,
+            870,
+            600,
+            899
+          ],
+          "content": "公司性质：私营企业 行业类别：其他",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            186,
+            903,
+            534,
+            931
+          ],
+          "content": "担任职位： 广州产品开发部主管",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "text",
+          "bbox": [
+            185,
+            936,
+            1058,
+            996
+          ],
+          "content": "工作描述： 1、设计火警主机中继器、MODEM 控制器、联动/复示屏控制器：使用 MCS\\-51 系列单片机，用 protel Design Explorer 软件设计电路，C51、A51 开发监控程序。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "text",
+          "bbox": [
+            185,
+            1001,
+            1057,
+            1060
+          ],
+          "content": "一中继器实现各种状态信息转换的集成,可以选择主机类型,以及是否转换至消防状态信息、联动/复示屏控制信息等。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            183,
+            1065,
+            1058,
+            1157
+          ],
+          "content": "一MODEM 控制器实现楼宇监控 MODEM 与网络中心监控计算机的双向数据传输，楼宇消防系统工作状态的收集、火灾警报的判断、有关状态数据向城市消防监控网络中心的发送以及与网络中心间的通讯控制。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            183,
+            1163,
+            1058,
+            1223
+          ],
+          "content": "一复示屏控制器实现消防联动设备工作状态，各楼层火灾探测器的火警、故障状态及探头所 在位置的显示。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            182,
+            1228,
+            1059,
+            1353
+          ],
+          "content": "2、开发城市消防监控网中心监控系统、楼宇消防监控系统：使用 MSF（微软解决方案框架结构）指导整个软件开发过程,采用C/S多层结构,使用大量的ActiveX控件。用Visual Basic开发监控界面、数据处理及图形显示程序，Visual C++开发状态数据接收、发送等控件。ADO模型的数据访问设计，提供了Access、SQL Server等多种数据库解决方案。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            186,
+            1357,
+            708,
+            1387
+          ],
+          "content": "$\\blacksquare$ 广州集信电脑通讯工程公司 （1996\\-01 \\~ 1999\\-12）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            187,
+            1390,
+            601,
+            1419
+          ],
+          "content": "公司性质：私营企业 行业类别：其他",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "text",
+          "bbox": [
+            186,
+            1423,
+            446,
+            1451
+          ],
+          "content": "担任职位：硬件工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            183,
+            1456,
+            1059,
+            1549
+          ],
+          "content": "工作描述： 1、设计8AD探头检测器、8AD主机打印卡：采用4000系列标准数字IC、MCS\\-51 系列单片机，用protel设计电路，NICE\\-51开发监控程序，实现探头工作状态检测、火灾 报警时地址信息发送，8AD消防系统时间输入及系统工作状态、警报信息的实时打印机。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            182,
+            1553,
+            1057,
+            1584
+          ],
+          "content": "2、开发火灾报警自动监控软件：DOS 环境，用 Turbo C 开发监控介面、数据处理及图形显",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": true
+    },
+    {
+      "page_num": 2,
+      "blocks": [
+        {
+          "idx": 6,
+          "type": "header",
+          "bbox": [
+            141,
+            69,
+            321,
+            139
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            183,
+            156,
+            1058,
+            248
+          ],
+          "content": "示程序，汇编语言开发状态数据接收等通讯程序，实现楼宇消防系统状态信息的实时采集、 处理和记录，发生火灾等警报时有关信息及楼层平面图上探头位置的实时显示，火灾警报等 有关状态信息的查询、打印。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            181,
+            254,
+            1058,
+            377
+          ],
+          "content": "3、开发自动火灾报警电脑监控系统：火灾报警自动监控软件的Windows 版，用Visual Basic 开发监控界面、数据处理及图形显示程序，状态数据接收等通讯程序，Access 数据库存储 相关数据，实现有关值勤信息及软件工作状态信息的记录与查询、部门职员管理等功能的增 加。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            186,
+            382,
+            639,
+            411
+          ],
+          "content": "■87217 部队三站二室 （1990\\-07 \\~ 1995\\-12）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            185,
+            415,
+            783,
+            444
+          ],
+          "content": "公司性质： 其他 行业类别： 计算机业（硬件、网络设备）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            187,
+            448,
+            445,
+            476
+          ],
+          "content": "担任职位：硬件工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            481,
+            1058,
+            574
+          ],
+          "content": "工作描述：一开发导弹弹道数据采集、处理及显示系统：DOS 环境，用 Turbo C、FORTRAN 及汇编语言开发，实现导弹弹道数据的实时采集、处理及弹道图形显示。主持设计弹道数据的实时采集、系统通讯及与计算机接口电路，参与外设驱动程序程序设计。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": true
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "test_summary": {
+    "total_tests": 24,
+    "successful_tests": 24,
+    "failed_tests": 0,
+    "success_rate": 100.0
+  },
+  "test_results": [
+    {
+      "test_name": "用户级数据隔离 - 访问自己的数据",
+      "success": true,
+      "expected": "allowed",
+      "actual": "allowed",
+      "reason": "访问允许"
+    },
+    {
+      "test_name": "用户级数据隔离 - 访问他人的数据",
+      "success": true,
+      "expected": "denied",
+      "actual": "denied",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "组织级数据隔离 - 同组织访问",
+      "success": true,
+      "expected": "allowed",
+      "actual": "allowed",
+      "reason": "访问允许"
+    },
+    {
+      "test_name": "组织级数据隔离 - 跨组织访问",
+      "success": true,
+      "expected": "denied",
+      "actual": "denied",
+      "reason": "数据隔离检查失败"
+    },
+    {
+      "test_name": "超级管理员权限 - 创建用户",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "组织管理员权限 - 创建项目",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "普通用户权限 - 读取项目",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "普通用户权限 - 创建用户",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "访客权限 - 读取用户",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "访客权限 - 创建用户",
+      "success": true,
+      "expected": false,
+      "actual": false,
+      "reason": "角色级别不足: 1 < 2"
+    },
+    {
+      "test_name": "普通用户权限 - 更新用户",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "普通用户权限 - 删除用户",
+      "success": true,
+      "expected": false,
+      "actual": false,
+      "reason": "角色级别不足: 2 < 3"
+    },
+    {
+      "test_name": "普通用户权限 - 创建简历",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "普通用户权限 - 更新简历",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "普通用户权限 - 删除简历",
+      "success": true,
+      "expected": true,
+      "actual": true,
+      "reason": "权限匹配成功"
+    },
+    {
+      "test_name": "访客权限 - 创建简历",
+      "success": true,
+      "expected": false,
+      "actual": false,
+      "reason": "角色级别不足: 1 < 2"
+    },
+    {
+      "test_name": "访客权限 - 更新简历",
+      "success": true,
+      "expected": false,
+      "actual": false,
+      "reason": "角色级别不足: 1 < 2"
+    },
+    {
+      "test_name": "记录登录事件",
+      "success": true,
+      "event_id": "48571122-51ba-4f60-81aa-684e19ae620e"
+    },
+    {
+      "test_name": "记录数据访问事件",
+      "success": true,
+      "event_id": "8fe46576-3469-4788-82ae-156280a08c7c"
+    },
+    {
+      "test_name": "记录权限变更事件",
+      "success": true,
+      "event_id": "8af3c57d-affe-4647-8ac1-fd5904c7d1a6"
+    },
+    {
+      "test_name": "记录安全违规事件",
+      "success": true,
+      "event_id": "f35e29e6-9fae-4a58-947c-fb016a76ac3f"
+    },
+    {
+      "test_name": "完整访问控制 - 用户访问自己的数据",
+      "success": true,
+      "isolation_result": "allowed",
+      "permission_result": true,
+      "audit_event_id": "29c993d0-4f71-4968-8d56-109482a25705",
+      "expected": "allowed"
+    },
+    {
+      "test_name": "完整访问控制 - 用户访问他人数据",
+      "success": true,
+      "isolation_result": "denied",
+      "permission_result": false,
+      "audit_event_id": "54780f0f-7d3d-42e0-9750-35ca49f70ed9",
+      "expected": "denied"
+    },
+    {
+      "test_name": "完整访问控制 - 管理员访问组织数据",
+      "success": true,
+      "isolation_result": "allowed",
+      "permission_result": true,
+      "audit_event_id": "9a54efab-05d7-4a57-b399-c46600f698ae",
+      "expected": "allowed"
+    }
+  ],
+  "timestamp": "2025-09-24T09:01:40.423312"
+}

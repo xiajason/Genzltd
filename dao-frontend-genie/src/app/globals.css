@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 积分制DAO治理系统全局样式 */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+/* 积分制DAO专用样式 */
+.dao-card {
+  @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow;
+}
+
+.dao-button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+}
+
+.dao-button-primary {
+  @apply dao-button bg-purple-600 text-white hover:bg-purple-700;
+}
+
+.dao-button-secondary {
+  @apply dao-button bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.dao-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500;
+}
+
+.dao-badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
+
+.dao-badge-success {
+  @apply dao-badge bg-green-100 text-green-800;
+}
+
+.dao-badge-warning {
+  @apply dao-badge bg-yellow-100 text-yellow-800;
+}
+
+.dao-badge-error {
+  @apply dao-badge bg-red-100 text-red-800;
+}
+
+.dao-badge-info {
+  @apply dao-badge bg-blue-100 text-blue-800;
+}
+
+/* 投票权重显示 */
+.voting-power {
+  @apply text-purple-600 font-semibold;
+}
+
+.reputation-score {
+  @apply text-green-600 font-medium;
+}
+
+.contribution-points {
+  @apply text-blue-600 font-medium;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .dao-card {
+    @apply p-4;
+  }
+  
+  .dao-button {
+    @apply px-3 py-2 text-sm;
+  }
+}
+
+/* 加载动画 */
+.loading-spinner {
+  @apply animate-spin rounded-full border-b-2 border-purple-500;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

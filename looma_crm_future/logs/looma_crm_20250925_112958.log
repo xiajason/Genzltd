@@ -1,0 +1,1111 @@
+[2025-09-25 11:29:59 +0800] [18885] [INFO] Sanic v23.12.1
+2025-09-25 11:29:59,084 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-25 11:29:59 +0800] [18885] [INFO] Goin' Fast @ http://0.0.0.0:8700
+2025-09-25 11:29:59,084 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:8700
+[2025-09-25 11:29:59 +0800] [18885] [INFO] app: looma_crm
+2025-09-25 11:29:59,084 - sanic.root - INFO - app: looma_crm
+[2025-09-25 11:29:59 +0800] [18885] [INFO] mode: production, single worker
+2025-09-25 11:29:59,084 - sanic.root - INFO - mode: production, single worker
+[2025-09-25 11:29:59 +0800] [18885] [INFO] server: sanic, HTTP/1.1
+2025-09-25 11:29:59,084 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-25 11:29:59 +0800] [18885] [INFO] python: 3.12.11
+2025-09-25 11:29:59,084 - sanic.root - INFO - python: 3.12.11
+[2025-09-25 11:29:59 +0800] [18885] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-25 11:29:59,084 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-25 11:29:59 +0800] [18885] [INFO] packages: sanic-routing==23.12.0
+2025-09-25 11:29:59,084 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-25 11:29:59,745 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-25 11:29:59,745 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-25 11:29:59,745 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-25 11:30:04,784 - shared.database.unified_data_access - WARNING - Weaviate连接初始化失败: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8091 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-09-25 11:30:04,794 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-25 11:30:04,794 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-25 11:30:04,795 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-25 11:30:04,809 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功
+2025-09-25 11:30:04,809 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-25 11:30:04,809 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-25 11:30:04,809 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-25 11:30:04,809 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-25 11:30:04,809 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-25 11:30:04,809 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-25 11:30:04,809 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-25 11:30:04 +0800] [18892] [INFO] Starting worker [18892]
+2025-09-25 11:30:04,811 - sanic.server - INFO - Starting worker [18892]
+2025-09-25 11:30:08,310 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 182.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:30:23,300 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 182.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:30:38,300 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 182.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:30:53,299 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 182.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:30:54,264 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:30:54,264 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:30:54,265 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:30:54,265 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:30:54,265 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:30:54,266 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:31:08,301 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 182.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:31:23,308 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 182.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:31:38,301 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:31:53,301 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:32:08,303 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:32:22,951 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:32:22,952 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:32:22,953 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:32:22,953 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:32:22,954 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:32:22,955 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:32:23,305 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 1959.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 363.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:32:32,959 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:32:32,961 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:32:32,962 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:32:32,963 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:32:32,964 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:32:32,965 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:32:38,302 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 2638.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 364.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:32:39,773 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 2638.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 364.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:32:42,967 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:32:42,968 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:32:42,968 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:32:42,969 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:32:42,969 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:32:42,969 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:32:45,800 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 2638.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 364.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:32:52,974 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:32:52,975 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:32:52,976 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:32:52,976 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:32:52,977 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:32:52,978 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:32:53,308 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 3353.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 365.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:33:02,980 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:33:02,981 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:33:02,981 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:33:02,981 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:33:02,982 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:33:02,982 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:33:08,306 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 3353.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 365.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:33:12,988 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:33:12,989 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:33:12,991 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:33:12,992 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:33:12,993 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:33:12,995 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:33:23,001 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:33:23,002 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:33:23,004 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:33:23,005 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:33:23,007 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:33:23,008 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:33:23,309 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 4068.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 366.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:33:33,014 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:33:33,016 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:33:33,018 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:33:33,019 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:33:33,020 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:33:33,022 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:33:38,309 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 4747.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 367.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:33:43,027 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:33:43,029 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:33:43,030 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:33:43,031 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:33:43,031 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:33:43,032 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:33:53,035 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:33:53,035 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:33:53,035 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:33:53,036 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:33:53,036 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:33:53,037 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:33:53,306 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 5462.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 368.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:34:03,041 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:34:03,043 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:34:03,044 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:34:03,044 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:34:03,045 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:34:03,046 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:34:08,309 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 5462.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 368.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:34:13,050 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:34:13,050 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:34:13,051 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:34:13,052 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:34:13,053 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:34:13,054 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:34:23,058 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:34:23,059 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:34:23,060 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:34:23,061 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:34:23,061 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:34:23,062 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:34:23,306 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 6177.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 369.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:34:33,066 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:34:33,067 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:34:33,067 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:34:33,068 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:34:33,069 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:34:33,070 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:34:38,310 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 6892.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 370.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:34:43,074 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:34:43,078 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:34:43,081 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:34:43,082 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:34:43,083 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:34:43,084 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:34:53,087 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:34:53,088 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:34:53,089 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:34:53,090 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:34:53,091 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:34:53,091 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:34:53,308 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 7607.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 371.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:35:03,094 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:35:03,095 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:35:03,096 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:35:03,097 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:35:03,097 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:35:03,098 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:35:08,308 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 7607.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 371.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:35:13,103 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:35:13,105 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:35:13,105 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:35:13,106 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:35:13,107 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:35:13,107 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:35:23,111 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:35:23,112 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:35:23,112 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:35:23,113 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:35:23,114 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:35:23,114 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:35:23,311 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 8464.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 372.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:35:33,116 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:35:33,117 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:35:33,118 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:35:33,118 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:35:33,119 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:35:33,119 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:35:38,309 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 8464.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 372.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:35:43,125 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:35:43,127 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:35:43,128 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:35:43,129 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:35:43,131 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:35:43,132 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:35:53,137 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:35:53,139 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:35:53,140 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:35:53,141 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:35:53,142 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:35:53,143 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:35:53,310 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 9204.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 373.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:36:03,150 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:36:03,151 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:36:03,153 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:36:03,154 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:36:03,155 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:36:03,157 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:36:08,309 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 9928.0
+python_gc_objects_collected_total{generation="1"} 698.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 374.0
+python_gc_collections_total{generation="1"} 33.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:36:13,163 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:36:13,164 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:36:13,166 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:36:13,167 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:36:13,168 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:36:13,169 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:36:23,175 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:36:23,176 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:36:23,177 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:36:23,178 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:36:23,179 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:36:23,180 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:36:23,310 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 9928.0
+python_gc_objects_collected_total{generation="1"} 1663.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 374.0
+python_gc_collections_total{generation="1"} 34.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:36:33,184 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:36:33,186 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:36:33,188 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:36:33,189 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:36:33,190 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:36:33,191 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:36:38,313 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 9928.0
+python_gc_objects_collected_total{generation="1"} 1663.0
+python_gc_objects_collected_total{generation="2"} 0.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 374.0
+python_gc_collections_total{generation="1"} 34.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:36:43,195 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:36:43,220 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:36:43,221 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:36:43,221 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:36:43,222 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:36:43,222 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:36:44,988 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 9928.0
+python_gc_objects_collected_total{generation="1"} 1663.0
+python_gc_objects_collected_total{generation="2"} 861.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 374.0
+python_gc_collections_total{generation="1"} 34.0
+python_gc_collections_total{generation="2"} 3.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:36:53,225 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:36:53,226 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:36:53,226 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:36:53,227 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:36:53,228 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:36:53,228 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:36:53,311 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 10390.0
+python_gc_objects_collected_total{generation="1"} 1663.0
+python_gc_objects_collected_total{generation="2"} 861.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 375.0
+python_gc_collections_total{generation="1"} 34.0
+python_gc_collections_total{generation="2"} 3.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes
+2025-09-25 11:37:03,232 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 11:37:03,233 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 11:37:03,234 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 11:37:03,234 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 11:37:03,235 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 11:37:03,236 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+2025-09-25 11:37:08,311 - __mp_main__ - ERROR - 未处理的异常: reject_bytes is on and '# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 10390.0
+python_gc_objects_collected_total{generation="1"} 1663.0
+python_gc_objects_collected_total{generation="2"} 861.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 375.0
+python_gc_collections_total{generation="1"} 34.0
+python_gc_collections_total{generation="2"} 3.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="11",version="3.12.11"} 1.0
+# HELP http_requests_total Total HTTP requests
+# TYPE http_requests_total counter
+# HELP http_request_duration_seconds HTTP request duration
+# TYPE http_request_duration_seconds histogram
+# HELP active_connections Number of active connections
+# TYPE active_connections gauge
+active_connections 0.0
+# HELP looma_operations_total Total Looma operations
+# TYPE looma_operations_total counter
+' is bytes

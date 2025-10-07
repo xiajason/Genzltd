@@ -1,0 +1,996 @@
+
+
+
+
+									
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="author" content="Copyright 1999-2002 jobcn.com">
+<link rel="stylesheet" href="/include/jobcn9.css">
+<title>招聘 求职首选--卓博人才网</title>
+<script type="text/javascript" language="javascript">
+<!--
+function changephoto()
+{
+	for(var i=0;i<document.images.length;i++)
+	{
+		var e = document.images[i];
+		if (e.name == 'photo')
+		{
+			width=e.width;
+			height=e.height;
+			if (width<=200 &&height<=300)
+			{
+				continue;
+			}
+			if (width/200<=height/300)
+			{
+				e.height=300
+				e.width=width*(300/height)
+			}
+			else
+			{
+				e.width=200
+				e.height=height*(200/width)
+			}
+		}
+	}
+}
+function enter()
+{
+	var s;
+	s=choose();
+	if(s.length<1)
+	{
+		alert("请选择您要查看的简历！");
+		return false;
+	}
+	
+		thisForm.action="PersonDetail.jsp?Ref=310FD3DD1D9F3B0C";
+	
+	thisForm.submitEnter.value="1";
+	document.thisForm.cancelAccount.value="";
+	thisForm.submit();
+}
+
+function cancel()
+{
+	document.thisForm.submitEnter.value="0";
+	document.thisForm.cancelAccount.value="cancel";
+	thisForm.submit();
+}
+
+function choose()
+{
+	var s="";
+	if(thisForm.selectedid!=null){
+		for(var i=0;i<thisForm.selectedid.length;i++)
+		{
+			if(thisForm.selectedid[i].checked)
+			{
+				s=s+"'"+thisForm.selectedid[i].value+"'"+",";
+			}
+		}
+		if(thisForm.selectedid.checked==1)
+		{
+			s=s+"'"+thisForm.selectedid.value+"'"+",";
+		}
+	}
+	if(s!="")
+		s=s.substring(0,s.length-1);
+	return s;
+}
+
+function InviteView(pagename)
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	if(pagename.indexOf("WriteVideoInterviews")>0){
+		window.open(pagename+"?personDetailStr=personDetailStr&resumeList="+s,'etner','resizable=0,menuBar=0,toolBar=0,scrollbars=yes,width=640,height=350,left=100,top=0');
+	}else{
+		window.open(pagename+"?resumeList="+s,'etner','resizable=0,menuBar=0,toolBar=0,scrollbars=yes,width=640,height=350,left=100,top=0');
+	}
+}
+
+function talent()
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	window.open("enterTalent.jsp?id="+s,"talent","resizable=1,menuBar=0,toolBar=0,scrollbars=yes,width=480,height=350,left=100,top=0");
+}
+
+function sendtocompany()
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	thisForm.action="sendtocompany.jsp";
+	thisForm.target="_blank";
+	thisForm.submit();
+}
+
+function printresume()
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	thisForm.action="printResume.jsp";
+	thisForm.target="_blank";
+	thisForm.submit();
+}
+function CheckAll(form)
+{
+	for (var i=0;i<form.elements.length;i++)
+	{
+		var e = form.elements[i];
+		if (e.name=="selectedid")
+			e.checked = form.chkall.checked;
+	}
+}
+function getKeyStr(keyword){
+	var skeyword = "";
+	for(var i = 0; i < keyword.length; i++){
+		skeyword += "["+keyword.charAt(i)+"]";
+	}
+	return skeyword;
+}
+
+function makeKeywordStr(str, keyword){
+    if(s == "") return "";
+    var skeyword = getKeyStr(keyword);
+    var rgExpHtml1 = new RegExp("<", "gi");
+    var rgExpHtml2 = new RegExp(">", "gi");
+    var rgExpKey = new RegExp(skeyword, "gi");
+    var replaceText = "<span style=\"color:#FF0000;\">" + keyword + "</span>";
+
+    if(str.search(rgExpHtml1) == -1){
+        return str.replace(rgExpKey, replaceText);
+    }else{
+        var result = "";
+        var begin = 0;
+        var end = 0;
+        var transact = false;
+        var s;
+        for(var i = 0; i < str.length; i++){
+            s = str.charAt(i);
+
+            if(s == '<'){
+                end = i;
+                result += str.substring(begin, end).replace(rgExpKey, replaceText);
+                begin = i;
+                end = i;
+            }
+
+            if(s == '>'){
+                result += str.substring(begin, i + 1);
+                begin = i + 1;
+                end = i + 1;
+            }
+
+        }
+        result += str.substring(begin, i + 1).replace(rgExpKey, replaceText);
+
+        return result;
+    }
+}
+
+/**
+ * 为字符串增加trim方法，以去除左右空格
+ */
+String.prototype.trim = function(){
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function bodyLoad(){
+    changephoto();
+
+    var keyword = '食品 AND 人力资源总监';
+    keyword = keyword.trim();
+    if(keyword.length == 0) return;
+
+    var filter = "&nbsp;";
+
+    if (keyword.indexOf(' AND ')>=0) {
+        var arrKeyword = keyword.split(' AND ');
+    } else {
+        var arrKeyword = keyword.split(' OR ');
+    }
+    
+
+    for(var j = 0; j < arrKeyword.length; j++){
+        keyword = arrKeyword[j].trim();
+
+        if(filter.indexOf(keyword) >= 0) break;
+
+        if(resume.length > 0){
+            for(var i = 0; i < resume.length; i++){
+                resume[i].innerHTML = makeKeywordStr(resume[i].innerHTML, keyword);
+            }
+        }else{
+            resume.innerHTML = makeKeywordStr(resume.innerHTML, keyword);
+        }
+    }
+}
+-->
+</script>
+</head>
+<body LEFTMARGIN="0" TOPMARGIN="10" onload="javascript:bodyLoad();">
+<br>
+	<div align="center">
+		<form name="thisForm" method="post">
+			<input type="hidden" name="resumedetail">
+			<input type="hidden" name="resumeid">
+			<input type="hidden" name="idtype" value="resumeID">
+			<input type="hidden" name="showEngCV" value="1">
+            <input type="hidden" name="referFrom" value=""> 
+			
+			
+			
+			
+			
+		
+<style type="text/css" media="all">
+<!--
+body{margin:10pt 0pt 0pt 0pt;font-size:9pt;font-family:宋体,Arial,Helvetica,sans-serif;}
+.cn{line-height:14pt;font-family:宋体,Arial,Helvetica,sans-serif;border:1px solid #808080;}
+.en{line-height:14pt;font-family:Arial, Helvetica, sans-serif;border:1px solid #808080;}
+.cn .v{font-size:9pt;color:#000000;text-align:left;font-weight:normal;word-wrap:break-word;word-break:break-all;}
+.en .v{font-size:9pt;color:#000000;text-align:left;font-weight:normal;word-wrap:break-word;word-break:keep-all;}
+.cn .f{font-size:9pt;color:#000080;text-align:right;font-weight:normal;}
+.en .f{font-size:9pt;color:#000080;text-align:right;font-weight:bold;}
+.t{font-size:11pt; color:#000080; font-weight:bold;}
+.tb{font-size:11pt;color:#000080; margin-left:10pt;}
+.pl20{padding-left:20pt}
+.check{color:#024EFD;font-size:9pt;}
+.cer{color:#0000FF;cursor:hand}
+a:link,a:visited,a:active{color: #000000;text-decoration: none;}
+a:hover{color: #000000;text-decoration: underline;}
+a.func:link,a.func:visited,a.func:active,a.func:hover{color:#e08907;font-weight:bold;font-size:9pt;}
+#remark{margin:5pt 5pt 5pt 15pt;padding:0pt;font-size:9pt;color:#336699;}
+-->
+</style>
+<style type="text/css" media="print">
+<!--
+.cn{line-height:14pt;font-family:宋体,Arial,Helvetica,sans-serif;border:0px solid #808080;}
+.en{line-height:14pt;font-family:宋体,Arial,Helvetica,sans-serif;border:0px solid #808080;}
+#np{display:none;}
+.np{display:none;}
+.PageNext{page-break-after: always;}
+-->
+</style>
+<br />
+<table width="650" class="cn" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="160" height="80" rowspan="2"><img alt="" src="http://www.jobcn.com/commimage/jobcn_smalllogo2.gif" /></td>
+                    <td width="455" height="40" align="right" valign="bottom">
+                        <span class="f np" style="color:#024EFD">
+                        <input type="checkbox" value="3133952" name="selectedid" checked="checked"/>选中该求职者</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40" align="right" valign="top"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <span style="font-weight:bold;font-size:12pt;">张月华的个人简历</span><span class="f">（№:3133952）</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="2"></td>
+                </tr>
+            </table>
+            <input type="hidden" name="e_mail" value="zhangyuehua2003@163.com"/>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="445" valign="middle">
+                        <table cellspacing="0" cellpadding="0" width="445" align="center"  border="0">
+                            <tr valign="top">
+                                <td width="90" height="22" class="f">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                                <td width="175" class="v" id="resume">张月华</td>
+                                <td width="80" class="f">性&nbsp;别：</td>
+                                <td width="100" class="v" id="resume">男</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">更新日期：</td>
+                                <td class="v">2010年05月06日</td>
+                                <td class="f">民&nbsp;族：</td>
+                                <td class="v" id="resume">土家</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">户&nbsp;&nbsp;&nbsp;&nbsp;籍：</td>
+                                <td class="v" id="resume">贵州铜仁</td>
+                                <td class="f">年&nbsp;龄：</td>
+                                <td class="v">38</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">婚姻状况：</td>
+                                <td class="v" id="resume">已婚</td>
+                                <td class="f">身&nbsp;高：</td>
+                                <td class="v">170cm</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">现所在地：</td>
+                                <td colspan="3" class="v" id="resume">江苏无锡</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">希望地区：</td>
+                                <td colspan="3" class="v" id="resume">广东&nbsp;&nbsp;江苏&nbsp;&nbsp;浙江</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">希望岗位：</td>
+                                <td colspan="3" class="v" id="resume">经营/管理类-(正/副)总裁/总经理/CEO<br />行政/人事类-行政总监<br />行政/人事类-人力资源总监<br /></td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">待遇要求：</td>
+                                <td colspan="3" class="v">￥30000元/月（可面议&nbsp;要求提供住宿）</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">最快到岗：</td>
+                                <td colspan="3" class="v">随时到岗</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="170" align="center" valign="middle">
+<a target="_blank" href="http://image.jobcn.com/PersonPhoto/portrait/200602/3133952_1.jpg" name="photo"><img height="200" width="145" style="border:1px solid #000000" src="http://image.jobcn.com/PersonPhoto/portrait/200602/3133952_1.jpg" alt="点击查看原图"/></a>
+                    </td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">教育/培训</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">1990-09 ~1994-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">贵州大学</td>
+                    <td width="177" id="resume">企业管理</td>
+                    <td width="106" id="resume">本科</td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">1987-09 ~1990-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">德江一中</td>
+                    <td width="177" id="resume">文科</td>
+                    <td width="106" id="resume">高中</td>
+                </tr>
+                <tr>
+                    <td colspan="4" height="5"></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">1999-07 ~1999-08&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">东莞市劳动局</td>
+                    <td width="177" id="resume">安全生产管理</td>
+                    <td width="106" id="resume">安全主任资格</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">工作经验&nbsp;&nbsp;<span class="v" style="font-weight:bold;">至今10年1月工作经验,曾在5家公司工作</span></td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" class="t"><span class="tb" id="resume">▌</span>广州鹭业水产有限公司（罗非鱼加工出口）<span class="v"> （2008-11 ~ 2010-03）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="123" height="20" class="f">公司性质：&nbsp;&nbsp;</td>
+                    <td width="123" class="v" id="resume">民营企业</td>
+                    <td width="67" class="f">行业类别：</td>
+                    <td width="305" class="v" id="resume">农、林、牧、副、渔业</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">担任职位：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">(正/副)总裁/总经理/CEO</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">工作描述：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">负责广州分公司的全面经营管理,主要职责有：<br />  1、负责实施集团及董事会确定的工作任务和各项经营经济指标，推进行之有效的经济责任制，确保各项工作任务和经营经济指标的完成。<br />  2、协助董事长设定公司组织架构建设并规定其权限与职责。<br />  3、负责对公司全部经营活动的策划、组织、指挥、协调、监督和控制。<br />  4、负责对公司经营运作的评估、研讨、培训和提升工作，对经营效益盈亏承担责任。<br />  5、注重分析研究市场信息，组织研究新的营销措施，增强公司的市场应变能力和竞争能力。<br />  6、负责制定公司年度、月度拓展和业务计划（含可执行质量化数据），呈董事会审核并领导所属高效执行。<br />  7、负责组织推行全面质量管理体系，提高服务质量水平，采取切实可行措施推进公司的销售能力的扩张和现代化管理，提高经济效率，增进自我改进和自我发展能力。<br /> 8负责公司运营安全，防范风险建立危机意识，并负责协调把关处理纠纷事故。<br /> 9、参与公司对外关系的开拓和协调工作。<br /> 10、严控生产成本和质量管理。增强各级管理和员工成本意识。</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">离职原因：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">另寻发展，公司资金严重缺口。</td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" class="t"><span class="tb" id="resume">▌</span>湛江国联水产开发股份有限公司(5000人）<span class="v"> （2008-03 ~ 2008-10）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="123" height="20" class="f">公司性质：&nbsp;&nbsp;</td>
+                    <td width="123" class="v" id="resume">股份制企业</td>
+                    <td width="67" class="f">行业类别：</td>
+                    <td width="305" class="v" id="resume">农、林、牧、副、渔业</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">担任职位：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">行政总监</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">工作描述：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">1、股份制企业（水产行业,水产养殖、加工;5000人以上）<br />2、全面负责集团公司、（下属饲料厂、养殖基地、）的行政、人事和后勤管理工作。<br />主要有：<br />    A行政方面：制定公司的各项管理制度,负责协调和处理公司内部的跨部门间的协调事务,办公室的事务及办公费用管理,车队、保安的管理，每周公司例会的组织召开，对外工作主要有各类证件的办理和年审，新项目的申报，大型会议的组织统筹，政府官员和贵宾的接待。<br />    B后勤方面：食堂、小卖部、娱乐场所、环境卫生、电工等管理和成本开支控制。<br />    C人事方面：全盘负责集团公司人力资源的总体规划、选用、考核、培训、用人、绩效、薪资、企业文化等，尤其是对KPI的设计、组织架构的整合、岗位的设定、岗位职务的说明、薪资及激励措施、企业人才梯队、团队的建设等。<br />3、负责接待客户的SA8000、ISO9000的验厂。<br />4、筹建属下分厂的工作进展情况。<br />5、内销部的规划及筹建。</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">离职原因：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">在职</td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" class="t"><span class="tb" id="resume">▌</span>创艺实业有限公司(3200人)<span class="v"> （2004-01 ~ 2007-12）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="123" height="20" class="f">公司性质：&nbsp;&nbsp;</td>
+                    <td width="123" class="v" id="resume">私营企业</td>
+                    <td width="67" class="f">行业类别：</td>
+                    <td width="305" class="v" id="resume">生产、制造、修饰加工</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">担任职位：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">副总经理</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">工作描述：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">1、私营企业（主要生产各类化妆品盒、首饰盒、礼品盒、五金工艺及各种手袋等等）。<br />2、主要工作职责：负责行政、人事、后勤、生产、企业策划等工作。起草制定公司各项规章制度和检查推行下属公司（创艺、创葳）的制度执行情况。对外工作有:申办各种国内外展销会和出国展补助及公司所有对外一切工作事务和各类证件年审和办理。SA8000的验厂，并能确保验厂的各项要求达到客户的验厂标准。<br />3、供应商的管理，成本控制。</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">离职原因：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">另找发展</td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" class="t"><span class="tb" id="resume">▌</span>东方叶杨羊绒企业集团(6500人)<span class="v"> （1998-05 ~ 2004-01）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="123" height="20" class="f">公司性质：&nbsp;&nbsp;</td>
+                    <td width="123" class="v" id="resume">外资企业</td>
+                    <td width="67" class="f">行业类别：</td>
+                    <td width="305" class="v" id="resume">纺织品业（服饰、鞋类、家纺用品、皮具…）</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">担任职位：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">人力资源总监</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">工作描述：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">1、外资企业（制衣行业,主要生产羊绒衫、羊毛衫）<br />2、全面负责集团公司、（下属企业北京奥力神建材厂、北京东方叶杨纺织有限公司、河北清河东方叶杨纺织有限公司、东莞东方叶杨纺织有限公司）的行政、人事管理工作。属下分公司的制度审核、制订和人事任命。行政、人事对外一切事务。负责主管级以上人员升迁、考核、招聘等等。<br />3、全盘负责集团公司人力资源的规划、选用、考核、培养、用人、薪资等，尤其是对KPI的设计、组织架构的整合、岗位的设定、岗位职务的说明、薪资及激励措施、企业人才梯队的建设等。<br />4、负责接待客户的SA8000、ISO9000的验厂，并能确保验厂的各项要求达到客户的验厂标准。<br />5、筹建属下分厂的工作进展情况。</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">离职原因：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">辞职</td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" class="t"><span class="tb" id="resume">▌</span>明安国际企业(8000人)<span class="v"> （1994-10 ~ 1998-04）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="123" height="20" class="f">公司性质：&nbsp;&nbsp;</td>
+                    <td width="123" class="v" id="resume">跨国公司(集团)</td>
+                    <td width="67" class="f">行业类别：</td>
+                    <td width="305" class="v" id="resume">生产、制造、修饰加工</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">担任职位：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">总务课长</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">工作描述：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">1、台资企业，主要生产各类高尔夫整套运动产品。<br />2、在任职期间，主要负责总务科一切日常行政、后勤事务，贯彻落实公司精神，检查督导各项人事制度、行政制度与执行力度，ISO和5S的推动和内部稽查。负责公司各项行政制度的制定、组织和实施，处理与其他部门的部门关系，检查考核人事组、后勤组、保安组、工务组、总务成员的工作情况。人员的招聘处理、员工工伤，人员的培训工作，全厂的纪律教育和安全卫生教育和技术培训，制订人才培训计划的工作情况，员工的考勤管理文件和日常文件的签发。</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">离职原因：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">辞职</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">技能/专长</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">专&nbsp;&nbsp;业&nbsp;&nbsp;职&nbsp;&nbsp;称：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">管理师</td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">语&nbsp;&nbsp;言&nbsp;&nbsp;能&nbsp;&nbsp;力：&nbsp;</td>
+                    <td colspan="3" class="v">普通话流利,粤语一般</td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">第一外语：&nbsp;</td>
+                    <td width="188" class="v">英语 一般</td>
+                    <td width="100"></td>
+                    <td width="200"></td>
+                </tr>
+                <tr valign="top">
+                    <td width="130" height="20" class="f">计&nbsp;算&nbsp;机&nbsp;能&nbsp;力：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">中级</td>
+                </tr>
+                <tr valign="top">
+                    <td width="130" height="20" class="f">计算机详细技能：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">会操作办公室各类软件、考勤软件。会驾驶,持B照</td>
+                </tr>
+                <tr valign="top">
+                    <td width="130" height="20" class="f">其&nbsp;&nbsp;它&nbsp;&nbsp;技&nbsp;&nbsp;能：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">本人具有较强战略规划的能力，熟悉企业业务和运营流程，在团队管理方面有极强的领导技巧和才能，具有先进的管理理念，熟悉公司全面运作，公司经营管理，各部门工作流程，作风平谨稳健；具有优秀的领导能力，善于协调、沟通。责任心、事业心强，具有领导气质，胸怀、眼光和魄力，具大局意识和发展意识。</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">发展方向</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td height="20" class="v pl20" id="resume"><span class="f">寻求职位：</span> 1.总经理;&nbsp;&nbsp;2.副总经理;&nbsp;&nbsp;3.行政总监</td>
+                </tr>
+                <tr>
+                    <td class="v pl20" id="resume">中型以上企业全面管理。有充分的发展空间，能充分发挥自己的才能。本人具有挑战新工作岗位的能力和决心。给我一片天地还您一片蓝天。</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">自我评价</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" valign="top" width="580" id="resume">自 信、勇气、心细、热忱是我的人生信念，自94年参加工作以来，至今已有16年的实践工作经验,先后在多家大型企业负责过行政、人事、后勤综合管理工作。由于在工作中不断的总结.创新，造就本人工作能力强,后任职水产虾、罗非鱼食品加工行业副总经理全面负责工厂的全面经营管理工作，有着丰富的企业全面的管理经验.具有良好的沟通能力，能很好地组建团队并领导团队，能深得下属的拥戴及各部门工作的配合； 有很好的沟通、协调、组织能力。</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">联系方式</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">联系电话：</td>
+                    <td width="240" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=0713795F923F268AEE983ED791FDCF11" ></td>
+                    <td width="88" class="f">移动电话：</td>
+                    <td width="200" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=DB5110F555569F2F8CE5E4CC33220CE9" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">电子邮件：</td>
+                    <td width="240" class="v"><a href="mailto:zhangyuehua2003@163.com">zhangyuehua2003@163.com</a></td>
+                    <td width="88" class="f">聊天号码：</td>
+                    <td width="200" class="v">247789383</td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">个人主页：</td>
+                    <td colspan="3" class="v"><a target="_blank" href="http://zhangyuehua2003blog.163.com">http://zhangyuehua2003blog.163.com</a></td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br />
+<table width="650" class="en" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="160" height="80" rowspan="2"><img alt="" src="http://www.jobcn.com/commimage/jobcn_smalllogo2.gif" /></td>
+                    <td width="455" height="40" align="right" valign="bottom"></td>
+                </tr>
+                <tr>
+                    <td height="40" align="right" valign="top"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <span style="font-weight:bold;font-size:12pt;">ZHANG YUE HUA's Resume</span><span class="f" style="font-weight:normal">（№:3133952）</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="2"></td>
+                </tr>
+            </table>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="445" valign="middle">
+                        <table width="445" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr valign="top">
+                                <td width="120" height="22" class="f"> Name：</td>
+                                <td width="130" class="v" id="resume">ZHANG YUE HUA</td>
+                                <td width="95" class="f">Sex：</td>
+                                <td width="100" class="v">male</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Update：</td>
+                                <td class="v">2010-04-05</td>
+                                <td class="f">Nationality：</td>
+                                <td class="v" id="resume">Han</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Residence：</td>
+                                <td class="v" id="resume">TongrenGuizhou</td>
+                                <td class="f"> Age：</td>
+                                <td class="v">37</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Wedlock：</td>
+                                <td class="v" id="resume">Married</td>
+                                <td class="f">Stature：</td>
+                                <td class="v">170cm</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Location：</td>
+                                <td colspan="3" class="v" id="resume">ZhongshanGuangdong</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">TargetLocation：</td>
+                                <td colspan="3" class="v" id="resume">Beijing<br />DongGuanGuangdong<br />JiangSu</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Target Jobs：</td>
+                                <td colspan="3" class="v" id="resume">Management-Department Manager<br />Management-Manager Assistant<br /></td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">DesiredSalary：</td>
+                                <td colspan="3" class="v" id="resume">interview</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">When Can Start：</td>
+                                <td colspan="3" class="v" id="resume">Immediately</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="170" align="center" valign="middle">
+<a target="_blank" href="http://image.jobcn.com/PersonPhoto/portrait/200602/3133952_1.jpg" name="photo"><img height="200" width="145" style="border:1px solid #000000" src="http://image.jobcn.com/PersonPhoto/portrait/200602/3133952_1.jpg" alt="点击查看原图"/></a>
+                    </td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">Education&amp;Training</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="120" height="22" align="right">1990-09 ~1994-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">GUI ZHOU UNIVERSITY</td>
+                    <td width="178" id="resume">ENTERPRISE MANAGEMENT</td>
+                    <td width="120" id="resume">Bachelor Degree</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="2" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="2" bgcolor="#f0f0f0" class="t">Work Experience&nbsp;&nbsp;<span class='style3'><font color='000080'>10 years 5 months work experience,and served on 2 Companies.</font></span></td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="2" ></td>
+                </tr>
+                <tr>
+                    <td height="24" colspan="2" class="t" id="resume"><span class="tb">▌</span>FENG HUI FACTORY<span class="v"> （1998-05 ~ 2000-02）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f"> Company Type：</td>
+                    <td width="458" class="v" id="resume">State Owned Enterprise</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Company Category：</td>
+                    <td width="458" class="v" id="resume">Internet and e-Commerce</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Job Title：</td>
+                    <td width="458" class="v" id="resume">Sales</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Job Description：</td>
+                    <td width="458" class="v" id="resume">* in charge of project planning and general administration<br />  <br />* in charge of working with costomer on factrory inspection under SA8000 and insuring of going through each inquires</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Reason forLeaving：</td>
+                    <td width="458" class="v" id="resume">For further development</td>
+                </tr>
+                <tr>
+                    <td height="24" colspan="2" class="t" id="resume"><span class="tb">▌</span>MINAN INTERNATIONAL ENTERPRISE<span class="v"> （1994-10 ~ 1998-04）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f"> Company Type：</td>
+                    <td width="458" class="v" id="resume">State Owned Enterprise</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Company Category：</td>
+                    <td width="458" class="v" id="resume">Internet and e-Commerce</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Job Title：</td>
+                    <td width="458" class="v" id="resume">Sales</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Job Description：</td>
+                    <td width="458" class="v" id="resume">* in charge of daily administration, logistics of general affairs department:carrying out top decicions and putting them into effect;looking-over performance of administraion and personal rules as well as ISO and 5S.<br /><br />* in chare of drawing and implementing each administration system, harmonizing relations with other department, checking work of groups like administration, logistics and public security in our department.<br /><br />* in charge of all matters with regard to employment,training, education.</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Reason forLeaving：</td>
+                    <td width="458" class="v" id="resume">Resignation</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="2" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="2" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="2" bgcolor="#f0f0f0" class="t">Skills</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="2" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Professional Title：</td>
+                    <td width="390" class="v" id="resume">Managing master</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Language Skills：</td>
+                    <td width="390" class="v">Mandarin Excellent&nbsp;, &nbsp;Cantonese General</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Foreign Languages：</td>
+                    <td width="390" class="v">English General
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">The Second Language：</td>
+                    <td width="390" class="v">Other General</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Computer Skills：</td>
+                    <td width="390" class="v" id="resume">junior</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Concrete Technical Abilities：</td>
+                    <td width="390" class="v" id="resume">Proficiency in Office software and software of checking on work attendance</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Correlative Skills：</td>
+                    <td width="390" class="v" id="resume">Plenty of both internal operating management experiences like administration,human resources,logistics,production and external communicating and corresponding experiences with various social functional department;<br /><br />Execllent executable ability of compay system and rules and familiar with System SA8000;<br /><br />Ever live through successfully factory inspection under IS9000 and SA8000 in wollen weaving,hardware and leather industry.</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="2" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">Development</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td height="20" class="v pl20" id="resume"><span class="f">Target Position：</span></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" id="resume">intermediate,high-level manager post in the companies.Could use my experiences of department and project management and team set-up and business operation in the best ompanies. Put to good use my abilities of communication,and could combined with company's evolution.</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">Self Assessment</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" valign="top" width="580" id="resume">I started to work in MINGAN international enterprise as a team manager in 1994.<br />
+then in 1998 I left for FENHUI factory as personel manager, till 2000 I joined a DONGFANG YEYANGRONG enterprise as a personel manager , 2004 as a personel manager in DONG GUAN CHONG WEI INDUSTRIAL LTM. These  working experience of over 10 years have trained me to be a person with abundant management experience <br />
+being good at department & project management in different companies as well as <br />
+acting well in team set-up and expansion, production and management system set-up and consummation.</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">Contact</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">Telephone：</td>
+                    <td width="200" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=E2CD262361E26F51EFF38B68AAE1FCAC09ED79DA69853928" ></td>
+                    <td width="138" class="f">Mobile：</td>
+                    <td width="190" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=5430D389484B671C86D72B778ACF031B" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">Pager：</td>
+                    <td width="200" class="v"></td>
+                    <td width="138" class="f">Email：</td>
+                    <td width="190" class="v"><a href="mailto:zhangyuehua2003@163.com">zhangyuehua2003@163.com</a></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">Homepage：</td>
+                    <td width="200" class="v"><a target="_blank" href=""></a></td>
+                    <td width="138" class="f">Instant Messenger：</td>
+                    <td width="190" class="v">247789383</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- ###personcontact:1###isSaveAccount:0###errorCode0###showResume.getUnViewTotal()0-->
+
+
+				<div align="center">
+						<table width="641" height="50" border="0" cellpadding="0" cellspacing="0" bordercolor="#111111" id="AutoNumber14" style="border-collapse: collapse">
+							
+							<tr>
+								<td valign="bottom">　</td>   
+								
+        <td align="center" valign="middle"> 
+          </td>
+								<td valign="top"></td>
+							</tr>
+						</table>					
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="600" id="AutoNumber14">
+      <tr>
+		<td></td>
+			<td height="60" align="center" valign="top"> 
+            
+            <img border="0" src="/images/WriteInterviews_But.gif" onclick="javascript:InviteView('/company/resumestore/personInterview.jsp')" style="cursor:hand"> 
+            <img border="0" src="/images/WriteInterviewss_But.gif" onclick="javascript:InviteView('/company/resumestore/allInterView.jsp');" style="cursor:hand"> 
+			<img alt="邀请视频面试" border="0" onclick="javascript:InviteView('/company/resumestore/WriteVideoInterviews.jsp')" src="/images/WriteVideoInterviews_But.gif" style="CURSOR: hand" />
+            <img border="0" src="/images/SendDept_But.gif" onclick="javascript:talent();" style="cursor:hand"> 
+            <IMG border=0 onclick="javascript:printresume();" src="/images/printresume.gif"  style="CURSOR: hand"> 
+            <IMG border=0 onclick="javascript:sendtocompany();" src="/images/SendResumeToCompany.gif"  style="CURSOR: hand"> 
+            
+            
+          </td>
+			<td></td>
+		</tr>
+            <input type="hidden" name="submitEnter">
+			<input type="hidden" name="cancelAccount">
+            <input type="hidden" name="keyword1" value="食品 AND 人力资源总监">
+		</table>
+			</div>
+
+		<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="766" id="AutoNumber12">
+					<tr>
+						<td><div id="foot">
+    <div id="footer" style="border-top:1px solid #FF9900">
+        <p>
+            <a href="/public/About.jsp" target="_blank">关于我们</a>&nbsp;|&nbsp;
+            <a href="/public/Terms.jsp" target="_blank">相关法律</a>&nbsp;|&nbsp;
+            <a href="/Help/index.jsp" target="_blank">在线帮助</a>&nbsp;|&nbsp;
+            <a href="/public/SiteMap.jsp" target="_blank">网站地图</a>&nbsp;|&nbsp;
+            <a href="/public/Contact.jsp" target="_blank">联系我们</a>&nbsp;|&nbsp;
+            <a href="/person/CompanyContent.jsp?ComID=200406" target="_blank">加盟卓博</a>&nbsp;|&nbsp;
+			<a href="/public/ContactUs.jsp" target="_blank">投诉、意见反馈</a>&nbsp;|&nbsp;
+            <a href="/help/rss/rss.jsp" target="_blank">RSS信息聚合服务</a>&nbsp;|&nbsp;
+            <a href="/help/jobcn/wap/wap.jsp" target="_blank">WAP</a>
+        </p>
+		
+		
+		
+        <p>
+		
+			Copyright&nbsp;&copy; 1999 - 2010 jobcn.com All Rights Reserved<br />
+			<a href="http://www.Jobcn.com">招聘</a>  
+			<a href="http://www.Jobcn.com">求职</a> 首选 --
+			<a href="http://www.Jobcn.com">卓博人才网</a> 版权所有<br />
+			<a href="/Company/ADPage/Permit1.htm" target="_blank">粤B2-20040458</a>  
+			<a href="/Company/ADPage/Permit2.htm" target="_blank">软件企业认定证书</a>  
+			<a href="/Company/ADPage/Permit4.htm" target="_blank">高新技术企业认定证书</a>  
+			<a href="/Company/ADPage/Permit3.htm" target="_blank">民营科技企业资格证书</a><br />
+		
+        </p>
+		
+		<p>
+		  <img src="/CommImage/jobcn/v95/jobcn_75.jpg" alt="ICP经营许可证标志" border="0" />
+		  <a href="http://210.76.65.188/webrecord/innernet/Welcome.jsp?bano=4419003010513" target="_blank">
+		  <img src="/CommImage/jobcn/v95/jobcn_76.jpg" alt="“安网”备案标志" border="0" /></a>
+		  <a href="http://210.76.65.188/" target="_blank">
+		  <img src="/CommImage/jobcn/v95/jobcn_77.jpg" alt="网上报警" border="0" /></a>		</p>
+		
+		
+    </div>
+</div>
+
+</td>
+					</tr>
+				</table>
+		</form>
+	</div>
+<script language="javascript" type="text/javascript">
+	window.document.title ="招聘 求职首选 卓博人才网-张月华的简历";
+</script>
+</body>
+</html>
+<script LANGUAGE="javascript">
+function form_submit()
+{
+	if(window.event.keyCode==13)
+		thisForm.enter1.focus();
+}
+</script>

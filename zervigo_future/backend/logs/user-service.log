@@ -1,0 +1,5 @@
+
+2025/10/02 19:12:24 [35m/Users/szjason72/genzltd/zervigo_future/backend/pkg/jobfirst-core/database/mysql.go:28
+[0m[31m[error] [0mfailed to initialize database, got error dial tcp [::1]:3306: connect: connection refused
+2025/10/02 19:12:24 初始化JobFirst核心包失败: 初始化数据库管理器失败: 初始化MySQL失败: MySQL连接失败: dial tcp [::1]:3306: connect: connection refused
+exit status 1

@@ -1,0 +1,49 @@
+{
+  "database": {
+    "mysql": {
+      "host": "localhost",
+      "port": 3306,
+      "user": "root",
+      "password": "",
+      "database": "mbti_unified"
+    },
+    "postgresql": {
+      "host": "localhost",
+      "port": 5432,
+      "user": "postgres",
+      "password": "",
+      "database": "mbti_ai"
+    },
+    "redis": {
+      "host": "localhost",
+      "port": 6379,
+      "password": "",
+      "db": 0
+    },
+    "mongodb": {
+      "host": "localhost",
+      "port": 27017,
+      "database": "mbti_docs"
+    },
+    "neo4j": {
+      "host": "localhost",
+      "http_port": 7474,
+      "bolt_port": 7687,
+      "username": "neo4j",
+      "password": "mbti_neo4j_2025"
+    },
+    "sqlite": {
+      "path": "mbti_local.db"
+    }
+  },
+  "api": {
+    "local": "http://localhost:8080",
+    "aliyun": "http://aliyun-api-server",
+    "tencent": "http://tencent-api-server"
+  },
+  "monitoring": {
+    "enabled": true,
+    "interval": 60,
+    "alerts": true
+  }
+}

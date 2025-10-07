@@ -1,0 +1,332 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 7,
+          "type": "header",
+          "bbox": [
+            91,
+            86,
+            327,
+            112
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "header",
+          "bbox": [
+            82,
+            121,
+            373,
+            192
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            706,
+            135,
+            1027,
+            164
+          ],
+          "content": "女 |未婚 |1988-07-25 |目前所在地:深圳",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            763,
+            175,
+            1026,
+            202
+          ],
+          "content": "现有职称: 暂无 |政治面貌: 暂无",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "title",
+          "bbox": [
+            141,
+            209,
+            316,
+            242
+          ],
+          "content": "6302230-张红丽",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            635,
+            214,
+            1026,
+            241
+          ],
+          "content": "河南农业大学华豫学院 |大专 |计算机应用技术",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            426,
+            253,
+            1025,
+            282
+          ],
+          "content": "最近工作岗位:美术/平面设计[专业服务（法律、设计、会计、咨询等）]",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "title",
+          "bbox": [
+            76,
+            329,
+            218,
+            359
+          ],
+          "content": "个人基本信息",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            419,
+            294,
+            1028,
+            320
+          ],
+          "content": "电话:13691725723 |移动电话:13691725723 |E-mail:zhanghongli@yahoo.com.cn",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "figure",
+          "bbox": [
+            1031,
+            125,
+            1160,
+            302
+          ],
+          "content": "一个灰色的用户头像图标，上面写着“没有照片”。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094144516_5_8b02120bab58475e9fb7b75e5106007d/imgs/image0-1.jpg"
+        },
+        {
+          "idx": 16,
+          "type": "table",
+          "bbox": [
+            105,
+            367,
+            844,
+            606
+          ],
+          "content": "<table><tr><td>人才类别:社会在职</td><td>身高(cm):163cm</td></tr><tr><td>民族:汉族</td><td>婚姻状况:未婚</td></tr><tr><td>目前月薪:</td><td>文凭验证号: null</td></tr><tr><td>籍贯:河南</td><td>户口所在地:河南</td></tr><tr><td>通信地址:深圳。南山</td><td>邮政编码:</td></tr><tr><td>联系人:</td><td>个人主页:</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "title",
+          "bbox": [
+            98,
+            611,
+            250,
+            636
+          ],
+          "content": "计算机水平: 熟练",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            114,
+            645,
+            1102,
+            675
+          ],
+          "content": "业余爱好: 比较喜欢运动，喜欢看书写字，对美好生活充满向往。每个周末都去书城看书，喜欢让知识丰富自己的生活。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            116,
+            685,
+            859,
+            711
+          ],
+          "content": "语言能力: 喜欢挑战,喜欢表演,喜欢写作,喜欢一切有意义的事情.希望能够挑战不同的工作.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            119,
+            700,
+            1155,
+            795
+          ],
+          "content": "语言能力：虽然能说清楚但需要练习，语言表达能力良好，善与人沟通。比较喜欢运动，喜欢看书写字，对美好生活充满向往。每个周末都去书城看书，喜欢让知识丰富自己的生活。 语言表达能力良好，善与人沟通。喜欢交朋友，人缘亦很好，有很多的朋友善于与人沟通，做过电话销售，能很好地融入到陌生环境。与同事相处融洽。英语口语良好，普通话标准。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            112,
+            803,
+            1155,
+            885
+          ],
+          "content": "专业特长：平面设计软件熟练，从事平面设计工作一年，知识都掌握的比较好。做过销售，能吃苦耐劳，做事认真勤奋，努力 上进。平面设计软件熟练，从事平面设计工作一年，知识都掌握的比较好。做过销售，能吃苦耐劳，做事认真勤奋 ，努力上进。本人性格开朗外向，应变，思考能力强。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            204,
+            888,
+            595,
+            913
+          ],
+          "content": "在校期间，刻苦努力，专业知识几乎得心应手。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            203,
+            916,
+            1045,
+            941
+          ],
+          "content": "热爱平面设计工作，有着十分饱满的创作激情。在从事设计工作中积累了大量的实践经验和行内知识。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            202,
+            946,
+            1152,
+            998
+          ],
+          "content": "对我来说，我所拥有的是年轻和知识，年轻也意味着努力进取，但也意味着热情与活力，我自信能凭我自己的能力 和常识在以后的工作中克服各种困难，实现自我表现的人生价值",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            113,
+            1035,
+            856,
+            1061
+          ],
+          "content": "个人自述: 喜欢挑战,喜欢表演,喜欢写作,喜欢一切有意义的事情.希望能够挑战不同的工作.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "table",
+          "bbox": [
+            72,
+            1048,
+            1167,
+            1684
+          ],
+          "content": "<table><tr><td>个人自述:</td><td>喜欢挑战,喜欢表演,喜欢写作,喜欢一切有意思的事情.希望能够挑战不同的工作. 目前正在在职工作中，职位是平面设计师，主要做画册，企业CIS等。公司是专业做设计和企业整合的公司，比较注重专业素质和能力的培养。工作期间学到很多专业知识，培养了很好的审美和设计能力。</td></tr><tr><td colspan=\"2\">求职意向</td></tr><tr><td>工作方式:</td><td>全职 岗位类别:美术/平面设计</td></tr><tr><td colspan=\"2\">工作地区:深圳 所在行业:广告、会展、公关</td></tr><tr><td>提供住宿:</td><td>否 期望月薪:0</td></tr><tr><td colspan=\"2\">可到职天数：一周内</td></tr><tr><td>其他说明:</td><td></td></tr><tr><td colspan=\"2\">工作方式:全职 岗位类别:国内贸易</td></tr><tr><td>工作地区:</td><td>深圳 所在行业:</td></tr><tr><td>提供住宿:</td><td>否 期望月薪:0</td></tr><tr><td>可到职天数:</td><td>一周内</td></tr><tr><td>其他说明:</td><td></td></tr><tr><td>工作方式:</td><td>全职 岗位类别：【行政/人事】</td></tr><tr><td colspan=\"2\">工作地区:深圳  所在行业:</td></tr><tr><td>提供住宿:</td><td>否 期望月薪:0</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "table",
+          "bbox": [
+            67,
+            74,
+            1172,
+            908
+          ],
+          "content": "<table><tr><td colspan=\"3\">可到职天数：一周内  其他说明：</td></tr><tr><td colspan=\"3\">教育背景</td></tr><tr><td>时间从：2006-09-01至2009-01-01 学校名称</td><td>称:河南农业大学华豫学院</td><td></td></tr><tr><td colspan=\"3\">专业名称:计算机应用技术 学历:大专</td></tr><tr><td>学位:无学位 培养方式</td><td>式:全日制普通教育</td><td></td></tr><tr><td colspan=\"3\">专业描述:</td></tr><tr><td colspan=\"3\">工作经历</td></tr><tr><td>时间从: 2009-10-10至2010-03-05 工作单位名称</td><td>称:深圳日常设计有限公司</td><td></td></tr><tr><td colspan=\"3\">单位性质:私营企业 单位所在地:深圳市福田区</td></tr><tr><td colspan=\"3\">单位所属行业:专业服务(法律、设计、会计、咨询等) 岗位类别:美术/平面设计</td></tr><tr><td colspan=\"3\">工作描述: 目前正在在职工作中，职位是平面设计师，主要做画册，企业CIS等。公司是专业做设计和企业整合的公司，比较注重专业素质和能力的培养。工作期间学到很多专业知识，培养了很好的审美和设计能力。</td></tr><tr><td colspan=\"3\">时间从: 2008-12-01至2009-08-01 工作单位名称: 河南商丘市彩虹广告设计有限公司</td></tr><tr><td colspan=\"3\">单位性质:私营企业 单位所在地:河南</td></tr><tr><td colspan=\"3\">单位所属行业:广告、会展、公关 岗位类别:美术/平面设计</td></tr><tr><td>工作描述:学会一门技能，学会如何与人相处交流。做自己喜欢的工作，很</td><td>很满足，很认真。刚毕业就做设计总</td><td>总监，很自豪。</td></tr><tr><td colspan=\"3\">英文简历(English Curriculum Vitae)</td></tr><tr><td colspan=\"3\">i</td></tr><tr><td colspan=\"3\">评注内容</td></tr><tr><td>评注时间</td><td>评注人</td><td>备注</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

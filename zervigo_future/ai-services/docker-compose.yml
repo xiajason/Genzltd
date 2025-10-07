@@ -1,0 +1,181 @@
+# AI服务容器化部署配置
+services:
+  # AI基础服务 - 生产级实现
+  ai-service:
+    build:
+      context: ./ai-service
+      dockerfile: Dockerfile
+    container_name: jobfirst-ai-service
+    ports:
+      - "7540:8206"  # 映射到7540端口
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+      - FLASK_ENV=production
+      - DB_HOST=host.docker.internal
+      - DB_PORT=5432
+      - DB_USER=szjason72
+      - DB_PASSWORD=
+      - DB_NAME=jobfirst_vector
+      - MYSQL_HOST=host.docker.internal
+      - MYSQL_PORT=3306
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=
+      - MYSQL_DB=jobfirst
+      - REDIS_HOST=host.docker.internal
+      - REDIS_PORT=6379
+      - JWT_SECRET=jobfirst-unified-auth-secret-key-2024
+      - ZERVIGO_AUTH_URL=http://host.docker.internal:8207
+      - AI_SERVICE_MODE=production
+      - ENABLE_SUBSCRIPTION_VALIDATION=true
+      - ENABLE_QUOTA_MANAGEMENT=true
+      - ENABLE_FULL_AUTH_MIDDLEWARE=true
+      # 服务URL配置
+      - USER_SERVICE_URL=http://host.docker.internal:8081
+      - COMPANY_SERVICE_URL=http://host.docker.internal:8083
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '2.0'
+        reservations:
+          memory: 512M
+          cpus: '1.0'
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8206/health')"]
+      timeout: 30s
+      retries: 3
+      interval: 60s
+      start_period: 60s
+    restart: unless-stopped
+    networks:
+      - ai-services-network
+
+  # AI模型服务
+  ai-models:
+    build:
+      context: ./ai-models
+      dockerfile: Dockerfile
+    container_name: jobfirst-ai-models
+    ports:
+      - "8622:8002"
+    environment:
+      - MODEL_PATH=/app/models
+      - MAX_MEMORY=3GB
+      - TRANSFORMERS_CACHE=/app/cache
+      - HF_HOME=/app/cache
+    volumes:
+      - ai_models_cache:/app/cache
+      - ai_models_data:/app/models
+    deploy:
+      resources:
+        limits:
+          memory: 3G
+          cpus: '2.0'
+        reservations:
+          memory: 1G
+          cpus: '1.0'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002/health"]
+      timeout: 5s
+      retries: 5
+      interval: 10s
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - ai-services-network
+
+  # MinerU文档解析服务
+  mineru:
+    build:
+      context: ./mineru
+      dockerfile: Dockerfile
+    container_name: jobfirst-mineru
+    ports:
+      - "8621:8000"
+    environment:
+      - MINERU_MODE=lightweight
+      - MAX_MEMORY=2GB
+      - MAX_CONCURRENT=2
+      - AI_SERVICE_URL=http://ai-service:8206
+    volumes:
+      - mineru_uploads:/app/uploads
+      - mineru_output:/app/output
+      - mineru_models:/app/models
+      - /Users/szjason72/zervi-basic/basic/backend/internal/resume/uploads:/app/resume_uploads
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+          cpus: '2.0'
+        reservations:
+          memory: 1G
+          cpus: '1.0'
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      timeout: 5s
+      retries: 5
+      interval: 10s
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - ai-services-network
+    depends_on:
+      - ai-service
+
+  # AI服务监控
+  ai-monitor:
+    image: prom/prometheus:latest
+    container_name: jobfirst-ai-monitor
+    ports:
+      - "8623:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ai_monitor_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:9090/-/healthy"]
+      timeout: 30s
+      retries: 3
+      interval: 60s
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+        reservations:
+          memory: 128M
+          cpus: '0.25'
+    restart: unless-stopped
+    networks:
+      - ai-services-network
+
+volumes:
+  ai_models_cache:
+    driver: local
+  ai_models_data:
+    driver: local
+  mineru_uploads:
+    driver: local
+  mineru_output:
+    driver: local
+  mineru_models:
+    driver: local
+  ai_monitor_data:
+    driver: local
+
+networks:
+  ai-services-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.21.0.0/16

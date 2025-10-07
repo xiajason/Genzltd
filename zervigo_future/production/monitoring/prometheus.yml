@@ -1,0 +1,37 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'looma-crm'
+    static_configs:
+      - targets: ['looma-crm:8800']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  - job_name: 'zervigo-future'
+    static_configs:
+      - targets: ['zervigo-future:8200']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  - job_name: 'zervigo-dao'
+    static_configs:
+      - targets: ['zervigo-dao:9200']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  - job_name: 'zervigo-blockchain'
+    static_configs:
+      - targets: ['zervigo-blockchain:8300']
+    metrics_path: '/metrics'
+    scrape_interval: 30s
+
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+    scrape_interval: 30s

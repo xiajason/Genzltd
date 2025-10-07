@@ -1,0 +1,91 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+  external_labels:
+    environment: "future-development"
+    service_prefix: "future"
+
+rule_files:
+  - "alerts-future.yml"
+
+scrape_configs:
+  - job_name: 'future-ai-gateway'
+    static_configs:
+      - targets: ['future-ai-gateway:7510']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_ai_gateway_${1}'
+
+  - job_name: 'future-resume-ai'
+    static_configs:
+      - targets: ['future-resume-ai:7511']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_resume_ai_${1}'
+
+  - job_name: 'future-mineru'
+    static_configs:
+      - targets: ['future-mineru:8000']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_mineru_${1}'
+
+  - job_name: 'future-ai-models'
+    static_configs:
+      - targets: ['future-ai-models:8002']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_ai_models_${1}'
+
+  - job_name: 'future-redis'
+    static_configs:
+      - targets: ['redis-future:6379']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_redis_${1}'
+
+  - job_name: 'future-postgres'
+    static_configs:
+      - targets: ['postgres-future:5432']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_postgres_${1}'
+
+  - job_name: 'future-mongodb'
+    static_configs:
+      - targets: ['mongodb-future:27017']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_mongodb_${1}'
+
+  - job_name: 'future-elasticsearch'
+    static_configs:
+      - targets: ['elasticsearch-future:9200']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_elasticsearch_${1}'
+
+  - job_name: 'future-weaviate'
+    static_configs:
+      - targets: ['weaviate-future:8080']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: '.*'
+        target_label: '__name__'
+        replacement: 'future_weaviate_${1}'

@@ -1,0 +1,36 @@
+{
+  "test_time": "2025-09-23T21:06:21.336978",
+  "total_tests": 3,
+  "successful_tests": 0,
+  "failed_tests": 3,
+  "test_results": [
+    {
+      "test_type": "end_to_end_user_creation",
+      "user_id": "test_user_1",
+      "username": "testuser1",
+      "success": false,
+      "error": "float() argument must be a string or a real number, not 'NoneType'",
+      "timestamp": "2025-09-23T21:06:21.335724"
+    },
+    {
+      "test_type": "end_to_end_user_creation",
+      "user_id": "test_user_2",
+      "username": "testuser2",
+      "success": false,
+      "error": "float() argument must be a string or a real number, not 'NoneType'",
+      "timestamp": "2025-09-23T21:06:21.335765"
+    },
+    {
+      "test_type": "end_to_end_user_creation",
+      "user_id": "test_user_3",
+      "username": "testuser3",
+      "success": false,
+      "error": "float() argument must be a string or a real number, not 'NoneType'",
+      "timestamp": "2025-09-23T21:06:21.335796"
+    }
+  ],
+  "summary": {
+    "end_to_end_tests": 3,
+    "modification_tests": 0
+  }
+}

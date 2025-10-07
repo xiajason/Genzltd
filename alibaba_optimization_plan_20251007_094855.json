@@ -1,0 +1,184 @@
+{
+  "plan_time": "2025-10-07T09:48:55.533364",
+  "target_server": "阿里云 (47.115.168.107)",
+  "reference_server": "腾讯云 (101.33.251.158)",
+  "optimization_phases": [
+    {
+      "category": "Docker网络优化",
+      "description": "学习腾讯云的Docker网络配置",
+      "current_issue": "阿里云可能存在网络配置问题",
+      "tencent_reference": "腾讯云使用future_future-network，运行稳定",
+      "optimization_commands": [
+        "docker network ls",
+        "docker network inspect production_default",
+        "docker network create --driver bridge alibaba_optimized_network",
+        "docker network connect alibaba_optimized_network production-mysql-1",
+        "docker network connect alibaba_optimized_network production-postgresql-1"
+      ]
+    },
+    {
+      "category": "资源限制优化",
+      "description": "优化容器资源限制",
+      "current_issue": "容器资源使用过高",
+      "optimization_commands": [
+        "docker stats --no-stream",
+        "docker update --memory=1g --memory-swap=1g production-elasticsearch-1",
+        "docker update --memory=512m --memory-swap=512m production-neo4j-1",
+        "docker update --cpus=1.0 production-elasticsearch-1",
+        "docker update --cpus=1.0 production-neo4j-1"
+      ]
+    },
+    {
+      "category": "监控和告警",
+      "description": "建立监控和告警机制",
+      "current_issue": "缺乏实时监控",
+      "monitoring_commands": [
+        "docker exec production-elasticsearch-1 curl -s http://localhost:9200/_cluster/health",
+        "docker exec production-neo4j-1 cypher-shell -u neo4j -p jobfirst_password_2024 \"CALL dbms.components()\"",
+        "docker stats --format \"table {{.Container}}\\t{{.CPUPerc}}\\t{{.MemUsage}}\""
+      ]
+    },
+    {
+      "phase": "第一阶段：诊断和准备",
+      "duration": "30分钟",
+      "tasks": [
+        "连接到阿里云服务器",
+        "检查当前数据库状态",
+        "备份当前配置",
+        "分析具体问题"
+      ],
+      "commands": [
+        "ssh -i ~/.ssh/alibaba_deploy_key root@47.115.168.107",
+        "docker ps -a",
+        "docker stats --no-stream",
+        "free -h",
+        "df -h"
+      ]
+    },
+    {
+      "phase": "第二阶段：修复Elasticsearch",
+      "duration": "20分钟",
+      "tasks": [
+        "修复JVM参数冲突",
+        "优化内存配置",
+        "重启服务",
+        "验证修复效果"
+      ],
+      "commands": [
+        "docker exec production-elasticsearch-1 cat /etc/elasticsearch/jvm.options",
+        "docker exec production-elasticsearch-1 sed -i \"s/-Xms.*/-Xms1g/g\" /etc/elasticsearch/jvm.options",
+        "docker exec production-elasticsearch-1 sed -i \"s/-Xmx.*/-Xmx1g/g\" /etc/elasticsearch/jvm.options",
+        "docker restart production-elasticsearch-1",
+        "sleep 30",
+        "curl -s http://47.115.168.107:9200/_cluster/health"
+      ]
+    },
+    {
+      "phase": "第三阶段：修复Neo4j",
+      "duration": "20分钟",
+      "tasks": [
+        "修复密码配置",
+        "优化JVM参数",
+        "重启服务",
+        "验证连接"
+      ],
+      "commands": [
+        "docker logs production-neo4j-1 | grep -i password | tail -5",
+        "docker exec production-neo4j-1 neo4j-admin set-initial-password jobfirst_password_2024",
+        "docker restart production-neo4j-1",
+        "sleep 30",
+        "docker exec production-neo4j-1 cypher-shell -u neo4j -p jobfirst_password_2024 \"RETURN 1\""
+      ]
+    },
+    {
+      "phase": "第四阶段：系统优化",
+      "duration": "15分钟",
+      "tasks": [
+        "优化容器资源限制",
+        "建立监控机制",
+        "验证整体性能",
+        "生成优化报告"
+      ],
+      "commands": [
+        "docker update --memory=1g production-elasticsearch-1",
+        "docker update --memory=512m production-neo4j-1",
+        "docker stats --no-stream",
+        "python3 alibaba_cloud_database_manager.py"
+      ]
+    }
+  ],
+  "specific_fixes": [
+    {
+      "issue": "JVM参数冲突",
+      "current_problem": "同时存在 -Xms2g,-Xmx2g 和 -Xms512m,-Xmx512m 参数",
+      "solution": "统一JVM参数配置",
+      "commands": [
+        "docker exec production-elasticsearch-1 cat /etc/elasticsearch/jvm.options",
+        "docker exec production-elasticsearch-1 grep -E \"^-Xm[as]\" /etc/elasticsearch/jvm.options",
+        "echo \"检查当前JVM参数配置\""
+      ],
+      "fix_commands": [
+        "docker exec production-elasticsearch-1 sed -i \"s/-Xms512m/-Xms1g/g\" /etc/elasticsearch/jvm.options",
+        "docker exec production-elasticsearch-1 sed -i \"s/-Xmx512m/-Xmx1g/g\" /etc/elasticsearch/jvm.options",
+        "docker exec production-elasticsearch-1 sed -i \"s/-Xms2g/-Xms1g/g\" /etc/elasticsearch/jvm.options",
+        "docker exec production-elasticsearch-1 sed -i \"s/-Xmx2g/-Xmx1g/g\" /etc/elasticsearch/jvm.options"
+      ],
+      "verification": [
+        "docker restart production-elasticsearch-1",
+        "sleep 30",
+        "curl -s http://47.115.168.107:9200/_cluster/health | jq .status"
+      ]
+    },
+    {
+      "issue": "内存使用过高",
+      "current_problem": "Elasticsearch启动时CPU使用率196.82%",
+      "solution": "优化内存配置，参考腾讯云设置",
+      "recommended_config": {
+        "heap_size": "1g",
+        "system_memory": "2g",
+        "memory_usage_percent": "50%"
+      },
+      "tencent_reference": {
+        "heap_used": "455.2 MB",
+        "heap_max": "1860.0 MB",
+        "memory_usage_percent": "24.5%"
+      }
+    },
+    {
+      "issue": "密码配置问题",
+      "current_problem": "重复密码重置，导致服务不稳定",
+      "solution": "修复密码配置，停止重复重置",
+      "diagnosis_commands": [
+        "docker logs production-neo4j-1 | grep -i password | tail -10",
+        "docker exec production-neo4j-1 cat /var/lib/neo4j/conf/neo4j.conf | grep -i password",
+        "docker exec production-neo4j-1 ls -la /var/lib/neo4j/data/dbms/"
+      ],
+      "fix_commands": [
+        "docker exec production-neo4j-1 neo4j-admin set-initial-password jobfirst_password_2024",
+        "docker exec production-neo4j-1 chown -R neo4j:neo4j /var/lib/neo4j/data/",
+        "docker exec production-neo4j-1 chmod -R 755 /var/lib/neo4j/data/"
+      ],
+      "verification": [
+        "docker restart production-neo4j-1",
+        "sleep 30",
+        "docker exec production-neo4j-1 cypher-shell -u neo4j -p jobfirst_password_2024 \"RETURN 1\""
+      ]
+    },
+    {
+      "issue": "CPU使用率过高",
+      "current_problem": "CPU使用率27.43%，内存375MB",
+      "solution": "优化JVM参数和查询性能",
+      "jvm_optimization": {
+        "heap_size": "512m",
+        "gc_algorithm": "G1GC",
+        "gc_options": "-XX:+UseG1GC -XX:MaxGCPauseMillis=200"
+      },
+      "tencent_reference": {
+        "cpu_usage": "normal",
+        "memory_usage": "normal",
+        "status": "good"
+      }
+    }
+  ],
+  "monitoring_setup": []
+}

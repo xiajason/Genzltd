@@ -1,0 +1,226 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "table",
+          "bbox": [
+            123,
+            218,
+            1126,
+            1605
+          ],
+          "content": "<table><tr><td colspan=\"2\"></td><td></td><td></td><td></td><td rowspan=\"6\"></td></tr><tr><td colspan=\"2\" rowspan=\"2\"></td><td colspan=\"3\">甫选中该求职者</td></tr><tr><td colspan=\"3\"></td></tr><tr><td></td><td></td><td>—</td><td></td><td></td></tr><tr><td colspan=\"5\">陈晶的个人简历（No:2432561）</td></tr><tr><td colspan=\"5\"></td></tr><tr><td>$姓名:$</td><td colspan=\"2\">陈晶</td><td>男</td><td rowspan=\"9\">没有照片</td><td rowspan=\"10\"></td></tr><tr><td>更新日期:</td><td colspan=\"2\">2008年08月01日</td><td>汉族</td></tr><tr><td>$户籍:$</td><td colspan=\"2\">江西临川</td><td>$27$</td></tr><tr><td>婚姻状况:</td><td colspan=\"3\">未婚  身高: 162cm</td></tr><tr><td>现所在地:</td><td>广东涉</td><td></td><td></td></tr><tr><td>希望地区:</td><td colspan=\"3\">广东深圳 广东惠州 广东珠海</td></tr><tr><td>希望岗位:</td><td colspan=\"3\">工业/工厂类-PE工程师</td></tr><tr><td></td><td colspan=\"3\">工业/工厂类-品管经理/主管  质量/安全管理类-质量管理/测试工程师(QA/QC 工程师)</td></tr><tr><td>待遇要求:</td><td colspan=\"3\">￥4000元/月</td></tr><tr><td>$最快到岗:$</td><td colspan=\"3\">随时到岗</td><td></td></tr><tr><td colspan=\"5\"></td><td></td></tr><tr><td colspan=\"5\">教育/培训</td><td></td></tr><tr><td colspan=\"6\"></td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"2\">1999-09~2003-07</td><td>东华理工学院(原华东地质</td><td>电子信息工程</td><td>本科</td><td>-</td></tr><tr><td colspan=\"2\">1996-09~1999-07</td><td>西省临川市三中</td><td>里科</td><td>高中</td><td></td></tr><tr><td colspan=\"6\"></td></tr><tr><td colspan=\"5\"></td><td>-</td></tr><tr><td colspan=\"2\">2006-11~2006-12</td><td>北京新东方英语学校</td><td colspan=\"2\">三级英语听说读写 结业证书</td><td></td></tr><tr><td colspan=\"6\"></td></tr><tr><td colspan=\"6\"></td></tr><tr><td colspan=\"6\"></td></tr><tr><td colspan=\"5\">工作经验 至今 3 年 10 月工作经验,曾在 3 家公司工作</td><td></td></tr><tr><td colspan=\"6\"></td></tr><tr><td colspan=\"6\"></td></tr><tr><td colspan=\"5\">■ 北京港湾网络有限公司 (2008-03 ~ 2008-07)</td><td>-</td></tr><tr><td colspan=\"2\">公司性质:</td><td>营企业 行业</td><td>电信运营、增值服务</td><td>务业</td><td>-</td></tr><tr><td colspan=\"2\">担任职位：</td><td colspan=\"3\">质工程师</td><td></td></tr><tr><td colspan=\"5\">工作描述：负责安防产品的检验、测试及实验规划，并督导供应商产品的品质改善。</td><td>-</td></tr><tr><td colspan=\"5\">■ 深圳市同洲电子股份有限公司 (2007-07 ~ 2008-02)</td><td></td></tr><tr><td>公司性质:</td><td>$\\boxed{}$</td><td colspan=\"3\">家企业 行业类别：电子、微电子技术</td><td>-</td></tr><tr><td colspan=\"2\">担任职位：</td><td colspan=\"3\">量管理/测试工程师(QA/QC 工程师)</td><td></td></tr><tr><td colspan=\"2\">工作描述:</td><td colspan=\"3\">质 DVB/STB 产品的软体验证,实验策划及进度跟踪,判定软体功能异常缺陷及时将软件 BU</td><td>-</td></tr><tr><td colspan=\"2\">.</td><td colspan=\"3\">费给开发并协商软件缺陷的处理,制定测试流程、计划并完善测试方法</td><td>-</td></tr><tr><td>离职原因：</td><td></td><td colspan=\"3\">得个人的职业生涯的进一步发展和能力提升</td><td>-</td></tr><tr><td colspan=\"5\">■ 东莞市步步高视听电子有限公司 (2003-09 ~ 2006-08)</td><td>-</td></tr><tr><td>公司性质:</td><td>$\\boxed{1}$</td><td>营企业 行业</td><td>家电、工艺品、玩</td><td>具</td><td>-</td></tr><tr><td colspan=\"2\">担任职位：</td><td colspan=\"3\">工程师</td><td></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 1,
+          "type": "table",
+          "bbox": [
+            122,
+            139,
+            1122,
+            1032
+          ],
+          "content": "<table><tr><td></td><td>工作描述: 2</td><td>2003年9月至2004年6月从事DVD产品ME(治具制作)和PE工程技术工作,负责所跟踪产线异</td></tr><tr><td colspan=\"2\" rowspan=\"5\">宫  2  议  2  月  督</td><td>常的技术分析处理，并协助完善生产测试工艺；</td></tr><tr><td>2004年7月至2005年1月负责VCD、DVD产品全面品质验证，制定测试流程、计划并完善测</td></tr><tr><td>试方法；制订产品检验标准和品质测试作业指导书，解释并推行品质标准</td></tr><tr><td>2005年3月至2006年7月负责公司MP3产品的全面品质验证和制程品保体系运作,搜集市场客</td></tr><tr><td>督总局检验被评为质量合格产品</td></tr><tr><td></td><td>离职原因：</td><td>休息并去北京作中短期旅游并学习英语</td></tr><tr><td colspan=\"3\"></td></tr><tr><td colspan=\"3\"></td></tr><tr><td colspan=\"3\"></td></tr><tr><td></td><td colspan=\"2\"></td></tr><tr><td></td><td colspan=\"2\">技能/专长</td></tr><tr><td></td><td colspan=\"2\"></td></tr><tr><td></td><td colspan=\"2\"></td></tr><tr><td></td><td>语言能力:</td><td>普通话流利</td></tr><tr><td></td><td>英语水平:</td><td rowspan=\"2\">接近英语四级一般</td></tr><tr><td></td><td>英语口语:</td></tr><tr><td></td><td>第一外语:</td><td>英语 一般</td></tr><tr><td></td><td>计算机能力:</td><td>高校非计算机专业二级</td></tr><tr><td></td><td>计算机详细技能：</td><td rowspan=\"3\">熟练使用 Windows2000、Office2000。  掌握汇编语言、C 语言，能使用 Protel 绘制电路原理图和 PCB 图。并学习过 LAN、Internet 原理，掌握计算机网络技术。</td></tr><tr><td colspan=\"2\" rowspan=\"2\"></td></tr><tr><td colspan=\"2\">其它技能:</td><td>1、熟练掌握消费电子产品的产品质量测试及验证项目（包括模拟用户测试，电性能指标，环境可</td></tr><tr><td colspan=\"2\" rowspan=\"5\"></td><td>可靠性实验及ESD测试)，能制订家电产品从研发到量产各阶段品质验证计划；</td></tr><tr><td>2、能根据产品要求编写产品功能、外观标准并编制生产测试作业指导书;</td></tr><tr><td>3、负责过MP3结构来料品质改善工作</td></tr><tr><td>4、知悉碟机/MP3等家电类产品基本电路原理;</td></tr><tr><td>5、知悉 ISO9000: 2000 版质量管理体系内容，熟悉 QC 七大手法,了解 SPC 原理。</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "table",
+          "bbox": [
+            127,
+            1049,
+            1118,
+            1470
+          ],
+          "content": "<table><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\">发展方向</td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\">寻求职位：1.品质工程师；2.电子工程师</td></tr><tr><td colspan=\"4\">希望应聘品质工程师、QE 工程师,相信以本人近 4 年的家电工厂工作经验能胜任以上职位</td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\">联系方式</td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"4\"></td></tr><tr><td colspan=\"2\">联系电话:</td><td>$移动电话:$</td><td>13926506935</td></tr><tr><td>$电子邮件: \\underline$</td><td>chinesechen@mail.china.com</td><td>聊天号码:</td><td>ICQ: 502524316</td></tr><tr><td colspan=\"4\">个人主页：</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "figure",
+          "bbox": [
+            320,
+            1551,
+            392,
+            1594
+          ],
+          "content": "卓博商标，黑色字体“卓博”，其中“博”字的“日”字旁为红色。商标下方有一条细黑线。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094312249_5_ca1a9c34de30445db51c977f202b8c09/imgs/image1-1.jpg"
+        },
+        {
+          "idx": 3,
+          "type": "footer",
+          "bbox": [
+            143,
+            1549,
+            309,
+            1593
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 2,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "table",
+          "bbox": [
+            113,
+            142,
+            1133,
+            1465
+          ],
+          "content": "<table><tr><td colspan=\"2\" rowspan=\"2\"></td><td colspan=\"4\"></td><td rowspan=\"4\"></td></tr><tr><td colspan=\"5\"></td></tr><tr><td></td><td colspan=\"5\">willscan chen's Resume (No:2432561)</td></tr><tr><td colspan=\"6\"></td></tr><tr><td></td><td>Name:</td><td>Willscan chen</td><td>Sex:</td><td>male</td><td rowspan=\"10\">没有照片</td><td rowspan=\"10\"></td></tr><tr><td></td><td>Update:</td><td>2006-04-23</td><td>$Nationality:$</td><td>$Han$</td></tr><tr><td></td><td>Residence:</td><td>$FuzhouJiangxi$</td><td>$Age:$</td><td>$27$</td></tr><tr><td></td><td>Wedlock:</td><td>Single</td><td>$Stature:$</td><td>$162cm$</td></tr><tr><td></td><td>Location:</td><td colspan=\"3\">ShenzhenGuangdong</td></tr><tr><td></td><td colspan=\"4\">TargetLocation:</td></tr><tr><td></td><td></td><td></td><td></td><td></td></tr><tr><td></td><td>Target Jobs:</td><td colspan=\"3\">-</td></tr><tr><td></td><td>DesiredSalary:</td><td colspan=\"3\">$interview$</td></tr><tr><td></td><td>When Can Start:</td><td colspan=\"3\">Within half a month</td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\"></td></tr><tr><td></td><td colspan=\"6\">Education&amp;Training</td></tr><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\"></td></tr><tr><td colspan=\"7\"></td></tr><tr><td></td><td colspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"5\">Skills</td><td></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"5\">Language Skills:</td><td></td></tr><tr><td></td><td colspan=\"2\">Foreign Languages:</td><td colspan=\"3\">lish</td><td></td></tr><tr><td></td><td colspan=\"5\">Computer Skills:</td><td></td></tr><tr><td></td><td colspan=\"5\">Concrete Technical Abilities:</td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"5\">Development</td><td></td></tr><tr><td></td><td colspan=\"5\"></td><td></td></tr><tr><td colspan=\"7\"></td></tr><tr><td></td><td colspan=\"5\">Target Position: 1.,</td><td></td></tr><tr><td></td><td colspan=\"5\"></td><td></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"5\">Contact</td><td></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"6\"></td></tr><tr><td></td><td colspan=\"2\">Telephone:</td><td colspan=\"2\">Mobile: 13</td><td>10636928</td><td></td></tr><tr><td></td><td colspan=\"2\">Pager:</td><td>Email:</td><td>$chi$</td><td>hesechen@mail.china.com</td><td></td></tr><tr><td colspan=\"5\">Homepage:  Instant Messenger:  :</td><td></td><td></td></tr><tr><td colspan=\"7\"></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 3,
+      "blocks": [
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            51,
+            174,
+            1196,
+            210
+          ],
+          "content": "关于我们 | 相关法律 | 在线帮助 | 网站地图 | 联系我们 | 加盟卓博 | 投诉、意见反馈 | RSS 信息聚合服务 | WAP",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            366,
+            240,
+            877,
+            266
+          ],
+          "content": "Copyright © 1999 - 2008 jobcn.com All Rights Reserved",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            441,
+            273,
+            800,
+            299
+          ],
+          "content": "招聘 求职 首选 ——卓博人才网 版权所有",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            277,
+            305,
+            967,
+            333
+          ],
+          "content": "粤B2\\-20040458 软件企业认定证书 高新技术企业认定证书 民营科技企业资格证书",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "figure",
+          "bbox": [
+            512,
+            376,
+            747,
+            454
+          ],
+          "content": "三个图标并排展示，从左到右分别是：红色盾牌图案，带有“安”字的蓝色盾牌，以及一个警亭内的警察形象。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094312249_5_ca1a9c34de30445db51c977f202b8c09/imgs/image3-1.jpg"
+        },
+        {
+          "idx": 3,
+          "type": "title",
+          "bbox": [
+            22,
+            493,
+            157,
+            524
+          ],
+          "content": "The image contains four yellow blocks with a white background and a black border. There is no text content in the image.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "figure",
+          "bbox": [
+            187,
+            528,
+            257,
+            559
+          ],
+          "content": "图片中显示了两个黄色背景的矩形，每个矩形内有一个蓝色的右箭头符号。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094312249_5_ca1a9c34de30445db51c977f202b8c09/imgs/image3-2.jpg"
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

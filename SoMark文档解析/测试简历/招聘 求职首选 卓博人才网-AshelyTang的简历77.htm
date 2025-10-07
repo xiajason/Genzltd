@@ -1,0 +1,895 @@
+
+
+
+
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="author" content="Copyright 1999-2002 jobcn.com">
+<link rel="stylesheet" href="/include/jobcn9.css">
+<title>招聘 求职首选--卓博人才网</title>
+<script type="text/javascript" language="javascript">
+<!--
+function changephoto()
+{
+	for(var i=0;i<document.images.length;i++)
+	{
+		var e = document.images[i];
+		if (e.name == 'photo')
+		{
+			width=e.width;
+			height=e.height;
+			if (width<=200 &&height<=300)
+			{
+				continue;
+			}
+			if (width/200<=height/300)
+			{
+				e.height=300
+				e.width=width*(300/height)
+			}
+			else
+			{
+				e.width=200
+				e.height=height*(200/width)
+			}
+		}
+	}
+}
+function enter()
+{
+	var s;
+	s=choose();
+	if(s.length<1)
+	{
+		alert("请选择您要查看的简历！");
+		return false;
+	}
+	
+		thisForm.action="personDetail.jsp?Ref=20EEF96C6CF3A6DC";
+	
+	thisForm.submitEnter.value="1";
+	document.thisForm.cancelAccount.value="";
+	thisForm.submit();
+}
+
+function cancel()
+{
+	document.thisForm.submitEnter.value="0";
+	document.thisForm.cancelAccount.value="cancel";
+	thisForm.submit();
+}
+
+function choose()
+{
+	var s="";
+	if(thisForm.selectedid!=null){
+		for(var i=0;i<thisForm.selectedid.length;i++)
+		{
+			if(thisForm.selectedid[i].checked)
+			{
+				s=s+"'"+thisForm.selectedid[i].value+"'"+",";
+			}
+		}
+		if(thisForm.selectedid.checked==1)
+		{
+			s=s+"'"+thisForm.selectedid.value+"'"+",";
+		}
+	}
+	if(s!="")
+		s=s.substring(0,s.length-1);
+	return s;
+}
+
+function InviteView(pagename)
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	if(pagename.indexOf("WriteVideoInterviews")>0){
+		window.open(pagename+"?personDetailStr=personDetailStr&resumeList="+s,'etner','resizable=0,menuBar=0,toolBar=0,scrollbars=yes,width=640,height=350,left=100,top=0');
+	}else{
+		window.open(pagename+"?resumeList="+s,'etner','resizable=0,menuBar=0,toolBar=0,scrollbars=yes,width=640,height=350,left=100,top=0');
+	}
+}
+
+function talent()
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	window.open("enterTalent.jsp?id="+s,"talent","resizable=1,menuBar=0,toolBar=0,scrollbars=yes,width=480,height=350,left=100,top=0");
+}
+
+function sendtocompany()
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	thisForm.action="sendtocompany.jsp";
+	thisForm.target="_blank";
+	thisForm.submit();
+}
+
+function printresume()
+{
+	var s="";
+	s=choose();
+	if(s=="")
+	{
+		alert("请至少选择一项！");
+		return false;
+	}
+	thisForm.action="printResume.jsp";
+	thisForm.target="_blank";
+	thisForm.submit();
+}
+function CheckAll(form)
+{
+	for (var i=0;i<form.elements.length;i++)
+	{
+		var e = form.elements[i];
+		if (e.name=="selectedid")
+			e.checked = form.chkall.checked;
+	}
+}
+function getKeyStr(keyword){
+	var skeyword = "";
+	for(var i = 0; i < keyword.length; i++){
+		skeyword += "["+keyword.charAt(i)+"]";
+	}
+	return skeyword;
+}
+
+function makeKeywordStr(str, keyword){
+    if(s == "") return "";
+    var skeyword = getKeyStr(keyword);
+    var rgExpHtml1 = new RegExp("<", "gi");
+    var rgExpHtml2 = new RegExp(">", "gi");
+    var rgExpKey = new RegExp(skeyword, "gi");
+    var replaceText = "<span style=\"color:#FF0000;\">" + keyword + "</span>";
+
+    if(str.search(rgExpHtml1) == -1){
+        return str.replace(rgExpKey, replaceText);
+    }else{
+        var result = "";
+        var begin = 0;
+        var end = 0;
+        var transact = false;
+        var s;
+        for(var i = 0; i < str.length; i++){
+            s = str.charAt(i);
+
+            if(s == '<'){
+                end = i;
+                result += str.substring(begin, end).replace(rgExpKey, replaceText);
+                begin = i;
+                end = i;
+            }
+
+            if(s == '>'){
+                result += str.substring(begin, i + 1);
+                begin = i + 1;
+                end = i + 1;
+            }
+
+        }
+        result += str.substring(begin, i + 1).replace(rgExpKey, replaceText);
+
+        return result;
+    }
+}
+
+/**
+ * 为字符串增加trim方法，以去除左右空格
+ */
+String.prototype.trim = function(){
+    return this.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function bodyLoad(){
+    changephoto();
+
+    var keyword = '人力资源总监';
+    keyword = keyword.trim();
+    if(keyword.length == 0) return;
+
+    var filter = "&nbsp;";
+
+    if (keyword.indexOf(' AND ')>=0) {
+        var arrKeyword = keyword.split(' AND ');
+    } else {
+        var arrKeyword = keyword.split(' OR ');
+    }
+    
+
+    for(var j = 0; j < arrKeyword.length; j++){
+        keyword = arrKeyword[j].trim();
+
+        if(filter.indexOf(keyword) >= 0) break;
+
+        if(resume.length > 0){
+            for(var i = 0; i < resume.length; i++){
+                resume[i].innerHTML = makeKeywordStr(resume[i].innerHTML, keyword);
+            }
+        }else{
+            resume.innerHTML = makeKeywordStr(resume.innerHTML, keyword);
+        }
+    }
+}
+-->
+</script>
+</head>
+<body LEFTMARGIN="0" TOPMARGIN="10" onload="javascript:bodyLoad();">
+<br>
+	<div align="center">
+		<form name="thisForm" method="post">
+			<input type="hidden" name="resumedetail">
+			<input type="hidden" name="resumeid">
+			<input type="hidden" name="idtype" value="resumeID">
+			<input type="hidden" name="showEngCV" value="1">
+            <input type="hidden" name="referFrom" value=""> 
+			
+<style type="text/css" media="all">
+<!--
+body{margin:10pt 0pt 0pt 0pt;font-size:9pt;font-family:宋体,Arial,Helvetica,sans-serif;}
+.cn{line-height:14pt;font-family:宋体,Arial,Helvetica,sans-serif;border:1px solid #808080;}
+.en{line-height:14pt;font-family:Arial, Helvetica, sans-serif;border:1px solid #808080;}
+.cn .v{font-size:9pt;color:#000000;text-align:left;font-weight:normal;word-wrap:break-word;word-break:break-all;}
+.en .v{font-size:9pt;color:#000000;text-align:left;font-weight:normal;word-wrap:break-word;word-break:keep-all;}
+.cn .f{font-size:9pt;color:#000080;text-align:right;font-weight:normal;}
+.en .f{font-size:9pt;color:#000080;text-align:right;font-weight:bold;}
+.t{font-size:11pt; color:#000080; font-weight:bold;}
+.tb{font-size:11pt;color:#000080; margin-left:10pt;}
+.pl20{padding-left:20pt}
+.check{color:#024EFD;font-size:9pt;}
+.cer{color:#0000FF;cursor:hand}
+a:link,a:visited,a:active{color: #000000;text-decoration: none;}
+a:hover{color: #000000;text-decoration: underline;}
+a.func:link,a.func:visited,a.func:active,a.func:hover{color:#e08907;font-weight:bold;font-size:9pt;}
+#remark{margin:5pt 5pt 5pt 15pt;padding:0pt;font-size:9pt;color:#336699;}
+-->
+</style>
+<style type="text/css" media="print">
+<!--
+.cn{line-height:14pt;font-family:宋体,Arial,Helvetica,sans-serif;border:0px solid #808080;}
+.en{line-height:14pt;font-family:宋体,Arial,Helvetica,sans-serif;border:0px solid #808080;}
+#np{display:none;}
+.np{display:none;}
+.PageNext{page-break-after: always;}
+-->
+</style>
+<br />
+<table width="650" class="cn" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="160" height="80" rowspan="2"><img alt="" src="http://www.jobcn.com/commimage/jobcn_smalllogo2.gif" /></td>
+                    <td width="455" height="40" align="right" valign="bottom">
+                        <span class="f np" style="color:#024EFD">
+                        <input type="checkbox" value="3124428" name="selectedid" checked="checked"/>选中该求职者</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="40" align="right" valign="top"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <span style="font-weight:bold;font-size:12pt;">AshelyTang的个人简历</span><span class="f">（№:3124428）</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="2"></td>
+                </tr>
+            </table>
+            <input type="hidden" name="e_mail" value="xatta@163.com"/>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="445" valign="middle">
+                        <table cellspacing="0" cellpadding="0" width="445" align="center"  border="0">
+                            <tr valign="top">
+                                <td width="90" height="22" class="f">姓&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+                                <td width="175" class="v" id="resume">AshelyTang</td>
+                                <td width="80" class="f">性&nbsp;别：</td>
+                                <td width="100" class="v" id="resume">女</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">更新日期：</td>
+                                <td class="v">2008年09月12日</td>
+                                <td class="f">民&nbsp;族：</td>
+                                <td class="v" id="resume">汉族</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">户&nbsp;&nbsp;&nbsp;&nbsp;籍：</td>
+                                <td class="v" id="resume">广东珠海</td>
+                                <td class="f">年&nbsp;龄：</td>
+                                <td class="v">31</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">婚姻状况：</td>
+                                <td class="v" id="resume">已婚</td>
+                                <td class="f">身&nbsp;高：</td>
+                                <td class="v">163cm</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">现所在地：</td>
+                                <td colspan="3" class="v" id="resume">广东珠海</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">希望地区：</td>
+                                <td colspan="3" class="v" id="resume">广东&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">希望岗位：</td>
+                                <td colspan="3" class="v" id="resume">行政/人事类-人力资源总监<br />行政/人事类-人事经理/主管<br /></td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">待遇要求：</td>
+                                <td colspan="3" class="v">面议</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">最快到岗：</td>
+                                <td colspan="3" class="v">1个月以内</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="170" align="center" valign="middle">
+<img height="200" width="145" name="photo" border="1" src="http://image.jobcn.com/PersonPhoto/photoBlank.gif" alt="没有照片" />
+                    </td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">教育/培训</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">2007-09 ~2010-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">北京师范大学</td>
+                    <td width="177" id="resume">MBA</td>
+                    <td width="106" id="resume">硕士</td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">1998-09 ~2002-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">湘潭大学</td>
+                    <td width="177" id="resume">英语语言文学</td>
+                    <td width="106" id="resume">本科</td>
+                </tr>
+                <tr>
+                    <td colspan="4" height="5"></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">2007-08 ~2009-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">畅想职业培训</td>
+                    <td width="177" id="resume">国家人力资源高级管理师</td>
+                    <td width="106" id="resume"></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">2005-02 ~2005-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">畅想职业培训</td>
+                    <td width="177" id="resume">国家人力资源管理师</td>
+                    <td width="106" id="resume"></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="135" height="20" align="right">2003-08 ~2003-11&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">畅想职业培训</td>
+                    <td width="177" id="resume">国家人力资源助理管理师</td>
+                    <td width="106" id="resume"></td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">工作经验&nbsp;&nbsp;<span class="v" style="font-weight:bold;">至今6年5月工作经验,曾在1家公司工作</span></td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" class="t"><span class="tb" id="resume">▌</span>华润集团成员公司<span class="v"> （2002-04 ~ 目前）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="123" height="20" class="f">公司性质：&nbsp;&nbsp;</td>
+                    <td width="123" class="v" id="resume">国有企业</td>
+                    <td width="67" class="f">行业类别：</td>
+                    <td width="305" class="v" id="resume">纺织品业（服饰、鞋类、家纺用品、皮具…）</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">担任职位：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">人力资源总监</td>
+                </tr>
+                <tr valign="top">
+                    <td height="20" class="f">工作描述：&nbsp;&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">公司简介：圣马可（珠海）皮革制品有限公司是一家生产高档女士皮鞋、手袋、银包及皮带等产品的公司，由香港华润集团属下德信行有限公司全资拥有。它崇尚高贵、典雅，追求至善、完美，在意大利及香港技术专家的监制指导下，将意大利制鞋、制件文化融入东方的理念，将现代化的生产技术与传统的手工工艺完美结合，配备先进的设备，并拥有高素质的人员，产品的内涵外观都飘逸着时尚潮流。公司在北京、上海、广州、深圳、武汉、西安、成都、重庆及香港等地设有办事处，300余家专卖店遍及中国内地, 产品出口到海外17个国家。<br />主营业务: 皮革制品<br />职务: 行政人事总监 <br />下属人数: 40                       <br />直接领导是:总经理<br /><br />主要负责:<br />2006年4月至今 <br />    担任公司行政人事助理总监一职, 负责行政人事部的全面工作：根据公司的整体发展战略来发展人力资源/招聘战略；领导人力资源行政部团队向内部客户提供优质的服务；负责所有员工的招聘、解聘工作；完善员工福利及薪酬计划；设计及执行员工的绩效评估项目；制定并实施公司的培训策略及计划；负责员工沟通及员工关系管理；负责整个公司的安全、大楼的维护工作；统筹安排保安、清洁、园艺、饭堂、车队等各项工作。<br />2003年10月至2006年3月<br />    担任公司行政人事经理一职。<br />2003年2月—2003年9月<br />    被提拔为公司人力资源部副经理，具体负责人力资源工作。除具体负责公司薪酬制度的执行、检讨、调整，以及公司各部门激励机制的制定、考核、分析、修改等各项工作以外，负责指导下属的招聘、培训工作。<br />2003年6月—2004年3月<br />    任职人力资源部薪酬、考核主管，具体负责公司薪酬制度的执行、检讨、调整，以及公司各部门激励机制的制定、考核、分析、修改等各项工作。<br />2002年4月—2003年1月<br />    人力资源招聘、培训专员，兼总监文秘。从事员工招聘工作，执行公司年度培训计划、组织和实施各项培训并跟踪培训效果。负责部门文件的起草，协调部门内外部关系。<br /><br />取得主要成绩:<br />1. 根据公司的整体发展战略来制定企业人力资源/招聘战略,满足企业战略发展的人力资源需要。<br />2. 制定有效的薪酬和福利计划。<br />3、致力于团队建设，领导人力资源行政部团队向内部客户提供优质的服务。</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">技能/专长</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">语&nbsp;&nbsp;言&nbsp;&nbsp;能&nbsp;&nbsp;力：&nbsp;</td>
+                    <td colspan="3" class="v">普通话流利,粤语差</td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">英语水平：&nbsp;</td>
+                    <td width="188" class="v">专业</td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">英语口语：&nbsp;</td>
+                    <td width="188" class="v">熟练</td>
+                </tr>
+                <tr>
+                    <td width="130" height="20" class="f">第一外语：&nbsp;</td>
+                    <td width="188" class="v">英语 熟练</td>
+                    <td width="100"></td>
+                    <td width="200"></td>
+                </tr>
+                <tr valign="top">
+                    <td width="130" height="20" class="f">计&nbsp;算&nbsp;机&nbsp;能&nbsp;力：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">中级</td>
+                </tr>
+                <tr valign="top">
+                    <td width="130" height="20" class="f">计算机详细技能：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">能熟练应用OFFICE办公软件</td>
+                </tr>
+                <tr valign="top">
+                    <td width="130" height="20" class="f">其&nbsp;&nbsp;它&nbsp;&nbsp;技&nbsp;&nbsp;能：&nbsp;</td>
+                    <td colspan="3" class="v" id="resume">2002年8月 广东省劳资人员上岗资格培训并获上岗证<br />2003年4月高效率的招募、甄選与測評技巧的培训<br />2006年8月 华润集团人事经理培训<br />2007年7月 华润集团劳动合同法培训</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">发展方向</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" id="resume">高级人力资源职业经理人</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">自我评价</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" valign="top" width="580" id="resume">　　自2002年毕业进入公司以来，我很幸运，成长的历程是非常清晰、明朗的。5年的时间，在一家拥有一千员工的公司里，由一名应届毕业生成长为一个部门负责人。在被提拔到管理岗位后，我始终要求自己站在更高层次的角度去理解和执行公司的各项方针政策，领会精髓，不断的学习和提升自己，并带动整个团队的学习风气，鼓励我的属下不断学习，构建一个学习型、知识型的团队。</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">联系方式</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">联系电话：</td>
+                    <td width="240" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=88C23386EBA60A83C0B81A1D280E9B79" ></td>
+                    <td width="88" class="f">移动电话：</td>
+                    <td width="200" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=2110D2434733A850A56586D4CF0C4B8C" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">电子邮件：</td>
+                    <td width="240" class="v"><a href="mailto:xatta@163.com">xatta@163.com</a></td>
+                    <td width="88" class="f">聊天号码：</td>
+                    <td width="200" class="v"></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">个人主页：</td>
+                    <td colspan="3" class="v"><a target="_blank" href=""></a></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">通讯地址：</td>
+                    <td colspan="3" class="v">广东省珠海市香溪路118号42栋605室（519000）</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br />
+<table width="650" class="en" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+        <td>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="160" height="80" rowspan="2"><img alt="" src="http://www.jobcn.com/commimage/jobcn_smalllogo2.gif" /></td>
+                    <td width="455" height="40" align="right" valign="bottom"></td>
+                </tr>
+                <tr>
+                    <td height="40" align="right" valign="top"></td>
+                </tr>
+                <tr align="center">
+                    <td colspan="2">
+                        <span style="font-weight:bold;font-size:12pt;">AshelyTang's Resume</span><span class="f" style="font-weight:normal">（№:3124428）</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="15" colspan="2"></td>
+                </tr>
+            </table>
+            <table width="615" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td width="445" valign="middle">
+                        <table width="445" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr valign="top">
+                                <td width="120" height="22" class="f"> Name：</td>
+                                <td width="130" class="v" id="resume">AshelyTang</td>
+                                <td width="95" class="f">Sex：</td>
+                                <td width="100" class="v">female</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Update：</td>
+                                <td class="v">2008-09-12</td>
+                                <td class="f">Nationality：</td>
+                                <td class="v" id="resume">Han</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Residence：</td>
+                                <td class="v" id="resume"></td>
+                                <td class="f"> Age：</td>
+                                <td class="v">31</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Wedlock：</td>
+                                <td class="v" id="resume">Married</td>
+                                <td class="f">Stature：</td>
+                                <td class="v">163cm</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Location：</td>
+                                <td colspan="3" class="v" id="resume">ZhuhaiGuangdong</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">TargetLocation：</td>
+                                <td colspan="3" class="v" id="resume">Guangdong<br /><br /></td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">Target Jobs：</td>
+                                <td colspan="3" class="v" id="resume">Administration/Human Resource-Human Resource Majordomo<br /></td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">DesiredSalary：</td>
+                                <td colspan="3" class="v" id="resume">interview</td>
+                            </tr>
+                            <tr valign="top">
+                                <td height="22" class="f">When Can Start：</td>
+                                <td colspan="3" class="v" id="resume">Within 1 months</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td width="170" align="center" valign="middle">
+<img height="200" width="145" name="photo" border="1" src="http://image.jobcn.com/PersonPhoto/photoBlank.gif" alt="没有照片" />
+                    </td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">Education&amp;Training</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="120" height="22" align="right">2007-09 ~2010-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">Beijing Normal University</td>
+                    <td width="178" id="resume">Enterprise Management</td>
+                    <td width="120" id="resume">Master Degree</td>
+                </tr>
+                <tr valign="top" class="v">
+                    <td width="120" height="22" align="right">1998-09 ~2002-07&nbsp;&nbsp;</td>
+                    <td width="200" id="resume">Xiangtan University</td>
+                    <td width="178" id="resume">English Language and Literature</td>
+                    <td width="120" id="resume">Bachelor Degree</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="2" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="2" bgcolor="#f0f0f0" class="t">Work Experience&nbsp;&nbsp;<span class='style3'><font color='000080'>6 years 5 months work experience,and served on 1 Companies.</font></span></td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="2" ></td>
+                </tr>
+                <tr>
+                    <td height="24" colspan="2" class="t" id="resume"><span class="tb">▌</span>Saint Marco (Zhu Hai) leather goods Co. Ltd(Zhuhai,CHINA)<span class="v"> （2002-04 ~ Now）</span></td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f"> Company Type：</td>
+                    <td width="458" class="v" id="resume">Foreign Enterprise</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Company Category：</td>
+                    <td width="458" class="v" id="resume">Manufacturing</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Job Title：</td>
+                    <td width="458" class="v" id="resume">Human Resource Majordomo</td>
+                </tr>
+                <tr valign="top">
+                    <td width="160" height="20" class="f">Job Description：</td>
+                    <td width="458" class="v" id="resume">Working Experience：<br />April 2002-present      Saint Marco (Zhu Hai) leather goods Co. Ltd(Zhuhai,CHINA)  <br />(圣马可（珠海）皮革制品有限公司)<br />Nature: Zhuhai (China)<br /><br />Company profile(公司简介): Wholly-owned by Teck Soon Hong, Ltd., a subsidiary of China Resources (Holdings) Co., Ltd.(HK) and established in 1946, Saint Marco (Zhuhai) leather goods Co. Ltd. specialize in producing high-class leather or synthetic leather articles ranging from handbags and wallets to belts and shoes. Currently, close to 300 shops have been opened around China and the products are sold to seventeen countries around the world.   Saint Marco strives to continue to pass on the “GALADAY” mantra to all of their loyal customers.<br />Employees: Around 1,300 <br />Product: Leather products<br />Title: Assistant Director of the HR & Administration Department.(There is no Director in the company)<br />Report to: GM<br />Subordinates: 40<br /><br />Key responsibilities:<br />- From April 2006 until now<br />Hold a post of Assistant Director of the HR & Administration Department<br />&#61656;	Be responsible for recruitment and dismissal of all staff (except GM)and administer employment contracts;<br />&#61656;	Develop and review compensation & benefit package;<br />&#61656;	Design and implement performance appraisal program;<br />&#61656;	Develop training strategy and plan for the whole company;<br />&#61656;	Drive communication initiative & manage employee relations;<br />&#61656;	Be responsible for safety, maintenance of the office building;<br />&#61656;	Manage services projects (security, cleaning, gardening and canteen )<br />- From October 2003 to March 2006<br />Held a post of Manager of the HR & Administration Department.<br />- From February 2003 to September 2003<br />Promoted to the Vice Manager of HR & Administration Department.<br />&#61656;	Be responsible for the company’s salary payment and management<br />&#61656;	Develop and review compensation & benefit package<br />&#61656;	Implement performance appraisal program<br />&#61656;	Coach underlings’ work of recruitment and training<br />-From April 2002 to January 2003<br />&#61656;	Was responsible for recruitment and implementing training strategy ,at the same time, to be the secretary of the general manager.</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="2" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="2" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="2" bgcolor="#f0f0f0" class="t">Skills</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="2" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Language Skills：</td>
+                    <td width="390" class="v"></td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Oral English Level：</td>
+                    <td width="390" class="v">Skilled</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Foreign Languages：</td>
+                    <td width="390" class="v">English Skilled
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Computer Skills：</td>
+                    <td width="390" class="v" id="resume">junior</td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Concrete Technical Abilities：</td>
+                    <td width="390" class="v" id="resume"></td>
+                </tr>
+                <tr valign="top">
+                    <td width="228" height="20" class="f">Correlative Skills：</td>
+                    <td width="390" class="v" id="resume">Training  :<br />-June in 2003, attended the training of National Human Resources Administer Assistant , and get passed。<br />-November in 2004，took part in the training of National Human Resources Administer，and get passed.<br />-July in 2005,attended the training of The Effective Techniques of Recruitments;<br />-August in 2007, took part in the HR Manager Training which is organized by China Resources (Holdings) Co.,Ltd. (华润集团)<br />-September in 2007, attended the training of LAW OF THE PEOPLE’S REPUBLIC OF CHINA ON EMPLOYMENT CONTRACTS, which is organized by China Resources (Holdings) Co.,Ltd.(华润集团)</td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="2" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">Development</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td height="20" class="v pl20" id="resume"><span class="f">Target Position：</span></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" id="resume">Career Manager</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" bgcolor="#f0f0f0" class="t">Self Assessment</td>
+                </tr>
+                <tr>
+                    <td height="4" ></td>
+                </tr>
+                <tr>
+                    <td class="v pl20" valign="top" width="580" id="resume">&#8226; With mature professional knowledge in human resources field and understanding the impact on the company’s strategy caused by HR Management<br />
+&#8226; Well-versed with the local and Chinese Labor Law<br />
+&#8226; Strong interpersonal communication, negotiation and persuasion skills<br />
+&#8226; Good leadership skill<br />
+&#8226; Combined intelligence, common sense, creative mind, social confidence, and maturity<br />
+&#8226; about four years of experience in HRM</td>
+                </tr>
+                <tr>
+                    <td height="10" ></td>
+                </tr>
+            </table>
+            <table width="618" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td valign="bottom" colspan="4" height="1"><img alt="" height="1" src="http://www.jobcn.com/commimage/jianli_x.gif" width="618" /></td>
+                </tr>
+                <tr>
+                    <td height="22" colspan="4" bgcolor="#f0f0f0" class="t">Contact</td>
+                </tr>
+                <tr>
+                    <td height="4" colspan="4" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">Telephone：</td>
+                    <td width="200" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=88C23386EBA60A83C0B81A1D280E9B79" ></td>
+                    <td width="138" class="f">Mobile：</td>
+                    <td width="190" class="v"><img alt="" src="http://www.jobcn.com/public/ShowTextImage.jsp?text=2110D2434733A850A56586D4CF0C4B8C" ></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">Pager：</td>
+                    <td width="200" class="v"></td>
+                    <td width="138" class="f">Email：</td>
+                    <td width="190" class="v"><a href="mailto:xatta@163.com">xatta@163.com</a></td>
+                </tr>
+                <tr valign="top">
+                    <td width="90" height="20" class="f">Homepage：</td>
+                    <td width="200" class="v"><a target="_blank" href=""></a></td>
+                    <td width="138" class="f">Instant Messenger：</td>
+                    <td width="190" class="v"></td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="4" ></td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- ###personcontact:1###isSaveAccount:0###errorCode0###showResume.getUnViewTotal()0-->
+
+
+				<div align="center">
+						<table width="641" height="50" border="0" cellpadding="0" cellspacing="0" bordercolor="#111111" id="AutoNumber14" style="border-collapse: collapse">
+							
+							<tr>
+								<td valign="bottom">　</td>   
+								
+        <td align="center" valign="middle"> 
+          </td>
+								<td valign="top"></td>
+							</tr>
+						</table>					
+    <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="600" id="AutoNumber14">
+      <tr>
+		<td></td>
+			<td height="60" align="center" valign="top"> 
+            
+            <img border="0" src="/images/WriteInterviews_But.gif" onclick="javascript:InviteView('/company/resumestore/personInterview.jsp')" style="cursor:hand"> 
+            <img border="0" src="/images/WriteInterviewss_But.gif" onclick="javascript:InviteView('/company/resumestore/allInterView.jsp');" style="cursor:hand"> 
+			<img alt="邀请视频面试" border="0" onclick="javascript:InviteView('/company/resumestore/WriteVideoInterviews.jsp')" src="/images/WriteVideoInterviews_But.gif" style="CURSOR: hand" />
+            <img border="0" src="/images/SendDept_But.gif" onclick="javascript:talent();" style="cursor:hand"> 
+            <IMG border=0 onclick="javascript:printresume();" src="/images/printresume.gif"  style="CURSOR: hand"> 
+            <IMG border=0 onclick="javascript:sendtocompany();" src="/images/SendResumeToCompany.gif"  style="CURSOR: hand"> 
+            
+            
+          </td>
+			<td></td>
+		</tr>
+            <input type="hidden" name="submitEnter">
+			<input type="hidden" name="cancelAccount">
+            <input type="hidden" name="keyword1" value="人力资源总监">
+		</table>
+			</div>
+
+		<table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="766" id="AutoNumber12">
+					<tr>
+						<td><div id="foot">
+    <div id="footer" style="border-top:1px solid #FF9900">
+        <p>
+            <a href="/public/About.jsp" target="_blank">关于我们</a>&nbsp;|&nbsp;
+            <a href="/public/Terms.jsp" target="_blank">相关法律</a>&nbsp;|&nbsp;
+            <a href="/Help/index.jsp" target="_blank">在线帮助</a>&nbsp;|&nbsp;
+            <a href="/public/SiteMap.jsp" target="_blank">网站地图</a>&nbsp;|&nbsp;
+            <a href="/public/Contact.jsp" target="_blank">联系我们</a>&nbsp;|&nbsp;
+            <a href="/person/CompanyContent.jsp?ComID=200406" target="_blank">加盟卓博</a>&nbsp;|&nbsp;
+			<a href="/public/ContactUs.jsp" target="_blank">投诉、意见反馈</a>&nbsp;|&nbsp;
+            <a href="/help/rss/rss.jsp" target="_blank">RSS信息聚合服务</a>&nbsp;|&nbsp;
+            <a href="/help/jobcn/wap/wap.jsp" target="_blank">WAP</a>
+        </p>
+		
+		
+		
+        <p>
+		
+			Copyright&nbsp;&copy; 1999 - 2010 jobcn.com All Rights Reserved<br />
+			<a href="http://www.Jobcn.com">招聘</a>  
+			<a href="http://www.Jobcn.com">求职</a> 首选 --
+			<a href="http://www.Jobcn.com">卓博人才网</a> 版权所有<br />
+			<a href="/Company/ADPage/Permit1.htm" target="_blank">粤B2-20040458</a>  
+			<a href="/Company/ADPage/Permit2.htm" target="_blank">软件企业认定证书</a>  
+			<a href="/Company/ADPage/Permit4.htm" target="_blank">高新技术企业认定证书</a>  
+			<a href="/Company/ADPage/Permit3.htm" target="_blank">民营科技企业资格证书</a><br />
+		
+        </p>
+		
+		<p>
+		  <img src="/CommImage/jobcn/v95/jobcn_75.jpg" alt="ICP经营许可证标志" border="0" />
+		  <a href="http://210.76.65.188/webrecord/innernet/Welcome.jsp?bano=4419003010513" target="_blank">
+		  <img src="/CommImage/jobcn/v95/jobcn_76.jpg" alt="“安网”备案标志" border="0" /></a>
+		  <a href="http://210.76.65.188/" target="_blank">
+		  <img src="/CommImage/jobcn/v95/jobcn_77.jpg" alt="网上报警" border="0" /></a>		</p>
+		
+		
+    </div>
+</div>
+
+</td>
+					</tr>
+				</table>
+		</form>
+	</div>
+<script language="javascript" type="text/javascript">
+	window.document.title ="招聘 求职首选 卓博人才网-AshelyTang的简历";
+</script>
+</body>
+</html>
+<script LANGUAGE="javascript">
+function form_submit()
+{
+	if(window.event.keyCode==13)
+		thisForm.enter1.focus();
+}
+</script>

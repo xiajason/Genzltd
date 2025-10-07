@@ -1,0 +1,42 @@
+{
+  "timestamp": "2025-10-02T23:59:39.794384",
+  "target": "47.115.168.107:8300",
+  "port_connectivity": true,
+  "http_test_results": [
+    {
+      "protocol": "HTTP GET",
+      "status": "connection_error",
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "protocol": "HTTP GET /",
+      "status": "connection_error",
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "protocol": "HTTP GET /health",
+      "status": "connection_error",
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "protocol": "HTTP GET /status",
+      "status": "connection_error",
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "protocol": "HTTP GET /api",
+      "status": "connection_error",
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    },
+    {
+      "protocol": "HTTP POST",
+      "status": "connection_error",
+      "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+    }
+  ],
+  "summary": {
+    "total_tests": 6,
+    "successful": 0,
+    "failed": 6
+  }
+}

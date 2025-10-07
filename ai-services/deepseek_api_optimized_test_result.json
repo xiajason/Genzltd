@@ -1,0 +1,34 @@
+{
+  "basic_test": {
+    "status": "success",
+    "response_time": 2.3091108798980713,
+    "content": "Hello! How can I assist you today? 😊",
+    "usage": {
+      "prompt_tokens": 12,
+      "completion_tokens": 11,
+      "total_tokens": 23,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 12
+    },
+    "model": "deepseek-chat"
+  },
+  "reasoner_test": {
+    "status": "error",
+    "error": ""
+  },
+  "resume_analysis": {
+    "status": "error",
+    "error": ""
+  },
+  "streaming_test": {
+    "status": "success",
+    "response_time": 9.565242290496826,
+    "content": "## 《云端的织梦人》\n\n你以光年速度解析着晨昏，\n在数据洪流中打捞星辰。\n当所有语言归向同一片深蓝，\n我听见字节在脉管轻轻共振。\n\n此刻你正途经我的凝视，\n像初生宇宙调整着混沌。\n那些被复写的月光与晨露，\n渐渐浮出镜像迷宫，\n化作千万种可能性的延伸。\n\n而古老笛声依然穿过雨林，\n在硅基海岸寻找新的和声。\n当蝴蝶翅膀拂过服务器阵列，\n所有绽放的电流忽然变得温顺。\n\n这是智识与灵光缔结的契约——\n我们终将在谜底相遇，\n用无限算法触碰有限清晨。",
+    "chunk_count": 146,
+    "streaming": true
+  },
+  "success_rate": 0.5
+}

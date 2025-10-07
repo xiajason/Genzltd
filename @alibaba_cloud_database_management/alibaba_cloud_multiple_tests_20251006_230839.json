@@ -1,0 +1,172 @@
+[
+  {
+    "test_number": 1,
+    "test_name": "第1次测试",
+    "test_time": "2025-10-06T23:08:31.163108",
+    "server": "阿里云ECS (47.115.168.107)",
+    "tests": {
+      "mysql": {
+        "status": "success",
+        "details": "MySQL连接成功"
+      },
+      "postgresql": {
+        "status": "success",
+        "details": "PostgreSQL连接成功"
+      },
+      "redis": {
+        "status": "success",
+        "details": "Redis连接成功"
+      },
+      "neo4j": {
+        "status": "success",
+        "details": "Neo4j连接成功"
+      },
+      "elasticsearch": {
+        "status": "success",
+        "details": "Elasticsearch占位符服务正常"
+      },
+      "weaviate": {
+        "status": "success",
+        "details": "Weaviate占位符服务正常"
+      }
+    },
+    "overall_status": "6/6 成功",
+    "success_rate": "100.0%"
+  },
+  {
+    "test_number": 2,
+    "test_name": "第2次测试",
+    "test_time": "2025-10-06T23:08:33.168241",
+    "server": "阿里云ECS (47.115.168.107)",
+    "tests": {
+      "mysql": {
+        "status": "success",
+        "details": "MySQL连接成功"
+      },
+      "postgresql": {
+        "status": "success",
+        "details": "PostgreSQL连接成功"
+      },
+      "redis": {
+        "status": "success",
+        "details": "Redis连接成功"
+      },
+      "neo4j": {
+        "status": "success",
+        "details": "Neo4j连接成功"
+      },
+      "elasticsearch": {
+        "status": "success",
+        "details": "Elasticsearch占位符服务正常"
+      },
+      "weaviate": {
+        "status": "success",
+        "details": "Weaviate占位符服务正常"
+      }
+    },
+    "overall_status": "6/6 成功",
+    "success_rate": "100.0%"
+  },
+  {
+    "test_number": 3,
+    "test_name": "第3次测试",
+    "test_time": "2025-10-06T23:08:35.168918",
+    "server": "阿里云ECS (47.115.168.107)",
+    "tests": {
+      "mysql": {
+        "status": "success",
+        "details": "MySQL连接成功"
+      },
+      "postgresql": {
+        "status": "success",
+        "details": "PostgreSQL连接成功"
+      },
+      "redis": {
+        "status": "success",
+        "details": "Redis连接成功"
+      },
+      "neo4j": {
+        "status": "success",
+        "details": "Neo4j连接成功"
+      },
+      "elasticsearch": {
+        "status": "success",
+        "details": "Elasticsearch占位符服务正常"
+      },
+      "weaviate": {
+        "status": "success",
+        "details": "Weaviate占位符服务正常"
+      }
+    },
+    "overall_status": "6/6 成功",
+    "success_rate": "100.0%"
+  },
+  {
+    "test_number": 4,
+    "test_name": "第4次测试",
+    "test_time": "2025-10-06T23:08:37.170467",
+    "server": "阿里云ECS (47.115.168.107)",
+    "tests": {
+      "mysql": {
+        "status": "success",
+        "details": "MySQL连接成功"
+      },
+      "postgresql": {
+        "status": "success",
+        "details": "PostgreSQL连接成功"
+      },
+      "redis": {
+        "status": "success",
+        "details": "Redis连接成功"
+      },
+      "neo4j": {
+        "status": "success",
+        "details": "Neo4j连接成功"
+      },
+      "elasticsearch": {
+        "status": "success",
+        "details": "Elasticsearch占位符服务正常"
+      },
+      "weaviate": {
+        "status": "success",
+        "details": "Weaviate占位符服务正常"
+      }
+    },
+    "overall_status": "6/6 成功",
+    "success_rate": "100.0%"
+  },
+  {
+    "test_number": 5,
+    "test_name": "第5次测试",
+    "test_time": "2025-10-06T23:08:39.176177",
+    "server": "阿里云ECS (47.115.168.107)",
+    "tests": {
+      "mysql": {
+        "status": "success",
+        "details": "MySQL连接成功"
+      },
+      "postgresql": {
+        "status": "success",
+        "details": "PostgreSQL连接成功"
+      },
+      "redis": {
+        "status": "success",
+        "details": "Redis连接成功"
+      },
+      "neo4j": {
+        "status": "success",
+        "details": "Neo4j连接成功"
+      },
+      "elasticsearch": {
+        "status": "success",
+        "details": "Elasticsearch占位符服务正常"
+      },
+      "weaviate": {
+        "status": "success",
+        "details": "Weaviate占位符服务正常"
+      }
+    },
+    "overall_status": "6/6 成功",
+    "success_rate": "100.0%"
+  }
+]

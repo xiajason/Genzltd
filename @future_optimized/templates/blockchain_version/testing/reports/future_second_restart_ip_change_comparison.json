@@ -1,0 +1,36 @@
+{
+  "timestamp": "2025-10-06T09:43:05.036289",
+  "version": "future",
+  "restart_number": 2,
+  "test_type": "second_restart_ip_change_analysis",
+  "before_restart": {
+    "f-mysql": "172.20.0.5",
+    "f-redis": "172.20.0.3",
+    "f-sqlite-manager": "172.20.0.4",
+    "f-weaviate": "172.20.0.6",
+    "f-elasticsearch": "172.20.0.2",
+    "f-neo4j": "172.20.0.8",
+    "f-postgresql": "172.20.0.7"
+  },
+  "after_restart": {
+    "f-mysql": "172.20.0.8",
+    "f-redis": "172.20.0.3",
+    "f-sqlite-manager": "172.20.0.6",
+    "f-weaviate": "172.20.0.7",
+    "f-elasticsearch": "172.20.0.2",
+    "f-neo4j": "172.20.0.4",
+    "f-postgresql": "172.20.0.5"
+  },
+  "change_count": 5,
+  "total_count": 7,
+  "change_rate": 71.42857142857143,
+  "changes": [
+    true,
+    false,
+    true,
+    true,
+    false,
+    true,
+    true
+  ]
+}

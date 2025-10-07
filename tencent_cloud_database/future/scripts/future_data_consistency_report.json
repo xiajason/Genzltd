@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-10-06T09:28:21.253053",
+  "version": "Future",
+  "test_type": "data_consistency",
+  "results": {
+    "MySQL": "✅ 数据一致性验证成功",
+    "Redis": "❌ Redis测试失败: <built-in function id>"
+  },
+  "success_count": 1,
+  "total_count": 2,
+  "success_rate": 50.0
+}

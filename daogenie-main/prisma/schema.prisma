@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:postgres@localhost/app"
+}
+
+model Treasury {
+  id Int @id @default(autoincrement())
+  address String @unique
+  privateKey String
+  createdAt DateTime @default(now())
+  executions Execution[]
+}
+
+enum ExecutionStatus {
+  RUNNING
+  COMPLETE
+  ERROR
+}
+
+// passed proposal execution
+model Execution {
+  id Int @id @default(autoincrement())
+  onChainProposalId String @unique // {chainId}-{proposalId}
+  createdAt DateTime @default(now())
+  title String
+  description String
+  treasuryId Int
+  status ExecutionStatus @default(RUNNING)
+  result String?
+  error String?
+  treasury Treasury @relation(fields: [treasuryId], references: [id])
+}

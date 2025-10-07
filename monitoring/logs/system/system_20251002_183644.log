@@ -1,0 +1,47 @@
+[20251002_183644] CPU监控开始
+CPU usage: 8.37% user, 13.2% sys, 78.60% idle 
+
+[20251002_183644] 内存监控开始
+Mach Virtual Memory Statistics: (page size of 16384 bytes)
+Pages free:                                3818.
+Pages active:                            304274.
+Pages inactive:                          282360.
+Pages speculative:                        21136.
+Pages throttled:                              0.
+Pages wired down:                        120203.
+Pages purgeable:                          11239.
+"Translation faults":                 768270131.
+Pages copy-on-write:                  107734090.
+Pages zero filled:                    303231043.
+Pages reactivated:                      9828730.
+Pages purged:                            778338.
+File-backed pages:                       208898.
+Anonymous pages:                         398872.
+Pages stored in compressor:              643886.
+Pages occupied by compressor:            279409.
+Decompressions:                        18381738.
+Compressions:                          20215864.
+Pageins:                                5899715.
+Pageouts:                                 82802.
+Swapins:                                      0.
+Swapouts:                                     0.
+
+[20251002_183644] 磁盘监控开始
+Filesystem        Size    Used   Avail Capacity iused ifree %iused  Mounted on
+/dev/disk3s1s1   460Gi    10Gi   308Gi     4%    426k  3.2G    0%   /
+devfs            206Ki   206Ki     0Bi   100%     712     0  100%   /dev
+/dev/disk3s6     460Gi    20Ki   308Gi     1%       0  3.2G    0%   /System/Volumes/VM
+/dev/disk3s2     460Gi   6.6Gi   308Gi     3%    1.2k  3.2G    0%   /System/Volumes/Preboot
+/dev/disk3s4     460Gi   4.8Mi   308Gi     1%      58  3.2G    0%   /System/Volumes/Update
+/dev/disk1s2     500Mi   6.0Mi   483Mi     2%       1  4.9M    0%   /System/Volumes/xarts
+/dev/disk1s1     500Mi   5.4Mi   483Mi     2%      33  4.9M    0%   /System/Volumes/iSCPreboot
+/dev/disk1s3     500Mi   1.2Mi   483Mi     1%      90  4.9M    0%   /System/Volumes/Hardware
+/dev/disk3s5     460Gi   134Gi   308Gi    31%    3.6M  3.2G    0%   /System/Volumes/Data
+map auto_home      0Bi     0Bi     0Bi   100%       0     0     -   /System/Volumes/Data/home
+
+[20251002_183644] 网络监控开始
+      38
+
+[20251002_183644] 进程监控开始
+     660
+

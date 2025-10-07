@@ -1,0 +1,67 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: ${MYSQL_USERNAME:urw_resume}
+    password: ${MYSQL_PASSWORD:E8we7md6}
+    url: jdbc:mysql://${MYSQL_IP:114.116.199.40}:${MYSQL_PORT:53306}/${MYSQL_DBNAME:resume}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowMultiQueries=true
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    # 打开PSCache
+    poolPreparedStatements: true
+    filters: stat,wall,config
+    #指定每个连接上PSCache的大小
+    maxPoolPreparedStatementPerConnectionSize: 20
+    #合并多个DruidDataSource的监控数据
+    useGlobalDataSourceStat: true
+    #通过connectProperties属性来打开mergeSql功能；慢SQL记录
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_IP:114.116.196.148}:${EUREKA_PORT:7000}/eureka/
+
+hw:
+  blockchain:
+    configFilePath: /var/rsvp/resources/blockchain/bcs-us7ak3-7976472ae-resume1-cf6ez770a-sdk.yaml
+    contractName: resume
+    consensusNode: node-0.resume1-cf6ez770a
+    endorserNodes: node-1.resume1-cf6ez770a,node-1.resume2-un8sak4y3
+    queryNode: node-2.resume1-cf6ez770a
+    chainID: bcs-us7ak3-7976472ae
+  base:
+    swagger:
+      enable: true
+      title: 区块链服务API
+      description: 区块链服务API文档
+      version: 1.0.0
+    cache:
+      enable: true
+      host: ${REDIS_IP:192.168.1.148}
+      port: ${REDIS_PORT:16379}
+      password: ${REDIS_PASSWORD:rsvp128603}
+      connectTimeout: 3000
+      timeout: 3000
+      database: ${REDIS_DB:2}
+    jwt:
+      signingKey: ${JWT_KEY:xiaocaiasdfasf324234sdfsdf234r5234sdfsdf234r5}
+      expireSeconds: ${JWT_EXPIRE:86400}
+    security:
+      defaultConfig: true
+      defaultRealm: true
+      ignores:
+        - /version/
+        - /contract/point/tx/**
+        - /contract/resume

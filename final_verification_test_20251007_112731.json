@@ -1,0 +1,82 @@
+{
+  "verification_info": {
+    "start_time": "2025-10-07T11:27:01.386651",
+    "end_time": "2025-10-07T11:27:31.968837",
+    "server_ip": "47.115.168.107",
+    "total_databases": 6,
+    "successful_connections": 6,
+    "connection_success_rate": "100.0%"
+  },
+  "connection_results": {
+    "MySQL": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test\ttimestamp\n1\t2025-10-07 03:27:04"
+    },
+    "PostgreSQL": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test |           timestamp           \n------+-------------------------------\n    1 | 2025-10-07 03:27:06.945297+00\n(1 row)"
+    },
+    "Redis": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "PONG"
+    },
+    "Neo4j": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test, timestamp\n1, 2025-10-07T03:27:14.368Z"
+    },
+    "Elasticsearch": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "{\"cluster_name\":\"elasticsearch\",\"status\":\"green\",\"timed_out\":false,\"number_of_nodes\":1,\"number_of_data_nodes\":1,\"active_primary_shards\":0,\"active_shards\":0,\"relocating_shards\":0,\"initializing_shards\":0,\"unassigned_shards\":0,\"delayed_unassigned_shards\":0,\"number_of_pending_tasks\":0,\"number_of_in_flight_fetch\":0,\"task_max_waiting_in_queue_millis\":0,\"active_shards_percent_as_number\":100.0}"
+    },
+    "Weaviate": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "{\"grpcMaxMessageSize\":104858000,\"hostname\":\"http://[::]:8080\",\"modules\":{},\"version\":\"1.30.18\"}"
+    }
+  },
+  "consistency_results": [
+    {
+      "test": "MySQL-PostgreSQL时间同步",
+      "status": "success",
+      "details": "时间同步正常"
+    },
+    {
+      "test": "Redis-Neo4j连接稳定性",
+      "status": "success",
+      "details": "连接稳定"
+    },
+    {
+      "test": "Elasticsearch-Weaviate HTTP服务",
+      "status": "success",
+      "details": "HTTP服务正常"
+    }
+  ],
+  "reliability_results": [
+    {
+      "test": "系统内存检查",
+      "status": "success",
+      "details": "total        used        free      shared  buff/cache   available\nMem:          1.8Gi       1.6Gi       187Mi        15Mi       235Mi       267Mi\nSwap:            0B          0B          0B"
+    },
+    {
+      "test": "容器健康状态",
+      "status": "success",
+      "details": "NAMES                     STATUS         PORTS\nproduction-postgres       Up 46 minutes  0.0.0.0:5432->5432/tcp\nproduction-redis          Up 46 minutes  0.0.0.0:6379->6379/tcp\nproduction-mysql          Up 22 minutes  0.0.0.0:3306->3306/tcp\nproduction-weaviate       Up 46 minutes  0.0.0.0:8080->8080/tcp\nproduction-neo4j          Up 23 minutes  0.0.0.0:7474->7474/tcp, 0.0.0.0:7687->7687/tcp\nproduction-elasticsearch  Up 11 minutes  0.0.0.0:9200->9200/tcp"
+    },
+    {
+      "test": "网络端口检查",
+      "status": "success",
+      "details": "tcp        0      0 0.0.0.0:7687            0.0.0.0:*               LISTEN      2728961/conmon      \ntcp        0      0 0.0.0.0:6379            0.0.0.0:*               LISTEN      2682732/conmon      \ntcp        0      0 0.0.0.0:9200            0.0.0.0:*               LISTEN      2759031/conmon      \ntcp        0      0 0.0.0.0:8080            0.0.0.0:*               LISTEN      2683236/conmon      \ntcp        0      0 0.0.0.0:7474            0.0.0.0:*               LISTEN      2728961/conmon      \ntcp        0      0 0.0.0.0:5432            0.0.0.0:*               LISTEN      2682602/conmon"
+    }
+  ],
+  "trustworthiness_assessment": {
+    "connection_reliability": "100.0%",
+    "data_consistency": "Verified",
+    "system_stability": "Verified",
+    "overall_trustworthiness": "High"
+  }
+}

@@ -1,0 +1,35 @@
+# Prometheus监控配置
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+scrape_configs:
+  # AI服务监控
+  - job_name: 'ai-service'
+    static_configs:
+      - targets: ['ai-service:8206']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # AI模型服务监控
+  - job_name: 'ai-models'
+    static_configs:
+      - targets: ['ai-models:8002']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # MinerU服务监控
+  - job_name: 'mineru'
+    static_configs:
+      - targets: ['mineru:8000']
+    metrics_path: '/metrics'
+    scrape_interval: 10s
+
+  # Prometheus自身监控
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']

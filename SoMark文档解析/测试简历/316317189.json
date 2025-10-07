@@ -1,0 +1,1028 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 8,
+          "type": "header",
+          "bbox": [
+            91,
+            85,
+            328,
+            112
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "header",
+          "bbox": [
+            806,
+            214,
+            1024,
+            241
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "header",
+          "bbox": [
+            82,
+            121,
+            373,
+            193
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 27,
+          "type": "header",
+          "bbox": [
+            838,
+            175,
+            1023,
+            203
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 40,
+          "type": "text",
+          "bbox": [
+            129,
+            209,
+            328,
+            242
+          ],
+          "content": "316317189-黄显红",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "title",
+          "bbox": [
+            76,
+            329,
+            218,
+            359
+          ],
+          "content": "个人基本信息",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 34,
+          "type": "title",
+          "bbox": [
+            117,
+            373,
+            288,
+            400
+          ],
+          "content": "人才类别：社会无职",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            631,
+            135,
+            1025,
+            163
+          ],
+          "content": "女 |未婚 |1987-09-17 |目前所在地:深圳市南山区",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 29,
+          "type": "text",
+          "bbox": [
+            636,
+            254,
+            1024,
+            281
+          ],
+          "content": "最近工作岗位:文秘/高级文员/总经理秘书 [null]",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "text",
+          "bbox": [
+            539,
+            293,
+            1027,
+            321
+          ],
+          "content": "电话:13642351941 |移动电话:null |E-mail:jing56.love@163.com",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 42,
+          "type": "text",
+          "bbox": [
+            661,
+            373,
+            813,
+            400
+          ],
+          "content": "身高(cm): 163 cm",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "figure",
+          "bbox": [
+            1031,
+            125,
+            1159,
+            299
+          ],
+          "content": "一个灰色的用户头像图标，上面写着“没有照片”。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094115963_5_bf1b0ceeb9a44634a604c9c58f5410e2/imgs/image0-1.jpg"
+        },
+        {
+          "idx": 39,
+          "type": "text",
+          "bbox": [
+            155,
+            412,
+            250,
+            438
+          ],
+          "content": "民族: 汉族",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 38,
+          "type": "text",
+          "bbox": [
+            153,
+            490,
+            326,
+            517
+          ],
+          "content": "籍贯: 陕西省咸阳市",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 36,
+          "type": "text",
+          "bbox": [
+            116,
+            530,
+            380,
+            558
+          ],
+          "content": "通信地址: 陕西省咸阳市武功县",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 37,
+          "type": "text",
+          "bbox": [
+            134,
+            571,
+            269,
+            598
+          ],
+          "content": "联系人: 黄显红",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 30,
+          "type": "text",
+          "bbox": [
+            116,
+            645,
+            475,
+            675
+          ],
+          "content": "业余爱好：旅游 音乐 简笔画 逛街",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            117,
+            686,
+            318,
+            710
+          ],
+          "content": "语言能力: 英 语：四级",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 35,
+          "type": "text",
+          "bbox": [
+            203,
+            714,
+            361,
+            737
+          ],
+          "content": "普通话：二级甲等",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            118,
+            748,
+            325,
+            774
+          ],
+          "content": "专业特长: 英语教育专业",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 33,
+          "type": "text",
+          "bbox": [
+            205,
+            777,
+            286,
+            799
+          ],
+          "content": "英语口语",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "text",
+          "bbox": [
+            205,
+            805,
+            285,
+            827
+          ],
+          "content": "英语读写",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 31,
+          "type": "text",
+          "bbox": [
+            661,
+            411,
+            796,
+            439
+          ],
+          "content": "婚姻状况：未婚",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            644,
+            452,
+            788,
+            478
+          ],
+          "content": "文凭验证号: null",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            644,
+            490,
+            868,
+            518
+          ],
+          "content": "户口所在地: 陕西省咸阳市",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            662,
+            531,
+            812,
+            557
+          ],
+          "content": "邮政编码：712200",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 26,
+          "type": "text",
+          "bbox": [
+            662,
+            571,
+            751,
+            598
+          ],
+          "content": "个人主页:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 25,
+          "type": "text",
+          "bbox": [
+            205,
+            833,
+            286,
+            855
+          ],
+          "content": "国际贸易",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            112,
+            866,
+            1153,
+            974
+          ],
+          "content": "个人自述: 我是西安翻译学院英语教育专业的09届毕业生。我的爱好是旅游和音乐，看书。我的性格是内外兼有型，工作学习中沉稳细心，有责任心，平常活泼开朗，有很强的学习能力和适应环境的能力。去年寒假在人人乐做促销员，今年4月份至2月份在陕西加利福商贸有限公司做助理。也许我的工作经验很少，但是我对工作的热情和适应环境的能力使我有信心做好这份工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "title",
+          "bbox": [
+            77,
+            986,
+            171,
+            1015
+          ],
+          "content": "求职意向",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            117,
+            1029,
+            249,
+            1056
+          ],
+          "content": "工作方式：全职",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            118,
+            1069,
+            249,
+            1095
+          ],
+          "content": "工作地区：深圳",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "title",
+          "bbox": [
+            662,
+            1027,
+            833,
+            1056
+          ],
+          "content": "岗位类别：经理助理",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            663,
+            1069,
+            750,
+            1095
+          ],
+          "content": "所在行业:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            117,
+            1109,
+            231,
+            1134
+          ],
+          "content": "提供住宿: 否",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            661,
+            1108,
+            769,
+            1135
+          ],
+          "content": "期望月薪: 0",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 28,
+          "type": "text",
+          "bbox": [
+            99,
+            1148,
+            269,
+            1174
+          ],
+          "content": "可到职天数：一周内",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "text",
+          "bbox": [
+            114,
+            1183,
+            406,
+            1210
+          ],
+          "content": "其他说明：销售助理 业务助理",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "title",
+          "bbox": [
+            76,
+            1225,
+            172,
+            1253
+          ],
+          "content": "教育背景",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 41,
+          "type": "table",
+          "bbox": [
+            95,
+            1259,
+            953,
+            1614
+          ],
+          "content": "<table><tr><td colspan=\"3\">时间从：2006-09-01至2009-06-25</td><td>学校名称:西安翻译学院</td></tr><tr><td>专业名称:</td><td>英语教育</td><td></td><td>学历:大专</td></tr><tr><td>学位:</td><td>无学位</td><td></td><td>培养方式:全日制普通教育</td></tr><tr><td>专业描述:</td><td>英语听力，</td><td>英语泛读</td><td></td></tr><tr><td></td><td>英语翻译，</td><td>英语口语</td><td></td></tr><tr><td></td><td>英语教学法</td><td>，英语写作</td><td></td></tr><tr><td></td><td>综合英语，</td><td>英语语音</td><td></td></tr><tr><td></td><td>大学语文，</td><td>商务谈判</td><td></td></tr><tr><td></td><td>公共关系，</td><td>英美国家概况</td><td></td></tr><tr><td></td><td>教育心理学</td><td>，外贸函电</td><td></td></tr><tr><td></td><td>国际贸易，</td><td>日语</td><td></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 32,
+          "type": "title",
+          "bbox": [
+            77,
+            1613,
+            172,
+            1642
+          ],
+          "content": "工作经历",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "footer",
+          "bbox": [
+            625,
+            1655,
+            963,
+            1684
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "footer",
+          "bbox": [
+            135,
+            1656,
+            397,
+            1682
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 3,
+          "type": "title",
+          "bbox": [
+            115,
+            90,
+            288,
+            118
+          ],
+          "content": "单位性质：私营企业",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "title",
+          "bbox": [
+            644,
+            90,
+            871,
+            118
+          ],
+          "content": "单位所在地: 陕西省西安市",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "title",
+          "bbox": [
+            81,
+            130,
+            204,
+            157
+          ],
+          "content": "单位所属行业:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "table",
+          "bbox": [
+            58,
+            145,
+            1172,
+            1649
+          ],
+          "content": "<table><tr><td colspan=\"4\">工作描述: 1. 制作公司各种文档格式排版，包括合同、协议和邀请函等等。</td></tr><tr><td colspan=\"4\">2.协助业务接待客人。</td></tr><tr><td colspan=\"4\">3.客户回访。</td></tr><tr><td colspan=\"4\">4.在网上发布信息。5.收发快递，开发票等。</td></tr><tr><td colspan=\"4\">时间从: 2008-12-01至2009-01-10 工作单位名称: 智腾食品有限公司</td></tr><tr><td colspan=\"4\">单位性质:私营企业 单位所在地:陕西省西安市</td></tr><tr><td>单位所属行业:</td><td colspan=\"3\">快速消费品（食品 . 饮料 . 化妆品 . 服装 . 纺织 ）岗位类别:促销员</td></tr><tr><td>工作描述:</td><td colspan=\"3\">完成公司指定任务并超出20%销售额</td></tr><tr><td colspan=\"4\">时间从: 2008-07-02至2008-09-10 工作单位名称: 平安保险公司电话营销员</td></tr><tr><td>单位性质:</td><td colspan=\"3\">股份有限公司 单位所在地:陕西省咸阳市</td></tr><tr><td>单位所属行业:</td><td colspan=\"3\">金融业(投资.保险.证券.银行.基金) 岗位类别:电话销售</td></tr><tr><td>工作描述:</td><td colspan=\"3\">以打电话的形式来从众多人中发掘潜在客户，推广公司的业务。</td></tr><tr><td colspan=\"4\">时间从: 2007-01-28至2007-02-28 工作单位名称: 红太阳幼儿园</td></tr><tr><td>单位性质:</td><td colspan=\"3\">个体 单位所在地:陕西省咸阳市</td></tr><tr><td>单位所属行业:  工作描述:</td><td colspan=\"3\">教育和培训业 岗位类别:小学/幼儿教育/教师/园长 学生们的英语，语文成绩有了很大的提高。</td></tr><tr><td colspan=\"4\">专业证书</td></tr><tr><td colspan=\"2\">颁发日期(年月)</td><td>证书名称</td><td>备注</td></tr><tr><td colspan=\"2\">2009-03-20</td><td>秘书证</td><td></td></tr><tr><td colspan=\"2\">2009-06-03</td><td>等级证书</td><td></td></tr><tr><td colspan=\"2\">2008-10-13</td><td>英语四级</td><td></td></tr><tr><td colspan=\"2\">2007-03-10</td><td>应用技术证书</td><td></td></tr><tr><td colspan=\"4\">英文简历(English Curriculum Vitae)</td></tr><tr><td colspan=\"4\">Resume</td></tr><tr><td colspan=\"4\" rowspan=\"2\">Name: HuangXianhong Birthplace: ShannXi province  Sex: Female  Nationality: Han</td></tr><tr><td colspan=\"4\">Nationality: Han</td></tr><tr><td colspan=\"4\">Height: 163.cm Health:</td></tr><tr><td colspan=\"4\">Excellent</td></tr><tr><td>Major: English Ed</td><td>ducation</td><td></td><td></td></tr><tr><td colspan=\"4\">Expectative position: C ustomer service</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "title",
+          "bbox": [
+            661,
+            130,
+            977,
+            158
+          ],
+          "content": "岗位类别：文秘/高级文员/总经理秘书",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 2,
+      "blocks": [
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            78,
+            116,
+            460,
+            143
+          ],
+          "content": "2008/12 \\~ 2009/2 ZhiTeng Food Limited Company",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            77,
+            146,
+            186,
+            168
+          ],
+          "content": "Position:Sales",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            78,
+            174,
+            364,
+            196
+          ],
+          "content": "Place: Xi' an RenRenLe Supermarket",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            81,
+            202,
+            514,
+            225
+          ],
+          "content": "1. To introduce and commend the products for customers",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            79,
+            231,
+            648,
+            255
+          ],
+          "content": "2. Give products to drink for customers and notice the customers'  response",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            80,
+            260,
+            283,
+            281
+          ],
+          "content": "so that to collect it and stat.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            79,
+            286,
+            547,
+            312
+          ],
+          "content": "3. Customers' review and advice will be fed back to company.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            78,
+            340,
+            524,
+            368
+          ],
+          "content": "2009/4 \\~ 2009/9 ShannXijiaLiFu Business limited Company",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            78,
+            371,
+            218,
+            393
+          ],
+          "content": "Position: Assistant",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            80,
+            399,
+            587,
+            423
+          ],
+          "content": "1. Made diversified documentation such as contract .and invite letter.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            80,
+            428,
+            446,
+            452
+          ],
+          "content": "2. Assistance operator for reception of customers.",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            77,
+            482,
+            253,
+            508
+          ],
+          "content": "Education Background",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            80,
+            539,
+            392,
+            562
+          ],
+          "content": "2006/9 \\~ 2009/7Xi' an FanYi University",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            80,
+            567,
+            479,
+            590
+          ],
+          "content": "2003/9 \\~ 2006/7 Wu Gong Puji Senior Middle School",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            80,
+            596,
+            435,
+            620
+          ],
+          "content": "2000/9 ~ 2006/7 NanRen Junior Middle School",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            78,
+            651,
+            485,
+            676
+          ],
+          "content": "Certificate : OfficeAutomation ( Base Windows Office)",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "text",
+          "bbox": [
+            80,
+            682,
+            252,
+            703
+          ],
+          "content": "College English Test-4",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "text",
+          "bbox": [
+            80,
+            710,
+            201,
+            733
+          ],
+          "content": "Office secretary",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            78,
+            763,
+            610,
+            790
+          ],
+          "content": "Special skill: Excellent with Oral English, English reading, English writing",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            81,
+            793,
+            339,
+            815
+          ],
+          "content": "Be familiar with office A utomation",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            81,
+            821,
+            499,
+            846
+          ],
+          "content": "Be familiar with office secretary and office Assistant work",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            77,
+            877,
+            270,
+            901
+          ],
+          "content": "Interests: Tour and music",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "table",
+          "bbox": [
+            70,
+            940,
+            1157,
+            1026
+          ],
+          "content": "<table><tr><td colspan=\"3\">评注内容</td></tr><tr><td>评注时间</td><td>评注人</td><td>备注</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

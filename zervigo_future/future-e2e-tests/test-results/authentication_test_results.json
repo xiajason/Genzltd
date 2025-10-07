@@ -1,0 +1,49 @@
+{
+  "test_suite": "Future版用户认证端到端测试",
+  "start_time": "2025-09-28T16:01:46.657525",
+  "end_time": "2025-09-28T16:01:47.097058",
+  "duration": "0:00:00.439533",
+  "total_tests": 1,
+  "passed_tests": 1,
+  "failed_tests": 0,
+  "test_results": [
+    {
+      "test_name": "用户登录测试",
+      "passed": 3,
+      "failed": 0,
+      "tokens": [
+        {
+          "username": "admin",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NTk2NTEzMDYsImlhdCI6MTc1OTA0NjUwNn0.WGIzinn0ZiCs730fTQ73cuBEwJaQBCBMpaL9gUh_pHE"
+        },
+        {
+          "username": "testuser",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NTk2NTEzMDYsImlhdCI6MTc1OTA0NjUwNn0.oaJUWwUSvpZOpwiBLG7JzVTGrO6MG-WyQ_P39OsbYBI"
+        },
+        {
+          "username": "szjason72",
+          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InN6amFzb243MiIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzU5NjUxMzA3LCJpYXQiOjE3NTkwNDY1MDd9.om-Qf9sVJSiyDuJTz-FUp4WGFfk75y_5FLTpseF9IBo"
+        }
+      ],
+      "details": [
+        {
+          "user": "admin",
+          "status": "success",
+          "message": "登录成功"
+        },
+        {
+          "user": "testuser",
+          "status": "success",
+          "message": "登录成功"
+        },
+        {
+          "user": "szjason72",
+          "status": "success",
+          "message": "登录成功"
+        }
+      ],
+      "success_rate": 100.0
+    }
+  ],
+  "overall_success_rate": 100.0
+}

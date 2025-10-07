@@ -1,0 +1,558 @@
+{
+  "timestamp": "2025-10-03T07:11:04.985155",
+  "environments": {
+    "local": {
+      "environment": "local",
+      "base_url": "http://localhost:3000",
+      "endpoints": {
+        "/api/health": {
+          "success": true,
+          "status_code": 500,
+          "response_time": 0.00285,
+          "content_type": "",
+          "content_length": 21,
+          "data": "Internal Server Error",
+          "headers": {
+            "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "Date": "Thu, 02 Oct 2025 23:11:04 GMT",
+            "Connection": "keep-alive",
+            "Keep-Alive": "timeout=5",
+            "Transfer-Encoding": "chunked"
+          },
+          "url": "http://localhost:3000/api/health",
+          "timestamp": "2025-10-03T07:11:04.990651"
+        },
+        "/api/trpc/daoConfig.getDAOTypes": {
+          "success": true,
+          "status_code": 500,
+          "response_time": 0.004749,
+          "content_type": "",
+          "content_length": 21,
+          "data": "Internal Server Error",
+          "headers": {
+            "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "Date": "Thu, 02 Oct 2025 23:11:04 GMT",
+            "Connection": "keep-alive",
+            "Keep-Alive": "timeout=5",
+            "Transfer-Encoding": "chunked"
+          },
+          "url": "http://localhost:3000/api/trpc/daoConfig.getDAOTypes",
+          "timestamp": "2025-10-03T07:11:04.995852"
+        },
+        "/api/users": {
+          "success": true,
+          "status_code": 500,
+          "response_time": 0.00309,
+          "content_type": "",
+          "content_length": 21,
+          "data": "Internal Server Error",
+          "headers": {
+            "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "Date": "Thu, 02 Oct 2025 23:11:04 GMT",
+            "Connection": "keep-alive",
+            "Keep-Alive": "timeout=5",
+            "Transfer-Encoding": "chunked"
+          },
+          "url": "http://localhost:3000/api/users",
+          "timestamp": "2025-10-03T07:11:04.999283"
+        },
+        "/api/dao/configs": {
+          "success": true,
+          "status_code": 500,
+          "response_time": 0.003165,
+          "content_type": "",
+          "content_length": 21,
+          "data": "Internal Server Error",
+          "headers": {
+            "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Connection": "keep-alive",
+            "Keep-Alive": "timeout=5",
+            "Transfer-Encoding": "chunked"
+          },
+          "url": "http://localhost:3000/api/dao/configs",
+          "timestamp": "2025-10-03T07:11:05.002732"
+        },
+        "/api/dao/settings": {
+          "success": true,
+          "status_code": 500,
+          "response_time": 0.001181,
+          "content_type": "",
+          "content_length": 21,
+          "data": "Internal Server Error",
+          "headers": {
+            "Cache-Control": "private, no-cache, no-store, max-age=0, must-revalidate",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Connection": "keep-alive",
+            "Keep-Alive": "timeout=5",
+            "Transfer-Encoding": "chunked"
+          },
+          "url": "http://localhost:3000/api/dao/settings",
+          "timestamp": "2025-10-03T07:11:05.004154"
+        }
+      },
+      "summary": {
+        "total_endpoints": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "average_response_time": 0.003007,
+        "total_response_time": 0.015035
+      }
+    },
+    "tencent": {
+      "environment": "tencent",
+      "base_url": "http://101.33.251.158:9200",
+      "endpoints": {
+        "/api/health": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.023607,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.1</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.29.1",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://101.33.251.158:9200/api/health",
+          "timestamp": "2025-10-03T07:11:05.028018"
+        },
+        "/api/trpc/daoConfig.getDAOTypes": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.02415,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.1</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.29.1",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://101.33.251.158:9200/api/trpc/daoConfig.getDAOTypes",
+          "timestamp": "2025-10-03T07:11:05.052511"
+        },
+        "/api/users": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.023293,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.1</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.29.1",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://101.33.251.158:9200/api/users",
+          "timestamp": "2025-10-03T07:11:05.076141"
+        },
+        "/api/dao/configs": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.022915,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.1</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.29.1",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://101.33.251.158:9200/api/dao/configs",
+          "timestamp": "2025-10-03T07:11:05.099447"
+        },
+        "/api/dao/settings": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.023167,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.29.1</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.29.1",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://101.33.251.158:9200/api/dao/settings",
+          "timestamp": "2025-10-03T07:11:05.122992"
+        }
+      },
+      "summary": {
+        "total_endpoints": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "average_response_time": 0.023426400000000003,
+        "total_response_time": 0.11713200000000001
+      }
+    },
+    "alibaba": {
+      "environment": "alibaba",
+      "base_url": "http://47.115.168.107:9200",
+      "endpoints": {
+        "/api/health": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.021354,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.21.5</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.21.5",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://47.115.168.107:9200/api/health",
+          "timestamp": "2025-10-03T07:11:05.144820"
+        },
+        "/api/trpc/daoConfig.getDAOTypes": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.022561,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.21.5</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.21.5",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://47.115.168.107:9200/api/trpc/daoConfig.getDAOTypes",
+          "timestamp": "2025-10-03T07:11:05.167979"
+        },
+        "/api/users": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.019356,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.21.5</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.21.5",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://47.115.168.107:9200/api/users",
+          "timestamp": "2025-10-03T07:11:05.187990"
+        },
+        "/api/dao/configs": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.019826,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.21.5</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.21.5",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://47.115.168.107:9200/api/dao/configs",
+          "timestamp": "2025-10-03T07:11:05.208439"
+        },
+        "/api/dao/settings": {
+          "success": true,
+          "status_code": 404,
+          "response_time": 0.020139,
+          "content_type": "text/html",
+          "content_length": 153,
+          "data": "<html>\r\n<head><title>404 Not Found</title></head>\r\n<body>\r\n<center><h1>404 Not Found</h1></center>\r\n<hr><center>nginx/1.21.5</center>\r\n</body>\r\n</html>\r\n",
+          "headers": {
+            "Server": "nginx/1.21.5",
+            "Date": "Thu, 02 Oct 2025 23:11:05 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "153",
+            "Connection": "keep-alive"
+          },
+          "url": "http://47.115.168.107:9200/api/dao/settings",
+          "timestamp": "2025-10-03T07:11:05.229182"
+        }
+      },
+      "summary": {
+        "total_endpoints": 5,
+        "successful_requests": 5,
+        "failed_requests": 0,
+        "average_response_time": 0.0206472,
+        "total_response_time": 0.10323600000000001
+      }
+    }
+  },
+  "comparisons": {
+    "local_vs_tencent": {
+      "endpoint_comparisons": {
+        "/api/health": {
+          "path": "/api/health",
+          "description": "健康检查",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.020756999999999998,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/trpc/daoConfig.getDAOTypes": {
+          "path": "/api/trpc/daoConfig.getDAOTypes",
+          "description": "DAO类型获取",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.019401,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/users": {
+          "path": "/api/users",
+          "description": "用户列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.020203000000000002,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/dao/configs": {
+          "path": "/api/dao/configs",
+          "description": "DAO配置列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.01975,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/dao/settings": {
+          "path": "/api/dao/settings",
+          "description": "DAO设置列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.021986,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        }
+      },
+      "summary": {
+        "total_endpoints": 5,
+        "consistent_endpoints": 0,
+        "inconsistent_endpoints": 5,
+        "response_time_diff": 0
+      }
+    },
+    "local_vs_alibaba": {
+      "endpoint_comparisons": {
+        "/api/health": {
+          "path": "/api/health",
+          "description": "健康检查",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.018504,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/trpc/daoConfig.getDAOTypes": {
+          "path": "/api/trpc/daoConfig.getDAOTypes",
+          "description": "DAO类型获取",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.017812,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/users": {
+          "path": "/api/users",
+          "description": "用户列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.016266000000000003,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/dao/configs": {
+          "path": "/api/dao/configs",
+          "description": "DAO配置列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.016661,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        },
+        "/api/dao/settings": {
+          "path": "/api/dao/settings",
+          "description": "DAO设置列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": false,
+          "response_time_diff": 0.018958,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "状态码不一致: 500 vs 404",
+            "响应数据不一致"
+          ]
+        }
+      },
+      "summary": {
+        "total_endpoints": 5,
+        "consistent_endpoints": 0,
+        "inconsistent_endpoints": 5,
+        "response_time_diff": 0
+      }
+    },
+    "tencent_vs_alibaba": {
+      "endpoint_comparisons": {
+        "/api/health": {
+          "path": "/api/health",
+          "description": "健康检查",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": true,
+          "response_time_diff": 0.002252999999999998,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "响应数据不一致"
+          ]
+        },
+        "/api/trpc/daoConfig.getDAOTypes": {
+          "path": "/api/trpc/daoConfig.getDAOTypes",
+          "description": "DAO类型获取",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": true,
+          "response_time_diff": 0.0015890000000000001,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "响应数据不一致"
+          ]
+        },
+        "/api/users": {
+          "path": "/api/users",
+          "description": "用户列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": true,
+          "response_time_diff": 0.0039369999999999995,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "响应数据不一致"
+          ]
+        },
+        "/api/dao/configs": {
+          "path": "/api/dao/configs",
+          "description": "DAO配置列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": true,
+          "response_time_diff": 0.0030890000000000015,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "响应数据不一致"
+          ]
+        },
+        "/api/dao/settings": {
+          "path": "/api/dao/settings",
+          "description": "DAO设置列表",
+          "env1_success": true,
+          "env2_success": true,
+          "status_code_match": true,
+          "response_time_diff": 0.0030279999999999994,
+          "data_consistency": "inconsistent",
+          "issues": [
+            "响应数据不一致"
+          ]
+        }
+      },
+      "summary": {
+        "total_endpoints": 5,
+        "consistent_endpoints": 0,
+        "inconsistent_endpoints": 5,
+        "response_time_diff": 0
+      }
+    }
+  },
+  "summary": {
+    "total_environments": 3,
+    "total_endpoints": 5,
+    "total_comparisons": 3,
+    "consistency_score": 0.0,
+    "average_response_time": 0.015693533333333336,
+    "issues": [
+      "local_vs_tencent - /api/health: 状态码不一致: 500 vs 404",
+      "local_vs_tencent - /api/health: 响应数据不一致",
+      "local_vs_tencent - /api/trpc/daoConfig.getDAOTypes: 状态码不一致: 500 vs 404",
+      "local_vs_tencent - /api/trpc/daoConfig.getDAOTypes: 响应数据不一致",
+      "local_vs_tencent - /api/users: 状态码不一致: 500 vs 404",
+      "local_vs_tencent - /api/users: 响应数据不一致",
+      "local_vs_tencent - /api/dao/configs: 状态码不一致: 500 vs 404",
+      "local_vs_tencent - /api/dao/configs: 响应数据不一致",
+      "local_vs_tencent - /api/dao/settings: 状态码不一致: 500 vs 404",
+      "local_vs_tencent - /api/dao/settings: 响应数据不一致",
+      "local_vs_alibaba - /api/health: 状态码不一致: 500 vs 404",
+      "local_vs_alibaba - /api/health: 响应数据不一致",
+      "local_vs_alibaba - /api/trpc/daoConfig.getDAOTypes: 状态码不一致: 500 vs 404",
+      "local_vs_alibaba - /api/trpc/daoConfig.getDAOTypes: 响应数据不一致",
+      "local_vs_alibaba - /api/users: 状态码不一致: 500 vs 404",
+      "local_vs_alibaba - /api/users: 响应数据不一致",
+      "local_vs_alibaba - /api/dao/configs: 状态码不一致: 500 vs 404",
+      "local_vs_alibaba - /api/dao/configs: 响应数据不一致",
+      "local_vs_alibaba - /api/dao/settings: 状态码不一致: 500 vs 404",
+      "local_vs_alibaba - /api/dao/settings: 响应数据不一致",
+      "tencent_vs_alibaba - /api/health: 响应数据不一致",
+      "tencent_vs_alibaba - /api/trpc/daoConfig.getDAOTypes: 响应数据不一致",
+      "tencent_vs_alibaba - /api/users: 响应数据不一致",
+      "tencent_vs_alibaba - /api/dao/configs: 响应数据不一致",
+      "tencent_vs_alibaba - /api/dao/settings: 响应数据不一致"
+    ],
+    "recommendations": [
+      "❌ 存在严重API不一致，需要全面检查和修复"
+    ]
+  }
+}

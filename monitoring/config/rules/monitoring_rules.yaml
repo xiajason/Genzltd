@@ -1,0 +1,44 @@
+# 监控规则配置
+# 创建时间: 2025年1月27日
+# 版本: v1.0
+
+# 监控频率
+frequency:
+  system: "5分钟"
+  database: "1分钟"
+  storage: "10分钟"
+  performance: "2分钟"
+
+# 告警规则
+alerts:
+  - name: "CPU使用率过高"
+    condition: "cpu_usage > 90"
+    severity: "critical"
+    action: "发送邮件通知"
+  
+  - name: "内存使用率过高"
+    condition: "memory_usage > 95"
+    severity: "critical"
+    action: "发送邮件通知"
+  
+  - name: "磁盘使用率过高"
+    condition: "disk_usage > 90"
+    severity: "critical"
+    action: "发送邮件通知"
+  
+  - name: "数据库连接失败"
+    condition: "database_connection_failed"
+    severity: "critical"
+    action: "发送邮件通知"
+
+# 通知配置
+notifications:
+  email:
+    enabled: true
+    recipients: ["admin@example.com"]
+    smtp_server: "smtp.example.com"
+    smtp_port: 587
+  
+  webhook:
+    enabled: false
+    url: "https://hooks.slack.com/services/..."

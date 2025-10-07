@@ -1,0 +1,87 @@
+[2025-09-25 10:13:26 +0800] [12027] [INFO] Sanic v23.12.1
+2025-09-25 10:13:26,748 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-25 10:13:26 +0800] [12027] [INFO] Goin' Fast @ http://0.0.0.0:8700
+2025-09-25 10:13:26,748 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:8700
+[2025-09-25 10:13:26 +0800] [12027] [INFO] app: looma_crm
+2025-09-25 10:13:26,749 - sanic.root - INFO - app: looma_crm
+[2025-09-25 10:13:26 +0800] [12027] [INFO] mode: production, single worker
+2025-09-25 10:13:26,749 - sanic.root - INFO - mode: production, single worker
+[2025-09-25 10:13:26 +0800] [12027] [INFO] server: sanic, HTTP/1.1
+2025-09-25 10:13:26,749 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-25 10:13:26 +0800] [12027] [INFO] python: 3.12.11
+2025-09-25 10:13:26,749 - sanic.root - INFO - python: 3.12.11
+[2025-09-25 10:13:26 +0800] [12027] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-25 10:13:26,749 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-25 10:13:26 +0800] [12027] [INFO] packages: sanic-routing==23.12.0
+2025-09-25 10:13:26,749 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-25 10:13:27,423 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-25 10:13:27,423 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-25 10:13:27,423 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-25 10:13:32,461 - shared.database.unified_data_access - WARNING - Weaviate连接初始化失败: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8091 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-09-25 10:13:32,469 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-25 10:13:32,469 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-25 10:13:32,469 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-25 10:13:32,478 - shared.database.unified_data_access - WARNING - MongoDB连接初始化失败: Authentication failed., full error: {'ok': 0.0, 'errmsg': 'Authentication failed.', 'code': 18, 'codeName': 'AuthenticationFailed'}
+2025-09-25 10:13:32,481 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功 (无认证模式)
+2025-09-25 10:13:32,481 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-25 10:13:32,481 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-25 10:13:32,481 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-25 10:13:32,481 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-25 10:13:32,481 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-25 10:13:32,481 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-25 10:13:32,481 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-25 10:13:32 +0800] [12034] [INFO] Starting worker [12034]
+2025-09-25 10:13:32,481 - sanic.server - INFO - Starting worker [12034]
+2025-09-25 10:13:41,278 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 10:13:41,279 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 10:13:41,280 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 10:13:41,280 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 10:13:41,280 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 10:13:41,281 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/pymongo/synchronous/topology.py:553: ResourceWarning: Unclosed MongoClient opened at:
+  File "<string>", line 1, in <module>
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/spawn.py", line 135, in _main
+    return self._bootstrap(parent_sentinel)
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/Users/szjason72/.pyenv/versions/3.12.11/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/worker/serve.py", line 117, in worker_serve
+    return _serve_http_1(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/runners.py", line 257, in _serve_http_1
+    loop.run_until_complete(app._server_event("init", "before"))
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/app.py", line 2450, in _server_event
+    await self.dispatch(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/signals.py", line 304, in dispatch
+    return await dispatch
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/signals.py", line 248, in _dispatch
+    retval = await maybe_coroutine
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/app.py", line 1629, in _listener
+    await maybe_coro
+  File "/Users/szjason72/jobfirst/looma_crm_pro/looma_crm/app.py", line 60, in setup_services
+    await app.ctx.data_access.initialize()
+  File "/Users/szjason72/jobfirst/looma_crm_pro/shared/database/unified_data_access.py", line 56, in initialize
+    await self._init_mongodb()
+  File "/Users/szjason72/jobfirst/looma_crm_pro/shared/database/unified_data_access.py", line 131, in _init_mongodb
+    self.mongodb_client = AsyncIOMotorClient(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/motor/core.py", line 171, in __init__
+    delegate = self.__delegate_class__(*args, **kwargs)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/pymongo/synchronous/mongo_client.py", line 882, in __init__
+    self._init_based_on_options(self._seeds, srv_max_hosts, srv_service_name)
+Call MongoClient.close() to safely shut down your client and free up resources.
+  self._process_change(server_description, reset_pool, interrupt_connections)
+2025-09-25 10:13:46,330 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8207 ssl:default [Connection refused]
+2025-09-25 10:13:46,331 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8206 ssl:default [Connection refused]
+2025-09-25 10:13:46,331 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8082 ssl:default [Connection refused]
+2025-09-25 10:13:46,332 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8089 ssl:default [Connection refused]
+2025-09-25 10:13:46,332 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8083 ssl:default [Connection refused]
+2025-09-25 10:13:46,333 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:8081 ssl:default [Connection refused]
+[2025-09-25 10:45:29 +0800] [12027] [INFO] Received signal SIGTERM. Shutting down.
+2025-09-25 10:45:29,315 - sanic.root - INFO - Received signal SIGTERM. Shutting down.
+[2025-09-25 10:45:29 +0800] [12034] [INFO] Stopping worker [12034]
+2025-09-25 10:45:29,320 - sanic.server - INFO - Stopping worker [12034]
+2025-09-25 10:45:29,324 - __mp_main__ - INFO - 正在清理Looma CRM服务...

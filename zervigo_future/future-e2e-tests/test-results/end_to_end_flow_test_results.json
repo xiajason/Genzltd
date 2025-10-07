@@ -1,0 +1,42 @@
+{
+  "test_suite": "Future版端到端流程测试",
+  "start_time": "2025-09-28T16:01:47.105671",
+  "end_time": "2025-09-28T16:01:47.201044",
+  "duration": "0:00:00.095373",
+  "total_steps": 3,
+  "successful_steps": 3,
+  "failed_steps": 0,
+  "success_rate": 100.0,
+  "steps": [
+    {
+      "step": "用户登录",
+      "success": true,
+      "details": {
+        "status_code": 200,
+        "message": "用户登录成功",
+        "token_received": true
+      }
+    },
+    {
+      "step": "AI Gateway测试",
+      "success": true,
+      "details": {
+        "status_code": 200,
+        "message": "AI Gateway健康检查通过",
+        "service": "future-ai-gateway",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "step": "Resume AI测试",
+      "success": true,
+      "details": {
+        "status_code": 200,
+        "message": "Resume AI健康检查通过",
+        "service": "future-resume-ai",
+        "version": "1.0.0"
+      }
+    }
+  ],
+  "flow_completion": true
+}

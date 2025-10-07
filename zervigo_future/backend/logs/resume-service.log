@@ -1,0 +1,6 @@
+# command-line-arguments
+./main.go:42:12: undefined: InitSecureSQLiteManager
+./main.go:140:28: undefined: ResumeMetadata
+./main.go:140:47: undefined: ResumeParsingTask
+./main.go:140:69: undefined: ResumeStructuredDataRecord
+./main.go:154:2: undefined: handleResumeDocumentUploadWithMinerU

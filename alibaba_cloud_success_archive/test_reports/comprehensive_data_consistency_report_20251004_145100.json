@@ -1,0 +1,126 @@
+{
+  "timestamp": "2025-10-04T14:51:00.899308",
+  "version": "v1.0",
+  "title": "MBTI多数据库架构综合数据一致性验证报告",
+  "databases": {
+    "neo4j": {
+      "status": "connected",
+      "mbti_types": [
+        {
+          "type": "ENFP",
+          "name": "竞选者",
+          "traits": [
+            "热情",
+            "创意",
+            "社交"
+          ]
+        },
+        {
+          "type": "ESTP",
+          "name": "企业家",
+          "traits": [
+            "行动",
+            "实用",
+            "灵活"
+          ]
+        },
+        {
+          "type": "INTJ",
+          "name": "建筑师",
+          "traits": [
+            "独立",
+            "理性",
+            "创新"
+          ]
+        },
+        {
+          "type": "ISFJ",
+          "name": "守护者",
+          "traits": [
+            "忠诚",
+            "负责",
+            "细心"
+          ]
+        }
+      ],
+      "relationships": [
+        {
+          "from": "INTJ",
+          "to": "ENFP",
+          "score": 85
+        },
+        {
+          "from": "ISFJ",
+          "to": "ESTP",
+          "score": 78
+        },
+        {
+          "from": "INTJ",
+          "to": "ISFJ",
+          "score": 65
+        }
+      ],
+      "consistency_checks": {
+        "mbti_types_count": 4,
+        "relationships_count": 3,
+        "data_integrity": "passed",
+        "relationship_consistency": "passed",
+        "node_consistency": "passed"
+      },
+      "overall_status": "passed"
+    },
+    "sqlite": {
+      "status": "connected",
+      "consistency_checks": {
+        "local_cache_consistency": "passed",
+        "sync_status_consistency": "passed",
+        "data_integrity": "passed"
+      },
+      "overall_status": "passed"
+    },
+    "redis": {
+      "status": "connected",
+      "consistency_checks": {
+        "session_consistency": "passed",
+        "cache_consistency": "passed",
+        "queue_consistency": "passed"
+      },
+      "overall_status": "passed"
+    },
+    "mongodb": {
+      "status": "connected",
+      "consistency_checks": {
+        "document_consistency": "passed",
+        "collection_consistency": "passed",
+        "index_consistency": "passed"
+      },
+      "overall_status": "passed"
+    },
+    "mysql": {
+      "status": "connected",
+      "consistency_checks": {
+        "table_consistency": "passed",
+        "relationship_consistency": "passed",
+        "data_integrity": "passed"
+      },
+      "overall_status": "passed"
+    },
+    "postgresql": {
+      "status": "connected",
+      "consistency_checks": {
+        "vector_consistency": "passed",
+        "analysis_consistency": "passed",
+        "ai_model_consistency": "passed"
+      },
+      "overall_status": "passed"
+    }
+  },
+  "overall_status": "passed",
+  "summary": {
+    "total_databases": 6,
+    "passed_databases": 6,
+    "failed_databases": 0,
+    "success_rate": "100.0%",
+    "overall_status": "passed"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "test_suite": "Future版AI服务端到端测试",
+  "start_time": "2025-09-28T16:01:47.097322",
+  "end_time": "2025-09-28T16:01:47.105400",
+  "duration": "0:00:00.008078",
+  "total_tests": 2,
+  "passed_tests": 2,
+  "failed_tests": 0,
+  "test_results": [
+    {
+      "test_name": "AI Gateway健康检查",
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "status": "success",
+          "message": "AI Gateway健康检查通过",
+          "service": "future-ai-gateway",
+          "version": "1.0.0"
+        }
+      ],
+      "success_rate": 100.0
+    },
+    {
+      "test_name": "Resume AI健康检查",
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "status": "success",
+          "message": "Resume AI健康检查通过",
+          "service": "future-resume-ai",
+          "version": "1.0.0"
+        }
+      ],
+      "success_rate": 100.0
+    }
+  ],
+  "overall_success_rate": 100.0
+}

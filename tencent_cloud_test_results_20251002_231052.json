@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-10-02T23:10:52.132387",
+  "server_ip": "101.33.251.158",
+  "test_name": "腾讯云三版本端到端测试",
+  "summary": {
+    "total_tests": 9,
+    "passed": 4,
+    "failed": 5,
+    "success_rate": "44.4%"
+  },
+  "test_results": {
+    "connectivity": {
+      "total_tests": 4,
+      "passed": 2,
+      "failed": 2,
+      "details": [
+        {
+          "service": "DAO版服务",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "DAO PostgreSQL",
+          "test": "connectivity",
+          "status": "passed",
+          "port": "5433"
+        },
+        {
+          "service": "DAO Redis",
+          "test": "connectivity",
+          "status": "passed",
+          "port": "6380"
+        },
+        {
+          "service": "区块链服务",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    },
+    "dao_version": {
+      "total_tests": 3,
+      "passed": 2,
+      "failed": 1,
+      "details": [
+        {
+          "service": "DAO PostgreSQL",
+          "test": "port_connection",
+          "status": "passed"
+        },
+        {
+          "service": "DAO Redis",
+          "test": "port_connection",
+          "status": "passed"
+        }
+      ]
+    },
+    "blockchain_version": {
+      "total_tests": 1,
+      "passed": 0,
+      "failed": 1,
+      "details": [
+        {
+          "service": "Blockchain Web",
+          "test": "web_response",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    },
+    "integration": {
+      "total_tests": 1,
+      "passed": 0,
+      "failed": 1,
+      "details": [
+        {
+          "service": "Cross Service Integration",
+          "test": "all_services_accessible",
+          "status": "failed",
+          "services_status": [
+            false,
+            true,
+            true,
+            false
+          ]
+        }
+      ]
+    }
+  }
+}

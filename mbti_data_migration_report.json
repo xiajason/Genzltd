@@ -1,0 +1,121 @@
+{
+  "migration_summary": {
+    "total_checks": 9,
+    "passed_checks": 7,
+    "failed_checks": 2,
+    "success_rate": 77.77777777777779,
+    "timestamp": "2025-10-04T10:53:39.682742"
+  },
+  "consistency_checks": [
+    {
+      "check_id": "mbti_types_count_sqlite",
+      "check_name": "MBTI类型数量检查",
+      "table_name": "mbti_types",
+      "check_type": "count",
+      "expected_value": 16,
+      "actual_value": 16,
+      "status": "passed",
+      "message": "MBTI类型数量: 期望16，实际16",
+      "timestamp": "2025-10-04T10:53:39.682614"
+    },
+    {
+      "check_id": "mbti_types_error_sqlite",
+      "check_name": "MBTI类型表检查错误",
+      "table_name": "mbti_types",
+      "check_type": "error",
+      "expected_value": null,
+      "actual_value": null,
+      "status": "failed",
+      "message": "检查失败: near \"%\": syntax error",
+      "timestamp": "2025-10-04T10:53:39.682635"
+    },
+    {
+      "check_id": "flowers_count_sqlite",
+      "check_name": "花卉数量检查",
+      "table_name": "flowers",
+      "check_type": "count",
+      "expected_value": ">0",
+      "actual_value": 8,
+      "status": "passed",
+      "message": "花卉数量: 8",
+      "timestamp": "2025-10-04T10:53:39.682651"
+    },
+    {
+      "check_id": "flowers_integrity_sqlite",
+      "check_name": "花卉信息完整性检查",
+      "table_name": "flowers",
+      "check_type": "integrity",
+      "expected_value": 0,
+      "actual_value": 0,
+      "status": "passed",
+      "message": "花卉名称完整性: 0个空名称",
+      "timestamp": "2025-10-04T10:53:39.682667"
+    },
+    {
+      "check_id": "mbti_flower_mappings_count_sqlite",
+      "check_name": "MBTI-花卉映射数量检查",
+      "table_name": "mbti_flower_mappings",
+      "check_type": "count",
+      "expected_value": ">0",
+      "actual_value": 8,
+      "status": "passed",
+      "message": "MBTI-花卉映射数量: 8",
+      "timestamp": "2025-10-04T10:53:39.682678"
+    },
+    {
+      "check_id": "mbti_flower_mappings_fk_sqlite",
+      "check_name": "MBTI-花卉映射外键检查",
+      "table_name": "mbti_flower_mappings",
+      "check_type": "foreign_key",
+      "expected_value": 0,
+      "actual_value": 0,
+      "status": "passed",
+      "message": "无效外键: 0个",
+      "timestamp": "2025-10-04T10:53:39.682702"
+    },
+    {
+      "check_id": "compatibility_matrix_count_sqlite",
+      "check_name": "兼容性矩阵数量检查",
+      "table_name": "mbti_compatibility_matrix",
+      "check_type": "count",
+      "expected_value": 256,
+      "actual_value": 8,
+      "status": "failed",
+      "message": "兼容性矩阵数量: 期望256，实际8",
+      "timestamp": "2025-10-04T10:53:39.682713"
+    },
+    {
+      "check_id": "careers_count_sqlite",
+      "check_name": "职业数量检查",
+      "table_name": "careers",
+      "check_type": "count",
+      "expected_value": ">0",
+      "actual_value": 8,
+      "status": "passed",
+      "message": "职业数量: 8",
+      "timestamp": "2025-10-04T10:53:39.682723"
+    },
+    {
+      "check_id": "api_configs_count_sqlite",
+      "check_name": "API配置数量检查",
+      "table_name": "api_service_configs",
+      "check_type": "count",
+      "expected_value": ">=0",
+      "actual_value": 3,
+      "status": "passed",
+      "message": "API配置数量: 3",
+      "timestamp": "2025-10-04T10:53:39.682733"
+    }
+  ],
+  "recommendations": [
+    "🔧 修复数据一致性问题",
+    "📊 完善缺失的数据",
+    "🔍 检查外键约束",
+    "📈 优化数据质量"
+  ],
+  "next_steps": [
+    "1. 修复数据一致性问题",
+    "2. 重新运行数据一致性检查",
+    "3. 验证修复结果"
+  ]
+}

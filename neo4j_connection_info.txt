@@ -1,0 +1,26 @@
+Neo4j连接信息记录
+==================
+测试时间: 2025-01-04 11:30:00
+主机: localhost
+端口: 7687
+用户名: neo4j
+密码: 需要首次设置
+连接URL: bolt://localhost:7687
+状态: 需要设置初始密码
+
+测试结果:
+- 默认密码 "neo4j": 失败
+- Looma项目密码 "looma_password": 失败  
+- Zervigo项目密码 "jobfirst_password_2024": 失败
+- 简单密码 "password": 失败
+- 其他常见密码: 全部失败
+
+解决方案:
+1. 访问 http://localhost:7474 设置初始密码
+2. 或者通过命令行重置密码
+3. 或者检查Neo4j配置文件
+
+Neo4j状态: 运行中
+Web界面: http://localhost:7474
+Bolt端口: 7687
+HTTP端口: 7474

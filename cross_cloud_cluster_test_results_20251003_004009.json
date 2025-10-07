@@ -1,0 +1,292 @@
+{
+  "timestamp": "2025-10-03T00:39:55.190112",
+  "test_summary": {
+    "total_tests": 11,
+    "passed_tests": 4,
+    "failed_tests": 7,
+    "success_rate": "36.4%"
+  },
+  "environment_tests": {
+    "本地环境": {
+      "environment": "本地环境",
+      "services": {
+        "future_ai_services": {
+          "service": "future_ai_services",
+          "nodes": {
+            "http://localhost:7510": {
+              "status": "healthy",
+              "response_time_ms": 7.341861724853516,
+              "http_code": 200
+            },
+            "http://localhost:7511": {
+              "status": "healthy",
+              "response_time_ms": 3.0820369720458984,
+              "http_code": 200
+            },
+            "http://localhost:8002": {
+              "status": "healthy",
+              "response_time_ms": 1.992940902709961,
+              "http_code": 200
+            }
+          },
+          "healthy_nodes": 3,
+          "total_nodes": 3,
+          "health_percentage": 100.0
+        },
+        "looma_crm_services": {
+          "service": "looma_crm_services",
+          "nodes": {
+            "http://localhost:7500": {
+              "status": "healthy",
+              "response_time_ms": 3.715991973876953,
+              "http_code": 200
+            },
+            "http://localhost:8000": {
+              "status": "healthy",
+              "response_time_ms": 1.7008781433105469,
+              "http_code": 200
+            },
+            "http://localhost:7540": {
+              "status": "healthy",
+              "response_time_ms": 2.9611587524414062,
+              "http_code": 200
+            }
+          },
+          "healthy_nodes": 3,
+          "total_nodes": 3,
+          "health_percentage": 100.0
+        },
+        "blockchain_services": {
+          "service": "blockchain_services",
+          "nodes": {
+            "http://localhost:8301": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://localhost:8302": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://localhost:8303": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://localhost:8304": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            }
+          },
+          "healthy_nodes": 0,
+          "total_nodes": 4,
+          "health_percentage": 0.0
+        }
+      },
+      "overall_health": false
+    },
+    "腾讯云环境": {
+      "environment": "腾讯云环境",
+      "services": {
+        "dao_services": {
+          "service": "dao_services",
+          "nodes": {
+            "http://101.33.251.158:9200": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            }
+          },
+          "healthy_nodes": 0,
+          "total_nodes": 1,
+          "health_percentage": 0.0
+        },
+        "blockchain_services": {
+          "service": "blockchain_services",
+          "nodes": {
+            "http://101.33.251.158:8300": {
+              "status": "healthy",
+              "response_time_ms": 24.016857147216797,
+              "http_code": 200
+            }
+          },
+          "healthy_nodes": 1,
+          "total_nodes": 1,
+          "health_percentage": 100.0
+        },
+        "database_services": {
+          "service": "database_services",
+          "nodes": {
+            "http://101.33.251.158:5433": {
+              "status": "failed",
+              "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+            },
+            "http://101.33.251.158:6380": {
+              "status": "failed",
+              "error": "('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+            }
+          },
+          "healthy_nodes": 0,
+          "total_nodes": 2,
+          "health_percentage": 0.0
+        }
+      },
+      "overall_health": false
+    },
+    "阿里云环境": {
+      "environment": "阿里云环境",
+      "services": {
+        "production_services": {
+          "service": "production_services",
+          "nodes": {
+            "http://47.115.168.107:8800": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://47.115.168.107:8200": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://47.115.168.107:9200": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://47.115.168.107:8300": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            }
+          },
+          "healthy_nodes": 0,
+          "total_nodes": 4,
+          "health_percentage": 0.0
+        },
+        "monitoring_services": {
+          "service": "monitoring_services",
+          "nodes": {
+            "http://47.115.168.107:9090": {
+              "status": "unhealthy",
+              "http_code": 404,
+              "error": "HTTP 404"
+            },
+            "http://47.115.168.107:3000": {
+              "status": "healthy",
+              "response_time_ms": 64.29815292358398,
+              "http_code": 200
+            },
+            "http://47.115.168.107:9100": {
+              "status": "healthy",
+              "response_time_ms": 24.351835250854492,
+              "http_code": 200
+            }
+          },
+          "healthy_nodes": 2,
+          "total_nodes": 3,
+          "health_percentage": 66.66666666666666
+        }
+      },
+      "overall_health": false
+    }
+  },
+  "cross_cloud_tests": {
+    "load_balancing": {
+      "total_requests": 100,
+      "node_distribution": {
+        "http://localhost:7510": 0,
+        "http://localhost:7511": 0,
+        "http://localhost:8002": 0,
+        "http://localhost:7500": 0,
+        "http://localhost:8000": 0,
+        "http://localhost:7540": 0,
+        "http://localhost:8301": 0,
+        "http://localhost:8302": 0,
+        "http://localhost:8303": 0,
+        "http://localhost:8304": 0,
+        "http://101.33.251.158:9200": 0,
+        "http://101.33.251.158:8300": 0,
+        "http://101.33.251.158:5433": 0,
+        "http://101.33.251.158:6380": 0,
+        "http://47.115.168.107:8800": 0,
+        "http://47.115.168.107:8200": 0,
+        "http://47.115.168.107:9200": 0,
+        "http://47.115.168.107:8300": 0,
+        "http://47.115.168.107:9090": 0,
+        "http://47.115.168.107:3000": 0,
+        "http://47.115.168.107:9100": 0
+      },
+      "environment_distribution": {
+        "本地环境": {
+          "future_ai_services": 0,
+          "looma_crm_services": 0,
+          "blockchain_services": 0
+        },
+        "腾讯云环境": {
+          "dao_services": 0,
+          "blockchain_services": 0,
+          "database_services": 0
+        },
+        "阿里云环境": {
+          "production_services": 0,
+          "monitoring_services": 0
+        }
+      },
+      "response_times": {
+        "http://localhost:7510": 0,
+        "http://localhost:7511": 0,
+        "http://localhost:8002": 0,
+        "http://localhost:7500": 0,
+        "http://localhost:8000": 0,
+        "http://localhost:7540": 0,
+        "http://localhost:8301": 0,
+        "http://localhost:8302": 0,
+        "http://localhost:8303": 0,
+        "http://localhost:8304": 0,
+        "http://101.33.251.158:9200": 0,
+        "http://101.33.251.158:8300": 0,
+        "http://101.33.251.158:5433": 0,
+        "http://101.33.251.158:6380": 0,
+        "http://47.115.168.107:8800": 0,
+        "http://47.115.168.107:8200": 0,
+        "http://47.115.168.107:9200": 0,
+        "http://47.115.168.107:8300": 0,
+        "http://47.115.168.107:9090": 0,
+        "http://47.115.168.107:3000": 0,
+        "http://47.115.168.107:9100": 0
+      }
+    },
+    "failover": {
+      "simulated_failure": "腾讯云环境",
+      "remaining_environments": {
+        "本地环境": {
+          "available": false,
+          "services_count": 3
+        },
+        "阿里云环境": {
+          "available": false,
+          "services_count": 2
+        }
+      },
+      "failover_success": false
+    }
+  },
+  "performance_metrics": {
+    "concurrent_test": {
+      "concurrent_users": 20,
+      "requests_per_user": 10,
+      "total_requests": 200,
+      "successful_requests": 41,
+      "failed_requests": 159,
+      "success_rate": 20.5,
+      "total_test_time": 2.106527090072632,
+      "throughput": 94.94299928186734,
+      "avg_response_time": 410.18191198023356,
+      "max_response_time": 1939.6553039550781,
+      "min_response_time": 28.76424789428711
+    }
+  }
+}

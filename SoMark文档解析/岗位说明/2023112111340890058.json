@@ -1,0 +1,2012 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 15,
+          "type": "title",
+          "bbox": [
+            508,
+            161,
+            733,
+            198
+          ],
+          "content": "招聘岗位说明书",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            186,
+            266,
+            390,
+            297
+          ],
+          "content": "招聘岗位：综合岗",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "title",
+          "bbox": [
+            186,
+            317,
+            360,
+            346
+          ],
+          "content": "招聘数量：1 人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "title",
+          "bbox": [
+            187,
+            366,
+            302,
+            397
+          ],
+          "content": "主要职责：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            232,
+            413,
+            704,
+            451
+          ],
+          "content": "1.参与拟定公司重要管理制度并组织实施；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            183,
+            464,
+            1059,
+            549
+          ],
+          "content": "2. 参与公司重大会议活动及重要文件材料的起草综合，参与公司年度总结、经营管理报告等综合性材料的汇总撰写；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            230,
+            562,
+            954,
+            602
+          ],
+          "content": "3.组织办理主管部门交办、相关单位商办的书面意见及往来函件；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            232,
+            613,
+            880,
+            652
+          ],
+          "content": "4.参与公司日常业务管理相关的信息调研和政策研究工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            231,
+            663,
+            829,
+            702
+          ],
+          "content": "5. 负责公司工作简报、信息动态等内部信息采写编发；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            232,
+            714,
+            679,
+            751
+          ],
+          "content": "6. 负责对公司重要文书函件的审核把关；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            233,
+            764,
+            556,
+            800
+          ],
+          "content": "7.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "title",
+          "bbox": [
+            188,
+            817,
+            351,
+            847
+          ],
+          "content": "基本资格条件:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            184,
+            864,
+            1045,
+            950
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历，金融、经济、管理、法律等相关专业；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            183,
+            963,
+            1045,
+            1050
+          ],
+          "content": "2. 具有 2 年以上政策研究、文字综合相关经验；具有监管机关、政策研究机构、国有大型企业综合管理工作经历的优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            1063,
+            1045,
+            1150
+          ],
+          "content": "3. 熟悉国家经济金融大政方针政策，熟悉金融投资行业规律，了解投资机构运作管理；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            184,
+            1163,
+            1045,
+            1251
+          ],
+          "content": "4.具备较强的全局观念和较好的政策研究能力、文字分析综合能力和逻辑思维；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            230,
+            1263,
+            906,
+            1302
+          ],
+          "content": "5.具备良好的组织协调能力、团队合作精神和沟通协调能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            233,
+            1314,
+            630,
+            1351
+          ],
+          "content": "6.具备优秀的中英文听说读写能力;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            232,
+            1363,
+            880,
+            1402
+          ],
+          "content": "7. 能够独立开展工作，能够适应加班及较繁重的工作任务；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            234,
+            1414,
+            481,
+            1450
+          ],
+          "content": "8.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            186,
+            165,
+            506,
+            198
+          ],
+          "content": "招聘岗位：投资业务岗（一）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            187,
+            218,
+            359,
+            245
+          ],
+          "content": "招聘数量：3人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "title",
+          "bbox": [
+            188,
+            266,
+            302,
+            297
+          ],
+          "content": "主要职责:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            184,
+            314,
+            1054,
+            400
+          ],
+          "content": "1. 主要从事基础设施、能源、新能源、碳中和、物流、工业制造、医疗健康、硬科技、消费等一个或多个领域的投资工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            182,
+            413,
+            1056,
+            501
+          ],
+          "content": "2. 参与投资项目调研、尽职调查、估值分析、交易结构设计、投资协议谈判、项目交割；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            238,
+            512,
+            892,
+            552
+          ],
+          "content": "3. 参与已投项目日常管理、重大事项跟踪管理、退出管理；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            237,
+            564,
+            569,
+            601
+          ],
+          "content": "4. 完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "title",
+          "bbox": [
+            186,
+            616,
+            353,
+            649
+          ],
+          "content": "基本资格条件:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            185,
+            664,
+            1059,
+            849
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历，特别优秀的可放宽至本科及以上学历；金融、经济、财务管理等相关专业，兼具理学、工学、MBA教育背景者优先，新能源、科技、医疗、先进制造等产业相关专业背景者优先；取得CFA、CPA及其他相关国际权威专业资质者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            186,
+            863,
+            1060,
+            1000
+          ],
+          "content": "2. 具有1\\-5 年境外投资相关业务工作经历，包括但不限于在境内外领先大 中型投资机构、投资银行、证券公司、咨询机构、会计师事务所、跨国企业等机 构从事相关工作的经历；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            186,
+            1013,
+            1058,
+            1152
+          ],
+          "content": "3. 具有一个或多个领域的境外投资工作相关经营者优先；具有直接投资、私募股权投资相关经营者优先；熟悉新能源、碳中和、先进制造、医疗健康、科技等一个或多个行业投资者优先；对“一带一路”参与国家有深入了解者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            182,
+            1164,
+            1058,
+            1250
+          ],
+          "content": "4. 具有良好的表达沟通、研究分析、解决问题及执行落实的能力，具有良 好的团队合作精神和奉献精神；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            183,
+            1263,
+            1058,
+            1351
+          ],
+          "content": "5.具备出色的英文听说读写能力，能使用英语作为工作语言，熟练掌握第二外语者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            242,
+            1362,
+            1046,
+            1402
+          ],
+          "content": "6. 熟悉公文写作,能够熟练运用中文起草工作报告、相关业务文件材料等;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            244,
+            1414,
+            844,
+            1451
+          ],
+          "content": "7. 能够适应频繁的境内外出差，具备较强的抗压能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            244,
+            1464,
+            493,
+            1501
+          ],
+          "content": "8.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 2,
+      "blocks": [
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            186,
+            166,
+            505,
+            197
+          ],
+          "content": "招聘岗位：投资业务岗（二）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "title",
+          "bbox": [
+            187,
+            218,
+            359,
+            245
+          ],
+          "content": "招聘数量：2 人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "title",
+          "bbox": [
+            187,
+            266,
+            302,
+            297
+          ],
+          "content": "主要职责：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            184,
+            314,
+            1057,
+            400
+          ],
+          "content": "1. 参与跟踪分析私募股权基金投资及直接投资项目投资及市场动态，进行投资规划、投资策略、行业和国别研究；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            232,
+            412,
+            960,
+            452
+          ],
+          "content": "2. 参与对投资机会进行初步调研及尽职调查，撰写项目分析报告；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            184,
+            464,
+            1059,
+            550
+          ],
+          "content": "3.参与开展针对拟投项目的业务及财务(估值)分析、交易结构设计等工作、参与有关项目投资协议的谈判工作;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            236,
+            564,
+            484,
+            601
+          ],
+          "content": "4.协助完成项目交割；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            236,
+            613,
+            534,
+            651
+          ],
+          "content": "5.参与项目投后管理工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            236,
+            664,
+            558,
+            700
+          ],
+          "content": "6.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            187,
+            717,
+            352,
+            748
+          ],
+          "content": "基本资格条件：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            185,
+            764,
+            1059,
+            900
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历,特别优秀的可放宽至本科及以上学历；金融、经济、财务管理等相关专业，兼具理学、工学、MBA教育背景者优先；取得CFA、CPA及其他国际投资相关资质者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            913,
+            1059,
+            1000
+          ],
+          "content": "2. 具有 1-5 年以上境内外大中型投资机构、投资银行、商业银行等金融机构或跨国企业境外股权投资管理工作经验；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            184,
+            1013,
+            1057,
+            1102
+          ],
+          "content": "3. 具有金融行业直接投资、私募股权基金投资管理等一个或多个行业投资管理或相关工作经验者优先。对“一带一路”参与国家有深入了解者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            184,
+            1113,
+            1059,
+            1201
+          ],
+          "content": "4.踏实敬业、有责任心，具有良好的表达沟通、研究分析、解决问题及执行 落实的能力，具有良好的团队合作精神和奉献精神；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            183,
+            1213,
+            1058,
+            1300
+          ],
+          "content": "5. 具备出色的英文听说读写能力, 能使用英语作为工作语言, 熟练掌握第二外语者优先;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            234,
+            1312,
+            1048,
+            1352
+          ],
+          "content": "6. 熟悉公文写作, 能够熟练运用中文起草工作报告、相关业务文件材料等;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            182,
+            1365,
+            1058,
+            1451
+          ],
+          "content": "7. 能够适应加班、频繁的境内外出差，或较繁重的工作任务，有较强的抗压能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            236,
+            1463,
+            485,
+            1501
+          ],
+          "content": "8.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 3,
+      "blocks": [
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            186,
+            166,
+            505,
+            197
+          ],
+          "content": "招聘岗位：投资业务岗（三）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "title",
+          "bbox": [
+            187,
+            218,
+            359,
+            246
+          ],
+          "content": "招聘数量：1 人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            187,
+            266,
+            302,
+            297
+          ],
+          "content": "主要职责:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            239,
+            313,
+            1012,
+            352
+          ],
+          "content": "1. 负责从组合层面对公司已投基金进行投资数据分析及财务业绩评估；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            239,
+            363,
+            890,
+            401
+          ],
+          "content": "2. 负责协调处理公司已投控股基金的日常投资及运营事务;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            182,
+            414,
+            1054,
+            501
+          ],
+          "content": "3. 配合各项目团队监控已投基金项目各项风险指标，协助处理各类潜在风险事件；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            182,
+            513,
+            1052,
+            600
+          ],
+          "content": "4. 负责组织对接公司投资管理系统等业务系统中基金模块的需求编写、系统测试和日常使用推广；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            239,
+            613,
+            564,
+            651
+          ],
+          "content": "5.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "title",
+          "bbox": [
+            187,
+            667,
+            352,
+            698
+          ],
+          "content": "基本资格条件：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            184,
+            714,
+            1059,
+            800
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历，特别优秀的可放宽至本科及以上学历；金融、会计、财务等相关专业；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            184,
+            813,
+            1058,
+            901
+          ],
+          "content": "2. 具有1-5年以上境内外大中型投资机构私募股权基金投资管理工作经验，具有美元基金运营、会计及财务处理相关工作经验者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            184,
+            913,
+            1059,
+            1000
+          ],
+          "content": "3. 踏实敬业、有责任心，具有良好的表达沟通、研究分析、解决问题及执行 落实的能力，具有良好的团队合作精神和奉献精神；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            184,
+            1013,
+            1058,
+            1101
+          ],
+          "content": "4. 具备出色的英文听说读写能力，能使用英语作为工作语言，熟练掌握第二外语者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            238,
+            1112,
+            1045,
+            1152
+          ],
+          "content": "5. 熟悉公文写作, 能够熟练运用中文起草工作报告、相关业务文件材料等;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            239,
+            1164,
+            889,
+            1201
+          ],
+          "content": "6. 能够适应加班及较繁重的工作任务，有较强的抗压能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            241,
+            1214,
+            489,
+            1251
+          ],
+          "content": "7.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 4,
+      "blocks": [
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            186,
+            163,
+            505,
+            194
+          ],
+          "content": "招聘岗位：投资业务岗（四）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            187,
+            211,
+            360,
+            239
+          ],
+          "content": "招聘数量：2人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "title",
+          "bbox": [
+            188,
+            256,
+            302,
+            285
+          ],
+          "content": "主要职责:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            185,
+            299,
+            1043,
+            470
+          ],
+          "content": "1. 参与管理公司已投项目，做好项目日常监控和现场尽调，维护合作伙伴关系。配合项目负责人开展项目重大事项处置（包括投资结构调整设计、资产重组、财务测算及协议谈判等），研究项目退出（含一级市场和二级市场）策略并实施退出交易执行；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            185,
+            481,
+            1044,
+            564
+          ],
+          "content": "2. 参与行业研究，对所负责行业提出分析意见和投资策略，配合项目负责人分析投资委员会待决策项目，撰写综合评估意见；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            184,
+            573,
+            1042,
+            655
+          ],
+          "content": "3.参与公司整体资产组合监测和分析，参与研究公司整体资产组合配置调 整的意见建议；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            185,
+            665,
+            1039,
+            747
+          ],
+          "content": "4. 参与开展国别经济、金融工具运用、ESG 等专项课题研究，参与项目投资相关的其他组织协调工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            232,
+            757,
+            555,
+            793
+          ],
+          "content": "5.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "title",
+          "bbox": [
+            236,
+            804,
+            404,
+            838
+          ],
+          "content": "基本资格条件：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            238,
+            850,
+            1014,
+            890
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历，特别优秀的可放宽至本科。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            902,
+            1060,
+            1037
+          ],
+          "content": "2. 具有1 年以上投资、产业、经济金融研究等相关工作经验，在境内外领 先的投资银行、证券公司、直接投资机构、国际咨询机构、跨国企业等机构从事 过跨境投资经验者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            184,
+            1051,
+            1059,
+            1139
+          ],
+          "content": "3. 具有较强的专业素质和综合素质，包括较强的估值模型搭建能力、文字写作能力、快速学习能力、分析判断能力，善于沟通、组织、协调。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            184,
+            1151,
+            1058,
+            1239
+          ],
+          "content": "4. 具备出色的英文听说读写能力，能使用英语作为工作语言，熟练掌握第二外语者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            237,
+            1250,
+            1046,
+            1291
+          ],
+          "content": "5. 熟悉公文写作, 能够熟练运用中文起草工作报告、相关业务文件材料等;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            237,
+            1301,
+            486,
+            1339
+          ],
+          "content": "6.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 5,
+      "blocks": [
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            186,
+            166,
+            440,
+            197
+          ],
+          "content": "招聘岗位：风险管理岗",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "title",
+          "bbox": [
+            187,
+            218,
+            359,
+            246
+          ],
+          "content": "招聘数量：1 人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            188,
+            266,
+            302,
+            297
+          ],
+          "content": "主要职责:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            185,
+            314,
+            1048,
+            450
+          ],
+          "content": "1. 协助执行公司风险管理制度、风险管理各项决议和使用各种风险管理工 具，推动公司各部门及业务条线落实风险管理责任，协助开展风险识别、评 估、监控及缓释；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            183,
+            463,
+            1050,
+            550
+          ],
+          "content": "2.协助制定及落实公司风险管理政策，监测投资集中度、资产负债率、或有出资等风险管理提示性或限制性指标；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            184,
+            563,
+            1049,
+            650
+          ],
+          "content": "3. 跟踪项目投资情况，参与项目的投前尽职调查和投后管理，在投资业务关键节点协助出具风险提示意见；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            183,
+            663,
+            1050,
+            750
+          ],
+          "content": "4.协助组织和开展年度项目估值工作，形成相应的风险管理意见和投资建议；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            183,
+            763,
+            1050,
+            851
+          ],
+          "content": "5.协助对单个项目和公司整体风险状况进行识别评估和监测预警，落实风 险管理监控及报告制度；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            183,
+            863,
+            1049,
+            951
+          ],
+          "content": "6.遇有重大风险事件协助组织开展应对和处置，会同相关部门研究制定应 急预案，参与不良资产重整或处置；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            236,
+            962,
+            685,
+            1002
+          ],
+          "content": "7. 执行资金业务交易对手的准入及管理；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            236,
+            1014,
+            561,
+            1051
+          ],
+          "content": "8.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "title",
+          "bbox": [
+            187,
+            1067,
+            352,
+            1098
+          ],
+          "content": "基本资格条件：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            184,
+            1114,
+            1059,
+            1250
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历，特别优秀的可放宽至本科及以上学历；金融、投资、财务等相关专业，或交通、能源、资源、装备制造、基础设施等产业相关专业；理工科背景优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            185,
+            1263,
+            1059,
+            1450
+          ],
+          "content": "2. 具有2 年以上金融机构风险管理、投资管理等工作经验，或交通、能源、 资源、装备制造、基础设施等行业工作经验；具有海外项目投资、管理经验，或 具有国内外行业公认的风险管理或投资业务相关资质证书，或有风险评估系统搭 建及使用经验者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            184,
+            1463,
+            1060,
+            1550
+          ],
+          "content": "3. 具有良好的系统思维、估值建模及风险管理相关量化分析和技术能力；具有较好的概率统计和数据分析能力者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            233,
+            1562,
+            1058,
+            1603
+          ],
+          "content": "4. 具有较强的学习能力、分析判断和解决问题及执行落实的能力、具有扎实",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 6,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            184,
+            163,
+            929,
+            200
+          ],
+          "content": "的文字写作能力、良好的团队合作精神、人际协调和沟通交流能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            235,
+            213,
+            1043,
+            252
+          ],
+          "content": "5. 能使用英语作为工作语言, 英语口语流利者优先; 精通第二外语者优先;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            235,
+            264,
+            933,
+            301
+          ],
+          "content": "6. 能够适应加班及应急突发或较繁重的工作任务，抗压能力强；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            237,
+            314,
+            484,
+            350
+          ],
+          "content": "7.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": true
+    },
+    {
+      "page_num": 7,
+      "blocks": [
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            186,
+            166,
+            440,
+            197
+          ],
+          "content": "招聘岗位：国际合作岗",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "title",
+          "bbox": [
+            187,
+            217,
+            360,
+            246
+          ],
+          "content": "招聘数量：1 人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "title",
+          "bbox": [
+            188,
+            266,
+            302,
+            297
+          ],
+          "content": "主要职责:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            184,
+            314,
+            1058,
+            400
+          ],
+          "content": "1. 负责公司对外合作工作，与境外政府、投资机构和合作伙伴联络交流，搭 建和维护对外关系网络与合作平台；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            413,
+            1057,
+            501
+          ],
+          "content": "2.负责安排公司高层外事活动，组织公司多双边外事会见和国际会议，统筹协调公司各部门外事活动；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            230,
+            512,
+            806,
+            552
+          ],
+          "content": "3.负责对接和参与多双边政府合作交流和对话机制;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            184,
+            564,
+            1060,
+            700
+          ],
+          "content": "4. 负责公司外事管理，协助制定执行外事交往和因公出国（境）制度以及相关工作流程，与外事主管部门沟通，建设维护外事和因公出国（境）数据和文件库；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            183,
+            714,
+            1059,
+            800
+          ],
+          "content": "5. 对全球以及相关地区和国家的政治经济形势、投资市场和政策环境等信息动态和热点问题进行跟踪、分析和报告；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            230,
+            813,
+            556,
+            851
+          ],
+          "content": "6.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "title",
+          "bbox": [
+            187,
+            865,
+            353,
+            899
+          ],
+          "content": "基本资格条件：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            183,
+            914,
+            1059,
+            1001
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历，外语、国际关系、经济、金融等专业；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            231,
+            1013,
+            630,
+            1052
+          ],
+          "content": "2.有对外交流合作工作经验者优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            232,
+            1064,
+            606,
+            1101
+          ],
+          "content": "3.具备优秀的英语听说读写能力;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            183,
+            1114,
+            1060,
+            1200
+          ],
+          "content": "4. 具有较强的公文写作、沟通和组织协调能力，以及良好的逻辑思维和团队合作精神；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            232,
+            1212,
+            481,
+            1252
+          ],
+          "content": "5.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 8,
+      "blocks": [
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            186,
+            166,
+            490,
+            197
+          ],
+          "content": "招聘岗位：监察审计综合岗",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "title",
+          "bbox": [
+            187,
+            218,
+            359,
+            245
+          ],
+          "content": "招聘数量：1 人",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "title",
+          "bbox": [
+            188,
+            266,
+            302,
+            297
+          ],
+          "content": "主要职责:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            231,
+            312,
+            754,
+            351
+          ],
+          "content": "1. 参与部门业务制度、操作流程的制定与执行；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            184,
+            364,
+            1059,
+            450
+          ],
+          "content": "2. 执行内部审计工作，包括但不限于协调上级各项监督检查，以及公司境外项目投资有关专项审计、内控审计及审计报告撰写等；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            184,
+            463,
+            1059,
+            550
+          ],
+          "content": "3. 开展公司党风廉政建设及反腐败相关工作，负责日常纪律监督、警示教育及执纪问责等工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            230,
+            563,
+            754,
+            602
+          ],
+          "content": "4. 负责有关专业课题调研及课题报告撰写工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            231,
+            613,
+            629,
+            651
+          ],
+          "content": "5. 负责部门综合文书材料起草工作;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            232,
+            664,
+            555,
+            700
+          ],
+          "content": "6.完成领导交办的其他工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "title",
+          "bbox": [
+            187,
+            717,
+            351,
+            747
+          ],
+          "content": "基本资格条件:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            184,
+            764,
+            1059,
+            850
+          ],
+          "content": "1. 国内外知名院校硕士研究生及以上学历, 特别优秀的可放宽至大学本科学历, 经济金融、法律、会计、管理等相关专业;",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            184,
+            863,
+            1059,
+            951
+          ],
+          "content": "2. 具有 1 年以上相关工作经验，有政府机关、国有企业、金融机构相关工作背景者优先；中共党员优先；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            184,
+            963,
+            1060,
+            1050
+          ],
+          "content": "3. 具有较强的学习能力、逻辑分析和归纳总结能力，善于发现问题并运用相关规则分析研判问题；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            183,
+            1063,
+            1058,
+            1150
+          ],
+          "content": "4. 具有较强的纪律规则意识，工作积极主动、认真负责、诚实守信，具备良好 的团队合作精神和人际沟通协调能力，讲求工作质效；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            230,
+            1163,
+            831,
+            1202
+          ],
+          "content": "5. 具有较强的公文写作能力，能够熟练运用英语工作；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            231,
+            1213,
+            904,
+            1252
+          ],
+          "content": "6. 能够适应加班及较繁重的工作任务，具备较强的抗压能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            233,
+            1264,
+            481,
+            1301
+          ],
+          "content": "7.服从公司工作分配。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "timestamp": "2025-10-04 11:38:34",
+  "duration": "2.71秒",
+  "results": {
+    "neo4j_password": false,
+    "network_connectivity": true,
+    "api_health_checks": true,
+    "unified_config": true,
+    "data_consistency": true
+  },
+  "errors": [],
+  "success_rate": 80.0
+}

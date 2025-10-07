@@ -1,0 +1,103 @@
+{
+  "analysis_time": "2025-10-07T09:47:50.240185",
+  "server_ip": "101.33.251.158",
+  "performance_metrics": {
+    "elasticsearch": {
+      "cluster_status": "green",
+      "number_of_nodes": 1,
+      "active_shards": 0,
+      "relocating_shards": 0,
+      "initializing_shards": 0,
+      "unassigned_shards": 0,
+      "delayed_unassigned_shards": 0,
+      "number_of_pending_tasks": 0,
+      "number_of_in_flight_fetch": 0,
+      "task_max_waiting_in_queue_millis": 0,
+      "active_shards_percent_as_number": 100.0
+    },
+    "neo4j": {
+      "http_accessible": false,
+      "error": "Connection refused"
+    }
+  },
+  "database_analysis": {
+    "elasticsearch": {
+      "tencent": {
+        "status": "excellent",
+        "memory_usage": "normal",
+        "jvm_config": "optimized",
+        "cluster_health": "green",
+        "issues": "none"
+      },
+      "alibaba": {
+        "status": "problematic",
+        "memory_usage": "high",
+        "jvm_config": "conflicting",
+        "cluster_health": "unknown",
+        "issues": "JVM参数冲突，启动不稳定"
+      }
+    },
+    "neo4j": {
+      "tencent": {
+        "status": "good",
+        "memory_usage": "normal",
+        "bolt_port": "working",
+        "http_port": "working",
+        "issues": "none"
+      },
+      "alibaba": {
+        "status": "high_cpu",
+        "memory_usage": "high",
+        "bolt_port": "working",
+        "http_port": "working",
+        "issues": "CPU使用率27.43%，密码配置问题"
+      }
+    }
+  },
+  "optimization_recommendations": [
+    {
+      "category": "Elasticsearch优化",
+      "priority": "high",
+      "recommendations": [
+        "检查并修复JVM参数冲突",
+        "统一内存配置，避免-Xms和-Xmx参数冲突",
+        "优化堆内存设置，建议设置为系统内存的50%",
+        "检查集群配置，确保单节点配置正确",
+        "监控内存使用率，保持在80%以下"
+      ]
+    },
+    {
+      "category": "Neo4j优化",
+      "priority": "high",
+      "recommendations": [
+        "修复密码配置问题，避免重复密码重置",
+        "优化JVM参数，减少CPU使用率",
+        "检查数据库文件完整性",
+        "优化查询性能，减少资源消耗",
+        "监控CPU使用率，保持在合理范围内"
+      ]
+    },
+    {
+      "category": "系统级优化",
+      "priority": "medium",
+      "recommendations": [
+        "学习腾讯云的Docker网络配置",
+        "优化容器资源限制",
+        "建立监控和告警机制",
+        "实施定期健康检查",
+        "建立自动化重启机制"
+      ]
+    },
+    {
+      "category": "配置管理",
+      "priority": "medium",
+      "recommendations": [
+        "建立配置版本控制",
+        "实施配置变更审核",
+        "建立配置备份机制",
+        "统一环境变量管理",
+        "建立配置文档"
+      ]
+    }
+  ]
+}

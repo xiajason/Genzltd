@@ -1,0 +1,374 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 5,
+          "type": "header",
+          "bbox": [
+            93,
+            85,
+            328,
+            112
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "figure",
+          "bbox": [
+            82,
+            120,
+            372,
+            192
+          ],
+          "content": "深圳人才网标志，由蓝色、红色和黄色的旋转图案组成，旁边是“深圳人才网”四个蓝色汉字和网址“www.szhr.com.cn”。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094134321_5_104495b561a74ef4a02cbe69f33564fe/imgs/image0-1.jpg"
+        },
+        {
+          "idx": 16,
+          "type": "title",
+          "bbox": [
+            142,
+            209,
+            316,
+            241
+          ],
+          "content": "6292066-胡迷迷",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "title",
+          "bbox": [
+            76,
+            328,
+            218,
+            359
+          ],
+          "content": "个人基本信息",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            705,
+            134,
+            1026,
+            164
+          ],
+          "content": "女 |未婚 |1988-02-18 |目前所在地:深圳",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            839,
+            174,
+            1023,
+            202
+          ],
+          "content": "现有职称: |政治面貌:",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "figure",
+          "bbox": [
+            1030,
+            125,
+            1159,
+            299
+          ],
+          "content": "一个灰色的用户头像图标，上面写着“没有照片”。",
+          "format": "text",
+          "captions": [],
+          "img_url": "https://sce-test.oss-cn-shanghai.aliyuncs.com/250918094134321_5_104495b561a74ef4a02cbe69f33564fe/imgs/image0-2.jpg"
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            673,
+            214,
+            1024,
+            241
+          ],
+          "content": "湖南省第一师范学校 |大专 |公共事业管理",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            389,
+            253,
+            1025,
+            282
+          ],
+          "content": "最近工作岗位:业务经理/主管/助理 [金融业(投资．保险．证券．银行．基金)]",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            479,
+            293,
+            1028,
+            321
+          ],
+          "content": "电话:15986727060 |移动电话:15986727060 |E-mail:515684022@qq.com",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "table",
+          "bbox": [
+            104,
+            364,
+            844,
+            613
+          ],
+          "content": "<table><tr><td>人才类别:社会无职</td><td>身高(cm): 160 cm</td></tr><tr><td>民族:汉族</td><td>婚姻状况:未婚</td></tr><tr><td>目前月薪:</td><td>文凭验证号: null</td></tr><tr><td>籍贯:湖南</td><td>户口所在地:湖南</td></tr><tr><td>通信地址:深圳市布吉马鞍山3巷</td><td>邮政编码:</td></tr><tr><td>联系人:胡迷迷</td><td>个人主页:</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "title",
+          "bbox": [
+            98,
+            610,
+            250,
+            636
+          ],
+          "content": "计算机水平: 良好",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            116,
+            645,
+            588,
+            674
+          ],
+          "content": "业余爱好：上网，唱歌，旅游，看书，听音乐，逛街等等",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            117,
+            687,
+            294,
+            710
+          ],
+          "content": "语言能力: 普通话2甲",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "text",
+          "bbox": [
+            203,
+            714,
+            288,
+            737
+          ],
+          "content": "英语三级",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            114,
+            747,
+            1076,
+            778
+          ],
+          "content": "专业特长：善于学习，服从安排，不怕吃苦，参加过会计培训，略懂初级会计知识，办公软件基本熟练，打字速度快",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            117,
+            789,
+            534,
+            814
+          ],
+          "content": "个人自述：性格外向，形象端正；善于与人沟通；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            211,
+            816,
+            534,
+            840
+          ],
+          "content": "具有较强的团队精神和团队协作能力；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            212,
+            844,
+            983,
+            870
+          ],
+          "content": "对待事物常有自己的看法和见解；对待本职工作可以做到尽心尽责；思考深刻，善于学习，；",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            213,
+            873,
+            903,
+            897
+          ],
+          "content": "较强地综合协调能力和心理素质，愿意接受挑战，敢于承担责任，能承受工作压力。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            216,
+            901,
+            506,
+            925
+          ],
+          "content": "爱好文学、音乐、聊天、运动等等",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "title",
+          "bbox": [
+            208,
+            983,
+            328,
+            1008
+          ],
+          "content": "保险公司勿扰",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "table",
+          "bbox": [
+            68,
+            1009,
+            1169,
+            1644
+          ],
+          "content": "<table><tr><td colspan=\"2\">求职意向</td></tr><tr><td>工作方式:全职</td><td>岗位类别:声讯/座席员</td></tr><tr><td>工作地区:深圳</td><td>所在行业:</td></tr><tr><td>提供住宿: 否</td><td>期望月薪: 0</td></tr><tr><td colspan=\"2\">可到职天数:一周内</td></tr><tr><td>其他说明:</td><td></td></tr><tr><td>工作方式:全职</td><td>岗位类别:【客户服务】</td></tr><tr><td>工作地区:深圳</td><td>所在行业:</td></tr><tr><td colspan=\"2\">提供住宿: 否 期望月薪: 0</td></tr><tr><td>可到职天数: 一周内</td><td></td></tr><tr><td>其他说明:</td><td></td></tr><tr><td>工作方式:全职</td><td>岗位类别:销售助理</td></tr><tr><td>工作地区:深圳市龙岗区</td><td>所在行业:</td></tr><tr><td>提供住宿: 否</td><td>期望月薪: 0</td></tr><tr><td colspan=\"2\">可到职天数：一周内</td></tr><tr><td>其他说明:</td><td></td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "text",
+          "bbox": [
+            74,
+            1654,
+            172,
+            1682
+          ],
+          "content": "教育背景",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 0,
+          "type": "table",
+          "bbox": [
+            65,
+            68,
+            1175,
+            1335
+          ],
+          "content": "<table><tr><td colspan=\"2\">时间从: 2005-09-01至2008-06-01  学校名称  专业名称: 公共事务管理  学历  学位: 无学位  培养方式</td><td colspan=\"2\">: 湖南省第一师范学校  : 大专  : 全日制普通教育</td></tr><tr><td>时间从:</td><td>2002-09-01至2005-09-01 学校名称</td><td>: 常德澧县第二中学</td><td></td></tr><tr><td>专业名称:</td><td>文科 学历</td><td>: 高中 ( 职高、技校 )</td><td></td></tr><tr><td colspan=\"4\">学位:无学位 培养方式:全日制普通教育</td></tr><tr><td colspan=\"4\">专业描述:</td></tr><tr><td colspan=\"4\">工作经历</td></tr><tr><td>时间从:</td><td>2009-10-01至2010-01-01 工作单位名称</td><td>: 中国平安业务助理</td><td></td></tr><tr><td>单位性质:</td><td>股份有限公司 单位所在地</td><td>: 深圳市福田区</td><td></td></tr><tr><td>单位所属行业:  工作描述:</td><td>金融业(投资.保险.证券.银行.基金) 岗位类别</td><td>: 业务经理/主管/助理</td><td></td></tr><tr><td>时间从:</td><td>2009-05-01至2009-07-01 工作单位名称</td><td>: 黄冈网校长沙分校</td><td></td></tr><tr><td>单位性质:</td><td>私营企业 单位所在地</td><td>: 湖南</td><td></td></tr><tr><td colspan=\"4\">单位所属行业:教育和培训业 岗位类别:电话销售</td></tr><tr><td>工作描述:</td><td>根据学校的要求，邀请学生及家长过来，了解我们的学习资源第一个星期业绩第一，同事关系很好，由于个人原因离职</td><td></td><td></td></tr><tr><td>时间从:</td><td>2009-02-01至2009-05-01 工作单位名称</td><td>: 长沙超胜义齿加工厂</td><td></td></tr><tr><td>单位性质:</td><td>私营企业 单位所在地</td><td>: 湖南</td><td></td></tr><tr><td>单位所属行业:</td><td>医疗卫生业 岗位类别</td><td colspan=\"2\" rowspan=\"2\">: 文员/电脑录入/校对</td></tr><tr><td>工作描述:</td><td>前台接待，出货登记，入货登记，文件处理，接打电话等文职工作</td></tr><tr><td>时间从:</td><td>2008-04-01至2009-02-01 工作单位名称</td><td>: 长沙大金科技有限公司</td><td></td></tr><tr><td>单位性质:</td><td>私营企业 单位所在地</td><td>: 湖南</td><td></td></tr><tr><td>单位所属行业:</td><td>电信、通讯 岗位类别</td><td>: 电话销售</td><td></td></tr><tr><td>工作描述:</td><td>以电话销售的形式向客户推销联通的增值服务</td><td></td><td></td></tr><tr><td>时间从:</td><td>2007-10-01至2008-02-01 工作单位名称</td><td>: 永和豆浆连锁</td><td></td></tr><tr><td>单位性质:</td><td>股份有限公司 单位所在地</td><td colspan=\"2\">: 湖南</td></tr><tr><td>单位所属行业:</td><td>旅游、酒店和餐饮业 岗位类别</td><td>:收银员/营业员/服务员/店员</td><td></td></tr><tr><td>工作描述:</td><td>学校实习，在永和做了几个月的服务员。</td><td></td><td></td></tr><tr><td colspan=\"4\">评注内容</td></tr><tr><td></td><td>评注时间</td><td>评注人</td><td>备注</td></tr></table>",
+          "format": "html",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1755,
+        "w": 1240
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

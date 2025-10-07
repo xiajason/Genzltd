@@ -1,0 +1,124 @@
+version: '3.8'
+services:
+  # LoomaCRM主服务
+  looma-crm:
+    image: loomacrm-production:latest
+    container_name: looma-crm-prod
+    ports:
+      - "8800:8800"
+    environment:
+      - DATABASE_URL=mysql://user:pass@rds-host:3306/loomacrm
+      - REDIS_URL=redis://localhost:6379
+      - NODE_ENV=production
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    restart: unless-stopped
+    networks:
+      - production-network
+
+  # Zervigo Future版
+  zervigo-future:
+    image: zervigo-future-production:latest
+    container_name: zervigo-future-prod
+    ports:
+      - "8200:8200"
+    environment:
+      - API_GATEWAY_URL=http://localhost:8200
+      - LOOMACRM_URL=http://looma-crm:8800
+      - NODE_ENV=production
+    depends_on:
+      - looma-crm
+    restart: unless-stopped
+    networks:
+      - production-network
+
+  # Zervigo DAO版
+  zervigo-dao:
+    image: zervigo-dao-production:latest
+    container_name: zervigo-dao-prod
+    ports:
+      - "9200:9200"
+    environment:
+      - API_GATEWAY_URL=http://localhost:9200
+      - LOOMACRM_URL=http://looma-crm:8800
+      - NODE_ENV=production
+    depends_on:
+      - looma-crm
+    restart: unless-stopped
+    networks:
+      - production-network
+
+  # Zervigo 区块链版
+  zervigo-blockchain:
+    image: zervigo-blockchain-production:latest
+    container_name: zervigo-blockchain-prod
+    ports:
+      - "8300:8300"
+    environment:
+      - API_GATEWAY_URL=http://localhost:8300
+      - LOOMACRM_URL=http://looma-crm:8800
+      - NODE_ENV=production
+    depends_on:
+      - looma-crm
+    restart: unless-stopped
+    networks:
+      - production-network
+
+  # Prometheus监控
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus-prod
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./monitoring/data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    networks:
+      - production-network
+
+  # Grafana监控面板
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana-prod
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin123
+      - GF_USERS_ALLOW_SIGN_UP=false
+    volumes:
+      - ./monitoring/grafana:/var/lib/grafana
+    restart: unless-stopped
+    networks:
+      - production-network
+
+  # Node Exporter系统监控
+  node-exporter:
+    image: prom/node-exporter:latest
+    container_name: node-exporter-prod
+    ports:
+      - "9100:9100"
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.rootfs=/rootfs'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.mount-points-exclude=^/(sys|proc|dev|host|etc)($$|/)'
+    restart: unless-stopped
+    networks:
+      - production-network
+
+networks:
+  production-network:
+    driver: bridge

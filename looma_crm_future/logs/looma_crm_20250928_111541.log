@@ -1,0 +1,79 @@
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-28 11:15:42,449 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-28 11:15:42,449 - __main__ - INFO - Jaeger tracing initialized successfully
+[2025-09-28 11:15:42 +0800] [71192] [INFO] Sanic v23.12.1
+2025-09-28 11:15:42,465 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-28 11:15:42 +0800] [71192] [INFO] Goin' Fast @ http://0.0.0.0:7500
+2025-09-28 11:15:42,465 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:7500
+[2025-09-28 11:15:42 +0800] [71192] [INFO] app: looma_crm
+2025-09-28 11:15:42,465 - sanic.root - INFO - app: looma_crm
+[2025-09-28 11:15:42 +0800] [71192] [INFO] mode: production, single worker
+2025-09-28 11:15:42,465 - sanic.root - INFO - mode: production, single worker
+[2025-09-28 11:15:42 +0800] [71192] [INFO] server: sanic, HTTP/1.1
+2025-09-28 11:15:42,465 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-28 11:15:42 +0800] [71192] [INFO] python: 3.12.11
+2025-09-28 11:15:42,465 - sanic.root - INFO - python: 3.12.11
+[2025-09-28 11:15:42 +0800] [71192] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-28 11:15:42,465 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-28 11:15:42 +0800] [71192] [INFO] packages: sanic-routing==23.12.0
+2025-09-28 11:15:42,465 - sanic.root - INFO - packages: sanic-routing==23.12.0
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-28 11:15:43,094 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-28 11:15:43,094 - __mp_main__ - INFO - Jaeger tracing initialized successfully
+/Users/szjason72/jobfirst-future/looma_crm_future/looma_crm/tracing.py:31: DeprecationWarning: Call to deprecated method __init__. (Since v1.35, the Jaeger supports OTLP natively. Please use the OTLP exporter instead. Support for this exporter will end July 2023.) -- Deprecated since version 1.16.0.
+  jaeger_exporter = JaegerExporter(
+2025-09-28 11:15:43,757 - tracing - INFO - Jaeger tracing initialized successfully
+2025-09-28 11:15:43,757 - __mp_main__ - INFO - Jaeger tracing initialized successfully
+/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/touchup/schemes/ode.py:70: DeprecationWarning: Attribute s is deprecated and will be removed in Python 3.14; use value instead
+  if hasattr(event, "s"):
+2025-09-28 11:15:43,783 - __mp_main__ - INFO - 正在初始化Looma CRM服务...
+2025-09-28 11:15:43,783 - shared.database.unified_data_access - INFO - 正在初始化统一数据访问层...
+2025-09-28 11:15:43,784 - shared.database.unified_data_access - INFO - Neo4j连接初始化成功
+2025-09-28 11:15:48,761 - opentelemetry.sdk._shared_internal - ERROR - Exception while exporting Span.
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/opentelemetry/sdk/_shared_internal/__init__.py", line 179, in _export
+    self._exporter.export(
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/opentelemetry/exporter/jaeger/thrift/__init__.py", line 225, in export
+    self._agent_client.emit(batch)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/opentelemetry/exporter/jaeger/thrift/send.py", line 95, in emit
+    udp_socket.sendto(buff, self.address)
+OSError: [Errno 40] Message too long
+2025-09-28 11:15:48,828 - shared.database.unified_data_access - WARNING - Weaviate连接初始化失败: Weaviate did not start up in 5 seconds. Either the Weaviate URL http://localhost:8091 is wrong or Weaviate did not start up in the interval given in 'startup_period'.
+2025-09-28 11:15:48,840 - shared.database.unified_data_access - INFO - PostgreSQL连接池初始化成功
+2025-09-28 11:15:48,840 - shared.database.unified_data_access - INFO - Redis连接初始化成功
+2025-09-28 11:15:48,840 - shared.database.unified_data_access - INFO - Elasticsearch连接初始化成功
+2025-09-28 11:15:48,848 - shared.database.unified_data_access - INFO - MongoDB连接初始化成功
+2025-09-28 11:15:48,848 - shared.database.unified_data_access - INFO - 统一数据访问层初始化完成
+2025-09-28 11:15:48,848 - __mp_main__ - INFO - 统一数据访问层初始化完成
+2025-09-28 11:15:48,848 - shared.middleware.zervigo_auth_middleware - INFO - Zervigo认证中间件初始化完成
+2025-09-28 11:15:48,848 - __mp_main__ - INFO - Zervigo认证中间件初始化完成
+2025-09-28 11:15:48,848 - services.zervigo_integration_service - INFO - Zervigo集成服务初始化完成
+2025-09-28 11:15:48,848 - __mp_main__ - INFO - Zervigo集成服务初始化完成
+2025-09-28 11:15:48,848 - __mp_main__ - INFO - Looma CRM服务初始化完成
+[2025-09-28 11:15:48 +0800] [71242] [INFO] Starting worker [71242]
+2025-09-28 11:15:48,850 - sanic.server - INFO - Starting worker [71242]
+2025-09-28 11:15:48,851 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7520 ssl:default [Connection refused]
+2025-09-28 11:15:48,852 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7540 ssl:default [Connection refused]
+2025-09-28 11:15:48,852 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7532 ssl:default [Connection refused]
+2025-09-28 11:15:48,853 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7539 ssl:default [Connection refused]
+2025-09-28 11:15:48,853 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7534 ssl:default [Connection refused]
+2025-09-28 11:15:48,854 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7530 ssl:default [Connection refused]
+2025-09-28 11:18:04,592 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7520 ssl:default [Connection refused]
+2025-09-28 11:18:04,593 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7540 ssl:default [Connection refused]
+2025-09-28 11:18:04,593 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7532 ssl:default [Connection refused]
+2025-09-28 11:18:04,594 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7539 ssl:default [Connection refused]
+2025-09-28 11:18:04,594 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7534 ssl:default [Connection refused]
+2025-09-28 11:18:04,595 - shared.integration.zervigo_client - ERROR - Request failed: Cannot connect to host localhost:7530 ssl:default [Connection refused]
+[2025-09-28 11:22:59 +0800] [71242] [INFO] Stopping worker [71242]
+2025-09-28 11:22:59,583 - sanic.server - INFO - Stopping worker [71242]
+[2025-09-28 11:22:59 +0800] [71192] [INFO] Received signal SIGTERM. Shutting down.
+2025-09-28 11:22:59,583 - sanic.root - INFO - Received signal SIGTERM. Shutting down.
+2025-09-28 11:22:59,583 - __mp_main__ - INFO - 正在清理Looma CRM服务...
+2025-09-28 11:22:59,585 - shared.database.unified_data_access - INFO - 所有数据库连接已关闭
+2025-09-28 11:22:59,585 - __mp_main__ - INFO - Looma CRM服务清理完成
+[2025-09-28 11:22:59 +0800] [71242] [INFO] Worker complete [71242]
+2025-09-28 11:22:59,585 - sanic.server - INFO - Worker complete [71242]
+[2025-09-28 11:23:00 +0800] [71192] [INFO] Server Stopped
+2025-09-28 11:23:00,096 - sanic.root - INFO - Server Stopped

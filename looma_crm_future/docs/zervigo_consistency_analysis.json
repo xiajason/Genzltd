@@ -1,0 +1,42 @@
+{
+  "analysis_time": "2025-09-23T19:13:20.143635",
+  "consistency_issues": [],
+  "consistency_recommendations": [
+    {
+      "type": "status_enum_standardization",
+      "description": "统一状态字段枚举值",
+      "action": "定义统一的状态枚举值：active, inactive, pending, completed, cancelled"
+    }
+  ],
+  "data_mapping_requirements": {
+    "user_mapping": {
+      "source": "auth.users",
+      "target": "looma_crm.talent",
+      "key_fields": [
+        "id",
+        "username",
+        "email",
+        "status"
+      ],
+      "mapping_rules": {
+        "id": "zervigo_user_id",
+        "username": "name",
+        "email": "email",
+        "status": "status"
+      }
+    },
+    "resume_mapping": {
+      "source": "resume.resumes",
+      "target": "looma_crm.talent",
+      "key_fields": [
+        "user_id",
+        "parsed_data"
+      ],
+      "mapping_rules": {
+        "user_id": "zervigo_user_id",
+        "parsed_data.skills": "skills",
+        "parsed_data.experience": "experience"
+      }
+    }
+  }
+}

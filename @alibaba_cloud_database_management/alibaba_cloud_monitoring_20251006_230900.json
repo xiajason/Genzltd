@@ -1,0 +1,128 @@
+[
+  {
+    "timestamp": "2025-10-06T23:08:54.381024",
+    "server": "阿里云ECS (47.115.168.107)",
+    "container_status": "所有容器运行正常",
+    "database_connections": {
+      "mysql": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "postgresql": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "redis": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "neo4j": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "elasticsearch": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "weaviate": {
+        "status": "connected",
+        "response_time": "N/A"
+      }
+    },
+    "system_resources": {
+      "memory": "内存使用正常",
+      "disk": "磁盘使用正常",
+      "cpu": "CPU使用正常"
+    },
+    "summary": {
+      "connected_databases": 6,
+      "total_databases": 6,
+      "connection_rate": "100.0%",
+      "status": "healthy"
+    }
+  },
+  {
+    "timestamp": "2025-10-06T23:08:57.386489",
+    "server": "阿里云ECS (47.115.168.107)",
+    "container_status": "所有容器运行正常",
+    "database_connections": {
+      "mysql": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "postgresql": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "redis": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "neo4j": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "elasticsearch": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "weaviate": {
+        "status": "connected",
+        "response_time": "N/A"
+      }
+    },
+    "system_resources": {
+      "memory": "内存使用正常",
+      "disk": "磁盘使用正常",
+      "cpu": "CPU使用正常"
+    },
+    "summary": {
+      "connected_databases": 6,
+      "total_databases": 6,
+      "connection_rate": "100.0%",
+      "status": "healthy"
+    }
+  },
+  {
+    "timestamp": "2025-10-06T23:09:00.391706",
+    "server": "阿里云ECS (47.115.168.107)",
+    "container_status": "所有容器运行正常",
+    "database_connections": {
+      "mysql": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "postgresql": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "redis": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "neo4j": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "elasticsearch": {
+        "status": "connected",
+        "response_time": "N/A"
+      },
+      "weaviate": {
+        "status": "connected",
+        "response_time": "N/A"
+      }
+    },
+    "system_resources": {
+      "memory": "内存使用正常",
+      "disk": "磁盘使用正常",
+      "cpu": "CPU使用正常"
+    },
+    "summary": {
+      "connected_databases": 6,
+      "total_databases": 6,
+      "connection_rate": "100.0%",
+      "status": "healthy"
+    }
+  }
+]

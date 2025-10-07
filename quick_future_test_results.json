@@ -1,0 +1,65 @@
+{
+  "timestamp": "2025-10-02T23:05:30.084400",
+  "test_name": "Future版快速验证测试",
+  "summary": {
+    "total_tests": 12,
+    "passed": 12,
+    "failed": 0,
+    "success_rate": "100.0%"
+  },
+  "details": [
+    {
+      "service": "LoomaCRM",
+      "test": "health",
+      "status": "passed",
+      "service_name": "looma-crm-future"
+    },
+    {
+      "service": "AI Gateway",
+      "test": "health",
+      "status": "passed",
+      "service_name": "ai-gateway-future"
+    },
+    {
+      "service": "Resume AI",
+      "test": "health",
+      "status": "passed",
+      "service_name": "resume-ai-future"
+    },
+    {
+      "service": "MinerU",
+      "test": "health",
+      "status": "passed",
+      "service_name": "mineru-service"
+    },
+    {
+      "service": "AI Models",
+      "test": "health",
+      "status": "passed",
+      "service_name": "ai-models-service"
+    },
+    {
+      "service": "AI Service",
+      "test": "health",
+      "status": "passed",
+      "service_name": "ai-service-with-zervigo"
+    },
+    {
+      "service": "LoomaCRM",
+      "test": "api",
+      "status": "passed",
+      "users_count": 3
+    },
+    {
+      "service": "AI Gateway",
+      "test": "api",
+      "status": "passed",
+      "response": "AI Gateway Future: Hello..."
+    },
+    {
+      "service": "Resume AI",
+      "test": "api",
+      "status": "passed"
+    }
+  ]
+}

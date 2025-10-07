@@ -1,0 +1,129 @@
+{
+  "migration_summary": {
+    "total_steps": 15,
+    "completed_steps": 15,
+    "failed_steps": 0,
+    "pending_steps": 0,
+    "success_rate": 100.0,
+    "timestamp": "2025-10-04T10:50:41.931084"
+  },
+  "migration_steps": [
+    {
+      "step_id": "create_mbti_types",
+      "description": "创建MBTI类型表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_types (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    type_code VARCHAR(4) NOT NULL UNIQUE,\n                    type_name VARCHAR(50) NOT NULL,\n                    description TEXT,\n                    characteristics TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000444
+    },
+    {
+      "step_id": "create_flowers",
+      "description": "创建花卉信息表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS flowers (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    name VARCHAR(100) NOT NULL,\n                    scientific_name VARCHAR(100),\n                    color VARCHAR(50),\n                    season VARCHAR(20),\n                    meaning TEXT,\n                    personality_traits TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000268
+    },
+    {
+      "step_id": "create_mbti_flower_mappings",
+      "description": "创建MBTI-花卉映射表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_flower_mappings (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    mbti_type_id INTEGER NOT NULL,\n                    flower_id INTEGER NOT NULL,\n                    match_score DECIMAL(3,2) DEFAULT 0.00,\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (mbti_type_id) REFERENCES mbti_types(id),\n                    FOREIGN KEY (flower_id) REFERENCES flowers(id),\n                    UNIQUE (mbti_type_id, flower_id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.00031
+    },
+    {
+      "step_id": "create_compatibility_matrix",
+      "description": "创建兼容性矩阵表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_compatibility_matrix (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    type_a_id INTEGER NOT NULL,\n                    type_b_id INTEGER NOT NULL,\n                    compatibility_score DECIMAL(3,2) DEFAULT 0.00,\n                    relationship_type VARCHAR(50),\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (type_a_id) REFERENCES mbti_types(id),\n                    FOREIGN KEY (type_b_id) REFERENCES mbti_types(id),\n                    UNIQUE (type_a_id, type_b_id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000268
+    },
+    {
+      "step_id": "create_careers",
+      "description": "创建职业信息表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS careers (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    name VARCHAR(100) NOT NULL,\n                    category VARCHAR(50),\n                    description TEXT,\n                    required_skills TEXT,\n                    salary_range VARCHAR(50),\n                    growth_prospect VARCHAR(20),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000217
+    },
+    {
+      "step_id": "create_mbti_career_matches",
+      "description": "创建MBTI-职业匹配表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_career_matches (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    mbti_type_id INTEGER NOT NULL,\n                    career_id INTEGER NOT NULL,\n                    match_score DECIMAL(3,2) DEFAULT 0.00,\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (mbti_type_id) REFERENCES mbti_types(id),\n                    FOREIGN KEY (career_id) REFERENCES careers(id),\n                    UNIQUE (mbti_type_id, career_id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000264
+    },
+    {
+      "step_id": "create_user_mbti_reports",
+      "description": "创建用户MBTI报告表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS user_mbti_reports (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    user_id VARCHAR(100) NOT NULL,\n                    mbti_type_id INTEGER NOT NULL,\n                    test_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    confidence_score DECIMAL(3,2) DEFAULT 0.00,\n                    report_data TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (mbti_type_id) REFERENCES mbti_types(id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000266
+    },
+    {
+      "step_id": "create_api_service_configs",
+      "description": "创建API服务配置表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS api_service_configs (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    service_name VARCHAR(100) NOT NULL UNIQUE,\n                    api_url VARCHAR(500),\n                    api_key VARCHAR(500),\n                    rate_limit INTEGER DEFAULT 1000,\n                    status VARCHAR(20) DEFAULT 'active',\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000279
+    },
+    {
+      "step_id": "create_api_call_logs",
+      "description": "创建API调用日志表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS api_call_logs (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    service_id INTEGER NOT NULL,\n                    request_data TEXT,\n                    response_data TEXT,\n                    status_code INTEGER,\n                    execution_time DECIMAL(10,3),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (service_id) REFERENCES api_service_configs(id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000217
+    },
+    {
+      "step_id": "create_mbti_dimension_scores",
+      "description": "创建MBTI维度分数表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_dimension_scores (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    user_id VARCHAR(100) NOT NULL,\n                    dimension VARCHAR(2) NOT NULL,\n                    score DECIMAL(5,2) NOT NULL,\n                    test_session_id VARCHAR(100),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000233
+    },
+    {
+      "step_id": "create_mbti_question_banks",
+      "description": "创建MBTI题库表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_question_banks (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    bank_name VARCHAR(100) NOT NULL,\n                    version VARCHAR(20) NOT NULL,\n                    total_questions INTEGER NOT NULL,\n                    description TEXT,\n                    is_active BOOLEAN DEFAULT 1,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000224
+    },
+    {
+      "step_id": "create_mbti_questions",
+      "description": "创建MBTI题目表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_questions (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    question_bank_id INTEGER NOT NULL,\n                    question_text TEXT NOT NULL,\n                    dimension VARCHAR(2) NOT NULL,\n                    question_type VARCHAR(20) DEFAULT 'standard',\n                    options TEXT,\n                    difficulty VARCHAR(10) DEFAULT 'medium',\n                    category VARCHAR(50),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (question_bank_id) REFERENCES mbti_question_banks(id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000264
+    },
+    {
+      "step_id": "create_mbti_question_categories",
+      "description": "创建MBTI题目分类表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_question_categories (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    category_name VARCHAR(50) NOT NULL UNIQUE,\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.000224
+    },
+    {
+      "step_id": "create_mbti_test_sessions",
+      "description": "创建MBTI测试会话表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_test_sessions (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    session_id VARCHAR(100) NOT NULL UNIQUE,\n                    user_id VARCHAR(100) NOT NULL,\n                    question_bank_id INTEGER NOT NULL,\n                    status VARCHAR(20) DEFAULT 'active',\n                    start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    end_time TIMESTAMP NULL,\n                    total_questions INTEGER DEFAULT 0,\n                    answered_questions INTEGER DEFAULT 0,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (question_bank_id) REFERENCES mbti_question_banks(id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.00025
+    },
+    {
+      "step_id": "create_user_mbti_responses",
+      "description": "创建用户MBTI回答表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS user_mbti_responses (\n                    id INTEGER PRIMARY KEY AUTOINCREMENT,\n                    session_id VARCHAR(100) NOT NULL,\n                    question_id INTEGER NOT NULL,\n                    answer VARCHAR(10) NOT NULL,\n                    response_time DECIMAL(10,3),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (session_id) REFERENCES mbti_test_sessions(session_id),\n                    FOREIGN KEY (question_id) REFERENCES mbti_questions(id)\n                );\n                ",
+      "status": "completed",
+      "execution_time": 0.00026
+    }
+  ],
+  "recommendations": [
+    "✅ 数据迁移完成",
+    "🚀 可以开始数据一致性检查",
+    "📈 考虑性能优化",
+    "🔍 定期进行数据备份"
+  ],
+  "next_steps": [
+    "1. 开始数据一致性检查",
+    "2. 验证数据完整性",
+    "3. 开始Week 2: API网关和认证系统建设",
+    "4. 进行集成测试"
+  ]
+}

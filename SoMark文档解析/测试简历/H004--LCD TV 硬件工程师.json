@@ -1,0 +1,752 @@
+{
+  "pages": [
+    {
+      "page_num": 0,
+      "blocks": [
+        {
+          "idx": 20,
+          "type": "header",
+          "bbox": [
+            142,
+            69,
+            323,
+            138
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 30,
+          "type": "title",
+          "bbox": [
+            186,
+            158,
+            348,
+            184
+          ],
+          "content": "China Agent # 1",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            186,
+            219,
+            480,
+            248
+          ],
+          "content": "姓 名: H004 性别: 男",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            186,
+            253,
+            498,
+            281
+          ],
+          "content": "民族：汉族户籍：广东",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            186,
+            286,
+            489,
+            314
+          ],
+          "content": "年龄： 28 婚姻状况： 未婚",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            187,
+            320,
+            336,
+            346
+          ],
+          "content": "身高： 172cm",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            186,
+            351,
+            481,
+            379
+          ],
+          "content": "待遇要求：￥15000 元以上/月",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 26,
+          "type": "title",
+          "bbox": [
+            188,
+            483,
+            288,
+            506
+          ],
+          "content": "教育/培训",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 27,
+          "type": "text",
+          "bbox": [
+            185,
+            543,
+            817,
+            576
+          ],
+          "content": "1999-07 ~2003-07 哈尔滨工业大学 电气工程及其自动化 本科",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 21,
+          "type": "text",
+          "bbox": [
+            185,
+            609,
+            806,
+            639
+          ],
+          "content": "2006-12 ~2006-12 鼎韵科技 信号完整性分析及硬件测试技术",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 28,
+          "type": "text",
+          "bbox": [
+            185,
+            644,
+            566,
+            672
+          ],
+          "content": "2006-08 $\\sim$ 2006-10 深圳书城BEC II",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 23,
+          "type": "title",
+          "bbox": [
+            187,
+            709,
+            289,
+            733
+          ],
+          "content": "技能/专长",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            187,
+            773,
+            425,
+            801
+          ],
+          "content": "第一外语： 英语 熟练",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            187,
+            806,
+            433,
+            833
+          ],
+          "content": "计算机能力：中级",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 29,
+          "type": "text",
+          "bbox": [
+            187,
+            840,
+            932,
+            894
+          ],
+          "content": "计算机详细技能：熟练操作 Pads 2005, AutoCAD, Soliword, Coreldraw12 了解 VB 设计",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            187,
+            903,
+            715,
+            931
+          ],
+          "content": "熟练应用国际化电子办工平台Lotus Notos & PDMS IV",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 15,
+          "type": "text",
+          "bbox": [
+            186,
+            935,
+            926,
+            966
+          ],
+          "content": "其  它  技  能：  熟悉设计流程，生产工艺（SMT/PCBA），项目计划及跟进",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 24,
+          "type": "title",
+          "bbox": [
+            190,
+            1002,
+            277,
+            1026
+          ],
+          "content": "自我评价",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            186,
+            1065,
+            920,
+            1126
+          ],
+          "content": "熟悉国际一流企业工作流程，5 年电子及马达设计开发经验，工作认真负责。 良好的英语听说读写能力。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 25,
+          "type": "title",
+          "bbox": [
+            188,
+            1165,
+            278,
+            1187
+          ],
+          "content": "工作经验",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            186,
+            1195,
+            668,
+            1223
+          ],
+          "content": "$\\blacksquare$ 深圳万威电子有限公司 （2007-09 $\\sim$ 2008-10）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            187,
+            1228,
+            730,
+            1257
+          ],
+          "content": "公司性质：外资企业 行业类别：电子、微电子技术",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            187,
+            1261,
+            445,
+            1288
+          ],
+          "content": "担任职位： 电子工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            186,
+            1293,
+            738,
+            1321
+          ],
+          "content": "工作描述： 万威电子集团电子学习（游戏）机开发部：",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 22,
+          "type": "text",
+          "bbox": [
+            184,
+            1326,
+            1055,
+            1385
+          ],
+          "content": "承担产品开发电子工程技术任务，包括新产品线路设计及开发，跟进及改良现时产品设计， 按要求发出相关技术文件。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            186,
+            1391,
+            546,
+            1419
+          ],
+          "content": "1. 电路（MCU 系统）/硬件设计及实施。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            185,
+            1424,
+            388,
+            1451
+          ],
+          "content": "2. 目标/调试板制作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            185,
+            1457,
+            377,
+            1482
+          ],
+          "content": "3.硬件测试及检验。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            185,
+            1489,
+            458,
+            1516
+          ],
+          "content": "4.ES，EPR 及样机制作备料。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            185,
+            1522,
+            376,
+            1548
+          ],
+          "content": "5. PCB 画板及测试。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            185,
+            1554,
+            356,
+            1581
+          ],
+          "content": "6.项目计划控制。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    },
+    {
+      "page_num": 1,
+      "blocks": [
+        {
+          "idx": 15,
+          "type": "header",
+          "bbox": [
+            141,
+            69,
+            322,
+            139
+          ],
+          "content": "",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 19,
+          "type": "text",
+          "bbox": [
+            186,
+            156,
+            510,
+            183
+          ],
+          "content": "7.Mask Rom，BOM,工程文挡发放。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 20,
+          "type": "text",
+          "bbox": [
+            186,
+            187,
+            671,
+            217
+          ],
+          "content": "$\\blacksquare$ 深圳恒迪电子有限公司 （2006\\-03 \\~ 2007\\-08）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 16,
+          "type": "text",
+          "bbox": [
+            186,
+            221,
+            729,
+            249
+          ],
+          "content": "公司性质：外资企业 行业类别：电子、微电子技术",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 17,
+          "type": "text",
+          "bbox": [
+            186,
+            253,
+            446,
+            281
+          ],
+          "content": "担任职位： 电子工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 2,
+          "type": "text",
+          "bbox": [
+            182,
+            286,
+            1059,
+            377
+          ],
+          "content": "工作描述： 恒迪电子是一家高性能模拟IC 公司。主要产品Power Mosfet,DC/DC,LED Driver,电池充电保护IC 等。公司IC 元器件广泛应用于MP3,MP4,开关电源,LCD 逆变电路， 手机充电保护电路等。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 13,
+          "type": "text",
+          "bbox": [
+            185,
+            382,
+            985,
+            412
+          ],
+          "content": "1. VB 编写程序,设计制作 PCB 板,采购元器件,测试评估公司 IC 电子元器件性能。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 1,
+          "type": "text",
+          "bbox": [
+            183,
+            416,
+            1058,
+            507
+          ],
+          "content": "2. 上海, 成都, 东莞等地 IC 封装厂设备软, 硬件的安装调试 (包括其中测试 PCB 板的设计及安装)。设计及制造读码器(带单片机系统的手机码片识别仪器)。Coreldraw 制作产品规格。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 6,
+          "type": "text",
+          "bbox": [
+            182,
+            513,
+            1050,
+            573
+          ],
+          "content": "3．客户技术支持，分析客户产品电路，工艺等，协助客户解决产品设计，生产中的问题， 并编写相关技术报告。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 8,
+          "type": "text",
+          "bbox": [
+            186,
+            578,
+            500,
+            606
+          ],
+          "content": "4. 销售人员及代理商产品培训。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 9,
+          "type": "text",
+          "bbox": [
+            186,
+            611,
+            520,
+            638
+          ],
+          "content": "5. 公司局域网组建，调试，维护。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 18,
+          "type": "text",
+          "bbox": [
+            186,
+            643,
+            751,
+            672
+          ],
+          "content": "■ 德昌电机（Johnson Electric）（2003-07 ~ 2006-01）",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 14,
+          "type": "text",
+          "bbox": [
+            187,
+            676,
+            600,
+            703
+          ],
+          "content": "公司性质： 外资企业 行业类别： 电气",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 11,
+          "type": "text",
+          "bbox": [
+            187,
+            708,
+            445,
+            736
+          ],
+          "content": "担任职位： 项目工程师",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 0,
+          "type": "text",
+          "bbox": [
+            183,
+            741,
+            1058,
+            832
+          ],
+          "content": "工作描述： 德昌电机商业马达集团下属HA（家电）商业单元。公司属港资，在世界微马 达领域具有领导地位。工作期间主要负责各种家电电机的设计和开发，主导整个项目的工程 进度计划及相关跟进。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 4,
+          "type": "text",
+          "bbox": [
+            183,
+            838,
+            1057,
+            898
+          ],
+          "content": "1. 英文办公平台 PDMS IV 和 Lotus Notes 上开展工作。依照客户要求做PPL，完成产品结构，电磁等参数设计，并制作各种相关工程文件。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 3,
+          "type": "text",
+          "bbox": [
+            182,
+            903,
+            1057,
+            963
+          ],
+          "content": "2. 发EJR 单做样板，依照EN60335,UL982 等安全规格及客户要求做性能和相关安全评估测 试，验证样品品质。新元件质量评估及批准。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 5,
+          "type": "text",
+          "bbox": [
+            183,
+            968,
+            1059,
+            1027
+          ],
+          "content": "3．领导跨功能小组会议。准备各相关工程文件，与生产和品质部门同事合作，新产品试产 及转生产。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 7,
+          "type": "text",
+          "bbox": [
+            185,
+            1033,
+            804,
+            1062
+          ],
+          "content": "4. 新产品转生产。一年中6 个项目产品成功转生产的良好业绩。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 10,
+          "type": "text",
+          "bbox": [
+            185,
+            1066,
+            432,
+            1094
+          ],
+          "content": "5. 分析和处理客户投诉。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        },
+        {
+          "idx": 12,
+          "type": "text",
+          "bbox": [
+            185,
+            1098,
+            432,
+            1127
+          ],
+          "content": "6. 带领新同事开展工作。",
+          "format": "text",
+          "captions": [],
+          "img_url": ""
+        }
+      ],
+      "page_size": {
+        "h": 1754,
+        "w": 1241
+      },
+      "merge_content_from_pre_page": false
+    }
+  ]
+}

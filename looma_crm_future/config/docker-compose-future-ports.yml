@@ -1,0 +1,103 @@
+version: '3.8'
+
+services:
+  # Future版专用Redis
+  redis-future:
+    image: redis:7-alpine
+    container_name: future-redis
+    ports:
+      - "6383:6379"
+    command: redis-server --appendonly yes --requirepass future_redis_password_2025
+    volumes:
+      - future_redis_data:/data
+    networks:
+      - future-network
+
+  # Future版专用PostgreSQL
+  postgres-future:
+    image: postgres:15
+    container_name: future-postgres
+    ports:
+      - "5435:5432"
+    environment:
+      - POSTGRES_DB=jobfirst_future
+      - POSTGRES_USER=jobfirst_future
+      - POSTGRES_PASSWORD=secure_future_password_2025
+    volumes:
+      - future_postgres_data:/var/lib/postgresql/data
+    networks:
+      - future-network
+
+  # Future版专用MongoDB
+  mongodb-future:
+    image: mongo:7.0
+    container_name: future-mongodb
+    ports:
+      - "27019:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=jobfirst_future
+      - MONGO_INITDB_ROOT_PASSWORD=secure_future_password_2025
+      - MONGO_INITDB_DATABASE=jobfirst_future
+    volumes:
+      - future_mongodb_data:/data/db
+    networks:
+      - future-network
+
+  # Future版专用Neo4j
+  neo4j-future:
+    image: neo4j:5.15
+    container_name: future-neo4j
+    ports:
+      - "7476:7474"
+      - "7689:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/future_neo4j_password_2025
+      - NEO4J_dbms_default__database=jobfirst_future
+    volumes:
+      - future_neo4j_data:/data
+    networks:
+      - future-network
+
+  # Future版专用Elasticsearch
+  elasticsearch-future:
+    image: elasticsearch:8.11.0
+    container_name: future-elasticsearch
+    ports:
+      - "9203:9200"
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - future_elasticsearch_data:/usr/share/elasticsearch/data
+    networks:
+      - future-network
+
+  # Future版专用Weaviate
+  weaviate-future:
+    image: semitechnologies/weaviate:1.21.5
+    container_name: future-weaviate
+    ports:
+      - "8083:8080"
+    environment:
+      - QUERY_DEFAULTS_LIMIT=25
+      - AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED=true
+      - PERSISTENCE_DATA_PATH=/var/lib/weaviate
+      - DEFAULT_VECTORIZER_MODULE=none
+      - CLUSTER_HOSTNAME=node1
+    volumes:
+      - future_weaviate_data:/var/lib/weaviate
+    networks:
+      - future-network
+
+volumes:
+  future_redis_data:
+  future_postgres_data:
+  future_mongodb_data:
+  future_neo4j_data:
+  future_elasticsearch_data:
+  future_weaviate_data:
+
+networks:
+  future-network:
+    driver: bridge

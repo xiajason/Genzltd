@@ -1,0 +1,12 @@
+# command-line-arguments
+./main.go:37:17: undefined: NewDocumentAPI
+./main.go:41:16: undefined: NewCompanyProfileAPI
+./main.go:45:14: undefined: NewQuotaAPI
+./main.go:49:14: undefined: NewAdminAPI
+./main.go:57:23: undefined: NewCompanyPermissionManager
+./main.go:60:21: undefined: NewCompanyDataSyncService
+./main.go:63:13: undefined: NewCompanyAuthAPI
+./main.go:67:2: undefined: setupCompanyEnhancedRoutes
+./main.go:70:2: undefined: setupDAORoutes
+./main.go:73:2: undefined: setupAIOptimizationRoutes
+./main.go:73:2: too many errors

@@ -1,0 +1,18 @@
+{
+  "timestamp": "2025-10-06T09:43:20.710471",
+  "version": "future",
+  "restart_number": 2,
+  "test_type": "connection_test_after_second_restart",
+  "results": {
+    "mysql": "✅ 连接成功",
+    "postgres": "✅ 连接成功",
+    "redis": "✅ 连接成功",
+    "neo4j": "✅ 连接成功"
+  },
+  "statistics": {
+    "success_count": 4,
+    "total_count": 4,
+    "success_rate": 100.0,
+    "total_time": 0.04679727554321289
+  }
+}

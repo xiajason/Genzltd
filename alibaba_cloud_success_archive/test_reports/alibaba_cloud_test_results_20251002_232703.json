@@ -1,0 +1,154 @@
+{
+  "timestamp": "2025-10-02T23:27:03.237840",
+  "server_ip": "47.115.168.107",
+  "test_name": "阿里云生产环境端到端测试",
+  "environment": "production",
+  "summary": {
+    "total_tests": 19,
+    "passed": 1,
+    "failed": 18,
+    "success_rate": "5.3%"
+  },
+  "test_results": {
+    "connectivity": {
+      "total_tests": 7,
+      "passed": 0,
+      "failed": 7,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Prometheus监控",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Grafana面板",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Node Exporter",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    },
+    "production_services": {
+      "total_tests": 4,
+      "passed": 0,
+      "failed": 4,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "production_service",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "production_service",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "production_service",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "production_service",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    },
+    "monitoring_system": {
+      "total_tests": 3,
+      "passed": 0,
+      "failed": 3,
+      "details": []
+    },
+    "integration": {
+      "total_tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "service": "Production Integration",
+          "test": "all_services_accessible",
+          "status": "partial_success",
+          "services_count": 7,
+          "successful_services": 0,
+          "services_status": {
+            "LoomaCRM生产服务": false,
+            "Zervigo Future版": false,
+            "Zervigo DAO版": false,
+            "Zervigo 区块链版": false,
+            "Prometheus监控": false,
+            "Grafana面板": false,
+            "Node Exporter": false
+          }
+        }
+      ]
+    },
+    "performance": {
+      "total_tests": 4,
+      "passed": 0,
+      "failed": 4,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "response_time",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "response_time",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "response_time",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "response_time",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    }
+  }
+}

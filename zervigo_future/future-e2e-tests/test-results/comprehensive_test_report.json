@@ -1,0 +1,171 @@
+{
+  "report_metadata": {
+    "test_suite": "JobFirst Future版端到端功能测试综合报告",
+    "generated_at": "2025-09-28T16:01:47.201567",
+    "test_duration": "0:00:00.544083",
+    "test_environment": "Future版开发环境"
+  },
+  "overall_summary": {
+    "total_tests": 6,
+    "total_passed": 6,
+    "total_failed": 0,
+    "overall_success_rate": 100.0,
+    "test_status": "✅ PASS"
+  },
+  "test_suites": [
+    {
+      "name": "用户认证测试",
+      "passed": 1,
+      "failed": 0,
+      "total": 1,
+      "success_rate": 100.0
+    },
+    {
+      "name": "AI服务测试",
+      "passed": 2,
+      "failed": 0,
+      "total": 2,
+      "success_rate": 100.0
+    },
+    {
+      "name": "端到端流程测试",
+      "passed": 3,
+      "failed": 0,
+      "total": 3,
+      "success_rate": 100.0
+    }
+  ],
+  "detailed_results": {
+    "authentication": {
+      "test_suite": "Future版用户认证端到端测试",
+      "start_time": "2025-09-28T16:01:46.657525",
+      "end_time": "2025-09-28T16:01:47.097058",
+      "duration": "0:00:00.439533",
+      "total_tests": 1,
+      "passed_tests": 1,
+      "failed_tests": 0,
+      "test_results": [
+        {
+          "test_name": "用户登录测试",
+          "passed": 3,
+          "failed": 0,
+          "tokens": [
+            {
+              "username": "admin",
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NTk2NTEzMDYsImlhdCI6MTc1OTA0NjUwNn0.WGIzinn0ZiCs730fTQ73cuBEwJaQBCBMpaL9gUh_pHE"
+            },
+            {
+              "username": "testuser",
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwicm9sZSI6InVzZXIiLCJleHAiOjE3NTk2NTEzMDYsImlhdCI6MTc1OTA0NjUwNn0.oaJUWwUSvpZOpwiBLG7JzVTGrO6MG-WyQ_P39OsbYBI"
+            },
+            {
+              "username": "szjason72",
+              "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo0LCJ1c2VybmFtZSI6InN6amFzb243MiIsInJvbGUiOiJ1c2VyIiwiZXhwIjoxNzU5NjUxMzA3LCJpYXQiOjE3NTkwNDY1MDd9.om-Qf9sVJSiyDuJTz-FUp4WGFfk75y_5FLTpseF9IBo"
+            }
+          ],
+          "details": [
+            {
+              "user": "admin",
+              "status": "success",
+              "message": "登录成功"
+            },
+            {
+              "user": "testuser",
+              "status": "success",
+              "message": "登录成功"
+            },
+            {
+              "user": "szjason72",
+              "status": "success",
+              "message": "登录成功"
+            }
+          ],
+          "success_rate": 100.0
+        }
+      ],
+      "overall_success_rate": 100.0
+    },
+    "ai_services": {
+      "test_suite": "Future版AI服务端到端测试",
+      "start_time": "2025-09-28T16:01:47.097322",
+      "end_time": "2025-09-28T16:01:47.105400",
+      "duration": "0:00:00.008078",
+      "total_tests": 2,
+      "passed_tests": 2,
+      "failed_tests": 0,
+      "test_results": [
+        {
+          "test_name": "AI Gateway健康检查",
+          "passed": 1,
+          "failed": 0,
+          "details": [
+            {
+              "status": "success",
+              "message": "AI Gateway健康检查通过",
+              "service": "future-ai-gateway",
+              "version": "1.0.0"
+            }
+          ],
+          "success_rate": 100.0
+        },
+        {
+          "test_name": "Resume AI健康检查",
+          "passed": 1,
+          "failed": 0,
+          "details": [
+            {
+              "status": "success",
+              "message": "Resume AI健康检查通过",
+              "service": "future-resume-ai",
+              "version": "1.0.0"
+            }
+          ],
+          "success_rate": 100.0
+        }
+      ],
+      "overall_success_rate": 100.0
+    },
+    "end_to_end": {
+      "test_suite": "Future版端到端流程测试",
+      "start_time": "2025-09-28T16:01:47.105671",
+      "end_time": "2025-09-28T16:01:47.201044",
+      "duration": "0:00:00.095373",
+      "total_steps": 3,
+      "successful_steps": 3,
+      "failed_steps": 0,
+      "success_rate": 100.0,
+      "steps": [
+        {
+          "step": "用户登录",
+          "success": true,
+          "details": {
+            "status_code": 200,
+            "message": "用户登录成功",
+            "token_received": true
+          }
+        },
+        {
+          "step": "AI Gateway测试",
+          "success": true,
+          "details": {
+            "status_code": 200,
+            "message": "AI Gateway健康检查通过",
+            "service": "future-ai-gateway",
+            "version": "1.0.0"
+          }
+        },
+        {
+          "step": "Resume AI测试",
+          "success": true,
+          "details": {
+            "status_code": 200,
+            "message": "Resume AI健康检查通过",
+            "service": "future-resume-ai",
+            "version": "1.0.0"
+          }
+        }
+      ],
+      "flow_completion": true
+    }
+  }
+}

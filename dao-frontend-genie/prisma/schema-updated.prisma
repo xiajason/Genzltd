@@ -1,0 +1,177 @@
+// 积分制DAO治理系统数据库Schema - 用户整合版本
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://dao_user:dao_password_2024@localhost:9506/dao_governance"
+}
+
+// DAO成员表 - 基于积分制（扩展版本，整合zervigo用户数据）
+model DAOMember {
+  id                    BigInt    @id @default(autoincrement())
+  userId                String    @unique @map("user_id")
+  
+  // 基础用户信息（从zervigo整合）
+  username              String?   // 用户名
+  email                 String?   // 邮箱
+  firstName             String?   @map("first_name") // 名字
+  lastName              String?   @map("last_name")  // 姓氏
+  avatarUrl             String?   @map("avatar_url") // 头像URL
+  phone                 String?   // 电话
+  
+  // 扩展用户资料（从zervigo整合）
+  bio                   String?   @db.Text // 个人简介
+  location              String?   // 位置
+  website               String?   // 网站
+  githubUrl             String?   @map("github_url") // GitHub链接
+  linkedinUrl           String?   @map("linkedin_url") // LinkedIn链接
+  twitterUrl            String?   @map("twitter_url") // Twitter链接
+  skills                Json?     // 技能列表
+  interests             Json?     // 兴趣列表
+  languages             Json?     // 语言列表
+  
+  // DAO特有字段
+  walletAddress         String?   @map("wallet_address") // 可选，未来扩展
+  reputationScore       Int       @default(0) @map("reputation_score")
+  contributionPoints    Int       @default(0) @map("contribution_points")
+  joinDate              DateTime  @default(now()) @map("join_date")
+  status                DAOStatus @default(ACTIVE)
+  createdAt             DateTime  @default(now()) @map("created_at")
+  updatedAt             DateTime  @updatedAt @map("updated_at")
+  
+  // 关联关系
+  proposals             DAOProposal[] @relation("Proposer")
+  votes                 DAOVote[] @relation("Voter")
+  rewards               DAOReward[] @relation("Recipient")
+  activities            DAOActivity[] @relation("User")
+
+  @@map("dao_members")
+}
+
+// DAO提案表
+model DAOProposal {
+  id                BigInt            @id @default(autoincrement())
+  proposalId        String            @unique @map("proposal_id")
+  title             String
+  description       String?           @db.Text
+  proposerId        String            @map("proposer_id")
+  proposalType      DAOProposalType   @map("proposal_type")
+  status            DAOProposalStatus @default(DRAFT)
+  startTime         DateTime?         @map("start_time")
+  endTime           DateTime?         @map("end_time")
+  votesFor          Int               @default(0) @map("votes_for")
+  votesAgainst      Int               @default(0) @map("votes_against")
+  totalVotes        Int               @default(0) @map("total_votes")
+  createdAt         DateTime          @default(now()) @map("created_at")
+  updatedAt         DateTime          @updatedAt @map("updated_at")
+  
+  // 关联关系
+  proposer          DAOMember         @relation("Proposer", fields: [proposerId], references: [userId])
+  votes             DAOVote[]         @relation("Proposal")
+
+  @@map("dao_proposals")
+}
+
+// DAO投票表
+model DAOVote {
+  id              BigInt      @id @default(autoincrement())
+  proposalId      String      @map("proposal_id")
+  voterId         String      @map("voter_id")
+  voteChoice      DAOVoteChoice @map("vote_choice")
+  votingPower     Int         @map("voting_power") // 基于积分计算的投票权重
+  voteTimestamp   DateTime    @default(now()) @map("vote_timestamp")
+  
+  // 关联关系
+  proposal        DAOProposal @relation("Proposal", fields: [proposalId], references: [proposalId])
+  voter           DAOMember   @relation("Voter", fields: [voterId], references: [userId])
+
+  @@unique([proposalId, voterId], map: "unique_vote")
+  @@map("dao_votes")
+}
+
+// DAO奖励表
+model DAOReward {
+  id              BigInt          @id @default(autoincrement())
+  recipientId     String          @map("recipient_id")
+  rewardType      DAORewardType   @map("reward_type")
+  amount          Decimal         @db.Decimal(18, 8)
+  currency        String          @default("DAO")
+  description     String?         @db.Text
+  status          DAORewardStatus @default(PENDING)
+  createdAt       DateTime        @default(now()) @map("created_at")
+  distributedAt   DateTime?       @map("distributed_at")
+  
+  // 关联关系
+  recipient       DAOMember       @relation("Recipient", fields: [recipientId], references: [userId])
+
+  @@map("dao_rewards")
+}
+
+// DAO活动日志表
+model DAOActivity {
+  id                    BigInt    @id @default(autoincrement())
+  userId                String    @map("user_id")
+  activityType          String    @map("activity_type")
+  activityDescription   String?   @db.Text @map("activity_description")
+  metadata              Json?
+  timestamp             DateTime  @default(now())
+  
+  // 关联关系
+  user                  DAOMember @relation("User", fields: [userId], references: [userId])
+
+  @@map("dao_activity_log")
+}
+
+// 国库表（基础版本）
+model Treasury {
+  id          BigInt   @id @default(autoincrement())
+  address     String   @unique
+  privateKey  String   @map("private_key")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  @@map("treasury")
+}
+
+// 枚举类型
+enum DAOStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+}
+
+enum DAOProposalType {
+  GOVERNANCE
+  FUNDING
+  TECHNICAL
+  POLICY
+}
+
+enum DAOProposalStatus {
+  DRAFT
+  ACTIVE
+  PASSED
+  REJECTED
+  EXECUTED
+}
+
+enum DAOVoteChoice {
+  FOR
+  AGAINST
+  ABSTAIN
+}
+
+enum DAORewardType {
+  CONTRIBUTION
+  VOTING
+  PROPOSAL
+  GOVERNANCE
+}
+
+enum DAORewardStatus {
+  PENDING
+  APPROVED
+  DISTRIBUTED
+}

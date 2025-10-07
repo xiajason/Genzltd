@@ -1,0 +1,857 @@
+{
+  "connection_tests": [
+    {
+      "database_type": "SQLite",
+      "connection_status": "success",
+      "error_message": null,
+      "tables_count": 17,
+      "tables_list": [
+        "mbti_types",
+        "sqlite_sequence",
+        "flowers",
+        "mbti_flower_mappings",
+        "mbti_compatibility_matrix",
+        "careers",
+        "mbti_career_matches",
+        "user_mbti_reports",
+        "api_service_configs",
+        "api_call_logs",
+        "mbti_dimension_scores",
+        "mbti_question_banks",
+        "mbti_questions",
+        "mbti_question_categories",
+        "mbti_test_sessions",
+        "user_mbti_responses",
+        "mbti_migrations"
+      ],
+      "test_timestamp": "2025-10-04T11:04:05.092622"
+    },
+    {
+      "database_type": "MySQL",
+      "connection_status": "success",
+      "error_message": null,
+      "tables_count": 38,
+      "tables_list": [
+        "columns_priv",
+        "component",
+        "db",
+        "default_roles",
+        "engine_cost",
+        "func",
+        "general_log",
+        "global_grants",
+        "gtid_executed",
+        "help_category",
+        "help_keyword",
+        "help_relation",
+        "help_topic",
+        "innodb_index_stats",
+        "innodb_table_stats",
+        "ndb_binlog_index",
+        "password_history",
+        "plugin",
+        "procs_priv",
+        "proxies_priv",
+        "replication_asynchronous_connection_failover",
+        "replication_asynchronous_connection_failover_managed",
+        "replication_group_configuration_version",
+        "replication_group_member_actions",
+        "role_edges",
+        "server_cost",
+        "servers",
+        "slave_master_info",
+        "slave_relay_log_info",
+        "slave_worker_info",
+        "slow_log",
+        "tables_priv",
+        "time_zone",
+        "time_zone_leap_second",
+        "time_zone_name",
+        "time_zone_transition",
+        "time_zone_transition_type",
+        "user"
+      ],
+      "test_timestamp": "2025-10-04T11:04:05.101692"
+    },
+    {
+      "database_type": "PostgreSQL",
+      "connection_status": "success",
+      "error_message": null,
+      "tables_count": 1,
+      "tables_list": [
+        "template_vectors"
+      ],
+      "test_timestamp": "2025-10-04T11:04:05.126734"
+    }
+  ],
+  "mbti_table_check": {
+    "database_type": "SQLite",
+    "mbti_tables": {
+      "mbti_types": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "type_code",
+            "type": "VARCHAR(4)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "type_name",
+            "type": "VARCHAR(50)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "characteristics",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 16
+      },
+      "flowers": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "name",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "scientific_name",
+            "type": "VARCHAR(100)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "color",
+            "type": "VARCHAR(50)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "season",
+            "type": "VARCHAR(20)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "meaning",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "personality_traits",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 8
+      },
+      "mbti_flower_mappings": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "mbti_type_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "flower_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "match_score",
+            "type": "DECIMAL(3,2)",
+            "not_null": 0,
+            "default": "0.00"
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 8
+      },
+      "mbti_compatibility_matrix": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "type_a_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "type_b_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "compatibility_score",
+            "type": "DECIMAL(3,2)",
+            "not_null": 0,
+            "default": "0.00"
+          },
+          {
+            "name": "relationship_type",
+            "type": "VARCHAR(50)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 8
+      },
+      "careers": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "name",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "category",
+            "type": "VARCHAR(50)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "required_skills",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "salary_range",
+            "type": "VARCHAR(50)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "growth_prospect",
+            "type": "VARCHAR(20)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 8
+      },
+      "mbti_career_matches": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "mbti_type_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "career_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "match_score",
+            "type": "DECIMAL(3,2)",
+            "not_null": 0,
+            "default": "0.00"
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "user_mbti_reports": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "user_id",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "mbti_type_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "test_date",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "confidence_score",
+            "type": "DECIMAL(3,2)",
+            "not_null": 0,
+            "default": "0.00"
+          },
+          {
+            "name": "report_data",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "api_service_configs": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "service_name",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "api_url",
+            "type": "VARCHAR(500)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "api_key",
+            "type": "VARCHAR(500)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "rate_limit",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": "1000"
+          },
+          {
+            "name": "status",
+            "type": "VARCHAR(20)",
+            "not_null": 0,
+            "default": "'active'"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 3
+      },
+      "api_call_logs": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "service_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "request_data",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "response_data",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "status_code",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "execution_time",
+            "type": "DECIMAL(10,3)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "mbti_dimension_scores": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "user_id",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "dimension",
+            "type": "VARCHAR(2)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "score",
+            "type": "DECIMAL(5,2)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "test_session_id",
+            "type": "VARCHAR(100)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "mbti_question_banks": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "bank_name",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "version",
+            "type": "VARCHAR(20)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "total_questions",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "is_active",
+            "type": "BOOLEAN",
+            "not_null": 0,
+            "default": "1"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "mbti_questions": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "question_bank_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "question_text",
+            "type": "TEXT",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "dimension",
+            "type": "VARCHAR(2)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "question_type",
+            "type": "VARCHAR(20)",
+            "not_null": 0,
+            "default": "'standard'"
+          },
+          {
+            "name": "options",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "difficulty",
+            "type": "VARCHAR(10)",
+            "not_null": 0,
+            "default": "'medium'"
+          },
+          {
+            "name": "category",
+            "type": "VARCHAR(50)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "mbti_question_categories": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "category_name",
+            "type": "VARCHAR(50)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "description",
+            "type": "TEXT",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "mbti_test_sessions": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "session_id",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "user_id",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "question_bank_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "status",
+            "type": "VARCHAR(20)",
+            "not_null": 0,
+            "default": "'active'"
+          },
+          {
+            "name": "start_time",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          },
+          {
+            "name": "end_time",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "total_questions",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": "0"
+          },
+          {
+            "name": "answered_questions",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": "0"
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      },
+      "user_mbti_responses": {
+        "exists": true,
+        "columns": [
+          {
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "session_id",
+            "type": "VARCHAR(100)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "question_id",
+            "type": "INTEGER",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "answer",
+            "type": "VARCHAR(10)",
+            "not_null": 1,
+            "default": null
+          },
+          {
+            "name": "response_time",
+            "type": "DECIMAL(10,3)",
+            "not_null": 0,
+            "default": null
+          },
+          {
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default": "CURRENT_TIMESTAMP"
+          }
+        ],
+        "row_count": 0
+      }
+    },
+    "total_tables": 15,
+    "check_timestamp": "2025-10-04T11:04:05.128123"
+  },
+  "test_summary": {
+    "total_tests": 3,
+    "successful_tests": 3,
+    "failed_tests": 0,
+    "success_rate": 100.0,
+    "test_timestamp": "2025-10-04T11:04:05.128181"
+  },
+  "recommendations": [
+    "✅ 数据库连接正常",
+    "🚀 可以开始数据迁移",
+    "📊 检查表结构完整性",
+    "🔍 验证数据一致性"
+  ],
+  "next_steps": [
+    "1. 开始数据迁移",
+    "2. 验证表结构完整性",
+    "3. 检查数据一致性",
+    "4. 开始Week 2开发"
+  ]
+}

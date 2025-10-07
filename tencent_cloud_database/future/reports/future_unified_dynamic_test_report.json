@@ -1,0 +1,32 @@
+{
+  "timestamp": "2025-10-06T09:35:33.365166",
+  "version": "future",
+  "test_type": "unified_dynamic_test",
+  "container_ips": {},
+  "port_results": {
+    "mysql": "✅ 可用",
+    "postgres": "✅ 可用",
+    "redis": "✅ 可用",
+    "neo4j_http": "✅ 可用",
+    "neo4j_bolt": "✅ 可用"
+  },
+  "connection_results": {
+    "mysql": "✅ 连接成功",
+    "postgres": "✅ 连接成功",
+    "redis": "✅ 连接成功",
+    "neo4j": "✅ 连接成功"
+  },
+  "consistency_results": {
+    "mysql": "✅ 数据一致性验证成功",
+    "redis": "❌ Redis测试失败: <built-in function id>"
+  },
+  "statistics": {
+    "port_success": 5,
+    "port_total": 5,
+    "connection_success": 4,
+    "connection_total": 4,
+    "consistency_success": 1,
+    "consistency_total": 2,
+    "total_time": 0.14492177963256836
+  }
+}

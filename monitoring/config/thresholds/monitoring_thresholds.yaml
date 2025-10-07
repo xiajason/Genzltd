@@ -1,0 +1,47 @@
+# 监控阈值配置
+# 创建时间: 2025年1月27日
+# 版本: v1.0
+
+# 系统资源阈值
+system:
+  cpu_usage:
+    warning: 70
+    critical: 90
+  
+  memory_usage:
+    warning: 80
+    critical: 95
+  
+  disk_usage:
+    warning: 80
+    critical: 90
+
+# 数据库阈值
+database:
+  connection_timeout:
+    warning: 5
+    critical: 10
+  
+  response_time:
+    warning: 1000
+    critical: 5000
+
+# 存储阈值
+storage:
+  backup_size:
+    warning: 5GB
+    critical: 10GB
+  
+  docker_usage:
+    warning: 80
+    critical: 90
+
+# 性能阈值
+performance:
+  system_load:
+    warning: 2.0
+    critical: 4.0
+  
+  network_connections:
+    warning: 1000
+    critical: 2000

@@ -1,0 +1,120 @@
+2025/09/26 17:04:04 启动多数据库管理服务...
+2025/09/26 17:04:04 PostgreSQL配置: Host=localhost, Port=5432, User=szjason72, Database=jobfirst_vector
+2025/09/26 17:04:04 PostgreSQL DSN: postgres://szjason72:@localhost:5432/jobfirst_vector?sslmode=disable
+2025/09/26 17:04:04 警告: 部分数据库连接不健康
+2025/09/26 17:04:04 启动数据同步服务，工作协程数: 5
+2025/09/26 17:04:04 多数据库管理服务启动在端口: 8607
+2025/09/26 17:04:04 API端点:
+2025/09/26 17:04:04   GET  /health - 健康检查
+2025/09/26 17:04:04   GET  /api/v1/multi-database/health - 数据库健康检查
+2025/09/26 17:04:04   GET  /api/v1/multi-database/metrics - 数据库指标
+2025/09/26 17:04:04   POST /api/v1/multi-database/sync/task - 添加同步任务
+2025/09/26 17:04:04   GET  /api/v1/multi-database/sync/status - 同步状态
+2025/09/26 17:04:04   GET  /api/v1/multi-database/consistency/results - 一致性检查结果
+2025/09/26 17:04:04   POST /api/v1/multi-database/transaction/begin - 开始事务
+2025/09/26 17:04:04   POST /api/v1/multi-database/transaction/:id/commit - 提交事务
+2025/09/26 17:04:04 同步工作协程 0 启动
+2025/09/26 17:04:04 同步工作协程 2 启动
+2025/09/26 17:04:04 同步工作协程 1 启动
+2025/09/26 17:04:04 同步工作协程 4 启动
+2025/09/26 17:04:04 同步工作协程 3 启动
+2025/09/26 17:04:04 启动数据一致性检查，检查间隔: 5m0s
+2025/09/26 17:04:04 开始执行数据一致性检查
+2025/09/26 17:04:04 检查一致性规则: MySQL到PostgreSQL用户数据同步检查 (mysql_postgres_user_sync)
+
+2025/09/26 17:04:04 [32m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:186
+[0m[33m[0.580ms] [34;1m[rows:15][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+
+2025/09/26 17:04:05 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:193 [35;1mERROR: relation "users" does not exist (SQLSTATE 42P01)
+[0m[33m[1.897ms] [34;1m[rows:-][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+2025/09/26 17:04:05 检查一致性规则: MySQL到Neo4j企业数据同步检查 (mysql_neo4j_company_sync)
+
+2025/09/26 17:04:05 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:227 [35;1mError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at' at line 1
+[0m[33m[0.145ms] [34;1m[rows:-][0m MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at
+2025/09/26 17:04:05 数据一致性检查完成
+[GIN] 2025/09/26 - 17:04:07 | 200 |      93.208µs |             ::1 | GET      "/health"
+[GIN] 2025/09/26 - 17:04:44 | 200 |      59.209µs |             ::1 | GET      "/health"
+2025/09/26 17:05:04 数据库指标收集完成: &{MySQLActiveConns:1 MySQLIdleConns:1 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:05:04.999672 +0800 CST m=+60.018927835 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:06:04 数据库指标收集完成: &{MySQLActiveConns:1 MySQLIdleConns:1 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:06:04.998297 +0800 CST m=+120.018441585 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:07:04 数据库指标收集完成: &{MySQLActiveConns:1 MySQLIdleConns:1 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:06:34.999969 +0800 CST m=+150.020558001 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:08:04 数据库指标收集完成: &{MySQLActiveConns:1 MySQLIdleConns:1 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:07:34.998746 +0800 CST m=+210.020223835 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:09:04 开始执行数据一致性检查
+2025/09/26 17:09:04 检查一致性规则: MySQL到PostgreSQL用户数据同步检查 (mysql_postgres_user_sync)
+2025/09/26 17:09:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:1 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:09:04.996426 +0800 CST m=+300.019238210 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+
+2025/09/26 17:09:04 [32m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:186
+[0m[33m[2.747ms] [34;1m[rows:15][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+
+2025/09/26 17:09:04 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:193 [35;1mERROR: relation "users" does not exist (SQLSTATE 42P01)
+[0m[33m[1.038ms] [34;1m[rows:-][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+2025/09/26 17:09:04 检查一致性规则: MySQL到Neo4j企业数据同步检查 (mysql_neo4j_company_sync)
+
+2025/09/26 17:09:04 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:227 [35;1mError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at' at line 1
+[0m[33m[0.105ms] [34;1m[rows:-][0m MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at
+2025/09/26 17:09:04 数据一致性检查完成
+2025/09/26 17:10:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:09:34.997382 +0800 CST m=+330.020638001 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:11:05 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:11:05.002929 +0800 CST m=+420.027552710 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:12:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:12:04.993073 +0800 CST m=+480.018586501 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:13:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:12:34.994123 +0800 CST m=+510.020081210 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:14:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:1 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:13:34.993684 +0800 CST m=+570.020530835 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:14:04 开始执行数据一致性检查
+2025/09/26 17:14:04 检查一致性规则: MySQL到PostgreSQL用户数据同步检查 (mysql_postgres_user_sync)
+
+2025/09/26 17:14:04 [32m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:186
+[0m[33m[0.500ms] [34;1m[rows:15][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+
+2025/09/26 17:14:04 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:193 [35;1mERROR: relation "users" does not exist (SQLSTATE 42P01)
+[0m[33m[9.667ms] [34;1m[rows:-][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+2025/09/26 17:14:04 检查一致性规则: MySQL到Neo4j企业数据同步检查 (mysql_neo4j_company_sync)
+
+2025/09/26 17:14:04 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:227 [35;1mError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at' at line 1
+[0m[33m[0.227ms] [34;1m[rows:-][0m MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at
+2025/09/26 17:14:04 数据一致性检查完成
+2025/09/26 17:15:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:14:34.991692 +0800 CST m=+630.019387918 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:16:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:16:04.990945 +0800 CST m=+720.019984751 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:17:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:16:34.990135 +0800 CST m=+750.019618918 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:18:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:17:35.005161 +0800 CST m=+810.035534210 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:19:04 开始执行数据一致性检查
+2025/09/26 17:19:04 检查一致性规则: MySQL到PostgreSQL用户数据同步检查 (mysql_postgres_user_sync)
+2025/09/26 17:19:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:18:34.989374 +0800 CST m=+870.020636751 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+
+2025/09/26 17:19:04 [32m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:186
+[0m[33m[0.972ms] [34;1m[rows:15][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+
+2025/09/26 17:19:05 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:193 [35;1mERROR: relation "users" does not exist (SQLSTATE 42P01)
+[0m[33m[15.115ms] [34;1m[rows:-][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+2025/09/26 17:19:05 检查一致性规则: MySQL到Neo4j企业数据同步检查 (mysql_neo4j_company_sync)
+
+2025/09/26 17:19:05 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:227 [35;1mError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at' at line 1
+[0m[33m[0.143ms] [34;1m[rows:-][0m MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at
+2025/09/26 17:19:05 数据一致性检查完成
+2025/09/26 17:20:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:20:04.987511 +0800 CST m=+960.020098543 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:21:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:21:04.994919 +0800 CST m=+1020.028392876 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:22:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:21:34.985558 +0800 CST m=+1050.019476085 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:23:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:23:04.983487 +0800 CST m=+1140.018738210 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:24:04 开始执行数据一致性检查
+2025/09/26 17:24:04 检查一致性规则: MySQL到PostgreSQL用户数据同步检查 (mysql_postgres_user_sync)
+
+2025/09/26 17:24:04 [32m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:186
+[0m[33m[3.619ms] [34;1m[rows:15][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+
+2025/09/26 17:24:04 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:193 [35;1mERROR: relation "users" does not exist (SQLSTATE 42P01)
+[0m[33m[4.435ms] [34;1m[rows:-][0m SELECT id, username, email, created_at FROM users WHERE deleted_at IS NULL
+2025/09/26 17:24:04 检查一致性规则: MySQL到Neo4j企业数据同步检查 (mysql_neo4j_company_sync)
+
+2025/09/26 17:24:04 [31;1m/Users/szjason72/jobfirst/zervigo_pro/backend/pkg/multi-database/consistency_checker.go:227 [35;1mError 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at' at line 1
+[0m[33m[0.330ms] [34;1m[rows:-][0m MATCH (c:Company) RETURN c.id, c.name, c.industry, c.created_at
+2025/09/26 17:24:04 数据一致性检查完成
+2025/09/26 17:24:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:1 PostgreSQLActiveConns:2 PostgreSQLIdleConns:1 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:24:04.989461 +0800 CST m=+1200.025601460 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:25:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:25:04.982945 +0800 CST m=+1260.019981293 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:26:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:25:34.982299 +0800 CST m=+1290.019782626 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:27:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:27:04.981384 +0800 CST m=+1380.020201626 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:28:04 数据库指标收集完成: &{MySQLActiveConns:2 MySQLIdleConns:2 PostgreSQLActiveConns:2 PostgreSQLIdleConns:2 RedisActiveConns:1 MySQLHealthy:true PostgreSQLHealthy:true Neo4jHealthy:true RedisHealthy:true LastCheckTime:2025-09-26 17:27:34.981064 +0800 CST m=+1410.020326085 MySQLErrors:0 PostgreSQLErrors:0 Neo4jErrors:0 RedisErrors:0}
+2025/09/26 17:28:46 收到关闭信号，正在优雅关闭...
+2025/09/26 17:28:46 停止数据同步服务
+2025/09/26 17:28:46 同步工作协程 0 停止
+2025/09/26 17:28:46 同步工作协程 3 停止
+2025/09/26 17:28:46 同步工作协程 4 停止
+2025/09/26 17:28:46 同步工作协程 1 停止
+2025/09/26 17:28:46 同步工作协程 2 停止
+2025/09/26 17:28:46 多数据库管理服务已关闭

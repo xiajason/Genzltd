@@ -1,0 +1,177 @@
+{
+  "migration_summary": {
+    "total_steps": 15,
+    "completed_steps": 0,
+    "failed_steps": 7,
+    "pending_steps": 8,
+    "success_rate": 0.0,
+    "timestamp": "2025-10-04T10:45:42.179362"
+  },
+  "migration_steps": [
+    {
+      "step_id": "create_mbti_types",
+      "description": "创建MBTI类型表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_types (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    type_code VARCHAR(4) NOT NULL UNIQUE,\n                    type_name VARCHAR(50) NOT NULL,\n                    description TEXT,\n                    characteristics TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_types;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 0.000179
+    },
+    {
+      "step_id": "create_flowers",
+      "description": "创建花卉信息表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS flowers (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    name VARCHAR(100) NOT NULL,\n                    scientific_name VARCHAR(100),\n                    color VARCHAR(50),\n                    season VARCHAR(20),\n                    meaning TEXT,\n                    personality_traits TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS flowers;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 3.9e-05
+    },
+    {
+      "step_id": "create_mbti_flower_mappings",
+      "description": "创建MBTI-花卉映射表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_flower_mappings (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    mbti_type_id INT NOT NULL,\n                    flower_id INT NOT NULL,\n                    match_score DECIMAL(3,2) DEFAULT 0.00,\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (mbti_type_id) REFERENCES mbti_types(id),\n                    FOREIGN KEY (flower_id) REFERENCES flowers(id),\n                    UNIQUE KEY unique_mapping (mbti_type_id, flower_id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_flower_mappings;",
+      "dependencies": [
+        "create_mbti_types",
+        "create_flowers"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_compatibility_matrix",
+      "description": "创建兼容性矩阵表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_compatibility_matrix (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    type_a_id INT NOT NULL,\n                    type_b_id INT NOT NULL,\n                    compatibility_score DECIMAL(3,2) DEFAULT 0.00,\n                    relationship_type VARCHAR(50),\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (type_a_id) REFERENCES mbti_types(id),\n                    FOREIGN KEY (type_b_id) REFERENCES mbti_types(id),\n                    UNIQUE KEY unique_compatibility (type_a_id, type_b_id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_compatibility_matrix;",
+      "dependencies": [
+        "create_mbti_types"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_careers",
+      "description": "创建职业信息表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS careers (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    name VARCHAR(100) NOT NULL,\n                    category VARCHAR(50),\n                    description TEXT,\n                    required_skills TEXT,\n                    salary_range VARCHAR(50),\n                    growth_prospect VARCHAR(20),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS careers;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 3.2e-05
+    },
+    {
+      "step_id": "create_mbti_career_matches",
+      "description": "创建MBTI-职业匹配表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_career_matches (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    mbti_type_id INT NOT NULL,\n                    career_id INT NOT NULL,\n                    match_score DECIMAL(3,2) DEFAULT 0.00,\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (mbti_type_id) REFERENCES mbti_types(id),\n                    FOREIGN KEY (career_id) REFERENCES careers(id),\n                    UNIQUE KEY unique_career_match (mbti_type_id, career_id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_career_matches;",
+      "dependencies": [
+        "create_mbti_types",
+        "create_careers"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_user_mbti_reports",
+      "description": "创建用户MBTI报告表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS user_mbti_reports (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    user_id VARCHAR(100) NOT NULL,\n                    mbti_type_id INT NOT NULL,\n                    test_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    confidence_score DECIMAL(3,2) DEFAULT 0.00,\n                    report_data JSON,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (mbti_type_id) REFERENCES mbti_types(id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS user_mbti_reports;",
+      "dependencies": [
+        "create_mbti_types"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_api_service_configs",
+      "description": "创建API服务配置表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS api_service_configs (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    service_name VARCHAR(100) NOT NULL UNIQUE,\n                    api_url VARCHAR(500),\n                    api_key VARCHAR(500),\n                    rate_limit INT DEFAULT 1000,\n                    status VARCHAR(20) DEFAULT 'active',\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS api_service_configs;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 3.1e-05
+    },
+    {
+      "step_id": "create_api_call_logs",
+      "description": "创建API调用日志表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS api_call_logs (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    service_id INT NOT NULL,\n                    request_data JSON,\n                    response_data JSON,\n                    status_code INT,\n                    execution_time DECIMAL(10,3),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (service_id) REFERENCES api_service_configs(id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS api_call_logs;",
+      "dependencies": [
+        "create_api_service_configs"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_mbti_dimension_scores",
+      "description": "创建MBTI维度分数表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_dimension_scores (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    user_id VARCHAR(100) NOT NULL,\n                    dimension VARCHAR(2) NOT NULL,\n                    score DECIMAL(5,2) NOT NULL,\n                    test_session_id VARCHAR(100),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_dimension_scores;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 3.1e-05
+    },
+    {
+      "step_id": "create_mbti_question_banks",
+      "description": "创建MBTI题库表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_question_banks (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    bank_name VARCHAR(100) NOT NULL,\n                    version VARCHAR(20) NOT NULL,\n                    total_questions INT NOT NULL,\n                    description TEXT,\n                    is_active BOOLEAN DEFAULT TRUE,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_question_banks;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 2.9e-05
+    },
+    {
+      "step_id": "create_mbti_questions",
+      "description": "创建MBTI题目表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_questions (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    question_bank_id INT NOT NULL,\n                    question_text TEXT NOT NULL,\n                    dimension VARCHAR(2) NOT NULL,\n                    question_type VARCHAR(20) DEFAULT 'standard',\n                    options JSON,\n                    difficulty VARCHAR(10) DEFAULT 'medium',\n                    category VARCHAR(50),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (question_bank_id) REFERENCES mbti_question_banks(id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_questions;",
+      "dependencies": [
+        "create_mbti_question_banks"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_mbti_question_categories",
+      "description": "创建MBTI题目分类表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_question_categories (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    category_name VARCHAR(50) NOT NULL UNIQUE,\n                    description TEXT,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_question_categories;",
+      "dependencies": [],
+      "status": "failed",
+      "execution_time": 3.8e-05
+    },
+    {
+      "step_id": "create_mbti_test_sessions",
+      "description": "创建MBTI测试会话表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS mbti_test_sessions (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    session_id VARCHAR(100) NOT NULL UNIQUE,\n                    user_id VARCHAR(100) NOT NULL,\n                    question_bank_id INT NOT NULL,\n                    status VARCHAR(20) DEFAULT 'active',\n                    start_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    end_time TIMESTAMP NULL,\n                    total_questions INT DEFAULT 0,\n                    answered_questions INT DEFAULT 0,\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (question_bank_id) REFERENCES mbti_question_banks(id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS mbti_test_sessions;",
+      "dependencies": [
+        "create_mbti_question_banks"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    },
+    {
+      "step_id": "create_user_mbti_responses",
+      "description": "创建用户MBTI回答表",
+      "sql": "\n                CREATE TABLE IF NOT EXISTS user_mbti_responses (\n                    id INT PRIMARY KEY AUTO_INCREMENT,\n                    session_id VARCHAR(100) NOT NULL,\n                    question_id INT NOT NULL,\n                    answer VARCHAR(10) NOT NULL,\n                    response_time DECIMAL(10,3),\n                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                    FOREIGN KEY (session_id) REFERENCES mbti_test_sessions(session_id),\n                    FOREIGN KEY (question_id) REFERENCES mbti_questions(id)\n                );\n                ",
+      "rollback_sql": "DROP TABLE IF EXISTS user_mbti_responses;",
+      "dependencies": [
+        "create_mbti_test_sessions",
+        "create_mbti_questions"
+      ],
+      "status": "pending",
+      "execution_time": 0.0
+    }
+  ],
+  "recommendations": [
+    "🔧 修复失败的迁移步骤",
+    "📊 检查数据库连接",
+    "🔍 检查SQL语法",
+    "📈 重新执行迁移"
+  ],
+  "next_steps": [
+    "1. 修复失败的迁移步骤",
+    "2. 重新执行迁移",
+    "3. 验证迁移结果"
+  ]
+}

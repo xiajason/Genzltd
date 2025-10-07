@@ -1,0 +1,4 @@
+sanic>=23.0.0
+python-multipart
+aiofiles
+pathlib

@@ -1,0 +1,4 @@
+这是一个测试简历文件内容
+姓名: 张三
+职位: 软件工程师
+技能: Python, JavaScript, React

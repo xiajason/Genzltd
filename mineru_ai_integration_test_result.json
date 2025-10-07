@@ -1,0 +1,37 @@
+{
+  "mineru_service": {
+    "status": "success",
+    "health": {
+      "status": "healthy",
+      "service": "mineru-service",
+      "current_tasks": 0,
+      "max_concurrent": 2
+    }
+  },
+  "deepseek_api": {
+    "status": "success",
+    "content": "你好！我是DeepSeek，由深度求索公司创造的AI助手，很高兴为你服务！😊\n\n**关于我的基本信息：**\n- 我是一个纯文本模型，支持文件上传功能（图像、txt、pdf、ppt、word、excel等）\n- 我完全免费使用，没有收费计划\n- 上下文长度达128K\n- 支持联网搜索（需要手动开启）\n- 可通过官方应用商店下载App\n\n**API连接状态：**",
+    "usage": {
+      "prompt_tokens": 14,
+      "completion_tokens": 99,
+      "total_tokens": 113,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 14
+    }
+  },
+  "resume_analysis": {
+    "status": "error",
+    "error": "简历分析异常: "
+  },
+  "career_prediction": {
+    "status": "error",
+    "error": "职业预测异常: "
+  },
+  "job_matching": {
+    "status": "error",
+    "error": "职位匹配异常: "
+  }
+}

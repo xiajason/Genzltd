@@ -1,0 +1,45 @@
+{
+  "test_time": "2025-10-07T00:06:04.906244",
+  "server_ip": "47.115.168.107",
+  "connection_tests": {
+    "MySQL": {
+      "status": "failed",
+      "error": "(2013, 'Lost connection to MySQL server during query')"
+    },
+    "PostgreSQL": {
+      "status": "failed",
+      "error": "[Errno 54] Connection reset by peer"
+    },
+    "Redis": {
+      "status": "failed",
+      "error": "Error while reading from 47.115.168.107:6379 : (54, 'Connection reset by peer')"
+    },
+    "Neo4j": {
+      "status": "failed",
+      "error": "Couldn't connect to 47.115.168.107:7687 (resolved to ('47.115.168.107:7687',)):\nFailed to read four byte Bolt handshake response from server ResolvedIPv4Address(('47.115.168.107', 7687)) (deadline Deadline(timeout=60.0))"
+    },
+    "Elasticsearch": {
+      "status": "failed",
+      "error": "[Errno 54] Connection reset by peer"
+    },
+    "Weaviate": {
+      "status": "failed",
+      "error": "[Errno 54] Connection reset by peer"
+    }
+  },
+  "consistency_tests": {
+    "user_data_consistency": {
+      "error": "(2013, 'Lost connection to MySQL server during query')",
+      "consistent": false
+    }
+  },
+  "performance_tests": {},
+  "summary": {
+    "total_databases": 6,
+    "successful_connections": 0,
+    "failed_connections": 6,
+    "success_rate": "0.0%",
+    "test_duration": "0:00:45.052329",
+    "strict_test_passed": false
+  }
+}

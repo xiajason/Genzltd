@@ -1,0 +1,54 @@
+{
+  "test_info": {
+    "start_time": "2025-10-07T10:41:54.314754",
+    "end_time": "2025-10-07T10:42:47.440799",
+    "server_ip": "47.115.168.107",
+    "total_databases": 6,
+    "successful_tests": 3,
+    "success_rate": "50.0%"
+  },
+  "database_results": {
+    "MySQL": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test\n1"
+    },
+    "PostgreSQL": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "test \n------\n    1\n(1 row)"
+    },
+    "Redis": {
+      "status": "success",
+      "reason": "Connection successful",
+      "details": "PONG"
+    },
+    "Neo4j": {
+      "status": "failed",
+      "reason": "Connection failed",
+      "details": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nConnection refused\n"
+    },
+    "Elasticsearch": {
+      "status": "failed",
+      "reason": "Connection failed",
+      "details": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\n"
+    },
+    "Weaviate": {
+      "status": "failed",
+      "reason": "Connection failed",
+      "details": "Emulate Docker CLI using podman. Create /etc/containers/nodocker to quiet msg.\nError: runc: exec failed: unable to start container process: exec: \"curl\": executable file not found in $PATH: OCI runtime attempted to invoke a command that was not found\n"
+    }
+  },
+  "system_resources": {
+    "memory": "              total        used        free      shared  buff/cache   available\nMem:          1.8Gi       1.5Gi       180Mi        15Mi       292Mi       317Mi\nSwap:            0B          0B          0B\n",
+    "docker_stats": "Failed to get stats"
+  },
+  "optimization_status": {
+    "Neo4j": "内存优化完成 (减少45.7%)",
+    "Elasticsearch": "JVM参数优化完成 (减少68.5%)",
+    "MySQL": "密码认证修复完成",
+    "PostgreSQL": "密码认证修复完成",
+    "Redis": "密码认证修复完成",
+    "Weaviate": "连接正常"
+  }
+}

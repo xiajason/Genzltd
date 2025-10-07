@@ -1,0 +1,92 @@
+2025-09-28 14:49:21,609 - __main__ - INFO - 启动Future Resume AI服务...
+[2025-09-28 14:49:21 +0800] [16378] [DEBUG] 
+
+                 Sanic
+         Build Fast. Run Fast.
+
+
+2025-09-28 14:49:21,621 - sanic.root - DEBUG - 
+
+                 Sanic
+         Build Fast. Run Fast.
+
+
+[2025-09-28 14:49:21 +0800] [16378] [INFO] Sanic v23.12.1
+2025-09-28 14:49:21,621 - sanic.root - INFO - Sanic v23.12.1
+[2025-09-28 14:49:21 +0800] [16378] [INFO] Goin' Fast @ http://0.0.0.0:7511
+2025-09-28 14:49:21,621 - sanic.root - INFO - Goin' Fast @ http://0.0.0.0:7511
+[2025-09-28 14:49:21 +0800] [16378] [INFO] app: future_resume_ai
+2025-09-28 14:49:21,621 - sanic.root - INFO - app: future_resume_ai
+[2025-09-28 14:49:21 +0800] [16378] [INFO] mode: debug, single worker
+2025-09-28 14:49:21,621 - sanic.root - INFO - mode: debug, single worker
+[2025-09-28 14:49:21 +0800] [16378] [INFO] server: sanic, HTTP/1.1
+2025-09-28 14:49:21,621 - sanic.root - INFO - server: sanic, HTTP/1.1
+[2025-09-28 14:49:21 +0800] [16378] [INFO] python: 3.12.11
+2025-09-28 14:49:21,621 - sanic.root - INFO - python: 3.12.11
+[2025-09-28 14:49:21 +0800] [16378] [INFO] platform: macOS-15.6.1-arm64-arm-64bit
+2025-09-28 14:49:21,621 - sanic.root - INFO - platform: macOS-15.6.1-arm64-arm-64bit
+[2025-09-28 14:49:21 +0800] [16378] [INFO] packages: sanic-routing==23.12.0
+2025-09-28 14:49:21,621 - sanic.root - INFO - packages: sanic-routing==23.12.0
+[2025-09-28 14:49:21 +0800] [16378] [ERROR] Experienced exception while trying to serve
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/socket.py", line 110, in configure_socket
+    sock = bind_socket(
+           ^^^^^^^^^^^^
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/socket.py", line 33, in bind_socket
+    sock.bind(location)
+OSError: [Errno 48] Address already in use
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/mixins/startup.py", line 1048, in serve
+    configure_socket(server_info.settings)
+  File "/Users/szjason72/zervi-basic/looma_crm_ai_refactoring/venv/lib/python3.12/site-packages/sanic/server/socket.py", line [2025-09-28 14:49:26 +0800] - (sanic.access)[INFO][127.0.0.1:50466]: GET http://localhost:7511/health  200 131
+2025-09-28 14:49:26,462 - sanic.access - INFO - 
+[2025-09-28 15:27:34 +0800] - (sanic.access)[INFO][127.0.0.1:49729]: GET http://localhost:7511/health  200 131
+2025-09-28 15:27:34,398 - sanic.access - INFO - 
+[2025-09-28 15:36:09 +0800] - (sanic.access)[INFO][127.0.0.1:50148]: GET http://localhost:7511/health  200 131
+2025-09-28 15:36:09,115 - sanic.access - INFO - 
+[2025-09-28 15:40:48 +0800] - (sanic.access)[INFO][127.0.0.1:49405]: GET http://localhost:7511/health  200 131
+2025-09-28 15:40:48,963 - sanic.access - INFO - 
+[2025-09-28 15:44:26 +0800] - (sanic.access)[INFO][127.0.0.1:62804]: GET http://localhost:7511/health  200 131
+2025-09-28 15:44:26,360 - sanic.access - INFO - 
+[2025-09-28 15:44:26 +0800] - (sanic.access)[INFO][127.0.0.1:62809]: GET http://localhost:7511/health  200 131
+2025-09-28 15:44:26,385 - sanic.access - INFO - 
+[2025-09-28 15:47:34 +0800] - (sanic.access)[INFO][127.0.0.1:51428]: GET http://localhost:7511/health  200 131
+2025-09-28 15:47:34,637 - sanic.access - INFO - 
+[2025-09-28 15:47:34 +0800] - (sanic.access)[INFO][127.0.0.1:51473]: GET http://localhost:7511/health  200 131
+2025-09-28 15:47:34,717 - sanic.access - INFO - 
+[2025-09-28 16:01:47 +0800] - (sanic.access)[INFO][127.0.0.1:52249]: GET http://localhost:7511/health  200 131
+2025-09-28 16:01:47,104 - sanic.access - INFO - 
+[2025-09-28 16:01:47 +0800] - (sanic.access)[INFO][127.0.0.1:52294]: GET http://localhost:7511/health  200 131
+2025-09-28 16:01:47,200 - sanic.access - INFO - 
+[2025-09-28 16:07:52 +0800] - (sanic.access)[INFO][127.0.0.1:59911]: GET http://localhost:7511/health  200 131
+2025-09-28 16:07:52,036 - sanic.access - INFO - 
+[2025-09-28 16:23:58 +0800] - (sanic.access)[INFO][127.0.0.1:60143]: GET http://localhost:7511/health  200 131
+2025-09-28 16:23:58,190 - sanic.access - INFO - 
+[2025-09-28 16:28:48 +0800] - (sanic.access)[INFO][127.0.0.1:61899]: GET http://localhost:7511/health  200 131
+2025-09-28 16:28:48,606 - sanic.access - INFO - 
+[2025-09-28 16:36:02 +0800] - (sanic.access)[INFO][127.0.0.1:56095]: GET http://localhost:7511/health  200 131
+2025-09-28 16:36:02,867 - sanic.access - INFO - 
+[2025-09-28 16:38:54 +0800] - (sanic.access)[INFO][127.0.0.1:55462]: GET http://localhost:7511/health  200 131
+2025-09-28 16:38:54,771 - sanic.access - INFO - 
+[2025-09-28 19:58:11 +0800] - (sanic.access)[INFO][127.0.0.1:64385]: GET http://localhost:7511/health  200 131
+2025-09-28 19:58:11,809 - sanic.access - INFO - 
+[2025-09-28 19:59:19 +0800] - (sanic.access)[INFO][127.0.0.1:51106]: GET http://localhost:7511/health  200 131
+2025-09-28 19:59:19,733 - sanic.access - INFO - 
+[2025-09-28 20:15:12 +0800] - (sanic.access)[INFO][127.0.0.1:64256]: GET http://localhost:7511/health  200 131
+2025-09-28 20:15:12,727 - sanic.access - INFO - 
+[2025-09-28 20:15:24 +0800] [14485] [INFO] Received signal SIGTERM. Shutting down.
+2025-09-28 20:15:24,189 - sanic.root - INFO - Received signal SIGTERM. Shutting down.
+[2025-09-28 20:15:24 +0800] [14485] [DEBUG] [34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[14507][0m
+2025-09-28 20:15:24,189 - sanic.root - DEBUG - [34mTerminating a process: [1m[38;2;255;13;104mSanic-Server-0-0 [34m[14507][0m
+[2025-09-28 20:15:24 +0800] [14507] [INFO] Stopping worker [14507]
+2025-09-28 20:15:24,190 - sanic.server - INFO - Stopping worker [14507]
+[2025-09-28 20:15:24 +0800] [14507] [INFO] Worker complete [14507]
+2025-09-28 20:15:24,193 - sanic.server - INFO - Worker complete [14507]
+[2025-09-28 20:15:24 +0800] [14485] [INFO] Server Stopped
+2025-09-28 20:15:24,295 - sanic.root - INFO - Server Stopped
+[2025-09-28 20:15:24 +0800] [14485] [DEBUG] Zài jiàn
+2025-09-28 20:15:24,319 - sanic.root - DEBUG - Zài jiàn
+ with a value

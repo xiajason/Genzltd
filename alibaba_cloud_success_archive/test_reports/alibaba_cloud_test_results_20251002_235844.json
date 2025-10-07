@@ -1,0 +1,194 @@
+{
+  "timestamp": "2025-10-02T23:58:44.830720",
+  "server_ip": "47.115.168.107",
+  "test_name": "阿里云生产环境端到端测试",
+  "environment": "production",
+  "summary": {
+    "total_tests": 19,
+    "passed": 16,
+    "failed": 3,
+    "success_rate": "84.2%"
+  },
+  "test_results": {
+    "connectivity": {
+      "total_tests": 7,
+      "passed": 6,
+      "failed": 1,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 1619,
+          "content_type": "text/html"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "connectivity",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        },
+        {
+          "service": "Prometheus监控",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 23,
+          "content_type": "text/plain; charset=utf-8"
+        },
+        {
+          "service": "Grafana面板",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 70,
+          "content_type": "application/json; charset=UTF-8"
+        },
+        {
+          "service": "Node Exporter",
+          "test": "connectivity",
+          "status": "passed",
+          "http_code": 200,
+          "response_size": 64970,
+          "content_type": "text/plain; version=0.0.4; charset=utf-8"
+        }
+      ]
+    },
+    "production_services": {
+      "total_tests": 4,
+      "passed": 3,
+      "failed": 1,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.023141
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.01979
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "production_service",
+          "status": "passed",
+          "content_type": "text/html",
+          "content_length": 1619,
+          "response_time": 0.022007
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "production_service",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    },
+    "monitoring_system": {
+      "total_tests": 3,
+      "passed": 3,
+      "failed": 0,
+      "details": [
+        {
+          "service": "Prometheus",
+          "test": "health_check",
+          "status": "passed",
+          "response": "Prometheus is Healthy."
+        },
+        {
+          "service": "Grafana",
+          "test": "health_check",
+          "status": "passed",
+          "http_code": 200
+        },
+        {
+          "service": "Node Exporter",
+          "test": "metrics_collection",
+          "status": "passed",
+          "metrics_count": 609
+        }
+      ]
+    },
+    "integration": {
+      "total_tests": 1,
+      "passed": 1,
+      "failed": 0,
+      "details": [
+        {
+          "service": "Production Integration",
+          "test": "all_services_accessible",
+          "status": "partial_success",
+          "services_count": 7,
+          "successful_services": 6,
+          "services_status": {
+            "LoomaCRM生产服务": true,
+            "Zervigo Future版": true,
+            "Zervigo DAO版": true,
+            "Zervigo 区块链版": false,
+            "Prometheus监控": true,
+            "Grafana面板": true,
+            "Node Exporter": true
+          }
+        }
+      ]
+    },
+    "performance": {
+      "total_tests": 4,
+      "passed": 3,
+      "failed": 1,
+      "details": [
+        {
+          "service": "LoomaCRM生产服务",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.023615,
+          "performance_level": "excellent"
+        },
+        {
+          "service": "Zervigo Future版",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.025996,
+          "performance_level": "excellent"
+        },
+        {
+          "service": "Zervigo DAO版",
+          "test": "response_time",
+          "status": "passed",
+          "response_time": 0.024679,
+          "performance_level": "excellent"
+        },
+        {
+          "service": "Zervigo 区块链版",
+          "test": "response_time",
+          "status": "failed",
+          "error": "('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
+        }
+      ]
+    }
+  }
+}

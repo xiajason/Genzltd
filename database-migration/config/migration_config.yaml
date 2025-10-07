@@ -1,0 +1,97 @@
+# 数据库迁移配置
+# 创建时间: 2025年1月27日
+# 版本: v1.0
+
+# 源数据库配置
+source:
+  mysql:
+    host: localhost
+    port: 3306
+    username: root
+    password: your_password
+    database: mysql
+  
+  postgresql:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: your_password
+    database: postgres
+  
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  
+  mongodb:
+    host: localhost
+    port: 27017
+    database: admin
+  
+  neo4j:
+    host: localhost
+    port: 7474
+    username: neo4j
+    password: your_password
+
+# 目标数据库配置
+target:
+  mysql:
+    host: localhost
+    port: 3306
+    username: root
+    password: your_password
+    database: unified_database
+  
+  postgresql:
+    host: localhost
+    port: 5432
+    username: postgres
+    password: your_password
+    database: unified_analysis
+  
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+  
+  mongodb:
+    host: localhost
+    port: 27017
+    database: unified_documents
+  
+  neo4j:
+    host: localhost
+    port: 7474
+    username: neo4j
+    password: your_password
+    database: unified_graph
+
+# 迁移策略
+migration_strategy:
+  backup_before_migration: true
+  validate_after_migration: true
+  rollback_on_failure: true
+  parallel_migration: false
+  
+# 数据映射
+data_mapping:
+  looma_crm:
+    source_db: looma_crm
+    target_db: unified_database
+    tables: [users, companies, jobs, applications]
+  
+  zervigo:
+    source_db: zervigo
+    target_db: unified_database
+    tables: [resumes, profiles, matches]
+  
+  dao:
+    source_db: dao
+    target_db: unified_database
+    tables: [proposals, votes, governance]
+  
+  blockchain:
+    source_db: blockchain
+    target_db: unified_database
+    tables: [transactions, blocks, contracts]

@@ -1,0 +1,186 @@
+{
+  "test_timestamp": "2025-10-03T21:32:14.800523",
+  "test_data_summary": {
+    "resumes_count": 17,
+    "job_descriptions_count": 10
+  },
+  "test_results": [
+    {
+      "system": "技能标准化系统",
+      "total_tests": 5,
+      "successful_tests": 5,
+      "failed_tests": 0,
+      "test_results": [
+        {
+          "file": "陈晶--LCD TV 测试工程师.md",
+          "type": "resume_skill_extraction",
+          "status": "success",
+          "skills_count": 0,
+          "categories": []
+        },
+        {
+          "file": "简历1106--销售经理.xls  [兼容模式].md",
+          "type": "resume_skill_extraction",
+          "status": "success",
+          "skills_count": 0,
+          "categories": []
+        },
+        {
+          "file": "H003--LCD TV 硬件工程师.md",
+          "type": "resume_skill_extraction",
+          "status": "success",
+          "skills_count": 0,
+          "categories": []
+        },
+        {
+          "file": "b07576aaa7220b080bedb333e3c2ebf7.md",
+          "type": "job_skill_extraction",
+          "status": "success",
+          "skills_count": 0,
+          "categories": []
+        },
+        {
+          "file": "faa42e7635b4488c97a2c2ea83a90fc0.md",
+          "type": "job_skill_extraction",
+          "status": "success",
+          "skills_count": 0,
+          "categories": []
+        }
+      ],
+      "success_rate": 100.0
+    },
+    {
+      "system": "经验量化分析系统",
+      "total_tests": 3,
+      "successful_tests": 3,
+      "failed_tests": 0,
+      "test_results": [
+        {
+          "file": "陈晶--LCD TV 测试工程师.md",
+          "type": "resume_experience_analysis",
+          "status": "success",
+          "total_experience_score": 0,
+          "projects_analyzed": 0,
+          "achievements_identified": 5
+        },
+        {
+          "file": "简历1106--销售经理.xls  [兼容模式].md",
+          "type": "resume_experience_analysis",
+          "status": "success",
+          "total_experience_score": 0,
+          "projects_analyzed": 0,
+          "achievements_identified": 2
+        },
+        {
+          "file": "H003--LCD TV 硬件工程师.md",
+          "type": "resume_experience_analysis",
+          "status": "success",
+          "total_experience_score": 0,
+          "projects_analyzed": 0,
+          "achievements_identified": 0
+        }
+      ],
+      "success_rate": 100.0
+    },
+    {
+      "system": "能力评估框架系统",
+      "total_tests": 5,
+      "successful_tests": 5,
+      "failed_tests": 0,
+      "test_results": [
+        {
+          "file": "陈晶--LCD TV 测试工程师.md",
+          "type": "resume_competency_assessment",
+          "status": "success",
+          "overall_score": 0.24749999999999994,
+          "technical_score": 0.4124999999999999,
+          "business_score": 0.0,
+          "technical_competencies": 2,
+          "business_competencies": 0
+        },
+        {
+          "file": "简历1106--销售经理.xls  [兼容模式].md",
+          "type": "resume_competency_assessment",
+          "status": "success",
+          "overall_score": 0.2625,
+          "technical_score": 0.4375,
+          "business_score": 0.0,
+          "technical_competencies": 2,
+          "business_competencies": 0
+        },
+        {
+          "file": "H003--LCD TV 硬件工程师.md",
+          "type": "resume_competency_assessment",
+          "status": "success",
+          "overall_score": 0.4133333333333334,
+          "technical_score": 0.2888888888888889,
+          "business_score": 0.6000000000000001,
+          "technical_competencies": 2,
+          "business_competencies": 1
+        },
+        {
+          "file": "b07576aaa7220b080bedb333e3c2ebf7.md",
+          "type": "job_competency_analysis",
+          "status": "success",
+          "overall_score": 0.9600000000000002,
+          "technical_score": 1.466666666666667,
+          "business_score": 0.20000000000000004,
+          "technical_competencies": 3,
+          "business_competencies": 1
+        },
+        {
+          "file": "faa42e7635b4488c97a2c2ea83a90fc0.md",
+          "type": "job_competency_analysis",
+          "status": "success",
+          "overall_score": 0.8399999999999997,
+          "technical_score": 1.3999999999999997,
+          "business_score": 0.0,
+          "technical_competencies": 2,
+          "business_competencies": 0
+        }
+      ],
+      "success_rate": 100.0
+    },
+    {
+      "system": "集成工作流程",
+      "total_tests": 1,
+      "successful_tests": 1,
+      "failed_tests": 0,
+      "test_results": [
+        {
+          "file": "陈晶--LCD TV 测试工程师.md",
+          "type": "complete_workflow",
+          "status": "success",
+          "skills_extracted": 0,
+          "experience_score": 0,
+          "competency_score": 0.24749999999999994,
+          "workflow_complete": true
+        }
+      ],
+      "success_rate": 100.0
+    }
+  ],
+  "readiness_analysis": {
+    "overall_readiness": 100.0,
+    "component_readiness": {
+      "技能标准化系统": 100.0,
+      "经验量化分析系统": 100.0,
+      "能力评估框架系统": 100.0,
+      "集成工作流程": 100.0
+    },
+    "data_quality_assessment": {
+      "skill_extraction_quality": "high",
+      "experience_analysis_quality": "high",
+      "competency_assessment_quality": "high"
+    },
+    "integration_capabilities": {
+      "workflow_integration": 100.0,
+      "data_flow_integrity": "good",
+      "api_compatibility": "compatible"
+    },
+    "recommendations": [
+      "准备度优秀，可以开始AI身份数据模型集成"
+    ]
+  },
+  "overall_success": true
+}

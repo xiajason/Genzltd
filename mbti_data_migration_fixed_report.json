@@ -1,0 +1,152 @@
+{
+  "test_summary": {
+    "total_tests": 12,
+    "passed_tests": 11,
+    "failed_tests": 1,
+    "success_rate": 91.66666666666666,
+    "test_timestamp": "2025-10-04T10:59:54.457401"
+  },
+  "test_results": [
+    {
+      "test_name": "test_mbti_types_consistency",
+      "status": "passed",
+      "message": "MBTI类型数量正确: 16",
+      "details": {
+        "expected": 16,
+        "actual": 16
+      },
+      "timestamp": "2025-10-04T10:59:54.457148",
+      "execution_time": 0.000176
+    },
+    {
+      "test_name": "test_mbti_types_completeness",
+      "status": "passed",
+      "message": "所有MBTI类型都存在",
+      "details": {
+        "total_types": 16
+      },
+      "timestamp": "2025-10-04T10:59:54.457245",
+      "execution_time": 0.000273
+    },
+    {
+      "test_name": "test_flowers_consistency",
+      "status": "passed",
+      "message": "花卉数量正确: 8",
+      "details": {
+        "actual_count": 8
+      },
+      "timestamp": "2025-10-04T10:59:54.457259",
+      "execution_time": 1.2e-05
+    },
+    {
+      "test_name": "test_flowers_integrity",
+      "status": "passed",
+      "message": "花卉信息完整性检查通过",
+      "details": {
+        "null_names": 0
+      },
+      "timestamp": "2025-10-04T10:59:54.457275",
+      "execution_time": 2.7e-05
+    },
+    {
+      "test_name": "test_mbti_flower_mappings_consistency",
+      "status": "passed",
+      "message": "MBTI-花卉映射数量正确: 8",
+      "details": {
+        "actual_count": 8
+      },
+      "timestamp": "2025-10-04T10:59:54.457286",
+      "execution_time": 1e-05
+    },
+    {
+      "test_name": "test_mbti_flower_mappings_fk",
+      "status": "passed",
+      "message": "MBTI-花卉映射外键约束正确",
+      "details": {
+        "invalid_foreign_keys": 0
+      },
+      "timestamp": "2025-10-04T10:59:54.457310",
+      "execution_time": 3.3e-05
+    },
+    {
+      "test_name": "test_compatibility_matrix_consistency",
+      "status": "failed",
+      "message": "兼容性矩阵数量不正确: 期望256，实际8",
+      "details": {
+        "expected": 256,
+        "actual": 8
+      },
+      "timestamp": "2025-10-04T10:59:54.457321",
+      "execution_time": 1e-05
+    },
+    {
+      "test_name": "test_careers_consistency",
+      "status": "passed",
+      "message": "职业数量正确: 8",
+      "details": {
+        "actual_count": 8
+      },
+      "timestamp": "2025-10-04T10:59:54.457332",
+      "execution_time": 9e-06
+    },
+    {
+      "test_name": "test_api_configs_consistency",
+      "status": "passed",
+      "message": "API配置数量正确: 3",
+      "details": {
+        "actual_count": 3
+      },
+      "timestamp": "2025-10-04T10:59:54.457341",
+      "execution_time": 9e-06
+    },
+    {
+      "test_name": "test_data_integrity",
+      "status": "passed",
+      "message": "所有必需表都存在",
+      "details": {
+        "total_tables": 17,
+        "expected_tables": 15
+      },
+      "timestamp": "2025-10-04T10:59:54.457361",
+      "execution_time": 1.8e-05
+    },
+    {
+      "test_name": "test_foreign_key_consistency",
+      "status": "passed",
+      "message": "所有外键关系正确",
+      "details": {
+        "invalid_mappings": 0
+      },
+      "timestamp": "2025-10-04T10:59:54.457369",
+      "execution_time": 8e-06
+    },
+    {
+      "test_name": "test_data_completeness",
+      "status": "passed",
+      "message": "数据完整性良好: 100.0%",
+      "details": {
+        "completeness_score": 5,
+        "total_checks": 5,
+        "percentage": 100.0,
+        "mbti_count": 16,
+        "flowers_count": 8,
+        "mappings_count": 8,
+        "careers_count": 8,
+        "api_count": 3
+      },
+      "timestamp": "2025-10-04T10:59:54.457397",
+      "execution_time": 2.6e-05
+    }
+  ],
+  "recommendations": [
+    "🔧 修复数据一致性问题",
+    "📊 完善缺失的数据",
+    "🔍 检查外键约束",
+    "📈 优化数据质量"
+  ],
+  "next_steps": [
+    "1. 修复数据一致性问题",
+    "2. 重新运行数据一致性检查",
+    "3. 验证修复结果"
+  ]
+}
