@@ -16,6 +16,8 @@ pandas==2.1.4
 sentence-transformers==2.2.2
 scikit-learn==1.3.2
 huggingface-hub==0.16.4
+# 修复PyYAML版本冲突
+PyYAML>=6.0.0
 
 # 向量化和嵌入相关
 # fastembed==0.7.3  # 暂时移除，与huggingface-hub版本冲突
