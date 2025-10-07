@@ -142,6 +142,8 @@ jobs:
           source: "zervigo_future/backend/unified-auth"
           target: "${{ env.DEPLOY_PATH }}/zervigo/"
           strip_components: 2
+          timeout: 120s
+          command_timeout: 120s
       
       - name: Start Zervigo Service
         uses: appleboy/ssh-action@v1.0.3
@@ -245,6 +247,8 @@ jobs:
           source: "zervigo_future/ai-services/ai-service/*"
           target: "${{ env.DEPLOY_PATH }}/ai-service-1/current/"
           strip_components: 3
+          timeout: 120s
+          command_timeout: 120s
       
       - name: Setup and Start AI Service 1
         uses: appleboy/ssh-action@v1.0.3
@@ -261,11 +265,15 @@ jobs:
             python3.11 -m venv venv || python3 -m venv venv
             source venv/bin/activate
             
+            # 配置pip使用阿里云镜像（加速下载）
+            pip config set global.index-url https://p4wqihpo.mirror.aliyuncs.com/pypi/simple
+            pip config set install.trusted-host p4wqihpo.mirror.aliyuncs.com
+            
             # 升级pip
             pip install --upgrade pip
             
-            # 安装依赖
-            echo "📦 安装依赖包..."
+            # 安装依赖（使用阿里云镜像）
+            echo "📦 安装依赖包（使用阿里云镜像加速）..."
             pip install -r requirements.txt
             
             # 创建必要目录
@@ -378,6 +386,8 @@ jobs:
           source: "zervigo_future/ai-services/ai-service/*"
           target: "${{ env.DEPLOY_PATH }}/ai-service-2/current/"
           strip_components: 3
+          timeout: 120s
+          command_timeout: 120s
       
       - name: Setup and Start AI Service 2
         uses: appleboy/ssh-action@v1.0.3
@@ -391,7 +401,16 @@ jobs:
             # 创建虚拟环境
             python3.11 -m venv venv || python3 -m venv venv
             source venv/bin/activate
+            
+            # 配置pip使用阿里云镜像（加速下载）
+            pip config set global.index-url https://p4wqihpo.mirror.aliyuncs.com/pypi/simple
+            pip config set install.trusted-host p4wqihpo.mirror.aliyuncs.com
+            
+            # 升级pip
             pip install --upgrade pip
+            
+            # 安装依赖（使用阿里云镜像）
+            echo "📦 安装依赖包（使用阿里云镜像加速）..."
             pip install -r requirements.txt
             
             # 创建目录
@@ -487,6 +506,8 @@ jobs:
           source: "looma_crm_future/looma_crm/*,looma_crm_future/requirements.txt"
           target: "${{ env.DEPLOY_PATH }}/looma-crm/current/"
           strip_components: 1
+          timeout: 120s
+          command_timeout: 120s
       
       - name: Setup and Start LoomaCRM
         uses: appleboy/ssh-action@v1.0.3
@@ -500,10 +521,17 @@ jobs:
             # 创建虚拟环境
             python3.11 -m venv venv || python3 -m venv venv
             source venv/bin/activate
+            
+            # 配置pip使用阿里云镜像（加速下载）
+            pip config set global.index-url https://p4wqihpo.mirror.aliyuncs.com/pypi/simple
+            pip config set install.trusted-host p4wqihpo.mirror.aliyuncs.com
+            
+            # 升级pip
             pip install --upgrade pip
             
-            # 安装依赖
+            # 安装依赖（使用阿里云镜像）
             if [ -f requirements.txt ]; then
+              echo "📦 安装依赖包（使用阿里云镜像加速）..."
               pip install -r requirements.txt
             fi
             
