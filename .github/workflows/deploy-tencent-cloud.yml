@@ -325,6 +325,10 @@ jobs:
             TRANSFORMERS_CACHE=/home/${{ secrets.TENCENT_CLOUD_USER }}/.cache/huggingface
             ENVEOF
             
+            # 导出环境变量（从.env文件）
+            echo "📤 导出环境变量..."
+            export $(cat .env | grep -v '^#' | xargs)
+            
             # 启动服务
             echo "🚀 启动AI服务1..."
             nohup python ai_service_with_zervigo.py > logs/service.log 2>&1 &
@@ -470,6 +474,10 @@ jobs:
             MODEL_PATH=/home/${{ secrets.TENCENT_CLOUD_USER }}/.cache/huggingface
             TRANSFORMERS_CACHE=/home/${{ secrets.TENCENT_CLOUD_USER }}/.cache/huggingface
             ENVEOF
+            
+            # 导出环境变量（从.env文件）
+            echo "📤 导出环境变量..."
+            export $(cat .env | grep -v '^#' | xargs)
             
             # 启动服务
             echo "🚀 启动AI服务2..."
