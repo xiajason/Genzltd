@@ -262,7 +262,7 @@ jobs:
             echo "🔧 配置Python环境..."
             
             # 创建虚拟环境
-            python3.11 -m venv venv || python3 -m venv venv
+            python3 -m venv venv
             source venv/bin/activate
             
             # 配置pip使用阿里云镜像（加速下载）
@@ -399,7 +399,7 @@ jobs:
             cd ${{ env.DEPLOY_PATH }}/ai-service-2/current
             
             # 创建虚拟环境
-            python3.11 -m venv venv || python3 -m venv venv
+            python3 -m venv venv
             source venv/bin/activate
             
             # 配置pip使用阿里云镜像（加速下载）
@@ -531,7 +531,7 @@ jobs:
             cd ${{ env.DEPLOY_PATH }}/looma-crm/current
             
             # 创建虚拟环境
-            python3.11 -m venv venv || python3 -m venv venv
+            python3 -m venv venv
             source venv/bin/activate
             
             # 配置pip使用阿里云镜像（加速下载）
