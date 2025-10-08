@@ -256,6 +256,8 @@ jobs:
           host: ${{ env.TENCENT_SERVER_IP }}
           username: ${{ secrets.TENCENT_CLOUD_USER }}
           key: ${{ secrets.TENCENT_CLOUD_SSH_KEY }}
+          timeout: 1800s
+          command_timeout: 1800s
           script: |
             cd ${{ env.DEPLOY_PATH }}/ai-service-1/current
             
@@ -279,6 +281,13 @@ jobs:
               pip config unset global.index-url
               pip config unset install.trusted-host
               pip install -r requirements.txt
+            }
+            
+            # 单独安装torch CPU版本（避免下载超时）
+            echo "📦 安装torch CPU版本..."
+            pip install torch>=2.0.0,<3.0.0 --index-url https://download.pytorch.org/whl/cpu || {
+              echo "⚠️ PyTorch官方源失败，尝试默认源..."
+              pip install torch>=2.0.0,<3.0.0
             }
             
             # 创建必要目录
@@ -400,6 +409,8 @@ jobs:
           host: ${{ env.TENCENT_SERVER_IP }}
           username: ${{ secrets.TENCENT_CLOUD_USER }}
           key: ${{ secrets.TENCENT_CLOUD_SSH_KEY }}
+          timeout: 1800s
+          command_timeout: 1800s
           script: |
             cd ${{ env.DEPLOY_PATH }}/ai-service-2/current
             
@@ -421,6 +432,13 @@ jobs:
               pip config unset global.index-url
               pip config unset install.trusted-host
               pip install -r requirements.txt
+            }
+            
+            # 单独安装torch CPU版本（避免下载超时）
+            echo "📦 安装torch CPU版本..."
+            pip install torch>=2.0.0,<3.0.0 --index-url https://download.pytorch.org/whl/cpu || {
+              echo "⚠️ PyTorch官方源失败，尝试默认源..."
+              pip install torch>=2.0.0,<3.0.0
             }
             
             # 创建目录
@@ -537,6 +555,8 @@ jobs:
           host: ${{ env.TENCENT_SERVER_IP }}
           username: ${{ secrets.TENCENT_CLOUD_USER }}
           key: ${{ secrets.TENCENT_CLOUD_SSH_KEY }}
+          timeout: 1800s
+          command_timeout: 1800s
           script: |
             cd ${{ env.DEPLOY_PATH }}/looma-crm/current
             
