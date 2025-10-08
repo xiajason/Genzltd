@@ -283,12 +283,8 @@ jobs:
               pip install -r requirements.txt
             }
             
-            # 单独安装torch CPU版本（内存已释放）
-            echo "📦 安装torch CPU版本..."
-            pip install torch>=2.0.0,<3.0.0 --index-url https://download.pytorch.org/whl/cpu || {
-              echo "⚠️ PyTorch官方源失败，尝试默认源..."
-              pip install torch>=2.0.0,<3.0.0
-            }
+            # torch暂时禁用，避免内存不足
+            echo "ℹ️ torch暂时禁用，避免内存不足"
             
             # 创建必要目录
             mkdir -p logs temp uploads
@@ -434,12 +430,8 @@ jobs:
               pip install -r requirements.txt
             }
             
-            # 单独安装torch CPU版本（内存已释放）
-            echo "📦 安装torch CPU版本..."
-            pip install torch>=2.0.0,<3.0.0 --index-url https://download.pytorch.org/whl/cpu || {
-              echo "⚠️ PyTorch官方源失败，尝试默认源..."
-              pip install torch>=2.0.0,<3.0.0
-            }
+            # torch暂时禁用，避免内存不足
+            echo "ℹ️ torch暂时禁用，避免内存不足"
             
             # 创建目录
             mkdir -p logs temp uploads
