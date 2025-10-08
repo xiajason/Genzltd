@@ -292,19 +292,19 @@ jobs:
             # 创建环境配置
             echo "⚙️ 创建环境配置..."
             cat > .env << 'ENVEOF'
-            # PostgreSQL配置
-            DB_HOST=localhost
-            DB_PORT=5432
-            DB_USER=test_user
-            DB_PASSWORD=test_postgres_password
-            DB_NAME=jobfirst_vector
+            # PostgreSQL配置（用于向量存储）
+            POSTGRES_HOST=localhost
+            POSTGRES_PORT=5432
+            POSTGRES_USER=test_user
+            POSTGRES_PASSWORD=test_postgres_password
+            POSTGRES_DATABASE=jobfirst_vector
             
-            # MySQL配置
+            # MySQL配置（用于业务数据）
             MYSQL_HOST=localhost
             MYSQL_PORT=3306
             MYSQL_USER=root
             MYSQL_PASSWORD=test_mysql_password
-            MYSQL_DB=jobfirst
+            MYSQL_DATABASE=jobfirst
             
             # Redis配置
             REDIS_HOST=localhost
@@ -316,7 +316,7 @@ jobs:
             ZERVIGO_AUTH_URL=http://localhost:8207
             
             # 服务配置
-            SERVICE_PORT=8100
+            AI_SERVICE_PORT=8100
             SERVICE_NAME=AI-Service-1
             AI_SERVICE_MODE=production
             
@@ -438,19 +438,19 @@ jobs:
             
             # 创建环境配置 (端口8110)
             cat > .env << 'ENVEOF'
-            # PostgreSQL配置
-            DB_HOST=localhost
-            DB_PORT=5432
-            DB_USER=test_user
-            DB_PASSWORD=test_postgres_password
-            DB_NAME=jobfirst_vector
+            # PostgreSQL配置（用于向量存储）
+            POSTGRES_HOST=localhost
+            POSTGRES_PORT=5432
+            POSTGRES_USER=test_user
+            POSTGRES_PASSWORD=test_postgres_password
+            POSTGRES_DATABASE=jobfirst_vector
             
-            # MySQL配置
+            # MySQL配置（用于业务数据）
             MYSQL_HOST=localhost
             MYSQL_PORT=3306
             MYSQL_USER=root
             MYSQL_PASSWORD=test_mysql_password
-            MYSQL_DB=jobfirst
+            MYSQL_DATABASE=jobfirst
             
             # Redis配置
             REDIS_HOST=localhost
@@ -462,7 +462,7 @@ jobs:
             ZERVIGO_AUTH_URL=http://localhost:8207
             
             # 服务配置
-            SERVICE_PORT=8110
+            AI_SERVICE_PORT=8110
             SERVICE_NAME=AI-Service-2
             AI_SERVICE_MODE=production
             
