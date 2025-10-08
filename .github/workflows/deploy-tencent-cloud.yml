@@ -272,9 +272,14 @@ jobs:
             # 升级pip
             pip install --upgrade pip
             
-            # 安装依赖（使用阿里云镜像）
+            # 安装依赖（使用阿里云镜像，失败时使用官方源）
             echo "📦 安装依赖包（使用阿里云镜像加速）..."
-            pip install -r requirements.txt
+            pip install -r requirements.txt || {
+              echo "⚠️ 阿里云镜像安装失败，尝试官方源..."
+              pip config unset global.index-url
+              pip config unset install.trusted-host
+              pip install -r requirements.txt
+            }
             
             # 创建必要目录
             mkdir -p logs temp uploads
@@ -409,9 +414,14 @@ jobs:
             # 升级pip
             pip install --upgrade pip
             
-            # 安装依赖（使用阿里云镜像）
+            # 安装依赖（使用阿里云镜像，失败时使用官方源）
             echo "📦 安装依赖包（使用阿里云镜像加速）..."
-            pip install -r requirements.txt
+            pip install -r requirements.txt || {
+              echo "⚠️ 阿里云镜像安装失败，尝试官方源..."
+              pip config unset global.index-url
+              pip config unset install.trusted-host
+              pip install -r requirements.txt
+            }
             
             # 创建目录
             mkdir -p logs temp uploads
