@@ -1,0 +1,132 @@
+version: '3.8'
+
+# 腾讯云数据库集群 - 持久化配置方案
+# 包含主从复制配置，确保容器重启后配置不丢失
+
+services:
+  # MySQL数据库 - 从库（接收阿里云主库数据）
+  test-mysql:
+    image: mysql:8.0
+    container_name: test-mysql
+    restart: unless-stopped
+    network_mode: host  # 使用host模式访问SSH隧道
+    environment:
+      MYSQL_ROOT_PASSWORD: test_mysql_password
+      MYSQL_DATABASE: test_users
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./configs/mysql-slave.cnf:/etc/mysql/conf.d/slave.cnf  # 持久化配置
+    command:
+      - --server-id=2
+      - --relay-log=relay-bin
+      - --log-bin=mysql-bin
+      - --binlog-format=ROW
+      - --default-authentication-plugin=mysql_native_password
+
+  # PostgreSQL数据库 - 从库（接收阿里云主库数据）
+  test-postgres:
+    image: postgres:13
+    container_name: test-postgres
+    restart: unless-stopped
+    network_mode: host  # 使用host模式访问SSH隧道
+    environment:
+      POSTGRES_USER: test_user
+      POSTGRES_PASSWORD: test_postgres_password
+      POSTGRES_DB: jobfirst_vector
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./configs/postgresql.conf:/etc/postgresql/postgresql.conf  # 持久化配置
+      - ./configs/pg_hba.conf:/etc/postgresql/pg_hba.conf
+
+  # Redis数据库 - 从库（接收阿里云主库数据）
+  test-redis:
+    image: redis:7-alpine
+    container_name: test-redis
+    restart: unless-stopped
+    network_mode: host  # 使用host模式访问SSH隧道
+    command:
+      - redis-server
+      - --requirepass
+      - test_redis_password
+      - --replicaof
+      - "127.0.0.1"
+      - "16379"
+      - --masterauth
+      - f_redis_password_2025  # 阿里云Redis主库密码
+
+  # Neo4j图数据库
+  test-neo4j:
+    image: neo4j:latest
+    container_name: test-neo4j
+    restart: unless-stopped
+    environment:
+      NEO4J_AUTH: neo4j/test_neo4j_password
+      NEO4J_dbms_security_auth__enabled: "true"
+    ports:
+      - "7474:7474"  # HTTP
+      - "7687:7687"  # Bolt
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+
+  # Elasticsearch搜索引擎 - 优化内存配置
+  test-elasticsearch:
+    image: elasticsearch:8.8.0
+    container_name: test-elasticsearch
+    restart: unless-stopped
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"  # 内存优化，防止OOM
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - elasticsearch_data:/usr/share/elasticsearch/data
+
+  # Weaviate向量数据库
+  test-weaviate:
+    image: semitechnologies/weaviate:latest
+    container_name: test-weaviate
+    restart: unless-stopped
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'
+      ENABLE_MODULES: ''
+      CLUSTER_HOSTNAME: 'node1'
+    ports:
+      - "8080:8080"
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+
+  # MongoDB文档数据库 - 核心数据库（第4个）
+  production-mongodb:
+    image: mongo:6.0
+    container_name: production-mongodb
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: f_mongodb_password_2025
+      MONGO_INITDB_DATABASE: jobfirst_future
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - tencent_cloud_net
+
+volumes:
+  mysql_data:
+  postgres_data:
+  redis_data:
+  neo4j_data:
+  neo4j_logs:
+  elasticsearch_data:
+  weaviate_data:
+  mongodb_data:
+
+networks:
+  tencent_cloud_net:
+    driver: bridge
